@@ -186,6 +186,7 @@ onBeforeUnmount(() => {
 
 .hdr__sigil {
   color: var(--c-accent);
+  margin-left: var(--space-1);
 }
 
 .hdr__wordmark {
