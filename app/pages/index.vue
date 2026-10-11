@@ -17,7 +17,9 @@ defineOgImage(
 
 const { projects, socials } = useAbout();
 
-const currentProjects = computed(() => projects.value.filter((p) => p.to === "Present"));
+const currentProjects = computed(() =>
+  projects.value.filter((p) => p.to === "Present").slice(0, 2),
+);
 
 const { selected, randomWallpaper } = useWallpaper();
 
@@ -42,7 +44,10 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 <template>
   <div class="hero sheet-grid">
     <section class="hero__masthead" data-reveal-group>
-      <h1 class="hero__title" data-nameplate>Lemuel De Los Santos</h1>
+      <!-- <h1 class="hero__title" data-nameplate>Lemuel De Los Santos</h1> -->
+      <h1 class="hero__title" data-nameplate>
+        Lemuel <span class="hero__title--ln">De Los Santos</span>
+      </h1>
 
       <p class="hero__standfirst">Math and Computer Science Research Student</p>
 
@@ -52,7 +57,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         <div class="hero__col">
           <XLabel>Pronouns</XLabel>
           <p class="hero__value">he/him</p>
-          <span :style="{ height: '1.325em' }" />
+          <span :style="{ height: '1em' }" />
           <XLabel>Location</XLabel>
           <p class="hero__value">New York, NY</p>
         </div>
@@ -83,7 +88,9 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 
       <ul class="hero__work">
         <li v-for="project in currentProjects" :key="project.slug" class="hero__work-item">
-          <span class="hero__work-name">{{ project.name }}</span>
+          <span class="hero__work-name">
+            <XLink :to="`/projects/${project.slug}`">{{ project.name }}</XLink>
+          </span>
 
           <p class="hero__work-desc">{{ project.description }}</p>
 
@@ -109,7 +116,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
     </section>
 
     <section class="hero__writing" data-reveal-group>
-      <XSectionHead label="Recent writing" :count="recentPosts.length" />
+      <XSectionHead label="Latest writing" :count="recentPosts.length" />
 
       <ul class="hero__writing-list">
         <li v-for="post in recentPosts" :key="post.path" class="hero__writing-item">
@@ -142,9 +149,11 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   text-wrap: balance;
 }
 
-@media (max-width: 640px) {
-  .hero__title {
-    font-size: var(--t-36);
+@media (max-width: 1024px) {
+  .hero__title--ln {
+    display: block;
+    font-size: var(--t-30);
+    color: var(--c-dim);
   }
 }
 

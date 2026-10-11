@@ -148,4 +148,10 @@ defineOgImage(
 .article__body :deep(.katex-display > .katex) {
   text-align: left;
 }
+
+@media (max-width: 640px) {
+  .article__title {
+    font-size: var(--t-24);
+  }
+}
 </style>
