@@ -1,0 +1,8 @@
+{
+  "$schema": "https://unpkg.com/oxfmt@0.72.0/config.schema.json",
+  "singleQuote": false,
+  "semi": true,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "experimentalTernary": true
+}

@@ -1,0 +1,3550 @@
+{
+  "Asterism Code": [
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Regular.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 400,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2058692
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Italic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 400,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2201172
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Medium.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 500,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2054504
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-MediumItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 500,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2205676
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-SemiBold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 600,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2071524
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-SemiBoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 600,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2223816
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Bold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 700,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2062992
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-BoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 700,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2222024
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-ExtraBold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 800,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2073000
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-ExtraBoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 800,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2227276
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Black.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 950,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2073760
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-BlackItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 950,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11942,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 2219528
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-Regular.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 400,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4859964
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-Italic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 400,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 5003720
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-Medium.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 500,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4856288
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-MediumItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 500,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 5008236
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-SemiBold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 600,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4872948
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-SemiBoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 600,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 5026108
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-Bold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 700,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4864612
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-BoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 700,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 5024380
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-ExtraBold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 800,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4874192
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-ExtraBoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 800,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 5029756
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-Heavy.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 900,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4876248
+    },
+    {
+      "name": "Asterism Code",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismCode/AsterismCodeNerdFont-HeavyItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 900,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "NWID",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "WWID",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 22520,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 5022872
+    }
+  ],
+  "Asterism Slim": [
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-Regular.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 400,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 513924
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-Italic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 400,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 573428
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-Medium.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 500,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 514756
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-MediumItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 500,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 573764
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-SemiBold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 600,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 512036
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-SemiBoldItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 600,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 572600
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-Bold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 700,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 513136
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-BoldItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 700,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 573996
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-ExtraBold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 800,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 512540
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-ExtraBoldItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 800,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 571420
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-Black.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 950,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 491440
+    },
+    {
+      "name": "Asterism Slim",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismSlim-BlackItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 950,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.5,
+        "spacing": "proportional"
+      },
+      "bytes": 547348
+    }
+  ],
+  "Asterism Term": [
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Regular.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 400,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1652496
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Italic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 400,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1758980
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Medium.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 500,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1650644
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-MediumItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 500,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1761028
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-SemiBold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 600,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1645492
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-SemiBoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 600,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1767184
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Bold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 700,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1650300
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-BoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 700,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1772732
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-ExtraBold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 800,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1657120
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-ExtraBoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 800,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1777420
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Black.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 950,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1651596
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-BlackItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 950,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 9350,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 1767300
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-Regular.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 400,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4273428
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-Italic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 400,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4380872
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-Medium.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 500,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4272176
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-MediumItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 500,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4383020
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-SemiBold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 600,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4266852
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-SemiBoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 600,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4389064
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-Bold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 700,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4271672
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-BoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 700,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4394552
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-ExtraBold.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 800,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4278072
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-ExtraBoldItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 800,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4399348
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-Heavy.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 900,
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4273784
+    },
+    {
+      "name": "Asterism Term",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/truetype/NerdFonts/AsterismTerm/AsterismTermNerdFont-HeavyItalic.ttf",
+          "format": "truetype"
+        }
+      ],
+      "format": "truetype",
+      "weight": 900,
+      "style": "italic",
+      "patch": "Nerd Fonts",
+      "features": [
+        "APLF",
+        "CLIK",
+        "COQX",
+        "DFNY",
+        "ELMX",
+        "ERLA",
+        "FSHP",
+        "FSTA",
+        "HSKL",
+        "IDRS",
+        "JLIA",
+        "JSPT",
+        "MLXX",
+        "MOSC",
+        "MTLB",
+        "PHPX",
+        "PURS",
+        "RAKU",
+        "SWFT",
+        "THND",
+        "VRLG",
+        "WFLM",
+        "dlig",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 19928,
+        "ascender": 965,
+        "descender": -285,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "monospaced"
+      },
+      "bytes": 4390048
+    }
+  ],
+  "Asterism Text": [
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-Regular.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 400,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 514028
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-Italic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 400,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 570952
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-Medium.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 500,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 511752
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-MediumItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 500,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 572528
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-SemiBold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 600,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 510600
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-SemiBoldItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 600,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 570340
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-Bold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 700,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 509776
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-BoldItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 700,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 574060
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-ExtraBold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 800,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 511256
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-ExtraBoldItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 800,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 574004
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-Black.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 950,
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 490080
+    },
+    {
+      "name": "Asterism Text",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismText-BlackItalic.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 950,
+      "style": "italic",
+      "patch": "base",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 11602,
+        "ascender": 965,
+        "descender": -215,
+        "xHeight": 520,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 547932
+    }
+  ]
+}

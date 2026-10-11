@@ -1,0 +1,129 @@
+{
+  "displayName": "Synquid",
+  "scopeName": "source.synquid",
+  "fileTypes": ["sq"],
+  "name": "synquid",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#function_signature" },
+    { "include": "#refinement_block" },
+    { "include": "#let_bindings" },
+    { "include": "#operators" },
+    { "include": "#constants" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "begin": "--", "end": "\\n", "name": "comment.line.double-dash.synquid" },
+        {
+          "begin": "\\{-",
+          "end": "-}",
+          "name": "comment.block.synquid",
+          "patterns": [{ "include": "#comments" }]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(match|with|if|then|else|in|case|of)\\b",
+          "name": "keyword.control.synquid"
+        },
+        {
+          "match": "\\b(data|type|measure|inline|termination|qualifier|constant|where|import|module)\\b",
+          "name": "keyword.other.synquid"
+        }
+      ]
+    },
+    "function_signature": {
+      "begin": "\\b([a-z_][a-zA-Z0-9_']*)\\s*(::)",
+      "beginCaptures": {
+        "1": { "name": "entity.name.function.synquid" },
+        "2": { "name": "keyword.operator.double-colon.synquid" }
+      },
+      "end": "$",
+      "patterns": [{ "include": "#type_elements" }]
+    },
+    "type_elements": {
+      "patterns": [
+        { "include": "#refinement_block" },
+        { "match": "->|→|=>|⇒", "name": "keyword.operator.arrow.synquid" },
+        {
+          "match": "\\b([a-z_][a-zA-Z0-9_']*)\\s*(:)(?!:)",
+          "captures": {
+            "1": { "name": "variable.parameter.synquid" },
+            "2": { "name": "punctuation.separator.colon.synquid" }
+          }
+        },
+        { "match": "\\b[A-Z][a-zA-Z0-9_']*\\b", "name": "storage.type.synquid" },
+        { "include": "#comments" }
+      ]
+    },
+    "refinement_block": {
+      "begin": "\\{",
+      "beginCaptures": { "0": { "name": "punctuation.section.braces.begin.synquid" } },
+      "end": "\\}",
+      "endCaptures": { "0": { "name": "punctuation.section.braces.end.synquid" } },
+      "name": "meta.refinement.synquid",
+      "patterns": [
+        {
+          "match": "\\|",
+          "name": "punctuation.separator.pipe.synquid"
+        },
+        {
+          "match": "\\b([a-z_][a-zA-Z0-9_']*)\\s*(:)(?!:)",
+          "captures": {
+            "1": { "name": "variable.other.refinement.synquid" },
+            "2": { "name": "punctuation.separator.colon.synquid" }
+          }
+        },
+        { "include": "#logic_operators" },
+        { "include": "#constants" },
+        { "include": "#operators" },
+        { "match": "\\b[a-z_][a-zA-Z0-9_']*\\b", "name": "variable.other.synquid" },
+        { "include": "#type_elements" }
+      ]
+    },
+    "let_bindings": {
+      "begin": "\\blet\\b",
+      "beginCaptures": { "0": { "name": "keyword.control.let.synquid" } },
+      "end": "\\bin\\b",
+      "endCaptures": { "0": { "name": "keyword.control.in.synquid" } },
+      "name": "meta.let-binding.synquid",
+      "patterns": [
+        {
+          "match": "\\b([a-z_][a-zA-Z0-9_']*)\\s*(=)",
+          "captures": {
+            "1": { "name": "variable.other.let.synquid" },
+            "2": { "name": "keyword.operator.assignment.synquid" }
+          }
+        },
+        { "include": "#refinement_block" },
+        { "include": "#logic_operators" },
+        { "include": "#constants" },
+        { "include": "#operators" },
+        { "match": "\\b[a-z_][a-zA-Z0-9_']*\\b", "name": "variable.other.synquid" },
+        { "include": "#type_elements" }
+      ]
+    },
+    "logic_operators": {
+      "patterns": [
+        { "match": "&&|\\|\\||==|!=|<=|>=|<|>|=>|!", "name": "keyword.operator.logical.synquid" }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        { "match": "\\?\\?", "name": "keyword.operator.hole.synquid" },
+        { "match": "\\+|-|\\*|/|%|=", "name": "keyword.operator.arithmetic.synquid" }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        { "match": "\\b(True|False)\\b", "name": "constant.language.boolean.synquid" },
+        { "match": "\\b[0-9]+\\b", "name": "constant.numeric.decimal.synquid" },
+        { "match": "\\b[A-Z][a-zA-Z0-9_']*\\b", "name": "storage.type.synquid" }
+      ]
+    }
+  }
+}

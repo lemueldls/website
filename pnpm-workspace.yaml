@@ -1,0 +1,15 @@
+allowBuilds:
+  "@parcel/watcher": true
+  better-sqlite3: true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vue-demi: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - '@cloudflare/workers-types@5.20261009.1'
+  - '@iconify-json/lucide@1.2.142'
+  - '@iconify-json/material-symbols@1.2.95'
+  - miniflare@5.20261006.1-alpha
+  - satori@0.47.1
+  - wrangler@4.149.0

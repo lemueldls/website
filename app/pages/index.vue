@@ -1,0 +1,414 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: "Lemuel De Los Santos",
+  description: "Math and Computer Science Research Student",
+});
+
+defineOgImage(
+  "Root",
+  {
+    label: "index",
+    title: "Personal Website",
+    description: "Math and Computer Science Research Student",
+    meta: "full stack · systems · typography",
+  },
+  { alt: "Lemuel De Los Santos — personal website and portfolio" },
+);
+
+const { projects, socials } = useAbout();
+
+const currentProjects = computed(() => projects.value.filter((p) => p.to === "Present"));
+
+const { selected, randomWallpaper } = useWallpaper();
+
+const discipline = [
+  "Full Stack Development",
+
+  "Type Systems",
+  "Compilers",
+
+  "Typography and Design",
+];
+
+const { data: posts } = await useAsyncData("home-writing", () =>
+  queryCollection("blog").order("date", "DESC").all(),
+);
+
+const recentPosts = computed(() => (posts.value ?? []).filter((p) => !p.draft).slice(0, 2));
+
+const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
+</script>
+
+<template>
+  <div class="hero sheet-grid">
+    <section class="hero__masthead" data-reveal-group>
+      <h1 class="hero__title" data-nameplate>Lemuel De Los Santos</h1>
+
+      <p class="hero__standfirst">Math and Computer Science Research Student</p>
+
+      <div class="hero__rule" aria-hidden="true" />
+
+      <div class="hero__meta" data-reveal-group>
+        <div class="hero__col">
+          <XLabel>Pronouns</XLabel>
+          <p class="hero__value">he/him</p>
+          <span :style="{ height: '1.325em' }" />
+          <XLabel>Location</XLabel>
+          <p class="hero__value">New York, NY</p>
+        </div>
+
+        <div class="hero__col">
+          <XLabel>What I work on</XLabel>
+          <ul class="hero__disciplines">
+            <li v-for="d in discipline" :key="d">{{ d }}</li>
+          </ul>
+        </div>
+
+        <div class="hero__col">
+          <XLabel>Elsewhere</XLabel>
+          <ul class="hero__socials">
+            <li v-for="social in socials" :key="social.title">
+              <XLink class="hero__social-link" :href="social.href" external>
+                <XIcon class="hero__social-icon" :name="social.icon" size="xs" />
+                {{ social.title }}
+              </XLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero__current" data-reveal-group>
+      <XSectionHead label="Current work" :count="currentProjects.length" />
+
+      <ul class="hero__work">
+        <li v-for="project in currentProjects" :key="project.slug" class="hero__work-item">
+          <span class="hero__work-name">{{ project.name }}</span>
+
+          <p class="hero__work-desc">{{ project.description }}</p>
+
+          <span class="hero__work-meta meta">
+            <span class="hero__work-role">{{ project.role }}</span>
+            <span class="hero__work-dot" aria-hidden="true">·</span>
+            since <span class="num">{{ project.from }}</span>
+          </span>
+
+          <span class="hero__work-links">
+            <XLink v-if="project.link" :href="project.link.href" external>{{
+              project.link.text
+            }}</XLink>
+            <XLink v-if="project.github" :href="project.github.href" external>github</XLink>
+          </span>
+        </li>
+      </ul>
+
+      <div class="hero__actions">
+        <XButton to="/cv" variant="sheet">Curriculum Vitae</XButton>
+        <XButton to="/projects" variant="rule">All projects</XButton>
+      </div>
+    </section>
+
+    <section class="hero__writing" data-reveal-group>
+      <XSectionHead label="Recent writing" :count="recentPosts.length" />
+
+      <ul class="hero__writing-list">
+        <li v-for="post in recentPosts" :key="post.path" class="hero__writing-item">
+          <NuxtLink :to="`/writing/${slugOf(post)}`" class="hero__writing-link">
+            <span class="hero__writing-title">{{ post.title }}</span>
+            <span class="meta num">{{ post.date }}</span>
+          </NuxtLink>
+        </li>
+      </ul>
+
+      <div class="hero__writing-actions">
+        <XButton to="/writing" variant="rule">All writing</XButton>
+      </div>
+    </section>
+  </div>
+</template>
+
+<style scoped>
+.hero {
+  padding-inline: clamp(var(--space-4), 3vw, var(--space-8));
+}
+
+.hero__title {
+  font-family: var(--f-display);
+  font-size: var(--t-60);
+  font-weight: var(--f-display-weight);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-6);
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .hero__title {
+    font-size: var(--t-36);
+  }
+}
+
+.hero__standfirst {
+  font-family: var(--f-display);
+  font-size: var(--t-18);
+  line-height: 1.45;
+  color: var(--c-dim);
+  max-width: 50ch;
+  text-wrap: pretty;
+}
+
+.hero__intro {
+  margin-top: var(--space-4);
+  font-size: var(--t-11);
+  line-height: 1.65;
+  color: var(--c-fg);
+  max-width: var(--measure-text);
+  text-wrap: pretty;
+}
+
+.hero__rule {
+  margin-block: var(--space-7) var(--space-8);
+  border-top: 1px solid var(--c-rule-strong);
+  position: relative;
+  height: 3px;
+}
+
+.hero__rule::after,
+.hero__rule::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.hero__rule::before {
+  top: 2px;
+  border-top: 1px solid var(--c-rule);
+}
+
+.hero__rule::after {
+  top: 5px;
+  border-top: 1px solid var(--c-rule-faint);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-7) 6rem;
+}
+
+.hero__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.hero__value {
+  font-size: var(--t-10);
+}
+
+.hero__socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--t-10);
+}
+
+.hero__social-icon {
+  display: inline-flex;
+  margin-left: 0.5em;
+  margin-right: 0.25em;
+  color: var(--c-dimmer);
+}
+
+.hero__social-link:hover .hero__social-icon {
+  color: var(--c-accent);
+}
+
+.hero__disciplines {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--space-1) var(--space-6);
+  font-size: var(--t-10);
+}
+
+.hero__disciplines li::before {
+  content: "+ ";
+  color: var(--c-accent);
+}
+
+.hero__work {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__work-item {
+  display: grid;
+  grid-template-columns: minmax(8rem, 1fr) auto;
+  grid-template-areas:
+    "name   links"
+    "desc   desc"
+    "meta   meta";
+  align-items: baseline;
+  gap: var(--space-1) var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: var(--rule-width) solid var(--c-rule);
+}
+
+@media (max-width: 640px) {
+  .hero__work-item {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "links"
+      "desc"
+      "meta";
+  }
+}
+
+.hero__work-name {
+  grid-area: name;
+  font-family: var(--f-display);
+  font-size: var(--t-14);
+  font-weight: 600;
+}
+
+.hero__work-meta {
+  grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.hero__work-role {
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+
+.hero__work-dot {
+  color: var(--c-rule-strong);
+}
+
+.hero__work-desc {
+  grid-area: desc;
+  font-size: var(--t-10);
+  line-height: 1.6;
+  color: var(--c-dim);
+  max-width: var(--measure-long);
+  text-wrap: pretty;
+}
+
+.hero__work-links {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-1) var(--space-4);
+  font-size: var(--t-8);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+}
+
+.hero__writing-list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__writing-item {
+  border-bottom: var(--rule-width) solid var(--c-rule);
+}
+
+.hero__writing-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+  padding-block: var(--space-3);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.hero__writing-link:hover {
+  color: var(--c-accent);
+}
+
+.hero__writing-title {
+  font-family: var(--f-display);
+  font-size: var(--t-11);
+  font-weight: 600;
+  max-width: var(--measure-long);
+}
+
+.hero__writing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.hero__wallpaper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  padding-top: var(--space-6);
+  border-top: var(--rule-width) solid var(--c-rule);
+}
+
+.hero__wallpaper-label {
+  margin-bottom: var(--space-1);
+}
+
+.hero__wallpaper-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-2);
+  font-size: var(--t-9);
+  line-height: 1.6;
+  color: var(--c-dim);
+  max-width: var(--measure-text);
+}
+
+.hero__wallpaper-name {
+  font-family: var(--f-label);
+  font-size: var(--t-9);
+  color: var(--c-fg);
+}
+
+.hero__wallpaper-name--none {
+  color: var(--c-dimmer);
+}
+
+.hero__wallpaper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block: var(--space-1) var(--space-1);
+}
+
+@media (max-width: 640px) {
+  .hero__wallpaper-tail {
+    display: none;
+  }
+}
+</style>

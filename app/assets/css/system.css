@@ -1,0 +1,98 @@
+.label {
+  display: inline-block;
+  font-family: var(--f-label);
+  font-size: var(--t-8);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: lowercase;
+  color: var(--c-dim);
+  white-space: nowrap;
+}
+
+.label--accent {
+  color: var(--c-accent);
+}
+
+.label--strong {
+  color: var(--c-fg);
+  font-weight: 600;
+}
+
+.num {
+  font-family: var(--f-label);
+  color: var(--c-dim);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum", "zero";
+}
+
+.meta {
+  font-family: var(--f-label);
+  font-size: var(--t-8);
+  font-variant-numeric: tabular-nums;
+  color: var(--c-dimmer);
+}
+
+.meta strong {
+  color: var(--c-fg);
+  font-weight: 600;
+}
+
+.sheet-grid {
+  display: grid;
+  grid-template-columns: minmax(0, calc(var(--sheet-max) - var(--gutter) * 2));
+  gap: 2.5rem 4rem;
+  justify-content: center;
+}
+
+.mark {
+  --mark-size: 9px;
+  --mark-color: var(--c-rule-strong);
+  position: absolute;
+  width: var(--mark-size);
+  height: var(--mark-size);
+  pointer-events: none;
+  transition:
+    scale var(--dur) var(--ease-folio),
+    color var(--dur-fast) var(--ease);
+}
+
+.mark::before,
+.mark::after {
+  content: "";
+  position: absolute;
+  background: var(--mark-color);
+}
+
+.mark::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  translate: 0 -50%;
+}
+
+.mark::after {
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  translate: -50% 0;
+}
+
+.mark--tl {
+  top: calc(var(--mark-size) / -2);
+  left: calc(var(--mark-size) / -2);
+}
+.mark--tr {
+  top: calc(var(--mark-size) / -2);
+  right: calc(var(--mark-size) / -2);
+}
+.mark--bl {
+  bottom: calc(var(--mark-size) / -2);
+  left: calc(var(--mark-size) / -2);
+}
+.mark--br {
+  bottom: calc(var(--mark-size) / -2);
+  right: calc(var(--mark-size) / -2);
+}

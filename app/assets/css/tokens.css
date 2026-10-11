@@ -1,0 +1,131 @@
+[data-theme="ink"] {
+  color-scheme: dark;
+
+  --c-bg: #11111b;
+  --c-bg-tint: #141420;
+  --c-sheet: #1e1e2e;
+  --c-sheet-2: #181825;
+  --c-rule: #45475a;
+  --c-rule-strong: #6c7086;
+  --c-rule-faint: #313244;
+
+  --c-fg: #cdd6f4;
+  --c-fg-strong: #ffffff;
+  --c-dim: #9399b2;
+  --c-dimmer: #6c7086;
+
+  --c-accent: #00a896;
+  --c-accent-contrast: #11111b;
+  --c-mark: #cba6f7;
+
+  --c-code: #181825;
+  --c-code-fg: #cdd6f4;
+
+  --c-warning: #f9e2af;
+
+  --c-print-bg: #ffffff;
+  --c-print-fg: #1e1e2e;
+}
+[data-theme="paper"] {
+  color-scheme: light;
+
+  --c-bg: #eff1f5;
+  --c-bg-tint: #f7f7fa;
+  --c-sheet: #ffffff;
+  --c-sheet-2: #e6e9ef;
+  --c-rule: #dce0e8;
+  --c-rule-strong: #acb0be;
+  --c-rule-faint: #eef0f5;
+
+  --c-fg: #1e1e2e;
+  --c-fg-strong: #11111b;
+  --c-dim: #4c4f69;
+  --c-dimmer: #6c7086;
+
+  --c-accent: #00a896;
+  --c-accent-contrast: #ffffff;
+  --c-mark: #8839ef;
+
+  --c-code: #f7f7fa;
+  --c-code-fg: #1e1e2e;
+
+  --c-warning: #df8e1d;
+
+  --c-print-bg: #ffffff;
+  --c-print-fg: #1e1e2e;
+}
+
+:root {
+  --f-display: "Besley", Georgia, serif;
+  --f-text: "Asterism Text", ui-monospace, monospace;
+  --f-mono: "Asterism Code", ui-monospace, monospace;
+  --f-label: "Asterism Term", ui-monospace, monospace;
+
+  --t-6: 0.5rem;
+  --t-7: 0.6111rem;
+  --t-8: 0.7222rem;
+  --t-9: 0.8rem;
+  --t-10: 0.8889rem;
+  --t-105: 0.9444rem;
+  --t-11: 0.9778rem;
+  --t-12: 1rem;
+  --t-14: 1.2222rem;
+  --t-18: 1.6111rem;
+  --t-24: 2.2222rem;
+  --t-30: 3.25rem;
+  --t-36: 3.3333rem;
+  --t-60: 5rem;
+
+  --measure-narrow: 80ch;
+  --measure-text: 90ch;
+  --measure-wide: 100ch;
+
+  --sheet-max: 78rem;
+  --rule-width: 1px;
+  --header-h: 3.5rem;
+
+  --radius: 0px;
+
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --ease-folio: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --dur-fast: 120ms;
+  --dur: 240ms;
+  --dur-slow: 480ms;
+
+  --gutter: 10rem;
+
+  --tick-short: 1px;
+  --tick-mid: 3px;
+  --tick-long: 6px;
+
+  --z-ground: -2;
+  --z-wallpaper: -1;
+  --z-sheet: 1;
+  --z-header: 40;
+  --z-command: 60;
+  --z-dialog: 80;
+
+  --space-1: 0.25rem;
+  --space-1p5: 0.375rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --space-9: 3rem;
+  --space-10: 4rem;
+
+  --icon-xs: 0.75rem;
+  --icon-sm: 1rem;
+  --icon-md: 1.125rem;
+  --icon-lg: 1.25rem;
+}
+
+:root {
+  --wallpaper-opacity: 0.055;
+  --leading: 1.55;
+  --f-display-weight: 600;
+}
