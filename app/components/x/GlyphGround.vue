@@ -12,14 +12,37 @@ const RAMP = " .·:-=+*#@";
 const { selected } = useWallpaper();
 const { resolvedTheme } = useTheme();
 
+const CHROME_FUDGE = 0.2;
+
+interface Viewport {
+  width: number;
+  height: number;
+  dpr: number;
+}
+
 const mounted = ref(false);
-const viewport = ref({ width: 1440, height: 900 });
+const viewport = ref<Viewport>({ width: 0, height: 0, dpr: 1 });
 
 onMounted(() => {
   mounted.value = true;
 
   const update = () => {
-    viewport.value = { width: window.innerWidth, height: window.innerHeight };
+    const next: Viewport = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+      dpr: Math.min(window.devicePixelRatio || 1, 2),
+    };
+
+    const prev = viewport.value;
+    const settled =
+      prev.width > 0 &&
+      prev.width === next.width &&
+      prev.dpr === next.dpr &&
+      next.height <= prev.height * (1 + CHROME_FUDGE);
+
+    if (settled) return;
+
+    viewport.value = next;
   };
   update();
 
@@ -73,9 +96,9 @@ interface Plate {
   chars: string[];
 }
 
-async function prepare(file: string): Promise<Plate | null> {
-  const w = window.innerWidth;
-  const h = window.innerHeight;
+async function prepare(file: string, size: Viewport): Promise<Plate | null> {
+  const w = size.width;
+  const h = size.height;
 
   const cols = Math.max(2, Math.floor(w / CELL_W));
   const rows = Math.max(2, Math.floor(h / CELL_H));
@@ -183,7 +206,7 @@ function fadeOut(source: HTMLCanvasElement): boolean {
   return true;
 }
 
-async function drawAscii(file: string) {
+async function drawAscii(file: string, size: Viewport) {
   const el = canvas.value;
   if (!el) return;
 
@@ -191,7 +214,7 @@ async function drawAscii(file: string) {
 
   asciiReady.value = true;
 
-  const plate = await prepare(file);
+  const plate = await prepare(file, size);
   if (!plate) {
     asciiReady.value = false;
     return;
@@ -199,9 +222,11 @@ async function drawAscii(file: string) {
 
   await document.fonts.load(`${FONT_SIZE}px "Asterism Code"`);
 
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
-  const w = window.innerWidth;
-  const h = window.innerHeight + HEADROOM * 2;
+  // The bitmap is exactly the box, in device pixels, so the two can never disagree and
+  // stretch a glyph while a resize is in flight.
+  const dpr = size.dpr;
+  const w = size.width;
+  const h = size.height + HEADROOM * 2;
 
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (hasPlate.value && !reduced) {
@@ -559,7 +584,7 @@ watch(
 
     await nextTick();
 
-    await drawAscii(file);
+    await drawAscii(file, viewport.value);
   },
   { immediate: true },
 );
