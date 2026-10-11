@@ -93,7 +93,7 @@ const elsewhere = computed(() => [...socials]);
 
 .ftr__inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   gap: var(--space-6) var(--space-7);
   max-width: var(--sheet-max);
   margin-inline: auto;

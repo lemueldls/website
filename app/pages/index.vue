@@ -271,17 +271,6 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   border-bottom: var(--rule-width) solid var(--c-rule);
 }
 
-@media (max-width: 640px) {
-  .hero__work-item {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "name"
-      "links"
-      "desc"
-      "meta";
-  }
-}
-
 .hero__work-name {
   grid-area: name;
   font-family: var(--f-display);
