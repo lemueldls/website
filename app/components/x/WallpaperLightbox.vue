@@ -68,24 +68,24 @@ const paletteVars = computed<Record<string, string>>(() => {
           decoding="async"
         />
 
-        <button
-          type="button"
+        <XButton
+          square
           class="lightbox__arrow lightbox__arrow--prev"
           title="Previous wallpaper"
           aria-label="Previous wallpaper"
           @click="emit('step', -1)"
         >
-          <Icon name="material-symbols:chevron-left-sharp" aria-hidden="true" />
-        </button>
-        <button
-          type="button"
+          <XIcon name="material-symbols:chevron-left-sharp" size="lg" />
+        </XButton>
+        <XButton
+          square
           class="lightbox__arrow lightbox__arrow--next"
           title="Next wallpaper"
           aria-label="Next wallpaper"
           @click="emit('step', 1)"
         >
-          <Icon name="material-symbols:chevron-right-sharp" aria-hidden="true" />
-        </button>
+          <XIcon name="material-symbols:chevron-right-sharp" size="lg" />
+        </XButton>
       </figure>
 
       <div class="lightbox__side">
@@ -156,6 +156,7 @@ const paletteVars = computed<Record<string, string>>(() => {
             :href="wallpaperUrl(meta.file, variant)"
             class="lightbox__download"
             variant="sheet"
+            block
             download
           >
             <template #leading>
@@ -218,8 +219,8 @@ const paletteVars = computed<Record<string, string>>(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--space-7);
-  height: var(--space-7);
+  width: var(--space-8);
+  height: var(--space-8);
 
   padding: 0;
   border: var(--rule-width) solid var(--c-rule-strong);
