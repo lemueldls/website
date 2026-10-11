@@ -56,9 +56,9 @@ const elsewhere = computed(() => [...socials]);
 
       <p class="ftr__meta">
         <span class="ftr__meta-id">
-          <span class="meta">© {{ year }}</span>
-          <span class="ftr__dot" aria-hidden="true">·</span>
-          <span class="meta">lem.my</span>
+          <span class="text">Copyright © {{ year }}</span>
+          <!-- <span class="ftr__dot" aria-hidden="true">·</span> -->
+          <!-- <span class="meta">lem.my</span> -->
         </span>
 
         <XVisitorCounter />
