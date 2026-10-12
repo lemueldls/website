@@ -4,8 +4,6 @@ const { toggleTheme, resolvedTheme } = useTheme();
 const isInk = computed(() => resolvedTheme.value === "ink");
 const themeLabel = computed(() => (isInk.value ? "Switch to Paper" : "Switch to Ink"));
 
-const name = "Lemuel De Los Santos";
-
 const nav = [
   { to: "/cv", label: "Curriculum Vitae" },
   { to: "/projects", label: "Projects" },
@@ -94,10 +92,10 @@ onBeforeUnmount(() => {
         to="/"
         class="hdr__mark"
         :class="{ 'hdr__mark--stepped': wordmarkStepped }"
-        :title="name"
+        title="Lemuel De Los Santos"
       >
         <XSigil class="hdr__sigil" size="1.3em" />
-        <span class="hdr__wordmark">{{ name }}</span>
+        <span class="hdr__wordmark">Lemuel <span class="hdr__last-name">De Los Santos</span></span>
       </NuxtLink>
 
       <nav
@@ -198,6 +196,14 @@ onBeforeUnmount(() => {
   transition:
     opacity var(--dur) var(--ease-folio),
     translate var(--dur) var(--ease-folio);
+}
+
+.hdr__last-name {
+  color: var(--c-dim);
+}
+
+.hdr__mark:hover .hdr__last-name {
+  color: var(--c-accent);
 }
 
 .hdr__mark--stepped .hdr__wordmark {

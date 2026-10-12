@@ -25,10 +25,13 @@ const { selected, randomWallpaper } = useWallpaper();
 
 const discipline = [
   "Full Stack Development",
-
-  "Type Systems",
-  "Compilers",
-
+  // "Type Systems",
+  // "Computer Graphics",
+  // "Compilers",
+  "Programming Languages",
+  // "Systems Programming",
+  // "Web Development",
+  "Cybersecurity",
   "Typography and Design",
 ];
 
@@ -46,7 +49,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
     <section class="hero__masthead" data-reveal-group>
       <!-- <h1 class="hero__title" data-nameplate>Lemuel De Los Santos</h1> -->
       <h1 class="hero__title" data-nameplate>
-        Lemuel <span class="hero__title--ln">De Los Santos</span>
+        Lemuel <span class="hero__last-name">De Los Santos</span>
       </h1>
 
       <p class="hero__standfirst">Math and Computer Science Research Student</p>
@@ -149,12 +152,12 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   text-wrap: balance;
 }
 
-.hero__title--ln {
+.hero__last-name {
   color: var(--c-dim);
 }
 
 @media (max-width: 1024px) {
-  .hero__title--ln {
+  .hero__last-name {
     display: block;
     font-size: var(--t-30);
   }
