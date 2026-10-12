@@ -20,7 +20,7 @@ defineOgImage(
     title: "Projects",
     description:
       "Compilers, type systems, synthesis engines, tooling, and the typography to write about them.",
-    meta: `${projects.value.length} projects · ${allTechnologies.value.length} technologies`,
+    meta: `${projects.value.length} projects // ${allTechnologies.value.length} technologies`,
   },
   { alt: "Projects — the register of work" },
 );

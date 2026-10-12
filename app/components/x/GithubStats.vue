@@ -54,8 +54,8 @@ const fetchedNote = computed(() => {
         <div class="ghstats__row">
           <div class="ghstats__col">
             <XLabel variant="accent">Languages</XLabel>
-            <p class="meta ghstats__caption">Share of all bytes, by primary language</p>
-            <XStatLanguages :languages="stats.languages" />
+            <!-- <p class="meta ghstats__caption">Share of all bytes, by primary language</p> -->
+            <XLanguageShare :languages="stats.languages" />
           </div>
 
           <div class="ghstats__col">
@@ -72,10 +72,10 @@ const fetchedNote = computed(() => {
         </div>
       </template>
 
-      <div v-if="fetchedNote" class="ghstats__foot meta">
+      <!-- <div v-if="fetchedNote" class="ghstats__foot meta">
         {{ fetchedNote }}
-        <span v-if="stats?.stale" class="ghstats__stale"> · unavailable, showing cached</span>
-      </div>
+        <span v-if="stats?.stale" class="ghstats__stale"> // unavailable, showing cached</span>
+      </div> -->
     </XSheet>
   </section>
 </template>

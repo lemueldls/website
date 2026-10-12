@@ -87,15 +87,7 @@ function formatYear(iso: string): string {
       <div v-if="languageShares.length" class="repo__langs">
         <span class="label">Breakdown</span>
 
-        <ul class="repo__lang-list">
-          <li v-for="lang in languageShares" :key="lang.name" class="repo__lang">
-            <span class="repo__lang-name">{{ lang.name }}</span>
-            <span class="repo__lang-track" aria-hidden="true">
-              <span class="repo__lang-fill" :style="{ inlineSize: `${lang.percent}%` }" />
-            </span>
-            <span class="repo__lang-percent num">{{ lang.percent.toFixed(1) }}%</span>
-          </li>
-        </ul>
+        <XLanguageShare :languages="languageShares" />
       </div>
 
       <ul v-if="meta.topics.length" class="repo__topics">
@@ -162,23 +154,6 @@ function formatYear(iso: string): string {
   border-top: var(--rule-width) solid var(--c-rule);
 }
 
-.repo__lang-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.repo__lang {
-  display: grid;
-  grid-template-columns: minmax(5rem, 10rem) minmax(0, 1fr) 3.5rem;
-  align-items: center;
-  gap: 0 var(--space-3);
-  font-size: var(--t-9);
-}
-
 @media (max-width: 640px) {
   .repo__facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -195,35 +170,6 @@ function formatYear(iso: string): string {
   .repo__fact:nth-child(n + 3) {
     border-top: var(--rule-width) solid var(--c-rule);
   }
-
-  .repo__lang {
-    grid-template-columns: minmax(var(--space-10), 7rem) minmax(0, 1fr) 3.25rem;
-  }
-}
-
-.repo__lang-name {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: var(--c-dim);
-}
-
-.repo__lang-track {
-  position: relative;
-  height: 2px;
-  background: var(--c-rule);
-}
-
-.repo__lang-fill {
-  position: absolute;
-  inset-block: 0;
-  left: 0;
-  background: var(--c-accent);
-}
-
-.repo__lang-percent {
-  text-align: right;
-  color: var(--c-fg);
 }
 
 .repo__topics {

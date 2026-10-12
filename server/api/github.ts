@@ -12,7 +12,7 @@ const REPO_LIMIT = 100;
 
 const MAX_PAGES = 5;
 
-const LANG_CONCURRENCY = 8;
+const LANG_CONCURRENCY = 6;
 
 const RETRY_LIMIT = 1;
 
