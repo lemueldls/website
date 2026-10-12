@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      templateParams: { separator: "·" },
+      templateParams: { separator: "//" },
       htmlAttrs: { lang: "en" },
     },
   },
@@ -53,6 +53,7 @@ export default defineNuxtConfig({
             ),
             "rust",
             "haskell",
+            "typst",
           ],
         },
         remarkPlugins: {
@@ -119,19 +120,21 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/p": { redirect: "/projects" },
-    "/project": { redirect: "/projects" },
+    "/p/**": { redirect: "/projects/**" },
+    "/project/**": { redirect: "/projects/**" },
 
-    "/b": { redirect: "/writing" },
-    "/blog": { redirect: "/writing" },
+    "/b/**": { redirect: "/writing/**" },
+    "/blog/**": { redirect: "/writing/**" },
+    "/l/**": { redirect: "/writing/**" },
+    "/log/**": { redirect: "/writing/**" },
 
-    "/f": { redirect: "/fonts" },
-    "/font": { redirect: "/fonts" },
+    "/f/**": { redirect: "/fonts/**" },
+    "/font/**": { redirect: "/fonts/**" },
 
-    "/w": { redirect: "/wallpapers" },
-    "/wall": { redirect: "/wallpapers" },
-    "/walls": { redirect: "/wallpapers" },
-    "/wallpaper": { redirect: "/wallpapers" },
+    "/w/**": { redirect: "/wallpapers/**" },
+    "/wall/**": { redirect: "/wallpapers/**" },
+    "/walls/**": { redirect: "/wallpapers/**" },
+    "/wallpaper/**": { redirect: "/wallpapers/**" },
   },
 
   fonts: {

@@ -10,6 +10,7 @@ export default defineContentConfig({
         draft: z.optional(z.boolean()),
         date: z.optional(z.string()),
         updated: z.optional(z.string()),
+        description: z.optional(z.string()),
         excerpt: z.object({
           type: z.string(),
           children: z.any(),

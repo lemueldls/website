@@ -10,7 +10,7 @@ defineOgImage(
     label: "index",
     title: "Personal Website",
     description: "Math and Computer Science Research Student",
-    meta: "full stack · systems · typography",
+    meta: "full stack // systems // typography",
   },
   { alt: "Lemuel De Los Santos — personal website and portfolio" },
 );
@@ -39,7 +39,7 @@ const { data: posts } = await useAsyncData("home-writing", () =>
   queryCollection("blog").order("date", "DESC").all(),
 );
 
-const recentPosts = computed(() => (posts.value ?? []).filter((p) => !p.draft).slice(0, 2));
+const recentPosts = computed(() => (posts.value ?? []).filter((p) => !p.draft).slice(0, 3));
 
 const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 </script>
@@ -99,7 +99,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 
           <span class="hero__work-meta meta">
             <span class="hero__work-role">{{ project.role }}</span>
-            <span class="hero__work-dot" aria-hidden="true">·</span>
+            <span class="hero__work-dot" aria-hidden="true">//</span>
             since <span class="num">{{ project.from }}</span>
           </span>
 

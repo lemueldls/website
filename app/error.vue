@@ -10,9 +10,9 @@ defineProps<{ error: NuxtError }>();
 
   <div class="err">
     <XSheet class="err__sheet">
-      <XLabel variant="accent">Error {{ error.statusCode }}</XLabel>
-      <h1 class="err__title">{{ error.statusMessage || "Not found" }}</h1>
-      <p class="err__note">That page does not exist. Try the <XLink to="/">home page</XLink>.</p>
+      <XLabel variant="accent">Error {{ error.status }}</XLabel>
+      <h1 class="err__title">{{ error.statusText || "Not found" }}</h1>
+      <XButton :href="`/`" variant="accent" size="lg">Go back home</XButton>
     </XSheet>
   </div>
 </template>

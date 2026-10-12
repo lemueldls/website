@@ -18,6 +18,11 @@
   --c-accent-contrast: #11111b;
   --c-mark: #cba6f7;
 
+  /* Semantic tones for inline code marks and MDC callouts. */
+  --c-danger: #f38ba8;
+  --c-error: #f38ba8;
+  --c-info: #89b4fa;
+
   --c-code: #181825;
   --c-code-fg: #cdd6f4;
 
@@ -46,6 +51,11 @@
   --c-accent-contrast: #ffffff;
   --c-mark: #8839ef;
 
+  /* Semantic tones for inline code marks and MDC callouts. */
+  --c-danger: #d20f39;
+  --c-error: #d20f39;
+  --c-info: #1e66f5;
+
   --c-code: #f7f7fa;
   --c-code-fg: #1e1e2e;
 
@@ -70,13 +80,15 @@
   --t-11: 0.9778rem;
   --t-12: 1rem;
   --t-14: 1.2222rem;
+  --t-16: 1.4444rem;
   --t-18: 1.6111rem;
   --t-24: 2.2222rem;
   --t-30: 3.25rem;
   --t-36: 3.3333rem;
   --t-60: 5rem;
 
-  --measure-narrow: 80ch;
+  --measure-narrow: 50ch;
+  --measure-medium: 80ch;
   --measure-text: 90ch;
   --measure-wide: 100ch;
 

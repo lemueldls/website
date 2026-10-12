@@ -36,7 +36,7 @@ const cardMeta = computed(() =>
     `${readingTime(post.value?.body)} min read`,
   ]
     .filter(Boolean)
-    .join(" · "),
+    .join(" // "),
 );
 
 defineOgImage(
@@ -62,7 +62,7 @@ defineOgImage(
         <span class="num">
           {{ dateFormatter.custom(date, { dateStyle: "long" }) }}
           <span v-if="updated">
-            · updated {{ dateFormatter.custom(updated, { dateStyle: "long" }) }}</span
+            // updated {{ dateFormatter.custom(updated, { dateStyle: "long" }) }}</span
           >
         </span>
       </p>
@@ -71,7 +71,7 @@ defineOgImage(
     </header>
 
     <XSheet>
-      <div class="prose article__body">
+      <div class="prose prose--wide article__body">
         <ContentRenderer v-if="post" :value="post" />
 
         <XLink to="/writing" class="article__back">
@@ -130,16 +130,17 @@ defineOgImage(
 
 .article__back {
   display: inline-block;
+  width: 100%;
   margin-top: var(--space-9);
   padding-top: var(--space-5);
-  border-top: var(--rule-width) solid var(--c-rule);
+  /* border-top: var(--rule-width) solid var(--c-rule); */
   font-family: var(--f-label);
   font-size: var(--t-8);
   letter-spacing: 0.06em;
   text-transform: lowercase;
 }
 
-.article__body :deep(.katex-display) {
+/* .article__body :deep(.katex-display) {
   margin-block: 1.5em;
   padding-block: 1em;
   border-block: var(--rule-width) solid var(--c-rule);
@@ -147,7 +148,7 @@ defineOgImage(
 
 .article__body :deep(.katex-display > .katex) {
   text-align: left;
-}
+} */
 
 @media (max-width: 640px) {
   .article__title {

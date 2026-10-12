@@ -43,7 +43,7 @@ defineOgImage(
         <NuxtLink :to="`/writing/${slugOf(post)}`" class="entry__link">
           <div class="entry__meta">
             <span class="meta entry__date num">{{ post.date }}</span>
-            <span class="meta entry__dot" aria-hidden="true">·</span>
+            <span class="meta entry__dot" aria-hidden="true">//</span>
             <span class="meta entry__time num">{{ readingTime(post.body) }} min read</span>
           </div>
 
@@ -142,7 +142,7 @@ defineOgImage(
   font-family: var(--f-display);
   font-size: var(--t-18);
   margin-top: var(--space-2);
-  max-width: 52ch;
+  /* max-width: var(--measure-narrow); */
   text-wrap: pretty;
   transition: color var(--dur-fast) var(--ease);
 }

@@ -74,7 +74,7 @@ section > .section-head {
 }
 
 p {
-  max-width: var(--measure-text);
+  /* max-width: var(--measure-text); */
   text-wrap: pretty;
 }
 
