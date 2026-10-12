@@ -30,11 +30,12 @@ const { label, value, note } = toRefs(props);
   flex-direction: column;
   gap: var(--space-1);
   padding: var(--space-4) var(--space-4) var(--space-4);
+  container-type: inline-size;
 }
 
 .stat__value {
   font-family: var(--f-display);
-  font-size: var(--t-36);
+  font-size: clamp(var(--t-14), 28cqi, var(--t-36));
   font-weight: var(--f-display-weight);
   line-height: 1;
   letter-spacing: -0.02em;
@@ -44,5 +45,11 @@ const { label, value, note } = toRefs(props);
 
 .stat__note {
   margin: 0;
+}
+
+@media (max-width: 640px) {
+  .stat .label {
+    white-space: normal;
+  }
 }
 </style>

@@ -120,12 +120,12 @@ function formatYear(iso: string): string {
 <style scoped>
 .repo__sheet {
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .repo__facts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
 }
 
@@ -134,10 +134,15 @@ function formatYear(iso: string): string {
   flex-direction: column;
   gap: var(--space-1);
   padding: var(--space-4) var(--space-4);
+  border-left: var(--rule-width) solid var(--c-rule);
 }
 
-.repo__fact + .repo__fact {
-  border-left: var(--rule-width) solid var(--c-rule);
+.repo__fact:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.repo__fact:nth-child(n + 4) {
+  border-top: var(--rule-width) solid var(--c-rule);
 }
 
 .repo__value {
@@ -175,6 +180,22 @@ function formatYear(iso: string): string {
 }
 
 @media (max-width: 640px) {
+  .repo__facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .repo__fact:nth-child(3n + 1) {
+    border-left: var(--rule-width) solid var(--c-rule);
+  }
+
+  .repo__fact:nth-child(2n + 1) {
+    border-left: none;
+  }
+
+  .repo__fact:nth-child(n + 3) {
+    border-top: var(--rule-width) solid var(--c-rule);
+  }
+
   .repo__lang {
     grid-template-columns: minmax(var(--space-10), 7rem) minmax(0, 1fr) 3.25rem;
   }

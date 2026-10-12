@@ -88,11 +88,19 @@ const fetchedNote = computed(() => {
 
 .ghstats__totals {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.ghstats__totals > * + * {
+.ghstats__totals > * {
   border-left: var(--rule-width) solid var(--c-rule);
+}
+
+.ghstats__totals > :nth-child(4n + 1) {
+  border-left: none;
+}
+
+.ghstats__totals > :nth-child(n + 5) {
+  border-top: var(--rule-width) solid var(--c-rule);
 }
 
 .ghstats__rule {
@@ -108,6 +116,18 @@ const fetchedNote = computed(() => {
 }
 
 @media (max-width: 640px) {
+  .ghstats__totals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ghstats__totals > :nth-child(2n + 1) {
+    border-left: none;
+  }
+
+  .ghstats__totals > :nth-child(n + 3) {
+    border-top: var(--rule-width) solid var(--c-rule);
+  }
+
   .ghstats__row {
     gap: var(--space-6);
     padding: var(--space-5) var(--space-4);
