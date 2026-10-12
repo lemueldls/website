@@ -149,11 +149,14 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   text-wrap: balance;
 }
 
+.hero__title--ln {
+  color: var(--c-dim);
+}
+
 @media (max-width: 1024px) {
   .hero__title--ln {
     display: block;
     font-size: var(--t-30);
-    color: var(--c-dim);
   }
 }
 
@@ -161,9 +164,10 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   font-family: var(--f-display);
   font-size: var(--t-18);
   line-height: 1.45;
-  color: var(--c-dim);
+  color: var(--c-dimmer);
   max-width: 50ch;
   text-wrap: pretty;
+  font-style: italic;
 }
 
 .hero__intro {
