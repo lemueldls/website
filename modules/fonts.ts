@@ -20,7 +20,10 @@ export default defineNuxtModule({
           families = JSON.parse(readFileSync(metaPath, "utf-8"));
         } catch {
           nuxt.options.watch.push(metaPath);
-          console.warn("[x:fonts] app/assets/fonts.meta.json not found — run `pnpm gen:fonts`.");
+          console.warn(
+            "[x:fonts] app/assets/fonts.meta.json not found // it is a vendored artifact, " +
+              "refresh it with `pnpm fetch:meta` (it is generated in lemueldls/assets).",
+          );
           return {
             async resolveFont() {
               return undefined;

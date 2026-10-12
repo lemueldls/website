@@ -54,7 +54,7 @@ for (const [file, validate] of Object.entries(EXPECTED)) {
   const current = await readFile(path, "utf8").catch(() => "");
 
   if (current === body) {
-    console.log(`[fetch:meta] ${file} unchanged — ${summary.length} entries`);
+    console.log(`[fetch:meta] ${file} unchanged // ${summary.length} entries`);
     continue;
   }
 
@@ -66,10 +66,10 @@ for (const [file, validate] of Object.entries(EXPECTED)) {
 
   await mkdir(OUT_DIR, { recursive: true });
   await writeFile(path, body, "utf8");
-  console.log(`[fetch:meta] wrote ${file} — ${summary.length} entries`);
+  console.log(`[fetch:meta] wrote ${file} // ${summary.length} entries`);
 }
 
 if (CHECK && drift) {
-  console.error("[fetch:meta] manifests are out of date — run `pnpm fetch:meta`");
+  console.error("[fetch:meta] manifests are out of date // run `pnpm fetch:meta`");
   process.exit(1);
 }

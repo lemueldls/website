@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import type { Font } from "#shared/assets";
 
-import { byteLabel, fontUrl } from "#shared/assets";
-
-useSeoMeta({ title: "Fonts" });
+import { byteLabel, fontUrl, sampleFor } from "#shared/assets";
 
 const { fonts } = useAssets();
 
@@ -23,6 +21,8 @@ const family = computed(() => faces.value[0]!.name);
 
 const metrics = computed(() => faces.value[0]!.metrics);
 
+useSeoMeta({ title: () => family.value });
+
 const normalFaces = computed(() => faces.value.filter((f) => f.style !== "italic"));
 const italicFaces = computed(() => faces.value.filter((f) => f.style === "italic"));
 
@@ -36,9 +36,9 @@ defineOgImage(
     label: "font",
     title: family.value,
     description: `A live specimen: size, leading, tracking, weight, style, and OpenType features.`,
-    meta: `${metrics.value.glyphs.toLocaleString()} glyphs · ${metrics.value.spacing} · n ${metrics.value.measure}em`,
+    meta: `${metrics.value.glyphs.toLocaleString()} glyphs // ${metrics.value.spacing} // n ${metrics.value.measure}em`,
   },
-  { alt: `${family.value} — a live type specimen` },
+  { alt: `${family.value} // a live type specimen` },
 );
 
 const style = ref<"normal" | "italic">("normal");
@@ -47,6 +47,16 @@ const size = ref(24);
 const leading = ref(1.5);
 const tracking = ref(0);
 const measure = ref(68);
+
+const requestedWeight = Number(useRoute().query.w);
+const requestedStyle = useRoute().query.s;
+
+if (Number.isFinite(requestedWeight) && weights.value.includes(requestedWeight)) {
+  weight.value = requestedWeight;
+}
+if (requestedStyle === "italic" && italicFaces.value.length) {
+  style.value = "italic";
+}
 
 const FEATURE_LABELS: Record<string, string> = {
   THND: "Thin width",
@@ -71,17 +81,9 @@ const features = computed(() => {
 });
 const activeFeatures = ref<string[]>([]);
 
-const DEFAULT_SAMPLE = "Sphinx of black quartz, judge my vow.";
-const defaultSample = computed(() => {
-  const shipped = new Set(faces.value[0]?.features ?? []);
-  const parts = [DEFAULT_SAMPLE];
-  if (shipped.has("frac") || shipped.has("numr") || shipped.has("dnom")) parts.push("1/2 3/4 7/8");
-  else if (shipped.has("onum") || shipped.has("zero")) parts.push("0123456789");
-  if (shipped.has("dlig")) parts.push("<- -> => != === ===");
-  return parts.join(" ");
-});
+const defaultSample = computed(() => sampleFor(faces.value));
 
-const sampleText = useLocalStorage("x-font-sample", defaultSample);
+const sampleText = useLocalStorage(`x-font-sample-${slug}`, () => defaultSample.value);
 
 const activeFace = computed(
   () =>
@@ -117,7 +119,7 @@ const glyphRows =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()[]{};:,.<>/?|\\\"'`~_+=";
 
 function isActive(face: Font): boolean {
-  return face.weight === weight.value && (face.style ?? "normal") === style.value;
+  return face === activeFace.value;
 }
 
 function useAsDisplayFace() {
@@ -130,16 +132,16 @@ function useAsDisplayFace() {
 <template>
   <div class="family sheet-grid">
     <header class="family__head">
-      <XLabel variant="accent">Font</XLabel>
+      <XLabel variant="accent">Specimen</XLabel>
       <h1 class="family__name" :style="{ fontFamily: `'${family}'` }">{{ family }}</h1>
 
       <p class="meta family__metrics">
-        <span class="num">{{ metrics.glyphs.toLocaleString() }}</span> glyphs ·
-        <span class="num">{{ metrics.spacing }}</span> ·
-        <span class="num">n {{ metrics.measure }}em</span> ·
-        <span class="num">{{ metrics.unitsPerEm }}</span> upm · asc
+        <span class="num">{{ metrics.glyphs.toLocaleString() }}</span> glyphs //
+        <span class="num">{{ metrics.spacing }}</span> //
+        <span class="num">n {{ metrics.measure }}em</span> //
+        <span class="num">{{ metrics.unitsPerEm }}</span> upm // asc
         <span class="num">{{ metrics.ascender }}</span> / desc
-        <span class="num">{{ metrics.descender }}</span> ·
+        <span class="num">{{ metrics.descender }}</span> //
         <template v-if="metrics.xHeight">
           x-height <span class="num">{{ metrics.xHeight }}</span>
         </template>
@@ -207,7 +209,7 @@ function useAsDisplayFace() {
           <XCheckbox
             v-for="f in features"
             :key="f.tag"
-            :label="`${f.tag} — ${f.label}`"
+            :label="f.label"
             :model-value="activeFeatures.includes(f.tag)"
             @update:model-value="
               (v) =>
@@ -263,14 +265,28 @@ function useAsDisplayFace() {
       <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All fonts
     </XLink>
 
-    <div class="family__actions no-print">
+    <!-- <div class="family__actions no-print">
+      <XLink v-if="activeFace" :href="activeFace.src[0]!.url" external>
+        Download
+        {{
+          [
+            activeFace.patch === "base" ? null : activeFace.patch,
+            weight,
+            activeFace.style ?? "normal",
+          ]
+            .filter(Boolean)
+            .join(" ")
+        }}
+        · {{ byteLabel(activeFace.bytes) }}
+      </XLink>
+
       <XButton variant="sheet" size="sm" @click="useAsDisplayFace">
         Set as the display face
       </XButton>
       <span class="meta"
         >Swaps <span class="num">--f-display</span> to {{ family }} for this browser.</span
       >
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -402,7 +418,7 @@ function useAsDisplayFace() {
 }
 
 .family__inventory td {
-  padding: 0.3em 0.75em 0.3em 0;
+  padding: 0.3em 0.75em;
   border-bottom: var(--rule-width) solid var(--c-rule-faint);
   white-space: nowrap;
 }

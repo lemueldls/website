@@ -66,7 +66,6 @@
       ],
       "format": "truetype",
       "weight": 400,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -111,7 +110,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 2201172
+      "bytes": 2201172,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -179,7 +179,6 @@
       ],
       "format": "truetype",
       "weight": 500,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -224,7 +223,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 2205676
+      "bytes": 2205676,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -292,7 +292,6 @@
       ],
       "format": "truetype",
       "weight": 600,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -337,7 +336,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 2223816
+      "bytes": 2223816,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -405,7 +405,6 @@
       ],
       "format": "truetype",
       "weight": 700,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -450,7 +449,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 2222024
+      "bytes": 2222024,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -518,7 +518,6 @@
       ],
       "format": "truetype",
       "weight": 800,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -563,7 +562,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 2227276
+      "bytes": 2227276,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -631,7 +631,6 @@
       ],
       "format": "truetype",
       "weight": 950,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -676,7 +675,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 2219528
+      "bytes": 2219528,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -744,7 +744,6 @@
       ],
       "format": "truetype",
       "weight": 400,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -789,7 +788,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 5003720
+      "bytes": 5003720,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -857,7 +857,6 @@
       ],
       "format": "truetype",
       "weight": 500,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -902,7 +901,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 5008236
+      "bytes": 5008236,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -970,7 +970,6 @@
       ],
       "format": "truetype",
       "weight": 600,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -1015,7 +1014,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 5026108
+      "bytes": 5026108,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -1083,7 +1083,6 @@
       ],
       "format": "truetype",
       "weight": 700,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -1128,7 +1127,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 5024380
+      "bytes": 5024380,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -1196,7 +1196,6 @@
       ],
       "format": "truetype",
       "weight": 800,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -1241,7 +1240,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 5029756
+      "bytes": 5029756,
+      "style": "italic"
     },
     {
       "name": "Asterism Code",
@@ -1309,7 +1309,6 @@
       ],
       "format": "truetype",
       "weight": 900,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -1354,7 +1353,226 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 5022872
+      "bytes": 5022872,
+      "style": "italic"
+    }
+  ],
+  "Asterism Ruby": [
+    {
+      "name": "Asterism Ruby",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismRubyPinyin-Regular.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 400,
+      "patch": "Pinyin",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 32595,
+        "ascender": 969,
+        "descender": -241,
+        "xHeight": 545,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 3853616
+    },
+    {
+      "name": "Asterism Ruby",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismRubyPinyin-SemiBold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 600,
+      "patch": "Pinyin",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 32595,
+        "ascender": 969,
+        "descender": -241,
+        "xHeight": 545,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 3895628
+    },
+    {
+      "name": "Asterism Ruby",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismRubyPinyin-Bold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 700,
+      "patch": "Pinyin",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 32595,
+        "ascender": 969,
+        "descender": -241,
+        "xHeight": 545,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 3937352
+    },
+    {
+      "name": "Asterism Ruby",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismRubyRomaji-Regular.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 400,
+      "patch": "Romaji",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 32784,
+        "ascender": 969,
+        "descender": -241,
+        "xHeight": 545,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 3564964
+    },
+    {
+      "name": "Asterism Ruby",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismRubyRomaji-SemiBold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 600,
+      "patch": "Romaji",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 32784,
+        "ascender": 969,
+        "descender": -241,
+        "xHeight": 545,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 3606836
+    },
+    {
+      "name": "Asterism Ruby",
+      "src": [
+        {
+          "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismRubyRomaji-Bold.woff2",
+          "format": "woff2"
+        }
+      ],
+      "format": "woff2",
+      "weight": 700,
+      "patch": "Romaji",
+      "features": [
+        "APLF",
+        "MOSC",
+        "NWID",
+        "THND",
+        "WWID",
+        "dnom",
+        "frac",
+        "lnum",
+        "numr",
+        "onum",
+        "zero"
+      ],
+      "metrics": {
+        "unitsPerEm": 1000,
+        "glyphs": 32784,
+        "ascender": 969,
+        "descender": -241,
+        "xHeight": 545,
+        "capHeight": 735,
+        "measure": 0.6,
+        "spacing": "proportional"
+      },
+      "bytes": 3645284
     }
   ],
   "Asterism Slim": [
@@ -1404,7 +1622,6 @@
       ],
       "format": "woff2",
       "weight": 400,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -1429,7 +1646,8 @@
         "measure": 0.5,
         "spacing": "proportional"
       },
-      "bytes": 573428
+      "bytes": 573428,
+      "style": "italic"
     },
     {
       "name": "Asterism Slim",
@@ -1477,7 +1695,6 @@
       ],
       "format": "woff2",
       "weight": 500,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -1502,7 +1719,8 @@
         "measure": 0.5,
         "spacing": "proportional"
       },
-      "bytes": 573764
+      "bytes": 573764,
+      "style": "italic"
     },
     {
       "name": "Asterism Slim",
@@ -1550,7 +1768,6 @@
       ],
       "format": "woff2",
       "weight": 600,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -1575,7 +1792,8 @@
         "measure": 0.5,
         "spacing": "proportional"
       },
-      "bytes": 572600
+      "bytes": 572600,
+      "style": "italic"
     },
     {
       "name": "Asterism Slim",
@@ -1623,7 +1841,6 @@
       ],
       "format": "woff2",
       "weight": 700,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -1648,7 +1865,8 @@
         "measure": 0.5,
         "spacing": "proportional"
       },
-      "bytes": 573996
+      "bytes": 573996,
+      "style": "italic"
     },
     {
       "name": "Asterism Slim",
@@ -1696,7 +1914,6 @@
       ],
       "format": "woff2",
       "weight": 800,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -1721,7 +1938,8 @@
         "measure": 0.5,
         "spacing": "proportional"
       },
-      "bytes": 571420
+      "bytes": 571420,
+      "style": "italic"
     },
     {
       "name": "Asterism Slim",
@@ -1769,7 +1987,6 @@
       ],
       "format": "woff2",
       "weight": 950,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -1794,7 +2011,8 @@
         "measure": 0.5,
         "spacing": "proportional"
       },
-      "bytes": 547348
+      "bytes": 547348,
+      "style": "italic"
     }
   ],
   "Asterism Term": [
@@ -1862,7 +2080,6 @@
       ],
       "format": "truetype",
       "weight": 400,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -1905,7 +2122,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 1758980
+      "bytes": 1758980,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -1971,7 +2189,6 @@
       ],
       "format": "truetype",
       "weight": 500,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -2014,7 +2231,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 1761028
+      "bytes": 1761028,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2080,7 +2298,6 @@
       ],
       "format": "truetype",
       "weight": 600,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -2123,7 +2340,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 1767184
+      "bytes": 1767184,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2189,7 +2407,6 @@
       ],
       "format": "truetype",
       "weight": 700,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -2232,7 +2449,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 1772732
+      "bytes": 1772732,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2298,7 +2516,6 @@
       ],
       "format": "truetype",
       "weight": 800,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -2341,7 +2558,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 1777420
+      "bytes": 1777420,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2407,7 +2625,6 @@
       ],
       "format": "truetype",
       "weight": 950,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -2450,7 +2667,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 1767300
+      "bytes": 1767300,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2516,7 +2734,6 @@
       ],
       "format": "truetype",
       "weight": 400,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -2559,7 +2776,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 4380872
+      "bytes": 4380872,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2625,7 +2843,6 @@
       ],
       "format": "truetype",
       "weight": 500,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -2668,7 +2885,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 4383020
+      "bytes": 4383020,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2734,7 +2952,6 @@
       ],
       "format": "truetype",
       "weight": 600,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -2777,7 +2994,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 4389064
+      "bytes": 4389064,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2843,7 +3061,6 @@
       ],
       "format": "truetype",
       "weight": 700,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -2886,7 +3103,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 4394552
+      "bytes": 4394552,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -2952,7 +3170,6 @@
       ],
       "format": "truetype",
       "weight": 800,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -2995,7 +3212,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 4399348
+      "bytes": 4399348,
+      "style": "italic"
     },
     {
       "name": "Asterism Term",
@@ -3061,7 +3279,6 @@
       ],
       "format": "truetype",
       "weight": 900,
-      "style": "italic",
       "patch": "Nerd Fonts",
       "features": [
         "APLF",
@@ -3104,7 +3321,8 @@
         "measure": 0.6,
         "spacing": "monospaced"
       },
-      "bytes": 4390048
+      "bytes": 4390048,
+      "style": "italic"
     }
   ],
   "Asterism Text": [
@@ -3154,7 +3372,6 @@
       ],
       "format": "woff2",
       "weight": 400,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -3179,7 +3396,8 @@
         "measure": 0.6,
         "spacing": "proportional"
       },
-      "bytes": 570952
+      "bytes": 570952,
+      "style": "italic"
     },
     {
       "name": "Asterism Text",
@@ -3227,7 +3445,6 @@
       ],
       "format": "woff2",
       "weight": 500,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -3252,7 +3469,8 @@
         "measure": 0.6,
         "spacing": "proportional"
       },
-      "bytes": 572528
+      "bytes": 572528,
+      "style": "italic"
     },
     {
       "name": "Asterism Text",
@@ -3300,7 +3518,6 @@
       ],
       "format": "woff2",
       "weight": 600,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -3325,7 +3542,8 @@
         "measure": 0.6,
         "spacing": "proportional"
       },
-      "bytes": 570340
+      "bytes": 570340,
+      "style": "italic"
     },
     {
       "name": "Asterism Text",
@@ -3373,7 +3591,6 @@
       ],
       "format": "woff2",
       "weight": 700,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -3398,7 +3615,8 @@
         "measure": 0.6,
         "spacing": "proportional"
       },
-      "bytes": 574060
+      "bytes": 574060,
+      "style": "italic"
     },
     {
       "name": "Asterism Text",
@@ -3446,7 +3664,6 @@
       ],
       "format": "woff2",
       "weight": 800,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -3471,7 +3688,8 @@
         "measure": 0.6,
         "spacing": "proportional"
       },
-      "bytes": 574004
+      "bytes": 574004,
+      "style": "italic"
     },
     {
       "name": "Asterism Text",
@@ -3519,7 +3737,6 @@
       ],
       "format": "woff2",
       "weight": 950,
-      "style": "italic",
       "patch": "base",
       "features": [
         "APLF",
@@ -3544,7 +3761,8 @@
         "measure": 0.6,
         "spacing": "proportional"
       },
-      "bytes": 547932
+      "bytes": 547932,
+      "style": "italic"
     }
   ]
 }

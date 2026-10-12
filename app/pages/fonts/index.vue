@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { byteLabel } from "#shared/assets";
+import { byteLabel, sampleFor } from "#shared/assets";
 import type { Font } from "#shared/assets";
 
 useSeoMeta({ title: "Fonts" });
@@ -13,27 +13,26 @@ const CUTS: { name: string; use: string | null }[] = [
   { name: "Asterism Term", use: "labels" },
 ];
 
-const sample = "Sphinx of black quartz, judge my vow. 0123456789";
+const VARIANTS: { name: string; use: string | null }[] = [{ name: "Asterism Ruby", use: null }];
 
-const cuts = computed(() =>
-  CUTS.filter((cut) => fonts[cut.name]).map((cut) => {
-    const faces = fonts[cut.name]!;
-    const metrics = faces[0]!.metrics;
-    const features = faces[0]!.features;
-    const patches = [...new Set(faces.map((f) => f.patch))];
-    return {
-      ...cut,
-      faces,
-      slug: slugFromFamily(cut.name),
-      metrics,
-      features,
-      patches,
-      weights: [...new Set(faces.map((f) => f.weight))].sort((a, b) => a - b),
-      bytes: faces.reduce((sum, f) => sum + f.bytes, 0),
-      web: faces.filter((f) => f.format === "woff2").length,
-    };
-  }),
-);
+function describe(entry: { name: string; use: string | null }) {
+  const faces = fonts[entry.name]!;
+  return {
+    ...entry,
+    faces,
+    slug: slugFromFamily(entry.name),
+    metrics: faces[0]!.metrics,
+    features: faces[0]!.features,
+    patches: [...new Set(faces.map((f) => f.patch))],
+    weights: [...new Set(faces.map((f) => f.weight))].sort((a, b) => a - b),
+    bytes: faces.reduce((sum, f) => sum + f.bytes, 0),
+    web: faces.filter((f) => f.format === "woff2").length,
+  };
+}
+
+const cuts = computed(() => CUTS.filter((cut) => fonts[cut.name]).map(describe));
+
+const variants = computed(() => VARIANTS.filter((v) => fonts[v.name]).map(describe));
 
 const patches = computed(() => {
   const families = [...new Set(cuts.value.map((c) => c.name))];
@@ -54,7 +53,7 @@ const patches = computed(() => {
     },
     {
       name: "Nerd Fonts",
-      note: "The base cut with icon glyphs added — powerline separators, file-type and brand marks. Same outlines, same measure.",
+      note: "The base cut with icon glyphs added // powerline separators, file-type and brand marks. Same outlines, same measure.",
       glyphs: withNerd.length ? Math.max(...withNerd) : null,
     },
     {
@@ -74,7 +73,8 @@ const inventory = computed(() =>
         a.face.patch.localeCompare(b.face.patch) ||
         a.face.weight - b.face.weight ||
         (a.face.style ?? "normal").localeCompare(b.face.style ?? "normal"),
-    ),
+    )
+    .map((row, i, all) => ({ ...row, first: i === 0 || all[i - 1]!.name !== row.name })),
 );
 
 defineOgImage(
@@ -83,96 +83,153 @@ defineOgImage(
     label: "collection",
     title: "Fonts",
     description:
-      "Asterism — the type this site is set in. One design, four cuts, and the patches on top of them.",
-    meta: `${cuts.value.length} cuts · ${inventory.value.length} faces`,
+      "Asterism // the type this site is set in. One design, four cuts, the patches on top of them, and the language variant beside them.",
+    meta: `${cuts.value.length} cuts // ${inventory.value.length} faces`,
   },
-  { alt: "Asterism — the font catalogue" },
+  { alt: "Asterism // the font catalogue" },
 );
 </script>
 
 <template>
   <div class="fonts sheet-grid">
-    <header class="fonts__head">
+    <header class="fonts__section fonts__head">
       <XLabel variant="accent">Collection</XLabel>
       <h1 class="fonts__title">Fonts</h1>
     </header>
 
-    <XSectionHead label="Cuts" :count="cuts.length" />
+    <section class="fonts__section">
+      <XSectionHead label="Cuts" :count="cuts.length" />
 
-    <ul class="fonts__list" data-reveal-group>
-      <li v-for="cut in cuts" :key="cut.name" class="card">
-        <NuxtLink :to="`/fonts/${cut.slug}`" class="card__link">
-          <div class="card__head">
-            <h2 class="card__name" :style="{ fontFamily: `'${cut.name}'` }">{{ cut.name }}</h2>
+      <ul class="fonts__list" data-reveal-group>
+        <li v-for="cut in cuts" :key="cut.name" class="card">
+          <NuxtLink :to="`/fonts/${cut.slug}`" class="card__link">
+            <div class="card__head">
+              <h2 class="card__name" :style="{ fontFamily: `'${cut.name}'` }">
+                {{ cut.name }}
+              </h2>
 
-            <ul class="card__patches">
-              <li v-for="patch in cut.patches" :key="patch" class="card__patch">{{ patch }}</li>
-            </ul>
-          </div>
+              <ul class="card__patches">
+                <li v-for="patch in cut.patches" :key="patch" class="card__patch">{{ patch }}</li>
+              </ul>
+            </div>
 
-          <p
-            class="card__sample"
-            :style="{ fontFamily: `'${cut.name}'`, fontWeight: cut.weights[0] }"
-          >
-            {{ sample }}
+            <p
+              class="card__sample"
+              :style="{ fontFamily: `'${cut.name}'`, fontWeight: cut.weights[0] }"
+            >
+              {{ sampleFor(cut.faces) }}
+            </p>
+
+            <p class="card__meta meta">
+              <span class="num">{{ cut.metrics.spacing }}</span> //
+              <span class="num">n {{ cut.metrics.measure }}em</span> //
+              <span class="num">{{ cut.metrics.glyphs.toLocaleString() }}</span> glyphs //
+              <span class="num">{{ cut.faces.length }}</span> faces //
+              <span class="num">{{ byteLabel(cut.bytes) }}</span>
+            </p>
+          </NuxtLink>
+        </li>
+      </ul>
+    </section>
+
+    <section v-if="variants.length" class="fonts__section">
+      <XSectionHead label="Language variant" :count="variants.length" />
+
+      <ul class="fonts__list" data-reveal-group>
+        <li v-for="variant in variants" :key="variant.name" class="card">
+          <NuxtLink :to="`/fonts/${variant.slug}`" class="card__link">
+            <div class="card__head">
+              <h2 class="card__name" :style="{ fontFamily: `'${variant.name}'` }">
+                {{ variant.name }}
+              </h2>
+
+              <ul class="card__patches">
+                <li v-for="patch in variant.patches" :key="patch" class="card__patch">
+                  {{ patch }}
+                </li>
+              </ul>
+            </div>
+
+            <p
+              class="card__sample"
+              :style="{ fontFamily: `'${variant.name}'`, fontWeight: variant.weights[0] }"
+            >
+              {{ sampleFor(variant.faces) }}
+            </p>
+
+            <p class="card__meta meta">
+              <span class="num">{{ variant.metrics.spacing }}</span> //
+              <span class="num">n {{ variant.metrics.measure }}em</span> //
+              <span class="num">{{ variant.metrics.glyphs.toLocaleString() }}</span> glyphs //
+              <span class="num">{{ variant.faces.length }}</span> faces //
+              <span class="num">{{ byteLabel(variant.bytes) }}</span>
+            </p>
+          </NuxtLink>
+        </li>
+      </ul>
+    </section>
+
+    <!-- <section class="fonts__section">
+      <XSectionHead label="Patches" :count="patches.length" />
+
+      <ul class="patches" data-reveal-group>
+        <li v-for="patch in patches" :key="patch.name" class="patch">
+          <h3 class="patch__name">{{ patch.name }}</h3>
+
+          <p class="patch__note">{{ patch.note }}</p>
+
+          <p v-if="patch.glyphs" class="patch__meta meta">
+            <span class="num">+{{ patch.glyphs.toLocaleString() }}</span> glyphs
           </p>
+        </li>
+      </ul>
+    </section> -->
 
-          <p class="card__meta meta">
-            <span class="num">{{ cut.metrics.spacing }}</span> ·
-            <span class="num">n {{ cut.metrics.measure }}em</span> ·
-            <span class="num">{{ cut.metrics.glyphs.toLocaleString() }}</span> glyphs ·
-            <span class="num">{{ cut.faces.length }}</span> faces ·
-            <span class="num">{{ byteLabel(cut.bytes) }}</span>
-          </p>
-        </NuxtLink>
-      </li>
-    </ul>
+    <section class="fonts__section">
+      <XSectionHead label="Faces" :count="inventory.length" />
 
-    <XSectionHead label="Patches" :count="patches.length" />
-
-    <ul class="patches" data-reveal-group>
-      <li v-for="patch in patches" :key="patch.name" class="patch">
-        <h3 class="patch__name">{{ patch.name }}</h3>
-
-        <p class="patch__note">{{ patch.note }}</p>
-
-        <p v-if="patch.glyphs" class="patch__meta meta">
-          <span class="num">+{{ patch.glyphs.toLocaleString() }}</span> glyphs
-        </p>
-      </li>
-    </ul>
-
-    <XSectionHead label="Faces" :count="inventory.length" />
-
-    <div class="inventory">
-      <table>
-        <thead>
-          <tr>
-            <th>Cut</th>
-            <th>Patch</th>
-            <th>Weight</th>
-            <th>Style</th>
-            <th>Format</th>
-            <th>Size</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            v-for="row in inventory"
-            :key="`${row.name}-${row.face.patch}-${row.face.weight}-${row.face.style ?? 'normal'}`"
-          >
-            <td>
-              <NuxtLink :to="`/fonts/${row.slug}`">{{ row.name }}</NuxtLink>
-            </td>
-            <td>{{ row.face.patch }}</td>
-            <td class="num">{{ row.face.weight }}</td>
-            <td>{{ row.face.style ?? "normal" }}</td>
-            <td>{{ row.face.format }}</td>
-            <td class="num">{{ byteLabel(row.face.bytes) }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="inventory">
+        <table>
+          <thead>
+            <tr>
+              <th>Family</th>
+              <th>Patch</th>
+              <th>Weight</th>
+              <th>Style</th>
+              <th>Format</th>
+              <th>File</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="row in inventory"
+              :key="`${row.name}-${row.face.patch}-${row.face.weight}-${row.face.style ?? 'normal'}`"
+              :class="{ 'inventory__row--group': row.first }"
+            >
+              <td>
+                <NuxtLink
+                  :to="{
+                    path: `/fonts/${row.slug}`,
+                    query: { w: row.face.weight, s: row.face.style ?? 'normal' },
+                  }"
+                >
+                  {{ row.name }}
+                </NuxtLink>
+              </td>
+              <td>{{ row.face.patch }}</td>
+              <td class="num">{{ row.face.weight }}</td>
+              <td>{{ row.face.style ?? "normal" }}</td>
+              <td>{{ row.face.format }}</td>
+              <td class="num inventory__file">
+                <XLink :href="row.face.src[0]!.url" external>
+                  {{ byteLabel(row.face.bytes) }}
+                </XLink>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -336,9 +393,17 @@ defineOgImage(
 }
 
 .inventory td {
-  padding: 0.3em 0.75em 0.3em 0;
+  padding: 0.3em 0.75em;
   border-bottom: var(--rule-width) solid var(--c-rule-faint);
   white-space: nowrap;
+}
+
+.inventory__row--group td {
+  border-top: var(--rule-width) solid var(--c-rule-strong);
+}
+
+.inventory__row--group:first-child td {
+  border-top: none;
 }
 
 .inventory a {
