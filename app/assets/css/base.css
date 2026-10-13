@@ -253,6 +253,10 @@ legend {
 
 @page {
   size: portrait;
+  margin: 0.5in;
+}
+
+@page :first {
   margin: 0;
 }
 
