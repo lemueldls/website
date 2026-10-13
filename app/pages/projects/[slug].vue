@@ -52,7 +52,10 @@ const neighbours = computed(() => {
 
       <h1 class="detail__title">{{ entry.name }}</h1>
 
-      <p class="detail__dates meta">{{ entry.from }}&ndash;{{ entry.to ?? "Present" }}</p>
+      <span class="detail__date meta">
+        From <span class="detail__date-value">{{ entry.from }}</span> to
+        <span class="detail__date-value">{{ entry.to }}</span>
+      </span>
 
       <div class="detail__rule" aria-hidden="true" />
 
@@ -69,6 +72,12 @@ const neighbours = computed(() => {
         <li v-for="t of entry.technologies" :key="t">{{ t }}</li>
       </ul>
     </header>
+
+    <!-- <XSheet v-if="page">
+      <div class="detail__body prose">
+        <ContentRenderer :value="page" />
+      </div>
+    </XSheet> -->
 
     <XRepository v-if="repoName" :repo="repoName" />
 
@@ -96,6 +105,19 @@ const neighbours = computed(() => {
   font-family: var(--f-display);
   font-size: var(--t-36);
   margin-block: var(--space-3) var(--space-2);
+}
+
+.detail__date {
+  font-size: var(--t-9);
+  color: var(--c-dim);
+  white-space: nowrap;
+  /* flex-shrink: 0; */
+  margin-top: var(--space-2);
+}
+
+.detail__date-value {
+  font-weight: 600;
+  color: var(--c-fg);
 }
 
 .detail__note {

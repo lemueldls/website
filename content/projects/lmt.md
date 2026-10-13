@@ -24,7 +24,7 @@ prove absolute mathematical correctness about your algorithms with them, but the
 ecosystem, and working there means behaving more like a mathematician proving theorems than a
 developer writing application logic.
 
-I wanted a middle ground, so I started building **LMT** — short for **Language of Meaning & Types**,
+I wanted a middle ground, so I started building **LMT**, short for Language of Meaning & Types and
 pronounced _limit_. It is a proof-oriented specification and meta-programming language where types
 and values live in the same logical space.
 
@@ -49,19 +49,19 @@ let x: Positive = 7
 let y = 12 :: SmallEven
 ```
 
-The variable `it` refers to the value being checked. The `::` operator is a verification ascription —
-it tells the compiler that a proof obligation must be formally discharged right at that point before
+The variable `it` refers to the value being checked. The `::` operator is a verification ascription.
+It tells the compiler that a proof obligation must be formally discharged right at that point before
 compilation can succeed. You are not asking nicely. You are demanding.
 
 Subtyping between two refined types requires proving that the premise of one predicate logically
-implies the other within the current typing context. Which means subtyping checking cannot be done
-entirely by structural induction over type trees. The compiler has to extract the predicates,
-substitute the variables, and hand the resulting implication to a constraint solver.
+implies the other within the current typing context. So subtyping checks cannot be done entirely by
+structural induction over type trees. The compiler has to extract the predicates, substitute the
+variables, and hand the resulting implication to a constraint solver.
 
 ## Making the machine do the proving
 
 The work goes to an SMT (Satisfiability Modulo Theories) solver, which decides whether a formula is
-satisfiable within a specific theory — integers, bit-vectors, arrays, strings. Take a function with a
+satisfiable within a specific theory: integers, bit-vectors, arrays, strings. Take a function with a
 precondition and a return type:
 
 ```lmt
@@ -104,7 +104,7 @@ let root: Int | square(it) == 16 = ??
 ```
 
 When the compiler hits `??`, it analyses the constraint (`it * it = 16`) and asks the solver to find
-an existential assignment — discover the witness `4`, or `-4`, and insert it directly.
+an existential assignment: discover the witness `4`, or `-4`, and insert it directly.
 
 That's what makes LMT a cross-language synthesis engine. Define a data structure constraint, or a
 mathematical property a host function needs, and the compiler generates logic that satisfies it.

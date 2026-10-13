@@ -15,17 +15,17 @@ Ezno is a TypeScript type checker and compiler written in Rust. I was a contribu
 year, working on the checker itself rather than on the surrounding tooling.
 
 TypeScript's type system is unusually difficult to reimplement, because it is not a formal type
-system that grew features. It is a set of behaviours that accumulated over a decade around whatever
-real code was doing at the time, and a checker has to reproduce the _behaviour_ — including the
-behaviour nobody considers sensible — to be usable. The specification is the existing checker, and
-the existing checker is a large, subtle TypeScript program.
+system that grew features. It is a set of behaviors that accumulated over a decade around whatever
+real code was doing at the time, and a checker has to reproduce the _behavior_, including the
+behavior nobody considers sensible, to be usable. The specification is the existing checker, and the
+existing checker is a large, subtle TypeScript program.
 
-So most of the work is behaviour archaeology.
+So most of the work is behavior archaeology.
 
 ## Property checking and assignment
 
 A chunk of my work was on property checking and subtype comparison for class and object assignments.
-This sounds like one rule, but it is where a lot of TypeScript's incidental behaviour collects:
+This sounds like one rule, but it is where a lot of TypeScript's incidental behavior collects:
 optional properties, index signatures, fresh object literals, and the difference between a check
 that fails and a check that fails _here but not at declaration site_.
 

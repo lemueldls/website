@@ -11,7 +11,7 @@ github: https://github.com/lemueldls/rubify
 ---
 
 Ruby characters are the small annotations that sit above or beside a base character to show how it
-pronounces or romanises — the pinyin over a Mandarin character, or the furigana over kanji. For
+pronounces or romanises: the pinyin over a Mandarin character, or the furigana over kanji. For
 anyone learning either language from text, they are the difference between reading and guessing.
 
 The problem is that you cannot just render them as normal text. Ruby is a _font-level_ feature,
@@ -25,18 +25,17 @@ Rubify takes any font and produces an annotated version of it.
 
 A base glyph with a ruby annotation is not a glyph with text drawn over it. The base character is
 narrower than the space it occupies, because the annotation it carries needs room above it. The
-outline has to shift, the advance width has to change, and the relationship between the two has to be
-consistent across the entire character set — otherwise a character that gets a short annotation in one
-place looks fine and the same character with a long annotation collides in another.
+outline has to shift, the advance width has to change, and the relationship between the two has to
+be consistent across the entire character set. Otherwise a character that gets a short annotation in
+one place looks fine and the same character with a long annotation collides in another.
 
 Getting that wrong does not look like a font bug. It looks like a font.
 
 ## Every romanization, all at once
 
-The romanisation methods differ in ways that matter if you actually read with them: Pinyin for
-Mandarin, with its tones; Hanyu Pinyin, the same characters with tone marks; romaji for Japanese.
-A person learning Mandarin wants the Mandarin one, and a person learning Japanese wants the other,
-and rarely wants both at once.
+The romanisation methods differ in ways that matter if you read with them: Pinyin for Mandarin, with
+its tones, and romaji for Japanese. A person learning Mandarin wants the Mandarin one, and a person
+learning Japanese wants the other, and rarely wants both at once.
 
 Rubify builds the fonts annotated with each supported romanisation independently, so what you install
 matches what you are learning. The distribution is multiple families, multiple weight and style
@@ -44,10 +43,10 @@ combinations, all annotated, all usable.
 
 ## The part nobody warns you about
 
-A font with all of these annotations, across all the supported weights and styles, is enormous. The
-distribution-size problem is real, and it turned out to need its own tooling: a custom collection
-builder that produces font collections (`ttc`) rather than separate font binaries, plus
-optimization passes so the shipped artifact is not the intermediate one.
+A font with all of these annotations, across all the supported weights and styles, is enormous.
+Distribution size needed its own tooling: a custom collection builder that produces font collections
+(`ttc`) rather than separate font binaries, plus optimization passes so the shipped artifact is not
+the intermediate one.
 
 That last part is the least glamorous thing in the project and probably the thing most users notice.
 

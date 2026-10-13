@@ -91,7 +91,10 @@ function toggleTechnology(name: string) {
             <h2 class="project__name">
               <XLink :to="`/projects/${p.slug}`">{{ p.name }}</XLink>
             </h2>
-            <span class="meta project__dates num">{{ p.from }}&ndash;{{ p.to ?? "Present" }}</span>
+            <span class="project__date meta">
+              From <span class="project__date-value">{{ p.from }}</span> to
+              <span class="project__date-value">{{ p.to }}</span>
+            </span>
           </div>
 
           <div class="project__meta">
@@ -250,8 +253,16 @@ function toggleTechnology(name: string) {
   font-weight: 600;
 }
 
-.project__dates {
-  flex-shrink: 0;
+.project__date {
+  font-size: var(--t-9);
+  color: var(--c-dim);
+  white-space: nowrap;
+  /* flex-shrink: 0; */
+}
+
+.project__date-value {
+  font-weight: 600;
+  color: var(--c-fg);
 }
 
 .project__meta {
@@ -259,7 +270,7 @@ function toggleTechnology(name: string) {
   flex-wrap: wrap;
   align-items: baseline;
   gap: var(--space-1) var(--space-4);
-  margin-top: var(--space-1);
+  margin-top: var(--space-2);
   font-size: var(--t-8);
   letter-spacing: 0.06em;
   text-transform: lowercase;
@@ -271,7 +282,7 @@ function toggleTechnology(name: string) {
 }
 
 .project__description {
-  margin-top: var(--space-3);
+  margin-top: var(--space-2);
   max-width: var(--measure-text);
   font-family: var(--f-display);
   font-style: italic;
@@ -283,7 +294,7 @@ function toggleTechnology(name: string) {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-1) var(--space-2);
-  margin: var(--space-3) 0 0;
+  margin: var(--space-2) 0 0;
   padding: 0;
   font-family: var(--f-label);
   font-size: var(--t-6);
@@ -293,7 +304,7 @@ function toggleTechnology(name: string) {
 }
 
 .project__bullets {
-  margin: var(--space-3) 0 0;
+  margin: var(--space-2) 0 0;
   padding-left: 1.3em;
   max-width: var(--measure-text);
 }

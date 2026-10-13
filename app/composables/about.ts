@@ -1,3 +1,6 @@
+import { computed, toValue } from "vue";
+import type { ComputedRef, MaybeRefOrGetter } from "vue";
+
 interface Social {
   title: string;
   href: string;
@@ -385,10 +388,10 @@ const projects = [
     from: "August 2026",
     to: "Present",
     contributions: [
-      "Designed the workspace as a queryable document model, so pages, categories, daily notes, and sections can be read from inside a document with #typbase.query.",
-      "Built an inline WYSIWYG editor where compiled output replaces the source as you type, on CodeMirror 6 with a Typst 0.15 WebAssembly engine.",
-      "Extracted Mnemo's editor and engine into a reusable core, then rebuilt the application on top of it with Loro CRDTs, atproto Spaces sync, and a plugin system written in Typst itself.",
-      "Shipped standalone export to HTML, PDF, SVG, and a compilable Typst project, so a page is portable outside the app with typst compile --root ..",
+      "Designed the workspace as a queryable document model so pages and categories can be read from inside.",
+      "Built an inline WYSIWYG editor where compiled output replaces the source as you type with a WebAssembly engine.",
+      "Extracted editor and engine into a reusable core so any other application can be built on top of it.",
+      "Shipped standalone export to HTML, PDF, SVG, and a compilable Typst project, so a page is portable outside the app.",
     ],
     technologies: [
       "Rust",
@@ -397,11 +400,11 @@ const projects = [
       "CodeMirror",
       "TypeScript",
       "Nuxt",
-      "Loro",
-      "atproto",
+      // "Loro",
+      // "atproto",
       "SQLite",
       "Tauri",
-      "Harper",
+      // "Harper",
     ],
   },
   {
