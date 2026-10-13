@@ -13,28 +13,39 @@ const elsewhere = computed(() => [...socials]);
     <div class="ftr__inner">
       <div class="ftr__col">
         <XLabel>Webrings</XLabel>
-        <div class="ftr__rings">
-          <span v-for="ring in rings" :key="ring.name" class="ftr__ring">
-            <XButton
-              variant="ghost"
-              size="sm"
-              square
-              :href="ring.prev"
-              :title="`Previous in ${ring.name}`"
-            >
-              <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="xs" />
-            </XButton>
-            <XLink :href="ring.home">{{ ring.name }}</XLink>
-            <XButton
-              variant="ghost"
-              size="sm"
-              square
-              :href="ring.next"
-              :title="`Next in ${ring.name}`"
-            >
-              <XIcon name="material-symbols:keyboard-double-arrow-right-sharp" size="xs" />
-            </XButton>
-          </span>
+        <div class="ftr__rings no-print-chrome">
+          <div v-for="ring in rings" :key="ring.name" class="ftr__ring">
+            <div class="ftr__ring-nav">
+              <XButton
+                variant="ghost"
+                size="sm"
+                square
+                :href="ring.prev"
+                :title="`Previous in ${ring.name}`"
+              >
+                <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="xs" />
+              </XButton>
+              <XLink :href="ring.home">{{ ring.name }}</XLink>
+              <XButton
+                variant="ghost"
+                size="sm"
+                square
+                :href="ring.rand"
+                :title="`Random site in ${ring.name}`"
+              >
+                <XIcon name="material-symbols:casino-sharp" size="xs" />
+              </XButton>
+              <XButton
+                variant="ghost"
+                size="sm"
+                square
+                :href="ring.next"
+                :title="`Next in ${ring.name}`"
+              >
+                <XIcon name="material-symbols:keyboard-double-arrow-right-sharp" size="xs" />
+              </XButton>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -61,7 +72,9 @@ const elsewhere = computed(() => [...socials]);
           <!-- <span class="meta">lem.my</span> -->
         </span>
 
-        <XVisitorCounter />
+        <span class="ftr__meta-badges">
+          <XVisitorCounter />
+        </span>
       </p>
     </div>
   </footer>
@@ -93,8 +106,8 @@ const elsewhere = computed(() => [...socials]);
 
 .ftr__inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  gap: var(--space-6) var(--space-7);
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--space-4);
   max-width: var(--sheet-max);
   margin-inline: auto;
   padding: 0 clamp(var(--space-4), 3vw, var(--space-8)) var(--space-7);
@@ -120,10 +133,21 @@ const elsewhere = computed(() => [...socials]);
 }
 
 .ftr__ring {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-1);
   font-size: var(--t-8);
+}
+
+.ftr__ring-badge {
+  align-self: flex-start;
+}
+
+.ftr__ring-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
 }
 
 .ftr__socials {
@@ -131,7 +155,7 @@ const elsewhere = computed(() => [...socials]);
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: var(--space-2);
   font-size: var(--t-8);
 }
 
@@ -152,7 +176,6 @@ const elsewhere = computed(() => [...socials]);
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
-
   justify-content: space-between;
   padding-top: var(--space-4);
   border-top: 1px solid var(--c-rule);
@@ -163,6 +186,13 @@ const elsewhere = computed(() => [...socials]);
   display: inline-flex;
   align-items: baseline;
   gap: 0.5em;
+}
+
+.ftr__meta-badges {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
 .ftr__dot {

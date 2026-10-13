@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { selected, meta } = useWallpaper();
 const { resolvedTheme } = useTheme();
+const permalink = useWallpaperPermalink();
 
 const mounted = useMounted();
 
@@ -35,8 +36,7 @@ const liveAccent = computed<string | null>(() => {
 
 <template>
   <div class="palette">
-    <XLabel v-if="mounted && selected">Palette // {{ selected }}</XLabel>
-    <XLabel v-else>Palette</XLabel>
+    <XLabel>Palette</XLabel>
 
     <div v-if="mounted && swatches.length" class="palette__row">
       <span
@@ -50,6 +50,14 @@ const liveAccent = computed<string | null>(() => {
     </div>
 
     <p v-else class="palette__empty meta">No wallpaper selected.</p>
+
+    <XLabel v-if="mounted && selected">
+      <XLink
+        :to="mounted ? permalink : WALLPAPERS_PATH"
+        :title="mounted && selected ? `Permalink for ${selected}` : 'The wallpaper collection'"
+        >{{ selected }}
+      </XLink>
+    </XLabel>
   </div>
 </template>
 
@@ -57,6 +65,7 @@ const liveAccent = computed<string | null>(() => {
 .palette {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: var(--space-2);
 }
 

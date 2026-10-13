@@ -192,6 +192,16 @@ const useSharedWallpaper = createSharedComposable(() => {
 
 export const useWallpaper: () => WallpaperState = useSharedWallpaper;
 
+export const WALLPAPERS_PATH = "/wallpapers";
+
+export function wallpaperPermalink(file: string): string {
+  return `${WALLPAPERS_PATH}?i=${encodeURIComponent(file)}`;
+}
+
+export function useWallpaperPermalink(): ComputedRef<string> {
+  const { selected } = useWallpaper();
+  return computed(() => (selected.value ? wallpaperPermalink(selected.value) : WALLPAPERS_PATH));
+}
 export const useWallpapers = createSharedComposable(() => wallpapers);
 export const useWallpaperFiles = createSharedComposable(() => wallpaperFiles);
 export const useWallpaperTags = createSharedComposable(() => sortedWallpaperTags);

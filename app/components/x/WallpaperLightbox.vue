@@ -50,6 +50,27 @@ const paletteVars = computed<Record<string, string>>(() => {
     meta.palette.length > 1 ? `linear-gradient(90deg, ${meta.palette.join(", ")})` : "none";
   return vars;
 });
+
+const stageImage = ref<HTMLImageElement>();
+
+function settle(img: HTMLImageElement | undefined) {
+  if (img && img.complete && img.naturalWidth > 0) img.setAttribute("data-loaded", "");
+}
+
+function markLoaded(event: Event) {
+  settle(event.target as HTMLImageElement);
+}
+
+onMounted(() => settle(stageImage.value));
+
+watch([() => props.meta?.file, variant], async () => {
+  const img = stageImage.value;
+  if (!img) return;
+
+  img.removeAttribute("data-loaded");
+  await nextTick();
+  settle(img);
+});
 </script>
 
 <template>
@@ -63,6 +84,8 @@ const paletteVars = computed<Record<string, string>>(() => {
           :width="meta.width"
           :height="meta.height"
           class="lightbox__image"
+          ref="stageImage"
+          @load="markLoaded"
           loading="eager"
           decoding="async"
         />
@@ -74,7 +97,7 @@ const paletteVars = computed<Record<string, string>>(() => {
           aria-label="Previous wallpaper"
           @click="emit('step', -1)"
         >
-          <XIcon name="material-symbols:chevron-left-sharp" />
+          <XIcon name="material-symbols:chevron-left-sharp" size="lg" />
         </XButton>
         <XButton
           square
@@ -83,7 +106,7 @@ const paletteVars = computed<Record<string, string>>(() => {
           aria-label="Next wallpaper"
           @click="emit('step', 1)"
         >
-          <XIcon name="material-symbols:chevron-right-sharp" />
+          <XIcon name="material-symbols:chevron-right-sharp" size="lg" />
         </XButton>
       </figure>
 
@@ -249,6 +272,12 @@ const paletteVars = computed<Record<string, string>>(() => {
   object-fit: contain;
   background: var(--c-code);
   border: var(--rule-width) solid var(--c-rule);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.lightbox__image[data-loaded] {
+  opacity: 1;
 }
 
 .lightbox__facts {

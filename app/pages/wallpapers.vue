@@ -46,6 +46,29 @@ const { resolvedTheme } = useTheme();
 const activeTag = ref<string | null>(null);
 const search = ref("");
 
+const route = useRoute();
+const router = useRouter();
+
+function syncPermalink() {
+  if (!import.meta.client) return;
+  if (!selected.value && !route.query.i) return;
+
+  const query = { ...route.query };
+  if (selected.value) query.i = selected.value;
+  else delete query.i;
+
+  router.replace({ query });
+}
+
+onMounted(() => {
+  const file = route.query.i;
+  if (typeof file === "string" && file in wallpapers) setWallpaper(file);
+
+  syncPermalink();
+});
+
+watch(selected, syncPermalink);
+
 const variant = ref<WallpaperVariant>(resolvedTheme.value === "paper" ? "light" : "dark");
 
 const PAGE_SIZE = 24;
@@ -383,10 +406,8 @@ useHead(heroLink);
             @click="openLightbox(selected!)"
           >
             <img
-              :src="
-                wallpaperThumbUrl(selected!, variant, HERO_WIDTHS[0], { quality: HERO_QUALITY })
-              "
-              :srcset="wallpaperSrcSet(selected!, variant, HERO_WIDTHS, { quality: HERO_QUALITY })"
+              :src="wallpaperThumbUrl(selected!, 'base', HERO_WIDTHS[0], { quality: HERO_QUALITY })"
+              :srcset="wallpaperSrcSet(selected!, 'base', HERO_WIDTHS, { quality: HERO_QUALITY })"
               :sizes="HERO_SIZES"
               :alt="selected!"
               :width="currentMeta.width"
@@ -421,13 +442,13 @@ useHead(heroLink);
               />
             </div>
 
-            <p class="gallery__applied-note">
+            <!-- <p class="gallery__applied-note">
               Accent set to <code>{{ currentMeta.accent }}</code
               >, clamped for contrast on both themes.
-            </p>
+            </p> -->
 
             <div class="gallery__applied-actions">
-              <XButton :href="wallpaperUrl(selected!, variant)" variant="sheet" external>
+              <XButton :href="wallpaperUrl(selected!, 'base')" variant="sheet" external>
                 Download
                 <template #trailing>
                   <XIcon name="material-symbols:download-sharp" />
