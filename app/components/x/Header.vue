@@ -13,8 +13,6 @@ const nav = [
 ];
 
 const menuOpen = ref(false);
-const navId = useId();
-
 const menuLabel = computed(() => (menuOpen.value ? "Close menu" : "Open menu"));
 
 const route = useRoute();
@@ -24,16 +22,6 @@ watch(
     menuOpen.value = false;
   },
 );
-
-watch(menuOpen, (open) => {
-  if (!open || import.meta.server) return;
-  const onKey = (e: KeyboardEvent) => {
-    if (e.key !== "Escape") return;
-    menuOpen.value = false;
-    window.removeEventListener("keydown", onKey);
-  };
-  window.addEventListener("keydown", onKey);
-});
 
 const headerEl = useTemplateRef<HTMLElement>("headerEl");
 
@@ -87,71 +75,94 @@ onBeforeUnmount(() => {
 
 <template>
   <header ref="headerEl" class="hdr">
-    <div class="hdr__inner">
-      <NuxtLink
-        to="/"
-        class="hdr__mark"
-        :class="{ 'hdr__mark--stepped': wordmarkStepped }"
-        title="Lemuel De Los Santos"
-      >
-        <XSigil class="hdr__sigil" size="1.5em" />
-        <span class="hdr__wordmark">Lemuel <span class="hdr__last-name">De Los Santos</span></span>
-      </NuxtLink>
+    <PopoverRoot v-model:open="menuOpen">
+      <PopoverAnchor as-child>
+        <div class="hdr__inner">
+          <NuxtLink
+            to="/"
+            class="hdr__mark"
+            :class="{ 'hdr__mark--stepped': wordmarkStepped }"
+            title="Lemuel De Los Santos"
+          >
+            <XSigil class="hdr__sigil" size="1.5em" />
+            <span class="hdr__wordmark"
+              >Lemuel <span class="hdr__last-name">De Los Santos</span></span
+            >
+          </NuxtLink>
 
-      <nav
-        :id="navId"
-        class="hdr__nav"
-        :class="{ 'hdr__nav--open': menuOpen }"
-        aria-label="Primary"
-      >
-        <span class="mark mark--tl" />
-        <span class="mark mark--tr" />
-        <span class="mark mark--bl" />
-        <span class="mark mark--br" />
+          <nav class="hdr__nav" aria-label="Primary">
+            <NuxtLink
+              v-for="item in nav"
+              :key="item.to"
+              :to="item.to"
+              class="hdr__link"
+              active-class="hdr__link--active"
+            >
+              {{ item.label }}
+            </NuxtLink>
+          </nav>
 
-        <NuxtLink
-          v-for="item in nav"
-          :key="item.to"
-          :to="item.to"
-          class="hdr__link"
-          active-class="hdr__link--active"
+          <div class="hdr__tools">
+            <XButton variant="ghost" square :title="themeLabel" @click="toggleTheme()">
+              <XIcon
+                :name="
+                  isDark
+                    ? 'material-symbols:dark-mode-outline-sharp'
+                    : 'material-symbols:light-mode-outline-sharp'
+                "
+              />
+            </XButton>
+
+            <PopoverTrigger as-child>
+              <XButton
+                class="hdr__menu"
+                variant="ghost"
+                square
+                :title="menuLabel"
+                aria-label="Menu"
+              >
+                <XIcon
+                  :name="menuOpen ? 'material-symbols:close-sharp' : 'material-symbols:menu-sharp'"
+                />
+              </XButton>
+            </PopoverTrigger>
+          </div>
+        </div>
+      </PopoverAnchor>
+
+      <PopoverPortal>
+        <PopoverContent
+          class="hdr__sheet"
+          side="bottom"
+          align="start"
+          :side-offset="8"
+          :align-offset="12"
+          :collision-padding="12"
         >
-          {{ item.label }}
-        </NuxtLink>
-      </nav>
+          <span class="mark mark--tl" />
+          <span class="mark mark--tr" />
+          <span class="mark mark--bl" />
+          <span class="mark mark--br" />
 
-      <div class="hdr__tools">
-        <XButton variant="ghost" square :title="themeLabel" @click="toggleTheme()">
-          <XIcon
-            :name="
-              isDark
-                ? 'material-symbols:dark-mode-outline-sharp'
-                : 'material-symbols:light-mode-outline-sharp'
-            "
-          />
-        </XButton>
-
-        <XButton
-          class="hdr__menu"
-          variant="ghost"
-          square
-          :title="menuLabel"
-          :aria-label="menuLabel"
-          :aria-expanded="menuOpen"
-          :aria-controls="navId"
-          @click="menuOpen = !menuOpen"
-        >
-          <XIcon
-            :name="menuOpen ? 'material-symbols:close-sharp' : 'material-symbols:menu-sharp'"
-          />
-        </XButton>
-      </div>
-    </div>
+          <nav class="hdr__popnav" aria-label="Primary">
+            <NuxtLink
+              v-for="item in nav"
+              :key="item.to"
+              :to="item.to"
+              class="hdr__link"
+              active-class="hdr__link--active"
+            >
+              {{ item.label }}
+            </NuxtLink>
+          </nav>
+        </PopoverContent>
+      </PopoverPortal>
+    </PopoverRoot>
     <div class="hdr__rule" aria-hidden="true" />
   </header>
 </template>
 
-<style scoped>
+<style>
 .hdr {
   position: sticky;
   top: 0;
@@ -232,10 +243,6 @@ onBeforeUnmount(() => {
   margin-left: auto;
 }
 
-.hdr__nav > .mark {
-  display: none;
-}
-
 .hdr__link {
   font-family: var(--f-label);
   font-size: var(--t-8);
@@ -279,54 +286,7 @@ onBeforeUnmount(() => {
   }
 
   .hdr__nav {
-    position: absolute;
-    top: calc(100% + var(--space-2));
-    left: 0;
-    right: 0;
-    z-index: var(--z-header);
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    margin: var(--space-2) var(--space-3);
-    padding: 0;
-    background: var(--c-sheet);
-    border: var(--rule-width) solid var(--c-rule-strong);
-    box-shadow: 0 var(--space-3) var(--space-8) color-mix(in srgb, var(--c-bg) 45%, transparent);
-
-    opacity: 0;
-    visibility: hidden;
-    translate: 0 calc(var(--space-2) * -1);
-    transition:
-      opacity var(--dur) var(--ease-folio),
-      translate var(--dur) var(--ease-folio),
-      visibility var(--dur) var(--ease);
-  }
-
-  .hdr__nav--open {
-    opacity: 1;
-    visibility: visible;
-    translate: 0 0;
-  }
-
-  .hdr__nav > .mark {
-    display: block;
-  }
-
-  .hdr__link {
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--t-9);
-    border-bottom: var(--rule-width) solid var(--c-rule);
-  }
-
-  .hdr__link:last-of-type {
-    border-bottom: none;
-  }
-
-  .hdr__link--active {
-    box-shadow: none;
-    color: var(--c-accent);
-    background: var(--c-sheet-2);
-    box-shadow: inset 3px 0 0 var(--c-accent);
+    display: none;
   }
 }
 
@@ -334,5 +294,57 @@ onBeforeUnmount(() => {
   .hdr__wordmark {
     display: none;
   }
+}
+
+.hdr__sheet {
+  position: relative;
+  z-index: var(--z-command);
+  margin-top: var(--space-2);
+  width: calc(var(--reka-popover-trigger-width) - 1.5rem);
+  background: var(--c-sheet);
+  border: var(--rule-width) solid var(--c-rule-strong);
+  box-shadow: 0 var(--space-3) var(--space-8) color-mix(in srgb, var(--c-bg) 45%, transparent);
+}
+
+.hdr__sheet > .mark {
+  --mark-color: var(--c-rule-strong);
+}
+
+.hdr__sheet[data-state="open"] {
+  animation: hdr-sheet-in var(--dur) var(--ease-folio) both;
+}
+
+@keyframes hdr-sheet-in {
+  from {
+    opacity: 0;
+    translate: 0 calc(var(--space-2) * -1);
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.hdr__popnav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.hdr__popnav .hdr__link {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--t-9);
+  border-bottom: var(--rule-width) solid var(--c-rule);
+}
+
+.hdr__popnav .hdr__link:last-of-type {
+  border-bottom: none;
+}
+
+.hdr__popnav .hdr__link--active {
+  color: var(--c-accent);
+  background: var(--c-sheet-2);
+  box-shadow: inset 3px 0 0 var(--c-accent);
 }
 </style>
