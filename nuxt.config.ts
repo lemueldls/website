@@ -116,10 +116,13 @@ export default defineNuxtConfig({
     prerender: {
       routes: ["/"],
       crawlLinks: true,
+      ignore: ["/cv.pdf", "/cv"],
     },
   },
 
   routeRules: {
+    "/cv.pdf": { prerender: false },
+
     "/p/**": { redirect: "/projects/**" },
     "/project/**": { redirect: "/projects/**" },
 
@@ -193,4 +196,8 @@ export default defineNuxtConfig({
   },
 
   sitemap: { zeroRuntime: true },
+
+  linkChecker: {
+    excludeLinks: [/^\/cv\.pdf(\?|$)/, /^\/fonts\/[\w-]+\?/],
+  },
 });
