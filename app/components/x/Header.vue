@@ -273,7 +273,7 @@ onBeforeUnmount(() => {
 }
 
 .hdr__menu {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 720px) {
@@ -282,7 +282,7 @@ onBeforeUnmount(() => {
   }
 
   .hdr__menu {
-    display: inline-flex;
+    display: inline-flex !important;
   }
 
   .hdr__nav {
