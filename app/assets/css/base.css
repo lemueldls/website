@@ -285,6 +285,10 @@ legend {
     display: none !important;
   }
 
+  .hdr__sheet {
+    display: none !important;
+  }
+
   [data-reveal],
   [data-reveal]:not([data-revealed]) {
     opacity: 1 !important;
