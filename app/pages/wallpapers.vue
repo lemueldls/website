@@ -15,23 +15,17 @@ import {
   type WallpaperVariant,
 } from "#shared/assets";
 
-// Plain re-exports rather than the shared composables: they hold static module
-// data, so there is nothing to share and no Nuxt instance is involved.
 import { wallpapers, wallpaperFiles, sortedWallpaperTags, variants } from "~/composables/wallpaper";
 
 useSeoMeta({ title: "Wallpapers" });
 
-defineOgImage(
-  "Root",
-  {
-    label: "collection",
-    title: "Wallpapers",
-    description:
-      "Every wallpaper published in light and dark, each one able to retint the whole site.",
-    meta: `${wallpaperFiles.length} wallpapers`,
-  },
-  { alt: "Wallpapers // the collection, and the site's accent palette" },
-);
+defineOgImage("Root", {
+  label: "collection",
+  title: "Wallpapers",
+  description:
+    "Collection of wallpaper published in light and dark, each one able to retint the whole site.",
+  meta: `${wallpaperFiles.length} wallpapers`,
+});
 
 const {
   selected,
@@ -450,9 +444,7 @@ useHead(heroLink);
             <div class="gallery__applied-actions">
               <XButton :href="wallpaperUrl(selected!, 'base')" variant="sheet" external>
                 Download
-                <template #trailing>
-                  <XIcon name="material-symbols:download-sharp" />
-                </template>
+                <XIcon name="material-symbols:download-sharp" />
               </XButton>
               <XButton variant="ghost" @click="setWallpaper(null)">Remove</XButton>
             </div>
@@ -516,79 +508,79 @@ useHead(heroLink);
       </ul>
     </XSheet>
 
-    <XSectionHead label="Gallery" :count="matches.length">
+    <XSection label="Gallery" :count="matches.length">
       <template #tail>
         <span class="meta" aria-live="polite">showing {{ visible.length }}</span>
       </template>
-    </XSectionHead>
 
-    <ul ref="gridEl" class="gallery__grid" data-reveal-group>
-      <li
-        v-for="file in visible"
-        :key="file"
-        class="tile"
-        :class="{
-          'tile--selected': selected === file,
-          'tile--previewing': previewFile === file,
-        }"
-        @mouseenter="onTileEnter(file, $event)"
-        @mouseleave="onTileLeave()"
-        @focusin="onTileEnter(file, $event)"
-        @focusout="onTileLeave()"
-      >
-        <div class="tile__foot">
-          <button
-            type="button"
-            class="tile__hit"
-            :title="`Inspect ${file}`"
-            @click="openLightbox(file)"
-          >
-            <span class="tile__frame" :style="frameStyle(file)">
-              <img
-                :src="wallpaperThumbUrl(file, variant, HERO_WIDTHS[0]!)"
-                :srcset="wallpaperSrcSet(file, variant, TILE_WIDTHS)"
-                :sizes="TILE_SIZES"
-                :alt="file"
-                :width="wallpapers[file]!.width"
-                :height="wallpapers[file]!.height"
-                class="tile__image"
-                loading="lazy"
-                decoding="async"
-                @load="markLoaded"
-              />
+      <ul ref="gridEl" class="gallery__grid" data-reveal-group>
+        <li
+          v-for="file in visible"
+          :key="file"
+          class="tile"
+          :class="{
+            'tile--selected': selected === file,
+            'tile--previewing': previewFile === file,
+          }"
+          @mouseenter="onTileEnter(file, $event)"
+          @mouseleave="onTileLeave()"
+          @focusin="onTileEnter(file, $event)"
+          @focusout="onTileLeave()"
+        >
+          <div class="tile__foot">
+            <button
+              type="button"
+              class="tile__hit"
+              :title="`Inspect ${file}`"
+              @click="openLightbox(file)"
+            >
+              <span class="tile__frame" :style="frameStyle(file)">
+                <img
+                  :src="wallpaperThumbUrl(file, variant, HERO_WIDTHS[0]!)"
+                  :srcset="wallpaperSrcSet(file, variant, TILE_WIDTHS)"
+                  :sizes="TILE_SIZES"
+                  :alt="file"
+                  :width="wallpapers[file]!.width"
+                  :height="wallpapers[file]!.height"
+                  class="tile__image"
+                  loading="lazy"
+                  decoding="async"
+                  @load="markLoaded"
+                />
 
-              <span v-if="selected === file" class="tile__badge">
-                <XIcon name="material-symbols:check-sharp" size="sm" />
-                In use
+                <span v-if="selected === file" class="tile__badge">
+                  <XIcon name="material-symbols:check-sharp" size="sm" />
+                  In use
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
 
-          <div class="tile__caption">
-            <span class="tile__name" :title="file">{{ file }}</span>
+            <div class="tile__caption">
+              <span class="tile__name" :title="file">{{ file }}</span>
 
-            <XButton
-              v-if="selected !== file"
-              variant="sheet"
-              size="sm"
-              :title="`Set ${file} as the site wallpaper`"
-              @click="setWallpaper(file)"
-            >
-              Apply
-            </XButton>
-            <XButton
-              v-else
-              variant="ghost"
-              size="sm"
-              :title="`Stop using ${file}`"
-              @click="setWallpaper(null)"
-            >
-              Remove
-            </XButton>
+              <XButton
+                v-if="selected !== file"
+                variant="sheet"
+                size="sm"
+                :title="`Set ${file} as the site wallpaper`"
+                @click="setWallpaper(file)"
+              >
+                Apply
+              </XButton>
+              <XButton
+                v-else
+                variant="ghost"
+                size="sm"
+                :title="`Stop using ${file}`"
+                @click="setWallpaper(null)"
+              >
+                Remove
+              </XButton>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </XSection>
 
     <p v-if="matches.length === 0" class="gallery__empty meta">Nothing matches that filter.</p>
 

@@ -25,7 +25,7 @@ const elsewhere = computed(() => [...socials]);
               >
                 <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="xs" />
               </XButton>
-              <XLink :href="ring.home">{{ ring.name }}</XLink>
+              <XLink class="ftr__ring-link" :href="ring.home">{{ ring.name }}</XLink>
               <XButton
                 variant="ghost"
                 size="sm"
@@ -146,8 +146,12 @@ const elsewhere = computed(() => [...socials]);
 .ftr__ring-nav {
   display: flex;
   align-items: center;
-  gap: var(--space-1);
+  /* gap: var(--space-1); */
   flex-wrap: wrap;
+}
+
+.ftr__ring-link {
+  margin: 0 var(--space-1);
 }
 
 .ftr__socials {

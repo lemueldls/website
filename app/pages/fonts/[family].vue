@@ -36,16 +36,12 @@ const weights = computed(() =>
   [...new Set(faces.value.map((f) => f.weight))].sort((a, b) => a - b),
 );
 
-defineOgImage(
-  "Root",
-  {
-    label: "font",
-    title: family.value,
-    description: `A live specimen: size, leading, tracking, weight, style, and OpenType features.`,
-    meta: `${metrics.value.glyphs.toLocaleString()} glyphs // ${metrics.value.spacing} // n ${metrics.value.measure}em`,
-  },
-  { alt: `${family.value} // a live type specimen` },
-);
+defineOgImage("Root", {
+  label: "font",
+  title: family.value,
+  description: `A live specimen: size, leading, tracking, weight, style, and OpenType features.`,
+  meta: `${metrics.value.glyphs.toLocaleString()} glyphs // ${metrics.value.spacing} // n ${metrics.value.measure}em`,
+});
 
 const style = ref<"normal" | "italic">("normal");
 const weight = ref(normalFaces.value[0]?.weight ?? weights.value[0] ?? 400);
@@ -244,44 +240,46 @@ function useAsDisplayFace() {
       <p :style="previewStyle">{{ sampleText || "Type something..." }}</p>
     </XSheet>
 
-    <XSectionHead label="Faces" :count="faces.length" />
-    <div class="family__inventory">
-      <table>
-        <thead>
-          <tr>
-            <th>Patch</th>
-            <th>Weight</th>
-            <th>Style</th>
-            <th>Format</th>
-            <th>File</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            v-for="face in faces"
-            :key="`${face.patch}-${face.weight}-${face.style ?? 'normal'}`"
-            :class="{ 'family__inventory-row--active': isActive(face) }"
-          >
-            <td>{{ face.patch }}</td>
-            <td class="num">{{ face.weight }}</td>
-            <td>{{ face.style ?? "normal" }}</td>
-            <td>{{ face.format }}</td>
-            <td class="num">
-              <XLink :href="face.src[0]!.url" external>
-                {{ byteLabel(face.bytes) }}
-              </XLink>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <XSection label="Faces" :count="faces.length">
+      <div class="family__inventory">
+        <table>
+          <thead>
+            <tr>
+              <th>Patch</th>
+              <th>Weight</th>
+              <th>Style</th>
+              <th>Format</th>
+              <th>File</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="face in faces"
+              :key="`${face.patch}-${face.weight}-${face.style ?? 'normal'}`"
+              :class="{ 'family__inventory-row--active': isActive(face) }"
+            >
+              <td>{{ face.patch }}</td>
+              <td class="num">{{ face.weight }}</td>
+              <td>{{ face.style ?? "normal" }}</td>
+              <td>{{ face.format }}</td>
+              <td class="num">
+                <XLink :href="face.src[0]!.url" external>
+                  {{ byteLabel(face.bytes) }}
+                </XLink>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </XSection>
 
-    <XSectionHead label="Glyphs" />
-    <XSheet class="family__glyphs">
-      <p :style="{ ...previewStyle, fontSize: `${Math.min(size, 28)}px`, maxWidth: 'none' }">
-        {{ glyphRows }}
-      </p>
-    </XSheet>
+    <XSection label="Glyphs">
+      <XSheet class="family__glyphs">
+        <p :style="{ ...previewStyle, fontSize: `${Math.min(size, 28)}px`, maxWidth: 'none' }">
+          {{ glyphRows }}
+        </p>
+      </XSheet>
+    </XSection>
 
     <XLink to="/fonts" class="family__back">
       <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All fonts

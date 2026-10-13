@@ -4,16 +4,12 @@ useSeoMeta({
   description: "Math and Computer Science Research Student",
 });
 
-defineOgImage(
-  "Root",
-  {
-    label: "index",
-    title: "Personal Website",
-    description: "Math and Computer Science Research Student",
-    meta: "full stack // systems // typography",
-  },
-  { alt: "Lemuel De Los Santos // personal website and portfolio" },
-);
+defineOgImage("Root", {
+  label: "index",
+  title: "Personal Website",
+  description: "Math and Computer Science Research Student",
+  meta: "full stack // systems // typography",
+});
 
 const { projects, socials, email, rings } = useAbout();
 

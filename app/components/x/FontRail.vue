@@ -41,6 +41,7 @@ onMounted(() => {
     >
       <XIcon
         :name="open ? 'material-symbols:menu-open-sharp' : 'material-symbols:type-specimen-sharp'"
+        size="sm"
       />
     </XButton>
 

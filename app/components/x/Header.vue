@@ -128,7 +128,6 @@ onBeforeUnmount(() => {
                 ? 'material-symbols:dark-mode-outline-sharp'
                 : 'material-symbols:light-mode-outline-sharp'
             "
-            size="lg"
           />
         </XButton>
 
@@ -144,7 +143,6 @@ onBeforeUnmount(() => {
         >
           <XIcon
             :name="menuOpen ? 'material-symbols:close-sharp' : 'material-symbols:menu-sharp'"
-            size="lg"
           />
         </XButton>
       </div>

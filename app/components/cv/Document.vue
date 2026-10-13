@@ -126,7 +126,6 @@ const sections = computed(() =>
       {
         ...definition,
         entries,
-        /** How many of its entries reach the paper — what the head counts. */
         count: definition.entries ? entries.filter((entry) => entry.printable).length : undefined,
       },
     ];
@@ -299,7 +298,11 @@ const headWouldPrint = (section: {
 
         <ul v-else-if="section.key === 'talks'" class="cv__bullets">
           <li v-for="t of talks" :key="t.slug">
-            <strong>{{ t.title }}</strong> — {{ t.description }} ({{ t.date }})
+            <div class="cv__entry-row">
+              <strong>{{ t.title }}</strong>
+              <span class="cv__entry-date-value">{{ t.date }}</span>
+            </div>
+            <span>{{ t.description }}</span>
           </li>
         </ul>
 
@@ -527,12 +530,6 @@ a.cv__entry-name:hover {
   text-underline-offset: var(--space-1);
 }
 
-/*
- * The stack. `list-style: none` and a flex row of its own, because the outer
- * row wraps as a whole and these chips have to wrap among themselves — a long
- * Rust × Kotlin × WebAssembly list needs to break mid-list without dragging the
- * description down with it.
- */
 .cv__tech {
   list-style: none;
   display: flex;
@@ -547,11 +544,6 @@ a.cv__entry-name:hover {
   color: var(--c-dimmer);
 }
 
-/*
- * The repo URL, on paper only. Zero cost on screen — the name above links to the
- * project's own page, which carries the same URL — and on paper it is the only
- * way to reach the code. It trails whatever else is on the row.
- */
 .cv__repo {
   font-size: var(--t-8);
   color: var(--c-dim);

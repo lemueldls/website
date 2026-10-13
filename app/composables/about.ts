@@ -4,11 +4,16 @@ interface Social {
   icon: string;
 }
 
-interface Ring {
+export type RingSlug = "catppuccin" | "nix" | "recurse";
+
+export interface RingLink {
+  slug: RingSlug;
+  short: string;
   name: string;
   home: string;
   next: string;
   prev: string;
+  rand: string;
 }
 
 export interface Education {
@@ -21,7 +26,6 @@ export interface Education {
   to?: string;
   img?: { src: string; alt: string };
   award?: string;
-
   hidePrint?: boolean;
 }
 
@@ -37,7 +41,6 @@ export interface Experience {
   contributions: string[];
   technologies: string[];
   research?: boolean;
-
   hidePrint?: boolean;
 }
 
@@ -45,7 +48,7 @@ export interface Project extends Experience {
   github: { href: string; text: string };
 }
 
-export const socials: Social[] = [
+const socials: Social[] = [
   { title: "Bluesky", href: "https://bsky.app/profile/lem.my", icon: "simple-icons:bluesky" },
   {
     title: "LinkedIn",
@@ -55,34 +58,43 @@ export const socials: Social[] = [
   { title: "GitHub", href: "https://github.com/lemueldls", icon: "simple-icons:github" },
 ];
 
-export const email: Social = {
+const email: Social = {
   title: "hi@lem.my",
   href: "mailto:hi@lem.my",
   icon: "material-symbols:mail-outline-sharp",
 };
 
-export const rings: Ring[] = [
+const rings: RingLink[] = [
   {
+    slug: "catppuccin",
+    short: "Catppuccin",
     name: "Catppuccin Webring",
     home: "https://ctp-webr.ing",
     prev: "https://ctp-webr.ing/lem.my/previous",
     next: "https://ctp-webr.ing/lem.my/next",
+    rand: "https://ctp-webr.ing/random",
   },
   {
+    slug: "nix",
+    short: "Nix",
     name: "Nix Webring",
     home: "https://nixwebr.ing",
     prev: "https://nixwebr.ing/prev/lem.my",
     next: "https://nixwebr.ing/next/lem.my",
+    rand: "https://nixwebr.ing/rand",
   },
   {
+    slug: "recurse",
+    short: "Recurse",
     name: "Recurse Webring",
     home: "https://ring.recurse.com",
     prev: "https://ring.recurse.com/prev?id=89",
     next: "https://ring.recurse.com/next?id=89",
+    rand: "https://ring.recurse.com/rand",
   },
 ];
 
-export const education = [
+const education = [
   {
     name: "The City College of New York",
     slug: "ccny",
@@ -106,7 +118,7 @@ export const education = [
 
 export type EducationSlug = (typeof education)[number]["slug"];
 
-export const relevantCourses = [
+const relevantCourses = [
   { subjectArea: "CSC", catalogNumber: "10400", title: "Discrete Mathematical Structures" },
   { subjectArea: "CSC", catalogNumber: "21200", title: "Data Structures" },
   { subjectArea: "CSC", catalogNumber: "22000", title: "Algorithms" },
@@ -128,7 +140,7 @@ export const relevantCourses = [
   { subjectArea: "CSC", catalogNumber: "48000", title: "Computer Security" },
 ] as const;
 
-export const qualifications = {
+const qualifications = {
   languages: [
     "HTML5",
     "CSS",
@@ -165,6 +177,13 @@ export const qualifications = {
   ],
 } as const;
 
+const flagged = (entry: object, flag: string): boolean =>
+  flag in entry && (entry as Record<string, unknown>)[flag] === true;
+
+const isResearchEntry = (entry: object): boolean => flagged(entry, "research");
+
+export { isResearchEntry };
+
 const acmCcny = {
   slug: "acm-ccny",
   name: "Association for Computing Machinery",
@@ -191,7 +210,7 @@ const acmCcny = {
   ],
 } as const satisfies Experience;
 
-export const experiences = [
+const experiences = [
   {
     name: "Taylor | Graham",
     slug: "taylor-graham",
@@ -354,7 +373,7 @@ export const experiences = [
 
 export type ExperienceSlug = (typeof experiences)[number]["slug"];
 
-export const projects = [
+const projects = [
   {
     name: "Typbase",
     slug: "typbase",
@@ -393,7 +412,7 @@ export const projects = [
       "Koffi is a novel cross-platform framework and integrated ecosystem for Rust × Kotlin Multiplatform projects.",
     role: "Creator",
     from: "May 2026",
-    to: "September 2026",
+    to: "Present",
     contributions: [
       "Created an FFI bindings generator for Rust/Kotlin interoperability across JVM (FFM/JNI) and native targets.",
       "Invented a static metadata extraction engine that embeds type/function descriptors into compiled binaries using link-time reflection, generating C interop definitions and Kotlin wrappers without manual header maintenance.",
@@ -681,7 +700,7 @@ export const projects = [
 
 export type ProjectSlug = (typeof projects)[number]["slug"];
 
-export const affiliations = [
+const affiliations = [
   { ...acmCcny, role: "Vice President" },
   {
     name: "Google Developer Groups on Campus",
@@ -718,7 +737,7 @@ export const affiliations = [
 
 export type AffiliationSlug = (typeof affiliations)[number]["slug"];
 
-export const talks = [
+const talks = [
   {
     slug: "tbsscrg.pdf",
     title: "Type-Based Synthesis of Sound and Complete Random Generators",
@@ -735,9 +754,9 @@ export interface Preset {
   affiliations: AffiliationSlug[];
 }
 
-export const presets: Record<string, Preset> = {
+const presets: Record<string, Preset> = {
   default: {
-    education: ["ccny", "afse"],
+    education: ["ccny"],
     experiences: ["taylor-graham", "upenn-repl", "woven-toyota"],
     projects: ["mnemo", "kaetram", "my-afse"],
     affiliations: ["acm-ccny"],
@@ -750,6 +769,21 @@ export const presets: Record<string, Preset> = {
   },
 };
 
+const printHiddenFor = (
+  preset: ComputedRef<Preset>,
+  key: "education" | "experiences" | "projects" | "affiliations",
+): (<T extends { slug: string }>(entry: T) => T & { hidePrint: boolean }) => {
+  const carried = (slug: string) => {
+    const slugs: readonly string[] = preset.value[key];
+    return slugs.includes(slug);
+  };
+
+  const hidden = (entry: { slug: string }) => flagged(entry, "hidePrint") || !carried(entry.slug);
+
+  return <T extends { slug: string }>(entry: T) =>
+    ({ ...entry, hidePrint: hidden(entry) }) as T & { hidePrint: boolean };
+};
+
 export function useAbout(presetKey: MaybeRefOrGetter<string> = "default") {
   const preset = computed(() => presets[toValue(presetKey)] ?? presets.default!);
 
@@ -759,28 +793,15 @@ export function useAbout(presetKey: MaybeRefOrGetter<string> = "default") {
     email,
     rings,
 
-    education: computed<Education[]>(() =>
-      education.map<Education>((e) => ({
-        ...e,
-        hidePrint: !preset.value.education.includes(e.slug),
-      })),
-    ),
+    education: computed<Education[]>(() => education.map(printHiddenFor(preset, "education"))),
     relevantCourses,
     qualifications,
     experiences: computed<Experience[]>(() =>
-      experiences.map<Experience>((e) => ({
-        ...e,
-        hidePrint: !preset.value.experiences.includes(e.slug),
-      })),
+      experiences.map(printHiddenFor(preset, "experiences")),
     ),
-    projects: computed<Project[]>(() =>
-      projects.map<Project>((p) => ({ ...p, hidePrint: !preset.value.projects.includes(p.slug) })),
-    ),
+    projects: computed<Project[]>(() => projects.map(printHiddenFor(preset, "projects"))),
     affiliations: computed<Experience[]>(() =>
-      affiliations.map<Experience>((a) => ({
-        ...a,
-        hidePrint: !preset.value.affiliations.includes(a.slug),
-      })),
+      affiliations.map(printHiddenFor(preset, "affiliations")),
     ),
     talks,
   };

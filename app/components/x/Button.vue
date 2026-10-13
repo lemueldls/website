@@ -112,8 +112,8 @@ const tag = computed(() => {
 }
 
 .xbtn--accent {
+  border: none;
   background: var(--c-accent);
-  border-color: var(--c-accent);
   color: var(--c-accent-contrast);
 }
 .xbtn--accent:hover:not(:disabled) {
@@ -134,20 +134,5 @@ const tag = computed(() => {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-}
-
-.xbtn :deep(.xicon) {
-  width: var(--icon-xs);
-  height: var(--icon-xs);
-}
-
-.xbtn--md :deep(.xicon) {
-  width: var(--icon-sm);
-  height: var(--icon-sm);
-}
-
-.xbtn--lg :deep(.xicon) {
-  width: var(--icon-md);
-  height: var(--icon-md);
 }
 </style>

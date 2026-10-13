@@ -51,7 +51,7 @@ const selectedLabel = computed(
         </SelectIcon>
       </SelectTrigger>
 
-      <SelectPortal>
+      <SelectPortal class="xselect__portal">
         <SelectContent
           class="xselect__content"
           position="popper"
@@ -74,7 +74,7 @@ const selectedLabel = computed(
             >
               <span class="xselect__indicator">
                 <SelectItemIndicator>
-                  <XIcon name="material-symbols:check-sharp" size="xs" />
+                  <XIcon name="material-symbols:check-sharp" />
                 </SelectItemIndicator>
               </span>
               <SelectItemText>{{ opt.label }}</SelectItemText>
@@ -138,6 +138,8 @@ const selectedLabel = computed(
 
 .xselect__value {
   flex: 1;
+  text-align: left;
+  margin-left: var(--space-1);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -154,13 +156,14 @@ const selectedLabel = computed(
 }
 
 .xselect__content {
+  margin: var(--space-1) 0;
   z-index: var(--z-command);
   min-width: var(--reka-select-trigger-width);
   max-height: var(--reka-select-content-available-height);
   background: var(--c-sheet);
   border: var(--rule-width) solid var(--c-rule-strong);
   box-shadow: 0 var(--space-2) var(--space-7) color-mix(in srgb, var(--c-bg) 55%, transparent);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .xselect__viewport {
@@ -170,11 +173,11 @@ const selectedLabel = computed(
 .xselect__item {
   display: flex;
   align-items: center;
-  gap: 0.4em;
+  gap: var(--space-2);
   font-family: var(--f-label);
   font-size: var(--t-9);
   color: var(--c-dim);
-  padding: 0.35em 0.5em;
+  padding: var(--space-2);
   cursor: pointer;
   user-select: none;
   transition:
@@ -194,8 +197,8 @@ const selectedLabel = computed(
 .xselect__indicator {
   display: inline-grid;
   place-items: center;
-  width: 1em;
-  height: 1em;
+  width: 1rem;
+  height: 1rem;
   flex-shrink: 0;
 }
 

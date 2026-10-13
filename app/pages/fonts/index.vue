@@ -79,17 +79,12 @@ const inventory = computed(() =>
     .map((row, i, all) => ({ ...row, first: i === 0 || all[i - 1]!.name !== row.name })),
 );
 
-defineOgImage(
-  "Root",
-  {
-    label: "collection",
-    title: "Fonts",
-    description:
-      "Asterism // the type this site is set in. One design, four cuts, the patches on top of them, and the language variant beside them.",
-    meta: `${cuts.value.length} cuts // ${inventory.value.length} faces`,
-  },
-  { alt: "Asterism // the font catalogue" },
-);
+defineOgImage("Root", {
+  label: "collection",
+  title: "Fonts",
+  description: "Unified design font with patches and language variants.",
+  meta: `${cuts.value.length} cuts // ${inventory.value.length} faces`,
+});
 </script>
 
 <template>
@@ -99,9 +94,7 @@ defineOgImage(
       <h1 class="fonts__title">Fonts</h1>
     </header>
 
-    <section class="fonts__section">
-      <XSectionHead label="Cuts" :count="cuts.length" />
-
+    <XSection class="fonts__section" label="Cuts" :count="cuts.length">
       <ul class="fonts__list" data-reveal-group>
         <li v-for="cut in cuts" :key="cut.name" class="card">
           <NuxtLink :to="`/fonts/${cut.slug}`" class="card__link">
@@ -143,11 +136,14 @@ defineOgImage(
           </NuxtLink>
         </li>
       </ul>
-    </section>
+    </XSection>
 
-    <section v-if="variants.length" class="fonts__section">
-      <XSectionHead label="Language variant" :count="variants.length" />
-
+    <XSection
+      v-if="variants.length"
+      class="fonts__section"
+      label="Language variant"
+      :count="variants.length"
+    >
       <ul class="fonts__list" data-reveal-group>
         <li v-for="variant in variants" :key="variant.name" class="card">
           <NuxtLink :to="`/fonts/${variant.slug}`" class="card__link">
@@ -177,11 +173,7 @@ defineOgImage(
               <span class="num">{{ variant.faces.length }}</span> faces //
               <span class="num">{{ byteLabel(variant.bytes) }}</span>
             </p>
-            <!--
-              One link per annotation set, because they are two different fonts
-              rather than two weights of one.
-            -->
-            <p class="card__archive">
+            <!-- <p class="card__archive">
               <XLink
                 v-for="a in variant.archives"
                 :key="a.format + a.patch"
@@ -191,15 +183,13 @@ defineOgImage(
                 Download {{ a.patch.toLowerCase() }} {{ a.format }}
                 <span class="meta"> // {{ byteLabel(a.bytes) }} // with the licence</span>
               </XLink>
-            </p>
+            </p> -->
           </NuxtLink>
         </li>
       </ul>
-    </section>
+    </XSection>
 
-    <!-- <section class="fonts__section">
-      <XSectionHead label="Patches" :count="patches.length" />
-
+    <!-- <XSection label="Patches" :count="patches.length" class="fonts__section">
       <ul class="patches" data-reveal-group>
         <li v-for="patch in patches" :key="patch.name" class="patch">
           <h3 class="patch__name">{{ patch.name }}</h3>
@@ -211,11 +201,9 @@ defineOgImage(
           </p>
         </li>
       </ul>
-    </section> -->
+    </XSection> -->
 
-    <section class="fonts__section">
-      <XSectionHead label="Faces" :count="inventory.length" />
-
+    <XSection label="Faces" :count="inventory.length" class="fonts__section">
       <div class="inventory">
         <table>
           <thead>
@@ -257,7 +245,7 @@ defineOgImage(
           </tbody>
         </table>
       </div>
-    </section>
+    </XSection>
   </div>
 </template>
 

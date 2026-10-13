@@ -31,52 +31,52 @@ const fetchedNote = computed(() => {
 
 <template>
   <section v-if="stats || loading" class="ghstats">
-    <XSectionHead label="GitHub">
+    <XSection label="GitHub">
       <template v-if="stats?.stale" #tail>
         <span class="meta">last known</span>
       </template>
-    </XSectionHead>
 
-    <XSheet class="ghstats__sheet">
-      <div class="ghstats__totals">
-        <XStatCard
-          v-for="entry in totals"
-          :key="entry.key"
-          :label="entry.label"
-          :value="entry.value"
-          :note="entry.key === 'commits' ? repoNote : undefined"
-        />
-      </div>
-
-      <template v-if="stats && stats.languages.length">
-        <div class="ghstats__rule" aria-hidden="true" />
-
-        <div class="ghstats__row">
-          <div class="ghstats__col">
-            <XLabel variant="accent">Languages</XLabel>
-            <!-- <p class="meta ghstats__caption">Share of all bytes, by primary language</p> -->
-            <XLanguageShare :languages="stats.languages" />
-          </div>
-
-          <div class="ghstats__col">
-            <XLabel variant="accent">Most starred</XLabel>
-            <p class="meta ghstats__caption">Open source, by stars</p>
-
-            <ol class="repos">
-              <li v-for="repo in stats.topRepos" :key="repo.name" class="repo">
-                <span class="repo__name">{{ repo.name }}</span>
-                <span class="repo__stars num">{{ repo.stars }}</span>
-              </li>
-            </ol>
-          </div>
+      <XSheet class="ghstats__sheet">
+        <div class="ghstats__totals">
+          <XStatCard
+            v-for="entry in totals"
+            :key="entry.key"
+            :label="entry.label"
+            :value="entry.value"
+            :note="entry.key === 'commits' ? repoNote : undefined"
+          />
         </div>
-      </template>
 
-      <!-- <div v-if="fetchedNote" class="ghstats__foot meta">
+        <template v-if="stats && stats.languages.length">
+          <div class="ghstats__rule" aria-hidden="true" />
+
+          <div class="ghstats__row">
+            <div class="ghstats__col">
+              <XLabel variant="accent">Languages</XLabel>
+              <!-- <p class="meta ghstats__caption">Share of all bytes, by primary language</p> -->
+              <XLanguageShare :languages="stats.languages" />
+            </div>
+
+            <div class="ghstats__col">
+              <XLabel variant="accent">Most starred</XLabel>
+              <p class="meta ghstats__caption">Open source, by stars</p>
+
+              <ol class="repos">
+                <li v-for="repo in stats.topRepos" :key="repo.name" class="repo">
+                  <span class="repo__name">{{ repo.name }}</span>
+                  <span class="repo__stars num">{{ repo.stars }}</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </template>
+
+        <!-- <div v-if="fetchedNote" class="ghstats__foot meta">
         {{ fetchedNote }}
         <span v-if="stats?.stale" class="ghstats__stale"> // unavailable, showing cached</span>
       </div> -->
-    </XSheet>
+      </XSheet>
+    </XSection>
   </section>
 </template>
 

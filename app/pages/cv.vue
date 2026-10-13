@@ -34,20 +34,15 @@ const cvSpan = computed(() => {
     .filter((year) => Number.isFinite(year));
 
   const first = years.length > 0 ? Math.min(...years) : null;
-  return first ? `${first} — present` : "lem.my";
+  return first ? `since ${first}` : "lem.my";
 });
 
-defineOgImage(
-  "Root",
-  {
-    label: "curriculum vitae",
-    title: "Curriculum Vitae",
-    description:
-      "Education, research, and engineering experience — set in Besley and Asterism, print-ready.",
-    meta: cvSpan,
-  },
-  { alt: "Curriculum Vitae — Lemuel De Los Santos" },
-);
+defineOgImage("Root", {
+  label: "curriculum vitae",
+  title: "Curriculum Vitae",
+  description: "Education, research, and engineering experience.",
+  meta: cvSpan,
+});
 
 const showPreview = ref(false);
 const pickerOpen = ref(false);

@@ -263,12 +263,6 @@ legend {
     color: #1e1e2e !important;
   }
 
-  /*
-   * `display: none`, not the old scale-to-nothing: a selector that only shrinks
-   * and whitens its target still puts the text in the PDF, where a reader and a
-   * parser both find it. The CV's own print selection leans on this — a section
-   * the visitor switched off must be gone from the paper, not merely invisible.
-   */
   .no-print {
     display: none !important;
   }
@@ -278,12 +272,6 @@ legend {
     display: none !important;
   }
 
-  /*
-   * `print-only` reveals what the page hides — but a section can be both at
-   * once, and when it is, print's own "no" is the answer. `:not(.no-print)` is
-   * that arbitration: keywords and talks are print-only by nature *and* off by
-   * default, so they appear nowhere until asked for.
-   */
   .print-only:not(.no-print) {
     display: revert !important;
   }
@@ -314,6 +302,18 @@ legend {
     animation: none !important;
   }
 
+  .ground:has(.cv) {
+    padding-block: 0 !important;
+  }
+
+  .cv {
+    padding-inline: 0 !important;
+  }
+
+  .print-sheet .cv__page {
+    padding: var(--space-8) !important;
+  }
+
   .print-sheet {
     background: #ffffff !important;
     border-width: 0 !important;
@@ -330,7 +330,8 @@ legend {
     background-repeat: repeat-x !important;
   }
 
-  .print-sheet .cv__head {
+  /* .print-sheet .cv__head, */
+  .print-sheet .cv-head {
     border-bottom-width: 1px !important;
     border-bottom-style: solid !important;
     border-bottom-color: #bcc0cc !important;
@@ -349,36 +350,12 @@ legend {
     break-inside: avoid;
   }
 
-  /*
-   * A section head should never end a page on its own. This is a best-effort
-   * guard rather than a guarantee: the CSS says the right thing — the head asks
-   * not to be separated, and the following block answers — but Chromium, which
-   * is what prints the PDF, does not act on `avoid` for `break-before`/`after`,
-   * so a head can still land alone at the foot of a page.
-   *
-   * The rule is kept for the engines that do honour it, and the target is
-   * `.cv__section-body` rather than a sibling entry, because the first entry
-   * under a head is often one print does not show — a rule aimed at that would
-   * land on an element with no box at all.
-   */
   .print-sheet .cv-head {
     break-after: avoid;
   }
 
   .print-sheet .cv-head + * {
     break-before: avoid;
-  }
-
-  /* The leader is restated here because the blanket reset above strips every
-     background on the sheet. Without it the rule would print as nothing. */
-  .print-sheet .cv-head__rule {
-    background-image: radial-gradient(
-      circle at center,
-      #bcc0cc 0.5px,
-      transparent 0.6px
-    ) !important;
-    background-size: 0.35em 1px !important;
-    background-repeat: repeat-x !important;
   }
 }
 

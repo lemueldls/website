@@ -13,17 +13,12 @@ const allTechnologies = computed(() => {
     .map(([name, count]) => ({ name, count }));
 });
 
-defineOgImage(
-  "Root",
-  {
-    label: "projects",
-    title: "Projects",
-    description:
-      "Compilers, type systems, synthesis engines, tooling, and the typography to write about them.",
-    meta: `${projects.value.length} projects // ${allTechnologies.value.length} technologies`,
-  },
-  { alt: "Projects // the register of work" },
-);
+defineOgImage("Root", {
+  label: "collection",
+  title: "Projects",
+  description: "A collection of the software, research, and design work I've done.",
+  meta: `${projects.value.length} projects // ${allTechnologies.value.length} technologies`,
+});
 
 const active = reactive(new Set<string>());
 const query = useRouteQuery<string>("t", "");
@@ -56,33 +51,33 @@ function toggleTechnology(name: string) {
 <template>
   <div class="projects sheet-grid">
     <header class="projects__head">
-      <p class="label label--accent">Register</p>
+      <p class="label label--accent">collection</p>
       <h1 class="projects__title">Projects</h1>
     </header>
 
-    <XSectionHead label="Technologies" :count="allTechnologies.length" />
-
-    <ul class="projects__tags">
-      <li v-for="t of allTechnologies" :key="t.name">
-        <button
-          type="button"
-          class="tag"
-          :class="{ 'tag--active': active.has(t.name) }"
-          :aria-pressed="active.has(t.name)"
-          @click="toggleTechnology(t.name)"
-        >
-          {{ t.name }}
-          <span class="num tag__count">{{ t.count }}</span>
-        </button>
-      </li>
-    </ul>
+    <XSection label="Technologies" :count="allTechnologies.length">
+      <ul class="projects__tags">
+        <li v-for="t of allTechnologies" :key="t.name">
+          <button
+            type="button"
+            class="tag"
+            :class="{ 'tag--active': active.has(t.name) }"
+            :aria-pressed="active.has(t.name)"
+            @click="toggleTechnology(t.name)"
+          >
+            {{ t.name }}
+            <span class="num tag__count">{{ t.count }}</span>
+          </button>
+        </li>
+      </ul>
+    </XSection>
 
     <div class="projects__toolbar">
       <span class="meta">
         <strong class="num">{{ filtered.length }}</strong>
         of <span class="num">{{ projects.length }}</span>
       </span>
-      <XButton variant="ghost" size="sm" :disabled="active.size === 0" @click="active.clear()">
+      <XButton variant="ghost" :disabled="active.size === 0" @click="active.clear()">
         Clear filters
       </XButton>
     </div>
@@ -212,6 +207,12 @@ function toggleTechnology(name: string) {
   display: grid;
   grid-template-columns: var(--space-6) minmax(0, 1fr);
   gap: 0 var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .project {
+    gap: 0;
+  }
 }
 
 .project__spine {

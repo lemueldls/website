@@ -15,16 +15,12 @@ const { readingTime } = useReadingTime();
 
 useSeoMeta({ title: "Writing" });
 
-defineOgImage(
-  "Root",
-  {
-    label: "blog",
-    title: "Writing",
-    description: "Long-form pieces on compilers, type systems, and the tools built around them.",
-    meta: `${sorted.value.length} articles`,
-  },
-  { alt: "Writing // every article on the site" },
-);
+defineOgImage("Root", {
+  label: "blog",
+  title: "Writing",
+  description: "Long-form pieces on compilers, type systems, and the tools built around them.",
+  meta: `${sorted.value.length} articles`,
+});
 </script>
 
 <template>
@@ -36,28 +32,28 @@ defineOgImage(
       <div class="writing__rule" aria-hidden="true" />
     </header>
 
-    <XSectionHead label="Articles" :count="sorted.length" />
+    <XSection label="Articles" :count="sorted.length">
+      <ol class="writing__list" data-reveal-group>
+        <li v-for="post in sorted" :key="post.path" class="entry">
+          <NuxtLink :to="`/writing/${slugOf(post)}`" class="entry__link">
+            <div class="entry__meta">
+              <span class="meta entry__date num">{{ post.date }}</span>
+              <span class="meta entry__dot" aria-hidden="true">//</span>
+              <span class="meta entry__time num">{{ readingTime(post.body) }} min read</span>
+            </div>
 
-    <ol class="writing__list" data-reveal-group>
-      <li v-for="post in sorted" :key="post.path" class="entry">
-        <NuxtLink :to="`/writing/${slugOf(post)}`" class="entry__link">
-          <div class="entry__meta">
-            <span class="meta entry__date num">{{ post.date }}</span>
-            <span class="meta entry__dot" aria-hidden="true">//</span>
-            <span class="meta entry__time num">{{ readingTime(post.body) }} min read</span>
-          </div>
+            <h2 class="entry__title">{{ post.title }}</h2>
 
-          <h2 class="entry__title">{{ post.title }}</h2>
+            <p v-if="post.description" class="entry__description">{{ post.description }}</p>
 
-          <p v-if="post.description" class="entry__description">{{ post.description }}</p>
-
-          <span class="entry__more">
-            Read
-            <XIcon name="material-symbols:arrow-forward-sharp" size="xs" />
-          </span>
-        </NuxtLink>
-      </li>
-    </ol>
+            <span class="entry__more">
+              Read
+              <XIcon name="material-symbols:arrow-forward-sharp" size="xs" />
+            </span>
+          </NuxtLink>
+        </li>
+      </ol>
+    </XSection>
   </div>
 </template>
 

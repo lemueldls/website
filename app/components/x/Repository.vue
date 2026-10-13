@@ -43,69 +43,69 @@ function formatYear(iso: string): string {
 
 <template>
   <section v-if="meta" class="repo">
-    <XSectionHead label="Repository">
+    <XSection label="Repository">
       <template v-if="meta.archived" #tail>
         <span class="meta">archived</span>
       </template>
-    </XSectionHead>
 
-    <XSheet class="repo__sheet">
-      <dl class="repo__facts">
-        <div class="repo__fact">
-          <dt class="label">Stars</dt>
-          <dd class="repo__value num">{{ meta.stars }}</dd>
+      <XSheet class="repo__sheet">
+        <dl class="repo__facts">
+          <div class="repo__fact">
+            <dt class="label">Stars</dt>
+            <dd class="repo__value num">{{ meta.stars }}</dd>
+          </div>
+
+          <div class="repo__fact">
+            <dt class="label">Forks</dt>
+            <dd class="repo__value num">{{ meta.forks }}</dd>
+          </div>
+
+          <div class="repo__fact">
+            <dt class="label">Open issues</dt>
+            <dd class="repo__value num">{{ meta.openIssues }}</dd>
+          </div>
+
+          <div class="repo__fact">
+            <dt class="label">Licence</dt>
+            <dd class="repo__value">
+              {{ meta.license ?? "None" }}
+            </dd>
+          </div>
+
+          <div class="repo__fact">
+            <dt class="label">Language</dt>
+            <dd class="repo__value">{{ meta.language ?? "—" }}</dd>
+          </div>
+
+          <div class="repo__fact">
+            <dt class="label">Last push</dt>
+            <dd class="repo__value num">{{ pushed }}</dd>
+          </div>
+        </dl>
+
+        <div v-if="languageShares.length" class="repo__langs">
+          <span class="label">Breakdown</span>
+
+          <XLanguageShare :languages="languageShares" />
         </div>
 
-        <div class="repo__fact">
-          <dt class="label">Forks</dt>
-          <dd class="repo__value num">{{ meta.forks }}</dd>
-        </div>
+        <ul v-if="meta.topics.length" class="repo__topics">
+          <li v-for="topic in meta.topics" :key="topic" class="repo__topic">
+            {{ topic }}
+          </li>
+        </ul>
 
-        <div class="repo__fact">
-          <dt class="label">Open issues</dt>
-          <dd class="repo__value num">{{ meta.openIssues }}</dd>
-        </div>
+        <template v-if="readmeBody">
+          <div class="repo__rule" aria-hidden="true" />
 
-        <div class="repo__fact">
-          <dt class="label">Licence</dt>
-          <dd class="repo__value">
-            {{ meta.license ?? "None" }}
-          </dd>
-        </div>
+          <h2 class="repo__readme-heading label">README</h2>
 
-        <div class="repo__fact">
-          <dt class="label">Language</dt>
-          <dd class="repo__value">{{ meta.language ?? "—" }}</dd>
-        </div>
-
-        <div class="repo__fact">
-          <dt class="label">Last push</dt>
-          <dd class="repo__value num">{{ pushed }}</dd>
-        </div>
-      </dl>
-
-      <div v-if="languageShares.length" class="repo__langs">
-        <span class="label">Breakdown</span>
-
-        <XLanguageShare :languages="languageShares" />
-      </div>
-
-      <ul v-if="meta.topics.length" class="repo__topics">
-        <li v-for="topic in meta.topics" :key="topic" class="repo__topic">
-          {{ topic }}
-        </li>
-      </ul>
-
-      <template v-if="readmeBody">
-        <div class="repo__rule" aria-hidden="true" />
-
-        <h2 class="repo__readme-heading label">README</h2>
-
-        <div class="prose prose--wide repo__readme">
-          <ContentRenderer :value="{ body: readmeBody, title: 'README' }" />
-        </div>
-      </template>
-    </XSheet>
+          <div class="prose prose--wide repo__readme">
+            <ContentRenderer :value="{ body: readmeBody, title: 'README' }" />
+          </div>
+        </template>
+      </XSheet>
+    </XSection>
   </section>
 </template>
 
