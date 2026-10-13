@@ -195,7 +195,7 @@ export const useWallpaper: () => WallpaperState = useSharedWallpaper;
 export const WALLPAPERS_PATH = "/wallpapers";
 
 export function wallpaperPermalink(file: string): string {
-  return `${WALLPAPERS_PATH}?i=${encodeURIComponent(file)}`;
+  return `${WALLPAPERS_PATH}?a=${encodeURIComponent(file)}`;
 }
 
 export function useWallpaperPermalink(): ComputedRef<string> {

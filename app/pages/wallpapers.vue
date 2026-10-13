@@ -45,17 +45,17 @@ const router = useRouter();
 
 function syncPermalink() {
   if (!import.meta.client) return;
-  if (!selected.value && !route.query.i) return;
+  if (!selected.value && !route.query.a) return;
 
   const query = { ...route.query };
-  if (selected.value) query.i = selected.value;
-  else delete query.i;
+  if (selected.value) query.a = selected.value;
+  else delete query.a;
 
   router.replace({ query });
 }
 
 onMounted(() => {
-  const file = route.query.i;
+  const file = route.query.a;
   if (typeof file === "string" && file in wallpapers) setWallpaper(file);
 
   syncPermalink();
@@ -91,18 +91,63 @@ watch([activeTag, search, variant], () => {
   shown.value = PAGE_SIZE;
 });
 
+const INSPECT_KEY = "i";
+
 const lightboxOpen = ref(false);
 const lightboxFile = ref<string | null>(null);
 const lightboxVariant = ref<WallpaperVariant>("base");
+
+let inspectPushed = false;
+
+let openVariant: WallpaperVariant | undefined;
+
+function inspectQuery(): Record<string, string | number | null | Array<string | number | null>> {
+  return { ...route.query };
+}
+
+function withoutInspect(): Record<string, string | number | null | Array<string | number | null>> {
+  return Object.fromEntries(Object.entries(inspectQuery()).filter(([key]) => key !== INSPECT_KEY));
+}
+
+watch(
+  () => route.query[INSPECT_KEY],
+  (file) => {
+    if (typeof file !== "string" || !(file in wallpapers)) {
+      lightboxOpen.value = false;
+      inspectPushed = false;
+      return;
+    }
+
+    if (!lightboxOpen.value) {
+      lightboxVariant.value = openVariant ?? (resolvedTheme.value === "light" ? "light" : "dark");
+      openVariant = undefined;
+    }
+    lightboxFile.value = file;
+    lightboxOpen.value = true;
+  },
+  { immediate: true },
+);
+
+watch(lightboxOpen, (open, wasOpen) => {
+  if (open || !wasOpen) return;
+  if (route.query[INSPECT_KEY] === undefined) return;
+
+  if (inspectPushed) {
+    inspectPushed = false;
+    router.back();
+  } else {
+    router.replace({ query: withoutInspect() });
+  }
+});
 
 const lightboxMeta = computed<WallpaperMeta | null>(() =>
   lightboxFile.value ? (wallpapers[lightboxFile.value] ?? null) : null,
 );
 
-function openLightbox(file: string, variant: WallpaperVariant = "base") {
-  lightboxFile.value = file;
-  lightboxVariant.value = variant ?? (resolvedTheme.value === "light" ? "light" : "dark");
-  lightboxOpen.value = true;
+function openLightbox(file: string, variant?: WallpaperVariant) {
+  openVariant = variant;
+  inspectPushed = true;
+  router.push({ query: { ...inspectQuery(), [INSPECT_KEY]: file } });
 }
 
 function stepLightbox(delta: number) {
@@ -110,7 +155,7 @@ function stepLightbox(delta: number) {
   const index = lightboxFile.value ? list.indexOf(lightboxFile.value) : -1;
   if (index < 0 || list.length === 0) return;
   const next = list[(index + delta + list.length) % list.length];
-  if (next) lightboxFile.value = next;
+  if (next) router.replace({ query: { ...inspectQuery(), [INSPECT_KEY]: next } });
 }
 
 function onLightboxApply(apply: boolean) {
