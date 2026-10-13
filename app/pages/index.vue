@@ -6,8 +6,8 @@ useSeoMeta({
 
 defineOgImage("Root", {
   label: "index",
-  title: "Personal Website",
-  description: "Math and Computer Science Research Student",
+  title: "Home",
+  description: "Personal website and portfolio.",
   meta: "full stack // systems // typography",
 });
 
