@@ -6,10 +6,16 @@ const OUT_DIR = resolve(import.meta.dirname, "../app/assets");
 const CHECK = process.argv.includes("--check");
 
 const EXPECTED = {
-  "fonts.meta.json": (meta: unknown) => {
-    const families = meta as Record<string, unknown[]>;
+  "fonts.meta.json": (index: unknown) => {
+    const { families, archives } = index as {
+      families?: Record<string, unknown[]>;
+      archives?: Record<string, unknown[]>;
+    };
+    if (!families || !archives) throw new Error("expected { families, archives }");
+
     const names = Object.keys(families);
     if (names.length === 0) throw new Error("no families");
+
     for (const family of names) {
       const faces = families[family]!;
       if (faces.length === 0) throw new Error(`${family}: no faces`);
@@ -21,6 +27,20 @@ const EXPECTED = {
         }
       }
     }
+
+    // An archive is only worth linking if it names a format and a size, both of
+    // which the publisher wrote beside the zip.
+    for (const [family, entries] of Object.entries(archives)) {
+      if (!families[family]) throw new Error(`${family}: archives for an unknown family`);
+      for (const entry of entries as Record<string, unknown>[]) {
+        for (const field of ["format", "bytes", "patch"]) {
+          if (entry[field] === undefined) {
+            throw new Error(`${family}: an archive is missing ${field}`);
+          }
+        }
+      }
+    }
+
     return names;
   },
   "walls.meta.json": (meta: unknown) => {

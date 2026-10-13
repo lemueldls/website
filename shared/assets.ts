@@ -47,7 +47,6 @@ export interface WallpaperMeta {
 }
 
 export type WallpapersMeta = Record<string, WallpaperMeta>;
-export type FontsMeta = Record<string, Font[]>;
 
 export function fontUrl(path: string): string {
   return new URL(path, `${ASSETS_BASE_URL}/`).toString();
@@ -73,6 +72,44 @@ export const VIEW_QUALITY = 80;
 
 export interface DerivativeOptions {
   quality?: number;
+}
+
+export const LANGUAGE_VARIANT = "Asterism Ruby";
+export const LANGUAGE_SAMPLE = "你好，世界。";
+
+const FINGERPRINT = "Sphinx of black quartz, judge my vow.";
+
+export function sampleFor(faces: Font[]): string {
+  const shipped = new Set(faces[0]?.features ?? []);
+  const parts: string[] = [];
+
+  if (faces[0]?.name === LANGUAGE_VARIANT) parts.push(LANGUAGE_SAMPLE);
+
+  parts.push(FINGERPRINT);
+  if (shipped.has("frac") || shipped.has("numr") || shipped.has("dnom")) {
+    parts.push("1/2 3/4 7/8");
+  } else if (shipped.has("onum") || shipped.has("zero")) {
+    parts.push("0123456789");
+  }
+  if (shipped.has("dlig")) parts.push("<- -> => != === ===");
+  return parts.join(" ");
+}
+
+export interface FontArchive {
+  format: "truetype" | "woff2";
+  bytes: number;
+  patch: string;
+}
+
+export interface FontsIndex {
+  families: Record<string, Font[]>;
+  archives: Record<string, FontArchive[]>;
+}
+
+export function fontArchiveUrl(name: string, archive: FontArchive): string {
+  const slug = name.toLowerCase().replace(/\s+/g, "-");
+  const base = archive.patch === "base" ? slug : `${slug}-${archive.patch.toLowerCase()}`;
+  return `${ASSETS_BASE_URL}/fonts/${base}-${archive.format}.zip`;
 }
 
 export function wallpaperThumbUrl(

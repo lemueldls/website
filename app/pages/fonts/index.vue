@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { byteLabel, sampleFor } from "#shared/assets";
+import { byteLabel, fontArchiveUrl, sampleFor } from "#shared/assets";
+import type { FontArchive } from "#shared/assets";
 import type { Font } from "#shared/assets";
 
 useSeoMeta({ title: "Fonts" });
 
-const { fonts } = useAssets();
+const { fonts, archives } = useAssets();
 
 const CUTS: { name: string; use: string | null }[] = [
   { name: "Asterism Text", use: "body text" },
@@ -27,6 +28,7 @@ function describe(entry: { name: string; use: string | null }) {
     weights: [...new Set(faces.map((f) => f.weight))].sort((a, b) => a - b),
     bytes: faces.reduce((sum, f) => sum + f.bytes, 0),
     web: faces.filter((f) => f.format === "woff2").length,
+    archives: (archives[entry.name] ?? []) as FontArchive[],
   };
 }
 
@@ -127,6 +129,17 @@ defineOgImage(
               <span class="num">{{ cut.faces.length }}</span> faces //
               <span class="num">{{ byteLabel(cut.bytes) }}</span>
             </p>
+            <!-- <p class="card__archive">
+              <XLink
+                v-for="a in cut.archives"
+                :key="a.format"
+                :href="fontArchiveUrl(cut.name, a)"
+                external
+              >
+                Download {{ a.format }}
+                <span class="meta"> // {{ byteLabel(a.bytes) }} // with the licence</span>
+              </XLink>
+            </p> -->
           </NuxtLink>
         </li>
       </ul>
@@ -163,6 +176,21 @@ defineOgImage(
               <span class="num">{{ variant.metrics.glyphs.toLocaleString() }}</span> glyphs //
               <span class="num">{{ variant.faces.length }}</span> faces //
               <span class="num">{{ byteLabel(variant.bytes) }}</span>
+            </p>
+            <!--
+              One link per annotation set, because they are two different fonts
+              rather than two weights of one.
+            -->
+            <p class="card__archive">
+              <XLink
+                v-for="a in variant.archives"
+                :key="a.format + a.patch"
+                :href="fontArchiveUrl(variant.name, a)"
+                external
+              >
+                Download {{ a.patch.toLowerCase() }} {{ a.format }}
+                <span class="meta"> // {{ byteLabel(a.bytes) }} // with the licence</span>
+              </XLink>
             </p>
           </NuxtLink>
         </li>
@@ -311,6 +339,15 @@ defineOgImage(
   color: var(--c-dim);
   max-width: var(--measure-text);
   text-wrap: pretty;
+}
+
+.card__archive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25em;
+  margin-top: var(--space-2);
+  font-size: var(--t-8);
 }
 
 .card__meta {

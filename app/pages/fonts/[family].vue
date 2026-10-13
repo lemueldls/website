@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import type { Font } from "#shared/assets";
 
-import { byteLabel, fontUrl, sampleFor } from "#shared/assets";
+import { byteLabel, fontArchiveUrl, fontUrl, sampleFor } from "#shared/assets";
+import type { FontArchive } from "#shared/assets";
 
-const { fonts } = useAssets();
+const { fonts, archives } = useAssets();
 
 const route = useRoute();
 const slug = String(route.params.family);
@@ -20,6 +21,11 @@ if (!faces.value.length) {
 const family = computed(() => faces.value[0]!.name);
 
 const metrics = computed(() => faces.value[0]!.metrics);
+
+const patchArchives = computed<FontArchive[]>(() => {
+  const patch = activeFace.value?.patch ?? "base";
+  return (archives[family.value] ?? []).filter((a) => a.patch === patch);
+});
 
 useSeoMeta({ title: () => family.value });
 
@@ -147,6 +153,18 @@ function useAsDisplayFace() {
         </template>
       </p>
 
+      <p v-if="patchArchives.length" class="family__archive">
+        <XLink
+          v-for="a in patchArchives"
+          :key="a.format"
+          :href="fontArchiveUrl(family, a)"
+          external
+        >
+          Download {{ a.format }}
+          <span class="meta">&nbsp;// {{ byteLabel(a.bytes) }}</span>
+        </XLink>
+      </p>
+
       <div class="family__rule" aria-hidden="true" />
     </header>
 
@@ -235,7 +253,7 @@ function useAsDisplayFace() {
             <th>Weight</th>
             <th>Style</th>
             <th>Format</th>
-            <th>Size</th>
+            <th>File</th>
           </tr>
         </thead>
         <tbody>
@@ -248,7 +266,11 @@ function useAsDisplayFace() {
             <td class="num">{{ face.weight }}</td>
             <td>{{ face.style ?? "normal" }}</td>
             <td>{{ face.format }}</td>
-            <td class="num">{{ byteLabel(face.bytes) }}</td>
+            <td class="num">
+              <XLink :href="face.src[0]!.url" external>
+                {{ byteLabel(face.bytes) }}
+              </XLink>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -303,6 +325,15 @@ function useAsDisplayFace() {
 
 .family__metrics {
   margin-top: var(--space-3);
+}
+
+.family__archive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25em;
+  margin-top: var(--space-3);
+  font-size: var(--t-8);
 }
 
 .family__rule {
