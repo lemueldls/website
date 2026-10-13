@@ -2,6 +2,8 @@
 const { selected, meta } = useWallpaper();
 const { resolvedTheme } = useTheme();
 
+const mounted = useMounted();
+
 const ROLES = ["background", "surface", "primary", "secondary", "accent", "highlight"];
 
 interface Swatch {
@@ -33,17 +35,17 @@ const liveAccent = computed<string | null>(() => {
 
 <template>
   <div class="palette">
-    <XLabel v-if="selected">Palette · {{ selected }}</XLabel>
+    <XLabel v-if="mounted && selected">Palette // {{ selected }}</XLabel>
     <XLabel v-else>Palette</XLabel>
 
-    <div v-if="swatches.length" class="palette__row">
+    <div v-if="mounted && swatches.length" class="palette__row">
       <span
-        v-for="s in swatches"
-        :key="s.hex"
+        v-for="(s, i) in swatches"
+        :key="i"
         class="palette__swatch"
         :class="{ 'palette__swatch--accent': s.accent }"
         :style="{ background: s.hex }"
-        :title="`${s.role} · ${s.hex}`"
+        :title="`${s.role} // ${s.hex}`"
       />
     </div>
 

@@ -30,7 +30,7 @@ defineOgImage(
       "Every wallpaper published in light and dark, each one able to retint the whole site.",
     meta: `${wallpaperFiles.length} wallpapers`,
   },
-  { alt: "Wallpapers — the collection, and the site's accent palette" },
+  { alt: "Wallpapers // the collection, and the site's accent palette" },
 );
 
 const {
@@ -158,6 +158,8 @@ function pack(
 }
 
 const gridEl = ref<HTMLElement>();
+
+const appliedImageEl = ref<HTMLImageElement>();
 
 let lastKey = "";
 
@@ -314,13 +316,30 @@ function markLoaded(event: Event) {
   (event.target as HTMLElement).setAttribute("data-loaded", "");
 }
 
-function markLoadedComplete() {
-  for (const img of gridEl.value?.querySelectorAll<HTMLImageElement>(".tile__image") ?? []) {
-    if (img.complete && img.naturalWidth > 0) img.setAttribute("data-loaded", "");
-  }
+function settle(img: HTMLImageElement | undefined) {
+  if (img && img.complete && img.naturalWidth > 0) img.setAttribute("data-loaded", "");
 }
 
+function markLoadedComplete() {
+  for (const img of gridEl.value?.querySelectorAll<HTMLImageElement>(".tile__image") ?? []) {
+    settle(img);
+  }
+
+  settle(appliedImageEl.value);
+}
+
+const mounted = useMounted();
+
 onMounted(markLoadedComplete);
+
+watch([selected, variant], async () => {
+  const img = appliedImageEl.value;
+  if (!img) return;
+
+  img.removeAttribute("data-loaded");
+  await nextTick();
+  settle(img);
+});
 
 const heroLink = computed(() => {
   if (!selected.value) return { link: [] };
@@ -354,7 +373,7 @@ useHead(heroLink);
       <div class="gallery__rule" aria-hidden="true" />
     </header>
 
-    <section v-if="currentMeta" class="gallery__applied" data-reveal>
+    <section v-if="mounted && currentMeta" class="gallery__applied" data-reveal>
       <XSheet class="gallery__applied-sheet">
         <div class="gallery__applied-grid">
           <button
@@ -377,6 +396,8 @@ useHead(heroLink);
                 background: wallpaperPlaceholder(currentMeta),
                 aspectRatio: `${aspect(currentMeta)}`,
               }"
+              ref="appliedImageEl"
+              @load="markLoaded"
               loading="eager"
               fetchpriority="high"
               decoding="async"
@@ -409,7 +430,7 @@ useHead(heroLink);
               <XButton :href="wallpaperUrl(selected!, variant)" variant="sheet" external>
                 Download
                 <template #trailing>
-                  <XIcon name="material-symbols:download-sharp" size="xs" />
+                  <XIcon name="material-symbols:download-sharp" />
                 </template>
               </XButton>
               <XButton variant="ghost" @click="setWallpaper(null)">Remove</XButton>
@@ -424,7 +445,7 @@ useHead(heroLink);
         <label class="gallery__search">
           <span class="label">Search</span>
           <span class="gallery__search-field">
-            <XIcon name="material-symbols:search-sharp" size="md" />
+            <XIcon name="material-symbols:search-sharp" size="lg" />
             <input v-model="search" type="search" placeholder="file name..." />
           </span>
         </label>
@@ -439,15 +460,11 @@ useHead(heroLink);
           <span class="label">Surprise</span>
           <div class="gallery__action-group">
             <XButton variant="ghost" @click="randomWallpaper()">
-              <template #leading>
-                <XIcon name="material-symbols:casino-sharp" size="xs" />
-              </template>
+              <XIcon name="material-symbols:casino-sharp" />
               Random
             </XButton>
             <XButton variant="ghost" @click="dailyWallpaper()">
-              <template #leading>
-                <XIcon name="material-symbols:today-sharp" size="xs" />
-              </template>
+              <XIcon name="material-symbols:today-sharp" />
               Today&rsquo;s
             </XButton>
           </div>
@@ -631,10 +648,6 @@ useHead(heroLink);
   margin-bottom: var(--space-2);
 }
 
-.gallery__applied-sheet {
-  padding: var(--space-2);
-}
-
 .gallery__applied-grid {
   display: grid;
   grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
@@ -666,6 +679,12 @@ useHead(heroLink);
   object-fit: cover;
   background: var(--c-code);
   border: var(--rule-width) solid var(--c-rule);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.gallery__applied-image[data-loaded] {
+  opacity: 1;
 }
 
 .gallery__applied-body {
@@ -770,11 +789,11 @@ useHead(heroLink);
   --control-h: 2.4rem;
 }
 
-.gallery__controls-grid :deep(.xselect__trigger),
+/* .gallery__controls-grid :deep(.xselect__trigger),
 .gallery__search-field,
 .gallery__action-group {
   min-height: var(--control-h);
-}
+} */
 
 .gallery__actions {
   display: flex;
@@ -1037,7 +1056,8 @@ useHead(heroLink);
 }
 
 @media print {
-  .tile__image {
+  .tile__image,
+  .gallery__applied-image {
     opacity: 1 !important;
   }
 

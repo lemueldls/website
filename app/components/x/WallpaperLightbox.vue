@@ -63,7 +63,6 @@ const paletteVars = computed<Record<string, string>>(() => {
           :width="meta.width"
           :height="meta.height"
           class="lightbox__image"
-          :style="{ background: wallpaperPlaceholder(meta) }"
           loading="eager"
           decoding="async"
         />
@@ -75,7 +74,7 @@ const paletteVars = computed<Record<string, string>>(() => {
           aria-label="Previous wallpaper"
           @click="emit('step', -1)"
         >
-          <XIcon name="material-symbols:chevron-left-sharp" size="lg" />
+          <XIcon name="material-symbols:chevron-left-sharp" />
         </XButton>
         <XButton
           square
@@ -84,7 +83,7 @@ const paletteVars = computed<Record<string, string>>(() => {
           aria-label="Next wallpaper"
           @click="emit('step', 1)"
         >
-          <XIcon name="material-symbols:chevron-right-sharp" size="lg" />
+          <XIcon name="material-symbols:chevron-right-sharp" />
         </XButton>
       </figure>
 
@@ -131,13 +130,13 @@ const paletteVars = computed<Record<string, string>>(() => {
           </div>
         </div>
 
-        <p v-if="applied" class="lightbox__note">
+        <!-- <p v-if="applied" class="lightbox__note">
           Applied now. Accent clamped to
           <code>{{
             resolvedTheme === "ink" ? meta.accent : (meta.accentPaper ?? meta.accent)
           }}</code>
           for this theme.
-        </p>
+        </p> -->
 
         <div class="lightbox__tags" v-if="meta.tags.length">
           <span v-for="tag in meta.tags" :key="tag" class="lightbox__chip">{{ tag }}</span>
@@ -145,9 +144,7 @@ const paletteVars = computed<Record<string, string>>(() => {
 
         <div class="lightbox__actions">
           <XButton v-if="!applied" variant="accent" block @click="emit('apply', true)">
-            <template #leading>
-              <Icon name="material-symbols:check-sharp" aria-hidden="true" />
-            </template>
+            <XIcon name="material-symbols:check-sharp" />
             Apply
           </XButton>
           <XButton v-else variant="ghost" block @click="emit('apply', false)">Remove</XButton>
@@ -159,9 +156,7 @@ const paletteVars = computed<Record<string, string>>(() => {
             block
             download
           >
-            <template #leading>
-              <Icon name="material-symbols:download-sharp" aria-hidden="true" />
-            </template>
+            <XIcon name="material-symbols:download-sharp" />
             Download
           </XButton>
         </div>
