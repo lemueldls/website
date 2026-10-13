@@ -2,8 +2,6 @@
 const year = new Date().getFullYear();
 
 const { socials, email, rings } = useAbout();
-
-const elsewhere = computed(() => [...socials]);
 </script>
 
 <template>
@@ -11,6 +9,18 @@ const elsewhere = computed(() => [...socials]);
     <div class="ftr__rule" aria-hidden="true" />
 
     <div class="ftr__inner">
+      <div class="ftr__col">
+        <XLabel>Socials</XLabel>
+        <ul class="ftr__socials">
+          <li v-for="social in socials" :key="social.title">
+            <XLink class="ftr__social-link" :href="social.href" external>
+              <XIcon class="ftr__social-icon" :name="social.icon" size="xs" />
+              {{ social.title }}
+            </XLink>
+          </li>
+        </ul>
+      </div>
+
       <div class="ftr__col">
         <XLabel>Webrings</XLabel>
         <div class="ftr__rings no-print-chrome">
@@ -26,7 +36,7 @@ const elsewhere = computed(() => [...socials]);
                 <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="xs" />
               </XButton>
               <XLink class="ftr__ring-link" :href="ring.home">{{ ring.name }}</XLink>
-              <XButton
+              <!-- <XButton
                 variant="ghost"
                 size="sm"
                 square
@@ -34,7 +44,7 @@ const elsewhere = computed(() => [...socials]);
                 :title="`Random site in ${ring.name}`"
               >
                 <XIcon name="material-symbols:casino-sharp" size="xs" />
-              </XButton>
+              </XButton> -->
               <XButton
                 variant="ghost"
                 size="sm"
@@ -47,18 +57,6 @@ const elsewhere = computed(() => [...socials]);
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="ftr__col">
-        <XLabel>Elsewhere</XLabel>
-        <ul class="ftr__socials">
-          <li v-for="social in elsewhere" :key="social.title">
-            <XLink class="ftr__social-link" :href="social.href" external>
-              <XIcon class="ftr__social-icon" :name="social.icon" size="xs" />
-              {{ social.title }}
-            </XLink>
-          </li>
-        </ul>
       </div>
 
       <div class="ftr__col">
@@ -106,7 +104,7 @@ const elsewhere = computed(() => [...socials]);
 
 .ftr__inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: var(--space-4);
   max-width: var(--sheet-max);
   margin-inline: auto;

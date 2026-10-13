@@ -17,8 +17,6 @@ const currentProjects = computed(() =>
   projects.value.filter((p) => p.to === "Present").slice(0, 2),
 );
 
-const elsewhere = computed(() => [...socials]);
-
 const { selected, randomWallpaper } = useWallpaper();
 
 const discipline = [
@@ -70,6 +68,18 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         </div>
 
         <div class="hero__col">
+          <XLabel>Socials</XLabel>
+          <ul class="hero__socials">
+            <li v-for="social in socials" :key="social.title">
+              <XLink class="hero__social-link" :href="social.href" external>
+                <XIcon class="hero__social-icon" :name="social.icon" size="xs" />
+                {{ social.title }}
+              </XLink>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__col">
           <XLabel>Webrings</XLabel>
           <div class="hero__rings">
             <span v-for="ring in rings" :key="ring.name" class="hero__ring">
@@ -94,18 +104,6 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
               </XButton>
             </span>
           </div>
-        </div>
-
-        <div class="hero__col">
-          <XLabel>Elsewhere</XLabel>
-          <ul class="hero__socials">
-            <li v-for="social in elsewhere" :key="social.title">
-              <XLink class="hero__social-link" :href="social.href" external>
-                <XIcon class="hero__social-icon" :name="social.icon" size="xs" />
-                {{ social.title }}
-              </XLink>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
