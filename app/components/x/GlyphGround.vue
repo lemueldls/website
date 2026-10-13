@@ -83,8 +83,6 @@ function thumbUrl(file: string): string {
 
 const PRINT_MS = 820;
 
-let runId = 0;
-
 interface Plate {
   rows: number;
   cols: number;
@@ -208,20 +206,24 @@ async function drawAscii(file: string, size: Viewport) {
   const el = canvas.value;
   if (!el) return;
 
-  const scan = stopScan();
+  const generation = stopScan();
+
+  liveCtx = null;
+  livePlate = null;
 
   asciiReady.value = true;
 
   const plate = await prepare(file, size);
+  if (generation !== scanGeneration) return;
+
   if (!plate) {
     asciiReady.value = false;
     return;
   }
 
   await document.fonts.load(`${FONT_SIZE}px "Asterism Code"`);
+  if (generation !== scanGeneration) return;
 
-  // The bitmap is exactly the box, in device pixels, so the two can never disagree and
-  // stretch a glyph while a resize is in flight.
   const dpr = size.dpr;
   const w = size.width;
   const h = size.height + HEADROOM * 2;
@@ -256,12 +258,11 @@ async function drawAscii(file: string, size: Viewport) {
     return;
   }
 
-  const id = ++runId;
   const start = performance.now();
   let painted = 0;
 
   const step = (now: number) => {
-    if (id !== runId) return;
+    if (generation !== scanGeneration) return;
 
     const t = Math.min(1, (now - start) / PRINT_MS);
 
@@ -276,7 +277,7 @@ async function drawAscii(file: string, size: Viewport) {
     else {
       hasPlate.value = true;
 
-      startScan(scan, ctx, plate);
+      startScan(generation, ctx, plate);
     }
   };
 
@@ -562,14 +563,26 @@ onMounted(() => {
   });
 });
 
-watch(() => parallax.value, wakeGlow);
+watch(parallax, wakeGlow);
 
-watch(
-  () => resolvedTheme.value,
-  () => {
+onMounted(() => {
+  const inkObserver = new MutationObserver(() => {
     liveInk = readInk();
-  },
-);
+
+    if (!liveCtx || !livePlate) return;
+
+    for (let row = 0; row < livePlate.rows; row++) {
+      paintScannedRow(liveCtx, livePlate, row, glowLight, liveInk);
+    }
+  });
+
+  inkObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
+
+  onScopeDispose(() => inkObserver.disconnect());
+});
 
 watch(
   [selected, mounted, viewport],
@@ -587,7 +600,7 @@ watch(
   { immediate: true },
 );
 
-const blendClass = computed(() => (resolvedTheme.value === "ink" ? "screen" : "multiply"));
+const blendClass = computed(() => (resolvedTheme.value === "dark" ? "screen" : "multiply"));
 </script>
 
 <template>
