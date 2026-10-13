@@ -49,7 +49,7 @@ const liveAccent = computed<string | null>(() => {
       />
     </div>
 
-    <p v-else class="palette__empty meta">No wallpaper selected.</p>
+    <XLabel v-else class="palette__empty">No wallpaper selected</XLabel>
 
     <XLabel v-if="mounted && selected">
       <XLink
@@ -91,10 +91,6 @@ const liveAccent = computed<string | null>(() => {
   line-height: 1.35;
   color: var(--c-dim);
   word-break: break-all;
-}
-
-.palette__empty {
-  font-size: var(--t-6);
 }
 
 @media print {
