@@ -104,7 +104,7 @@ const { socials, email, rings } = useAbout();
 
 .ftr__inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   gap: var(--space-4);
   max-width: var(--sheet-max);
   margin-inline: auto;
