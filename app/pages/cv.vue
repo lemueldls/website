@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { presets, useAbout } from "~/composables/about";
+
 import {
   CV_FONTS,
   CV_SECTIONS,
@@ -50,6 +52,11 @@ const pickerOpen = ref(false);
 const on = (key: string) => isCvKeyOn(options, key);
 const toggle = (key: string) => toggleCvKey(options, key);
 
+const presetOptions = Object.entries(presets).map(([value, preset]) => ({
+  label: preset.label,
+  value,
+}));
+
 const pdfHref = computed(() => {
   const search = new URLSearchParams(serializeCvOptions(options)).toString();
   return `/cv.pdf${search ? `?${search}` : ""}`;
@@ -68,14 +75,7 @@ const pdfHref = computed(() => {
               :options="CV_FONTS.map((f) => ({ label: f.label, value: f.value }))"
             />
 
-            <XSelect
-              v-model="options.preset"
-              label="Preset"
-              :options="[
-                { label: 'Default', value: 'default' },
-                { label: 'Research', value: 'research' },
-              ]"
-            />
+            <XSelect v-model="options.preset" label="Preset" :options="presetOptions" />
 
             <XButton class="cv__controls-sections" variant="sheet" @click="pickerOpen = true">
               <XIcon name="material-symbols:tune-sharp" />

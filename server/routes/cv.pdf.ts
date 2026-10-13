@@ -3,7 +3,8 @@ import type { H3Event } from "h3";
 
 import puppeteer from "@cloudflare/puppeteer";
 
-import { parseCvOptions, serializeCvOptions } from "#shared/cv";
+import { parseCvOptions, serializeCvOptions, type CvOptions } from "#shared/cv";
+import { presets } from "~/composables/about";
 
 const MAX_AGE = 60 * 60 * 24 * 7;
 
@@ -25,11 +26,10 @@ function browserBinding(event: H3Event): BrowserBinding | undefined {
   return event.context.cloudflare?.env?.BROWSER;
 }
 
-function targetUrl(event: H3Event): string {
+function targetUrl(event: H3Event, options: CvOptions): string {
   const host = event.node.req.headers.host ?? "localhost:3000";
   const protocol = event.node.req.headers["x-forwarded-proto"] ?? "http";
 
-  const options = parseCvOptions(getQuery(event));
   const search = new URLSearchParams(serializeCvOptions(options)).toString();
 
   return `${protocol}://${host}/cv${search ? `?${search}` : ""}`;
@@ -56,11 +56,15 @@ async function digest(body: string): Promise<string> {
   return [...new Uint8Array(hash)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
-function pdfResponse(base64: string): Response {
+function downloadName(preset: string): string {
+  return presets[preset]?.download ?? "lemuel-de-los-santos-cv.pdf";
+}
+
+function pdfResponse(base64: string, preset: string): Response {
   return new Response(Buffer.from(base64, "base64"), {
     headers: {
       "content-type": "application/pdf",
-      "content-disposition": 'inline; filename="lemuel-de-los-santos-cv.pdf"',
+      "content-disposition": `attachment; filename="${downloadName(preset)}"`,
       "cache-control": `public, max-age=${MAX_AGE}, immutable`,
     },
   });
@@ -69,7 +73,8 @@ function pdfResponse(base64: string): Response {
 export default defineEventHandler(async (event) => {
   const binding = browserBinding(event);
 
-  const url = targetUrl(event);
+  const options = parseCvOptions(getQuery(event));
+  const url = targetUrl(event, options);
 
   if (!binding) {
     return sendRedirect(event, url, 302);
@@ -83,9 +88,8 @@ export default defineEventHandler(async (event) => {
     .catch(() => null);
 
   if (cached) {
-    return pdfResponse(cached);
+    return pdfResponse(cached, options.preset);
   }
-
   const browser = await puppeteer.launch(binding);
 
   try {
@@ -108,7 +112,7 @@ export default defineEventHandler(async (event) => {
       .setItem(cacheKey, encoded)
       .catch(() => {});
 
-    return pdfResponse(encoded);
+    return pdfResponse(encoded, options.preset);
   } finally {
     await browser.close();
   }

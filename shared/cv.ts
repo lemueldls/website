@@ -136,11 +136,6 @@ export const CV_FONTS: readonly { label: string; value: CvFont }[] = [
   { label: "Asterism Code", value: "mono" },
 ];
 
-export const CV_PRESET_LABELS: Record<string, string> = {
-  default: "Default",
-  research: "Research",
-};
-
 const STATIC_KEYS = new Map<string, boolean>(
   CV_SECTIONS.flatMap((section) => [
     [section.key, section.printDefault] as const,
@@ -180,7 +175,7 @@ export interface CvOptions {
 }
 
 export const CV_DEFAULT_OPTIONS: CvOptions = {
-  preset: "default",
+  preset: "resume",
   font: "besley",
   mergeResearch: false,
   showTech: false,

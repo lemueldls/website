@@ -747,25 +747,41 @@ const talks = [
   },
 ];
 
+export type Carried<T extends string> = T | "all";
+
 export interface Preset {
-  education: EducationSlug[];
-  experiences: ExperienceSlug[];
-  projects: ProjectSlug[];
-  affiliations: AffiliationSlug[];
+  education: Carried<EducationSlug>[];
+  experiences: Carried<ExperienceSlug>[];
+  projects: Carried<ProjectSlug>[];
+  affiliations: Carried<AffiliationSlug>[];
+  label: string;
+  download: string;
 }
 
-const presets: Record<string, Preset> = {
-  default: {
-    education: ["ccny"],
+export const presets: Record<string, Preset> = {
+  resume: {
+    education: ["ccny", "afse"],
     experiences: ["taylor-graham", "upenn-repl", "woven-toyota"],
     projects: ["mnemo", "kaetram", "my-afse"],
     affiliations: ["acm-ccny"],
+    label: "Resume",
+    download: "lemuel-de-los-santos-resume.pdf",
+  },
+  full: {
+    education: ["all"],
+    experiences: ["all"],
+    projects: ["all"],
+    affiliations: ["all"],
+    label: "Full CV",
+    download: "lemuel-de-los-santos-cv.pdf",
   },
   research: {
     education: ["ccny"],
     experiences: ["upenn-repl"],
     projects: ["koffi", "ezno", "mnemo", "synquid", "lmt", "pyret-rs"],
     affiliations: ["acm-ccny"],
+    label: "Research",
+    download: "lemuel-de-los-santos-research.pdf",
   },
 };
 
@@ -775,7 +791,7 @@ const printHiddenFor = (
 ): (<T extends { slug: string }>(entry: T) => T & { hidePrint: boolean }) => {
   const carried = (slug: string) => {
     const slugs: readonly string[] = preset.value[key];
-    return slugs.includes(slug);
+    return slugs.includes("all") || slugs.includes(slug);
   };
 
   const hidden = (entry: { slug: string }) => flagged(entry, "hidePrint") || !carried(entry.slug);
@@ -785,7 +801,7 @@ const printHiddenFor = (
 };
 
 export function useAbout(presetKey: MaybeRefOrGetter<string> = "default") {
-  const preset = computed(() => presets[toValue(presetKey)] ?? presets.default!);
+  const preset = computed(() => presets[toValue(presetKey)] ?? presets.resume!);
 
   return {
     preset,
