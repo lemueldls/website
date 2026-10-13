@@ -4,18 +4,19 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "postinstall": "nuxt prepare",
-    "preview": "nuxt preview",
     "deploy": "npm run build && wrangler deploy",
-    "typecheck": "nuxt typecheck && tsc --noEmit -p tsconfig.scripts.json",
-    "lint": "oxlint app shared content.config.ts modules scripts",
-    "lint:fix": "oxlint app shared content.config.ts modules scripts --fix",
+    "dev": "nuxt dev",
+    "fetch:meta": "node --experimental-strip-types scripts/fetch-meta.ts",
     "fmt": "oxfmt app shared content.config.ts modules scripts nuxt.config.ts",
     "fmt:check": "oxfmt --check app shared content.config.ts modules scripts nuxt.config.ts",
-    "gen:walls": "node --experimental-strip-types scripts/gen-walls-meta.ts",
-    "gen:fonts": "node --experimental-strip-types scripts/gen-fonts-meta.ts"
+    "gen:badges": "node --experimental-strip-types scripts/gen-badges.ts",
+    "gen:sigil": "node --experimental-strip-types scripts/gen-sigil.ts",
+    "generate": "nuxt generate",
+    "lint": "oxlint app shared content.config.ts modules scripts",
+    "lint:fix": "oxlint app shared content.config.ts modules scripts --fix",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck && tsc --noEmit -p tsconfig.scripts.json"
   },
   "dependencies": {
     "@cloudflare/puppeteer": "^1.4.0",
@@ -62,7 +63,6 @@
     "remark-math": "^6.0.0",
     "remark-smartypants": "^3.0.3",
     "satori": "^0.47.1",
-    "sharp": "^0.35.5",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.12",
     "wrangler": "^4.149.0"
