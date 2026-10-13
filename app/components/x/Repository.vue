@@ -66,7 +66,7 @@ function formatYear(iso: string): string {
           </div>
 
           <div class="repo__fact">
-            <dt class="label">Licence</dt>
+            <dt class="label">License</dt>
             <dd class="repo__value">
               {{ meta.license ?? "None" }}
             </dd>

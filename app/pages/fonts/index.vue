@@ -130,7 +130,7 @@ defineOgImage("Root", {
                 external
               >
                 Download {{ a.format }}
-                <span class="meta"> // {{ byteLabel(a.bytes) }} // with the licence</span>
+                <span class="meta"> // {{ byteLabel(a.bytes) }} // with the license</span>
               </XLink>
             </p> -->
           </NuxtLink>
@@ -181,7 +181,7 @@ defineOgImage("Root", {
                 external
               >
                 Download {{ a.patch.toLowerCase() }} {{ a.format }}
-                <span class="meta"> // {{ byteLabel(a.bytes) }} // with the licence</span>
+                <span class="meta"> // {{ byteLabel(a.bytes) }} // with the license</span>
               </XLink>
             </p> -->
           </NuxtLink>

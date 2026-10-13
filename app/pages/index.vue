@@ -27,7 +27,8 @@ const discipline = [
   "Programming Languages",
   // "Systems Programming",
   // "Web Development",
-  "Cybersecurity",
+  // "Cybersecurity",
+  "Reverse Engineering",
   "Typography and Design",
 ];
 
@@ -61,7 +62,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         </div>
 
         <div class="hero__col">
-          <XLabel>What I work on</XLabel>
+          <XLabel>Specializations</XLabel>
           <ul class="hero__disciplines">
             <li v-for="d in discipline" :key="d">{{ d }}</li>
           </ul>
