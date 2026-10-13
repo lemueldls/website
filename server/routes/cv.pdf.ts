@@ -12,10 +12,12 @@ const CACHE_PREFIX = "cv:pdf:v1:";
 
 const VIEWPORT = { width: 816, height: 1056, deviceScaleFactor: 2 };
 
+// const PAPER_MARGIN = "0.5in";
+
 const PDF_OPTIONS = {
   format: "letter" as const,
   printBackground: true,
-  margin: { top: "0", right: "0", bottom: "0", left: "0" },
+  // margin: { top: PAPER_MARGIN, right: PAPER_MARGIN, bottom: PAPER_MARGIN, left: PAPER_MARGIN },
 };
 
 interface BrowserBinding {

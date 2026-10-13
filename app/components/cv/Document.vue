@@ -348,9 +348,9 @@ const headWouldPrint = (section: {
             <ul v-if="showTech && entry.technologies.length" class="cv__tech">
               <li v-for="t of entry.technologies" :key="t">{{ t }}</li>
             </ul>
-            <a v-if="entry.github" :href="entry.github.href" class="cv__repo print-only">{{
+            <!-- <a v-if="entry.github" :href="entry.github.href" class="cv__repo print-only">{{
               entry.github.text
-            }}</a>
+            }}</a> -->
           </div>
 
           <ul v-if="entry.contributions.length" class="cv__bullets">
@@ -564,7 +564,7 @@ a.cv__entry-name:hover {
 } */
 
 .cv__quals {
-  margin-top: var(--space-2);
+  margin-top: var(--space-1);
 }
 
 .cv__quals h3 {

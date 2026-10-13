@@ -263,6 +263,10 @@ legend {
     color: #1e1e2e !important;
   }
 
+  body {
+    margin: 0.5in;
+  }
+
   .no-print {
     display: none !important;
   }
@@ -311,7 +315,7 @@ legend {
   }
 
   .print-sheet .cv__page {
-    padding: var(--space-8) !important;
+    padding: 0 !important;
   }
 
   .print-sheet {
