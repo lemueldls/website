@@ -50,7 +50,7 @@ withDefaults(
 
 @media (max-width: 640px) {
   .sheet__body {
-    padding: var(--space-5) var(--space-4);
+    padding: var(--space-4);
   }
 }
 

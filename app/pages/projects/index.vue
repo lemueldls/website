@@ -22,7 +22,7 @@ defineOgImage(
       "Compilers, type systems, synthesis engines, tooling, and the typography to write about them.",
     meta: `${projects.value.length} projects // ${allTechnologies.value.length} technologies`,
   },
-  { alt: "Projects — the register of work" },
+  { alt: "Projects // the register of work" },
 );
 
 const active = reactive(new Set<string>());
@@ -96,7 +96,7 @@ function toggleTechnology(name: string) {
             <h2 class="project__name">
               <XLink :to="`/projects/${p.slug}`">{{ p.name }}</XLink>
             </h2>
-            <span class="meta project__dates num">{{ p.from }} — {{ p.to ?? "Present" }}</span>
+            <span class="meta project__dates num">{{ p.from }}&ndash;{{ p.to ?? "Present" }}</span>
           </div>
 
           <div class="project__meta">

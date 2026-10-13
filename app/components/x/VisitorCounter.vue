@@ -25,7 +25,7 @@ const reading = computed(() => `${formatted.value} visitors since ${since.value}
 const note = computed(() => {
   if (!visits.value) return "";
 
-  return `${reading.value} · ${NUMBER_FORMAT.format(visits.value.today)} today`;
+  return `${reading.value} // ${NUMBER_FORMAT.format(visits.value.today)} today`;
 });
 </script>
 

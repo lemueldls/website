@@ -12,14 +12,16 @@ defineOgImage(
     description: "Math and Computer Science Research Student",
     meta: "full stack // systems // typography",
   },
-  { alt: "Lemuel De Los Santos — personal website and portfolio" },
+  { alt: "Lemuel De Los Santos // personal website and portfolio" },
 );
 
-const { projects, socials } = useAbout();
+const { projects, socials, email, rings } = useAbout();
 
 const currentProjects = computed(() =>
   projects.value.filter((p) => p.to === "Present").slice(0, 2),
 );
+
+const elsewhere = computed(() => [...socials]);
 
 const { selected, randomWallpaper } = useWallpaper();
 
@@ -47,7 +49,6 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 <template>
   <div class="hero sheet-grid">
     <section class="hero__masthead" data-reveal-group>
-      <!-- <h1 class="hero__title" data-nameplate>Lemuel De Los Santos</h1> -->
       <h1 class="hero__title" data-nameplate>
         Lemuel <span class="hero__last-name">De Los Santos</span>
       </h1>
@@ -73,9 +74,36 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         </div>
 
         <div class="hero__col">
+          <XLabel>Webrings</XLabel>
+          <div class="hero__rings">
+            <span v-for="ring in rings" :key="ring.name" class="hero__ring">
+              <XButton
+                variant="ghost"
+                size="sm"
+                square
+                :href="ring.prev"
+                :title="`Previous in ${ring.name}`"
+              >
+                <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="sm" />
+              </XButton>
+              <XLink :href="ring.home">{{ ring.name }}</XLink>
+              <XButton
+                variant="ghost"
+                size="sm"
+                square
+                :href="ring.next"
+                :title="`Next in ${ring.name}`"
+              >
+                <XIcon name="material-symbols:keyboard-double-arrow-right-sharp" size="sm" />
+              </XButton>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero__col">
           <XLabel>Elsewhere</XLabel>
           <ul class="hero__socials">
-            <li v-for="social in socials" :key="social.title">
+            <li v-for="social in elsewhere" :key="social.title">
               <XLink class="hero__social-link" :href="social.href" external>
                 <XIcon class="hero__social-icon" :name="social.icon" size="xs" />
                 {{ social.title }}
@@ -86,9 +114,12 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
       </div>
     </section>
 
-    <section class="hero__current" data-reveal-group>
-      <XSectionHead label="Current work" :count="currentProjects.length" />
-
+    <XSection
+      class="hero__current"
+      label="Current work"
+      :count="currentProjects.length"
+      data-reveal-group
+    >
       <ul class="hero__work">
         <li v-for="project in currentProjects" :key="project.slug" class="hero__work-item">
           <span class="hero__work-name">
@@ -116,11 +147,14 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         <XButton to="/cv" variant="sheet">Curriculum Vitae</XButton>
         <XButton to="/projects" variant="rule">All projects</XButton>
       </div>
-    </section>
+    </XSection>
 
-    <section class="hero__writing" data-reveal-group>
-      <XSectionHead label="Latest writing" :count="recentPosts.length" />
-
+    <XSection
+      class="hero__writing"
+      label="Latest writing"
+      :count="recentPosts.length"
+      data-reveal-group
+    >
       <ul class="hero__writing-list">
         <li v-for="post in recentPosts" :key="post.path" class="hero__writing-item">
           <NuxtLink :to="`/writing/${slugOf(post)}`" class="hero__writing-link">
@@ -133,7 +167,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
       <div class="hero__writing-actions">
         <XButton to="/writing" variant="rule">All writing</XButton>
       </div>
-    </section>
+    </XSection>
   </div>
 </template>
 
@@ -210,7 +244,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-7) 6rem;
+  gap: var(--space-7) var(--space-10);
 }
 
 .hero__col {
@@ -220,6 +254,22 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 }
 
 .hero__value {
+  font-size: var(--t-10);
+}
+
+.hero__rings {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--t-10);
+}
+
+.hero__ring {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
   font-size: var(--t-10);
 }
 

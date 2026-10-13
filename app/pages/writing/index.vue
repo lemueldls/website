@@ -23,7 +23,7 @@ defineOgImage(
     description: "Long-form pieces on compilers, type systems, and the tools built around them.",
     meta: `${sorted.value.length} articles`,
   },
-  { alt: "Writing — every article on the site" },
+  { alt: "Writing // every article on the site" },
 );
 </script>
 

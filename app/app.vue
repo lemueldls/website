@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-  titleTemplate: (title) => (title === "Lemuel De Los Santos" ? title : `${title} · lem.my`),
+  titleTemplate: (title) => (title === "Lemuel De Los Santos" ? title : `${title} // lem.my`),
   themeColor: "#00a896",
   profileFirstName: "Lemuel",
   profileLastName: "De Los Santos",

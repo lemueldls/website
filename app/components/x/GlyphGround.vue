@@ -20,12 +20,10 @@ interface Viewport {
   dpr: number;
 }
 
-const mounted = ref(false);
+const mounted = useMounted();
 const viewport = ref<Viewport>({ width: 0, height: 0, dpr: 1 });
 
 onMounted(() => {
-  mounted.value = true;
-
   const update = () => {
     const next: Viewport = {
       width: window.innerWidth,
@@ -622,7 +620,7 @@ const blendClass = computed(() => (resolvedTheme.value === "ink" ? "screen" : "m
 }
 
 .glyph-ground {
-  opacity: 0.08;
+  opacity: 0.1;
 }
 
 .glyph-ground.screen {

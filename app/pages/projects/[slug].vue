@@ -20,7 +20,7 @@ if (!entry.value) {
 }
 
 useSeoMeta({
-  title: `${entry.value!.name} — Projects`,
+  title: `${entry.value!.name} // Projects`,
   description: entry.value!.description,
 });
 
@@ -30,9 +30,9 @@ defineOgImage(
     label: entry.value!.role,
     title: entry.value!.name,
     description: entry.value!.description,
-    meta: `${entry.value!.from} — ${entry.value!.to ?? "Present"}`,
+    meta: `from ${entry.value!.from} to ${entry.value!.to ?? "present"}`,
   },
-  { alt: `${entry.value!.name} — ${entry.value!.role}` },
+  { alt: `${entry.value!.name} // ${entry.value!.role}` },
 );
 
 const neighbours = computed(() => {
@@ -52,7 +52,7 @@ const neighbours = computed(() => {
 
       <h1 class="detail__title">{{ entry.name }}</h1>
 
-      <p class="detail__dates meta">{{ entry.from }} — {{ entry.to ?? "Present" }}</p>
+      <p class="detail__dates meta">{{ entry.from }}&ndash;{{ entry.to ?? "Present" }}</p>
 
       <div class="detail__rule" aria-hidden="true" />
 

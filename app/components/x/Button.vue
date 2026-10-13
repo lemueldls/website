@@ -54,7 +54,7 @@ const tag = computed(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+  gap: var(--space-2);
   font-family: var(--f-label);
   font-size: var(--t-8);
   letter-spacing: 0.06em;
@@ -134,5 +134,20 @@ const tag = computed(() => {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
+}
+
+.xbtn :deep(.xicon) {
+  width: var(--icon-xs);
+  height: var(--icon-xs);
+}
+
+.xbtn--md :deep(.xicon) {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
+.xbtn--lg :deep(.xicon) {
+  width: var(--icon-md);
+  height: var(--icon-md);
 }
 </style>

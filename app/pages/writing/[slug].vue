@@ -47,7 +47,7 @@ defineOgImage(
     description,
     meta: cardMeta,
   },
-  { alt: `${title} — an article by Lemuel De Los Santos` },
+  { alt: `${title} // an article by Lemuel De Los Santos` },
 );
 </script>
 

@@ -10,19 +10,17 @@ withDefaults(defineProps<{ size?: number }>(), { size: 9 });
   />
 </template>
 
-<style scoped>
+<style>
 .fold {
   position: absolute;
 
   top: 0.4em;
 
-  right: calc(min(18px, 3vw) * -1);
+  right: calc(min(12px, 3vw) * -1);
   translate: 0 -50%;
   z-index: var(--z-sheet);
   pointer-events: none;
-  transition:
-    scale var(--dur) var(--ease-folio),
-    background-color var(--dur-fast) var(--ease);
+  transition: scale var(--dur) var(--ease-folio);
 }
 
 .fold::before,
@@ -30,6 +28,11 @@ withDefaults(defineProps<{ size?: number }>(), { size: 9 });
   content: "";
   position: absolute;
   background: var(--c-rule-strong);
+
+  /* The colour lives on the two rules rather than on `.fold`, so the transition
+     has to sit beside it: on the parent it is a transition for a property
+     nothing there ever changes, and the accent snaps instead of easing in. */
+  transition: background-color var(--dur-fast) var(--ease);
 }
 
 .fold::before {
@@ -49,14 +52,20 @@ withDefaults(defineProps<{ size?: number }>(), { size: 9 });
 }
 
 .section-head:hover > .fold,
-.section-head:focus-within > .fold {
+.section-head:focus-within > .fold,
+.section:hover .fold,
+.section:focus-within .fold {
   scale: 1.5;
 }
 
 .section-head:hover > .fold::before,
 .section-head:hover > .fold::after,
 .section-head:focus-within > .fold::before,
-.section-head:focus-within > .fold::after {
+.section-head:focus-within > .fold::after,
+.section:hover .fold::before,
+.section:hover .fold::after,
+.section:focus-within .fold::before,
+.section:focus-within .fold::after {
   background: var(--c-accent);
 }
 

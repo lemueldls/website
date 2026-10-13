@@ -94,7 +94,7 @@ onBeforeUnmount(() => {
         :class="{ 'hdr__mark--stepped': wordmarkStepped }"
         title="Lemuel De Los Santos"
       >
-        <XSigil class="hdr__sigil" size="1.3em" />
+        <XSigil class="hdr__sigil" size="1.5em" />
         <span class="hdr__wordmark">Lemuel <span class="hdr__last-name">De Los Santos</span></span>
       </NuxtLink>
 
@@ -121,21 +121,20 @@ onBeforeUnmount(() => {
       </nav>
 
       <div class="hdr__tools">
-        <XButton variant="ghost" size="sm" square :title="themeLabel" @click="toggleTheme()">
+        <XButton variant="ghost" square :title="themeLabel" @click="toggleTheme()">
           <XIcon
             :name="
               isInk
                 ? 'material-symbols:dark-mode-outline-sharp'
                 : 'material-symbols:light-mode-outline-sharp'
             "
-            size="sm"
+            size="lg"
           />
         </XButton>
 
         <XButton
           class="hdr__menu"
           variant="ghost"
-          size="sm"
           square
           :title="menuLabel"
           :aria-label="menuLabel"
@@ -145,7 +144,7 @@ onBeforeUnmount(() => {
         >
           <XIcon
             :name="menuOpen ? 'material-symbols:close-sharp' : 'material-symbols:menu-sharp'"
-            size="md"
+            size="lg"
           />
         </XButton>
       </div>

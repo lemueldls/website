@@ -112,7 +112,8 @@ const descriptionStyle = computed<CSSProperties>(() => ({
   lineHeight: 1.5,
   color: C.value.dim,
   marginTop: "26px",
-  maxWidth: "880px",
+  // maxWidth: "880px",
+  textWrap: "pretty",
   lineClamp: 3,
   textOverflow: "ellipsis",
 }));
