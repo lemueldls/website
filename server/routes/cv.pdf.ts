@@ -49,7 +49,7 @@ function pdfResponse(base64: string, preset: string): Response {
   return new Response(Buffer.from(base64, "base64"), {
     headers: {
       "content-type": "application/pdf",
-      "content-disposition": `attachment; filename="${downloadName(preset)}"`,
+      "content-disposition": `inline; filename="${downloadName(preset)}"`,
       "cache-control": `public, max-age=${MAX_AGE}, immutable`,
     },
   });
