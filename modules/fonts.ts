@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { defineNuxtModule, createResolver } from "nuxt/kit";
 import { defineFontProvider } from "unifont";
 
-import type { Font } from "../shared/assets";
+import type { Font, FontsIndex } from "../shared/assets";
 
 const { resolve } = createResolver(import.meta.url);
 
@@ -14,10 +14,11 @@ export default defineNuxtModule({
 
     nuxt.hook("fonts:providers", (providers) => {
       providers.assets = defineFontProvider("assets", async () => {
-        let families: Record<string, Font[]> = {};
+        let index: FontsIndex = { families: {}, archives: {} };
 
         try {
-          families = JSON.parse(readFileSync(metaPath, "utf-8"));
+          const parsed = JSON.parse(readFileSync(metaPath, "utf-8")) as FontsIndex;
+          index = { families: parsed.families ?? {}, archives: parsed.archives ?? {} };
         } catch {
           nuxt.options.watch.push(metaPath);
           console.warn(
@@ -33,7 +34,7 @@ export default defineNuxtModule({
 
         return {
           async resolveFont(fontFamily) {
-            const fonts = families[fontFamily];
+            const fonts: Font[] | undefined = index.families[fontFamily];
 
             return fonts ? { fonts } : undefined;
           },
