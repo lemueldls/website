@@ -98,8 +98,6 @@ const svg = (fill: string) =>
 await mkdir(resolve(ROOT, "public"), { recursive: true });
 
 await writeFile(resolve(ROOT, "public/icon.svg"), svg("#00a896"), "utf8");
-await writeFile(resolve(ROOT, "public/icon-on-light.svg"), svg("#11111b"), "utf8");
-await writeFile(resolve(ROOT, "public/icon-on-dark.svg"), svg("#cdd6f4"), "utf8");
 
 await mkdir(resolve(ROOT, "app/lib"), { recursive: true });
 await writeFile(

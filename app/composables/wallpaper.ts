@@ -96,20 +96,16 @@ export function clampAccent(accent: string, ground: string, min = 4.5): string {
 
 interface WallpaperState {
   selected: ComputedRef<string | null>;
-
   meta: ComputedRef<WallpaperMeta | null | undefined>;
   src: ComputedRef<string>;
-
   files: ComputedRef<string[]>;
   backgroundStyle: ComputedRef<{ backgroundImage: string; opacity: string }>;
+  accent: ComputedRef<string | null>;
   accentOverride: ComputedRef<string>;
   setWallpaper: (file: string | null) => void;
   randomWallpaper: () => string | null;
-
   dailyWallpaper: () => string | null;
-
   applyDaily: () => string | null;
-
   untouched: ComputedRef<boolean>;
 }
 
@@ -143,15 +139,17 @@ const useSharedWallpaper = createSharedComposable(() => {
     opacity: src.value ? "var(--wallpaper-opacity)" : "0",
   }));
 
-  const accentOverride = computed<string>(() => {
-    if (!meta.value) return "";
+  const accent = computed<string | null>(() => {
+    if (!meta.value) return null;
 
-    const accent =
-      resolvedTheme.value === "dark"
-        ? meta.value.accent
-        : (meta.value.accentLight ?? meta.value.accent);
-    return `--c-accent: ${accent};`;
+    return resolvedTheme.value === "dark"
+      ? meta.value.accent
+      : (meta.value.accentLight ?? meta.value.accent);
   });
+
+  const accentOverride = computed<string>(() =>
+    accent.value ? `--c-accent: ${accent.value};` : "",
+  );
 
   function setWallpaper(file: string | null) {
     wallpaperCookie.value = file && file in wallpapers ? file : NONE;
@@ -181,6 +179,7 @@ const useSharedWallpaper = createSharedComposable(() => {
     src,
     files: computed(() => wallpaperFiles),
     backgroundStyle,
+    accent,
     accentOverride,
     setWallpaper,
     randomWallpaper,

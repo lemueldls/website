@@ -7,28 +7,6 @@ useSeoMeta({
   profileUsername: "lemueldls",
 });
 
-useHead({
-  link: [
-    {
-      rel: "icon",
-      type: "image/svg+xml",
-      href: "/icon.svg",
-    },
-    {
-      rel: "icon",
-      type: "image/svg+xml",
-      href: "/icon-on-light.svg",
-      media: "(prefers-color-scheme: light)",
-    },
-    {
-      rel: "icon",
-      type: "image/svg+xml",
-      href: "/icon-on-dark.svg",
-      media: "(prefers-color-scheme: dark)",
-    },
-  ],
-});
-
 useSchemaOrg([
   definePerson({
     name: "Lemuel De Los Santos",

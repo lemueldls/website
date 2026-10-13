@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     head: {
       templateParams: { separator: "//" },
       htmlAttrs: { lang: "en" },
+      link: [{ key: "icon", rel: "icon", type: "image/svg+xml", href: "/icon.svg" }],
     },
   },
 
