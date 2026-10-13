@@ -63,7 +63,7 @@ onMounted(() => {
 
 watch(selected, syncPermalink);
 
-const variant = ref<WallpaperVariant>(resolvedTheme.value === "paper" ? "light" : "dark");
+const variant = ref<WallpaperVariant>(resolvedTheme.value === "light" ? "light" : "dark");
 
 const PAGE_SIZE = 24;
 const shown = ref(PAGE_SIZE);
@@ -102,7 +102,7 @@ const lightboxMeta = computed<WallpaperMeta | null>(() =>
 function openLightbox(file: string) {
   lightboxFile.value = file;
   lightboxVariant.value =
-    variant.value === "base" ? (resolvedTheme.value === "paper" ? "light" : "dark") : variant.value;
+    variant.value === "base" ? (resolvedTheme.value === "light" ? "light" : "dark") : variant.value;
   lightboxOpen.value = true;
 }
 

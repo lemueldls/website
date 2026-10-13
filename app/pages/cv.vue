@@ -133,11 +133,6 @@ const pdfHref = computed(() => {
       </div>
     </Transition>
 
-    <!--
-      The picker is a dialog rather than another block in the controls because it
-      has to hold every section, every sub-list, and every entry at once. During
-      a preview it opens over the paper it is editing.
-    -->
     <CvSectionPicker v-model:open="pickerOpen" :options="options" @toggle="toggle" />
   </div>
 </template>

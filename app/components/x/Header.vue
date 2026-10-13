@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const { toggleTheme, resolvedTheme } = useTheme();
 
-const isInk = computed(() => resolvedTheme.value === "ink");
-const themeLabel = computed(() => (isInk.value ? "Switch to Paper" : "Switch to Ink"));
+const isDark = computed(() => resolvedTheme.value === "dark");
+const themeLabel = computed(() => (isDark.value ? "Switch to Light" : "Switch to Dark"));
 
 const nav = [
   { to: "/cv", label: "Curriculum Vitae" },
@@ -124,7 +124,7 @@ onBeforeUnmount(() => {
         <XButton variant="ghost" square :title="themeLabel" @click="toggleTheme()">
           <XIcon
             :name="
-              isInk
+              isDark
                 ? 'material-symbols:dark-mode-outline-sharp'
                 : 'material-symbols:light-mode-outline-sharp'
             "

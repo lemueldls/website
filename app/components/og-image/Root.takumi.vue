@@ -4,7 +4,7 @@ import type { CSSProperties } from "vue";
 import { SIGIL_PATH, SIGIL_TRANSFORM, SIGIL_VIEWBOX } from "~/lib/sigil";
 
 const PALETTES = {
-  ink: {
+  dark: {
     bg: "#11111b",
     fg: "#cdd6f4",
     dim: "#9399b2",
@@ -14,7 +14,7 @@ const PALETTES = {
     ruleFaint: "#313244",
     accent: "#00a896",
   },
-  paper: {
+  light: {
     bg: "#eff1f5",
     fg: "#1e1e2e",
     dim: "#4c4f69",
@@ -26,7 +26,7 @@ const PALETTES = {
   },
 } as const;
 
-const GROUND = { dark: "ink", light: "paper" } as const;
+const GROUND = { dark: "dark", light: "light" } as const;
 
 const props = withDefaults(
   defineProps<{

@@ -6,7 +6,7 @@
     "bytes": 171732,
     "palette": ["#0c0c0a", "#251f1d", "#5b4641", "#0a0908", "#8e8782", "#030202"],
     "accent": "#8e8782",
-    "accentPaper": "#706b67",
+    "accentLight": "#706b67",
     "tags": []
   },
   "abandoned-trainstation.jpg": {
@@ -16,7 +16,7 @@
     "bytes": 4873574,
     "palette": ["#42733c", "#6aa24e", "#9ad068", "#1a4546", "#b6dbd5", "#2997b2"],
     "accent": "#9ad068",
-    "accentPaper": "#537138",
+    "accentLight": "#537138",
     "tags": ["urban"]
   },
   "abstract-swirls.jpg": {
@@ -26,7 +26,7 @@
     "bytes": 1166082,
     "palette": ["#070340", "#110d5e", "#1f2492", "#040130", "#020121", "#4a58ce"],
     "accent": "#6874d6",
-    "accentPaper": "#4a58ce",
+    "accentLight": "#4a58ce",
     "tags": []
   },
   "asian-village.png": {
@@ -36,7 +36,7 @@
     "bytes": 7433436,
     "palette": ["#2e363e", "#37495c", "#415e81", "#202028", "#b8bb9c", "#787e64"],
     "accent": "#b8bb9c",
-    "accentPaper": "#6b6d5b",
+    "accentLight": "#6b6d5b",
     "tags": []
   },
   "astronaut.png": {
@@ -46,7 +46,7 @@
     "bytes": 5842086,
     "palette": ["#d4a088", "#392a2f", "#524d55", "#966e67", "#f7d2ae", "#793a35"],
     "accent": "#d4a088",
-    "accentPaper": "#846455",
+    "accentLight": "#846455",
     "tags": []
   },
   "basement.jpg": {
@@ -56,7 +56,7 @@
     "bytes": 1093791,
     "palette": ["#06121e", "#162132", "#03090f", "#010204", "#2a3b51", "#5f6b75"],
     "accent": "#737e86",
-    "accentPaper": "#5f6b75",
+    "accentLight": "#5f6b75",
     "tags": []
   },
   "beach-path.jpg": {
@@ -66,7 +66,7 @@
     "bytes": 1522358,
     "palette": ["#09140a", "#283919", "#547524", "#95be2b", "#b8c3c0", "#327fb5"],
     "accent": "#95be2b",
-    "accentPaper": "#5d771b",
+    "accentLight": "#5d771b",
     "tags": ["landscape"]
   },
   "beach.jpg": {
@@ -76,7 +76,7 @@
     "bytes": 2902258,
     "palette": ["#b5cedf", "#86d2ee", "#d4e5f0", "#59c6ec", "#45afe2", "#368ed3"],
     "accent": "#59c6ec",
-    "accentPaper": "#34738a",
+    "accentLight": "#34738a",
     "tags": ["landscape"]
   },
   "biking-sunset.jpg": {
@@ -86,7 +86,7 @@
     "bytes": 3253257,
     "palette": ["#3f466b", "#2e3352", "#66587a", "#837ca7", "#b3a6ca", "#415c93"],
     "accent": "#b3a6ca",
-    "accentPaper": "#70687e",
+    "accentLight": "#70687e",
     "tags": ["sunset"]
   },
   "black-hole.png": {
@@ -96,7 +96,7 @@
     "bytes": 2337728,
     "palette": ["#1e0828", "#310c3a", "#120519", "#5c234e", "#9b6796", "#f1f0ce"],
     "accent": "#9f6d9a",
-    "accentPaper": "#8e5e8a",
+    "accentLight": "#8e5e8a",
     "tags": ["space"]
   },
   "blue-flowers.jpg": {
@@ -106,7 +106,7 @@
     "bytes": 971810,
     "palette": ["#144453", "#2c5d6c", "#4c7b8b", "#092f39", "#79a0af", "#051414"],
     "accent": "#79a0af",
-    "accentPaper": "#56717c",
+    "accentLight": "#56717c",
     "tags": []
   },
   "blue-landscape.png": {
@@ -116,7 +116,7 @@
     "bytes": 7364673,
     "palette": ["#3f91be", "#326d71", "#1b4b55", "#90d1de", "#7bb56b", "#0f3039"],
     "accent": "#7bb56b",
-    "accentPaper": "#4d7143",
+    "accentLight": "#4d7143",
     "tags": []
   },
   "bluehour.jpg": {
@@ -126,7 +126,7 @@
     "bytes": 615006,
     "palette": ["#36417a", "#222c5d", "#6d5b82", "#111d49", "#c57f7f", "#0d1439"],
     "accent": "#c57f7f",
-    "accentPaper": "#945f5f",
+    "accentLight": "#945f5f",
     "tags": ["sunset"]
   },
   "bunnies-road.png": {
@@ -136,7 +136,7 @@
     "bytes": 1192840,
     "palette": ["#070923", "#0b123b", "#050517", "#3350b3", "#142a74", "#04020e"],
     "accent": "#667cc6",
-    "accentPaper": "#3350b3",
+    "accentLight": "#3350b3",
     "tags": []
   },
   "c4-spring-sakura-sky.jpg": {
@@ -146,7 +146,7 @@
     "bytes": 1315793,
     "palette": ["#529fd7", "#2b3844", "#505960", "#c2d7eb", "#7f8385", "#a4acb4"],
     "accent": "#529fd7",
-    "accentPaper": "#3a7198",
+    "accentLight": "#3a7198",
     "tags": ["anime"]
   },
   "cabin-3.png": {
@@ -156,7 +156,7 @@
     "bytes": 693405,
     "palette": ["#3c5c86", "#344f77", "#436e93", "#2d3f56", "#6d7c88", "#252b35"],
     "accent": "#6286a5",
-    "accentPaper": "#436e93",
+    "accentLight": "#436e93",
     "tags": []
   },
   "cabin.png": {
@@ -166,7 +166,7 @@
     "bytes": 2947890,
     "palette": ["#0a1b1f", "#14262b", "#051417", "#050f10", "#223d42", "#396365"],
     "accent": "#628485",
-    "accentPaper": "#396365",
+    "accentLight": "#396365",
     "tags": []
   },
   "car-wreck.png": {
@@ -176,7 +176,7 @@
     "bytes": 1017536,
     "palette": ["#0c1225", "#0f1a2c", "#162636", "#173a4d", "#2287a0", "#1a5970"],
     "accent": "#2287a0",
-    "accentPaper": "#1e768c",
+    "accentLight": "#1e768c",
     "tags": []
   },
   "cartoon-castle.png": {
@@ -186,7 +186,7 @@
     "bytes": 7242049,
     "palette": ["#dbd7b7", "#a19c75", "#343d2f", "#474f3d", "#7a7658", "#272f23"],
     "accent": "#a19c75",
-    "accentPaper": "#726e53",
+    "accentLight": "#726e53",
     "tags": []
   },
   "cat-in-clouds.png": {
@@ -196,7 +196,7 @@
     "bytes": 17028,
     "palette": ["#19aedc", "#77c0db", "#c9eef2", "#1c6755", "#94c13f", "#0cacdd"],
     "accent": "#0cacdd",
-    "accentPaper": "#087393",
+    "accentLight": "#087393",
     "tags": ["landscape"]
   },
   "chess-gate.jpg": {
@@ -206,7 +206,7 @@
     "bytes": 575562,
     "palette": ["#18172b", "#12121e", "#dad0c9", "#28223b", "#584256", "#98878c"],
     "accent": "#98878c",
-    "accentPaper": "#726569",
+    "accentLight": "#726569",
     "tags": []
   },
   "city-horizon.jpg": {
@@ -216,7 +216,7 @@
     "bytes": 266659,
     "palette": ["#4a6d8d", "#23282a", "#363a3f", "#94484a", "#dd5432", "#5c5369"],
     "accent": "#dd5432",
-    "accentPaper": "#b8462a",
+    "accentLight": "#b8462a",
     "tags": ["sunset", "urban"]
   },
   "city-on-water.jpg": {
@@ -226,7 +226,7 @@
     "bytes": 1828817,
     "palette": ["#657c8b", "#8c9ca5", "#3c647a", "#8ed4e2", "#3a9abe", "#234a5e"],
     "accent": "#3a9abe",
-    "accentPaper": "#2c748e",
+    "accentLight": "#2c748e",
     "tags": ["urban"]
   },
   "city.png": {
@@ -236,7 +236,7 @@
     "bytes": 15570471,
     "palette": ["#c6edf9", "#bec2c7", "#8791b7", "#afa77c", "#675774", "#b67284"],
     "accent": "#afa77c",
-    "accentPaper": "#6d684e",
+    "accentLight": "#6d684e",
     "tags": ["urban"]
   },
   "clearing.png": {
@@ -246,7 +246,7 @@
     "bytes": 436311,
     "palette": ["#2a2f3a"],
     "accent": "#7a7d84",
-    "accentPaper": "#2a2f3a",
+    "accentLight": "#2a2f3a",
     "tags": []
   },
   "cloud-coffee.jpg": {
@@ -256,7 +256,7 @@
     "bytes": 1007637,
     "palette": ["#dbe0dd", "#a2b0b9", "#132b46", "#677a8d", "#3b5266", "#071426"],
     "accent": "#a2b0b9",
-    "accentPaper": "#656e74",
+    "accentLight": "#656e74",
     "tags": ["landscape"]
   },
   "clouds-2.png": {
@@ -266,7 +266,7 @@
     "bytes": 1630797,
     "palette": ["#9633c2", "#0b0535", "#3934a6", "#d29f95", "#4f92df", "#1a1a6d"],
     "accent": "#4f92df",
-    "accentPaper": "#3b6ea7",
+    "accentLight": "#3b6ea7",
     "tags": ["landscape"]
   },
   "clouds-3.jpg": {
@@ -276,7 +276,7 @@
     "bytes": 121254,
     "palette": ["#908bbd", "#2546ab", "#d6bbcb", "#4868be", "#1c348b", "#19256b"],
     "accent": "#908bbd",
-    "accentPaper": "#6c688e",
+    "accentLight": "#6c688e",
     "tags": ["landscape"]
   },
   "clouds-3.png": {
@@ -286,7 +286,7 @@
     "bytes": 9037950,
     "palette": ["#2d282b", "#b95d4d", "#baadb0", "#483226", "#eca771", "#84400c"],
     "accent": "#eca771",
-    "accentPaper": "#8a6142",
+    "accentLight": "#8a6142",
     "tags": ["landscape"]
   },
   "clouds.png": {
@@ -296,7 +296,7 @@
     "bytes": 3482310,
     "palette": ["#41578d", "#38497b", "#4f679d", "#303d62", "#758cb4", "#b1c3db"],
     "accent": "#b1c3db",
-    "accentPaper": "#606a77",
+    "accentLight": "#606a77",
     "tags": ["landscape"]
   },
   "cool.jpg": {
@@ -306,7 +306,7 @@
     "bytes": 1568898,
     "palette": ["#16101e", "#201229", "#0f0d13", "#112930", "#532a2c", "#b06820"],
     "accent": "#b36e29",
-    "accentPaper": "#9a5b1c",
+    "accentLight": "#9a5b1c",
     "tags": []
   },
   "corals-fish-underwater.jpg": {
@@ -316,7 +316,7 @@
     "bytes": 4148793,
     "palette": ["#1870a9", "#24a9db", "#0e4f85", "#93e1f8", "#073763", "#022547"],
     "accent": "#24a9db",
-    "accentPaper": "#187192",
+    "accentLight": "#187192",
     "tags": []
   },
   "cottages-river.png": {
@@ -326,7 +326,7 @@
     "bytes": 7008893,
     "palette": ["#5f79cb", "#343566", "#3a529f", "#242845", "#121c28", "#7c5762"],
     "accent": "#5f79cb",
-    "accentPaper": "#536ab2",
+    "accentLight": "#536ab2",
     "tags": ["landscape"]
   },
   "crane.png": {
@@ -336,7 +336,7 @@
     "bytes": 2881921,
     "palette": ["#129bb8", "#0e7c99", "#043445", "#108baa", "#14a7c5", "#115969"],
     "accent": "#14a7c5",
-    "accentPaper": "#0e768c",
+    "accentLight": "#0e768c",
     "tags": []
   },
   "dark-forest.jpg": {
@@ -346,7 +346,7 @@
     "bytes": 2933986,
     "palette": ["#132a33", "#21424c", "#061016", "#0a1820", "#040c11", "#467d88"],
     "accent": "#558892",
-    "accentPaper": "#40737d",
+    "accentLight": "#40737d",
     "tags": ["landscape"]
   },
   "dark-star.jpg": {
@@ -356,7 +356,7 @@
     "bytes": 231848,
     "palette": ["#111013", "#201f28", "#040518", "#0d0e21", "#4b3c56", "#568bb6"],
     "accent": "#568bb6",
-    "accentPaper": "#446e90",
+    "accentLight": "#446e90",
     "tags": []
   },
   "dark-waves.jpg": {
@@ -366,7 +366,7 @@
     "bytes": 940024,
     "palette": ["#21263a", "#1e1f2c", "#293654", "#1d1c23", "#446283", "#1b191d"],
     "accent": "#6b839d",
-    "accentPaper": "#446283",
+    "accentLight": "#446283",
     "tags": ["landscape"]
   },
   "deer-glade.jpg": {
@@ -376,7 +376,7 @@
     "bytes": 340057,
     "palette": ["#ae7f2f", "#965d37", "#bba25b", "#473a25", "#873c1e", "#968ba9"],
     "accent": "#bba25b",
-    "accentPaper": "#7d6c3d",
+    "accentLight": "#7d6c3d",
     "tags": []
   },
   "degirled.png": {
@@ -386,7 +386,7 @@
     "bytes": 5404429,
     "palette": ["#2c7980", "#d5bca6", "#181f1f", "#453f34", "#929290", "#656864"],
     "accent": "#d5bca6",
-    "accentPaper": "#73665a",
+    "accentLight": "#73665a",
     "tags": []
   },
   "diner-lonely-road.jpg": {
@@ -396,7 +396,7 @@
     "bytes": 1017617,
     "palette": ["#2bb8f1", "#203654", "#1d2434", "#2b4e79", "#2480c4", "#675852"],
     "accent": "#2bb8f1",
-    "accentPaper": "#1b7397",
+    "accentLight": "#1b7397",
     "tags": []
   },
   "dino.jpg": {
@@ -406,7 +406,7 @@
     "bytes": 2964682,
     "palette": ["#e8ae9b", "#d48191", "#b55a71", "#a82f53", "#faf0df", "#86d6b9"],
     "accent": "#e8ae9b",
-    "accentPaper": "#87655a",
+    "accentLight": "#87655a",
     "tags": []
   },
   "disco.png": {
@@ -416,7 +416,7 @@
     "bytes": 2003875,
     "palette": ["#14171f", "#3f393a", "#6f6051", "#bd9b70", "#0e2b42", "#2a4f6c"],
     "accent": "#bd9b70",
-    "accentPaper": "#7e674b",
+    "accentLight": "#7e674b",
     "tags": []
   },
   "dominik-mayer-1.jpg": {
@@ -426,7 +426,7 @@
     "bytes": 524564,
     "palette": ["#822808", "#cd4f0f", "#e8832f", "#331002", "#f9c95e", "#fbf2c5"],
     "accent": "#e8832f",
-    "accentPaper": "#9b571f",
+    "accentLight": "#9b571f",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-10.jpg": {
@@ -436,7 +436,7 @@
     "bytes": 1243871,
     "palette": ["#303c40", "#262e30", "#4a6268", "#0e100e", "#171b19", "#a2dbe2"],
     "accent": "#a2dbe2",
-    "accentPaper": "#516e71",
+    "accentLight": "#516e71",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-11.jpg": {
@@ -446,7 +446,7 @@
     "bytes": 506655,
     "palette": ["#010d14", "#103942", "#3cd0dc", "#0a2028", "#165e68", "#1d929e"],
     "accent": "#3cd0dc",
-    "accentPaper": "#237980",
+    "accentLight": "#237980",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-12.jpg": {
@@ -456,7 +456,7 @@
     "bytes": 447303,
     "palette": ["#58130f", "#c03a2f", "#746769", "#da9d6b", "#fae9cf", "#303f65"],
     "accent": "#da9d6b",
-    "accentPaper": "#886243",
+    "accentLight": "#886243",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-13.jpg": {
@@ -466,7 +466,7 @@
     "bytes": 671752,
     "palette": ["#b23516", "#ee6f21", "#3f211c", "#201613", "#f7d36d", "#550e09"],
     "accent": "#ee6f21",
-    "accentPaper": "#a94f17",
+    "accentLight": "#a94f17",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-14.jpg": {
@@ -476,7 +476,7 @@
     "bytes": 472906,
     "palette": ["#fad961", "#290a04", "#e5a843", "#ba6327", "#8a3613", "#fbf4af"],
     "accent": "#e5a843",
-    "accentPaper": "#866227",
+    "accentLight": "#866227",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-15.jpg": {
@@ -486,7 +486,7 @@
     "bytes": 449000,
     "palette": ["#19223d", "#25355c", "#355080", "#0b0e1d", "#7d3844", "#db5f3f"],
     "accent": "#db5f3f",
-    "accentPaper": "#ad4b32",
+    "accentLight": "#ad4b32",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-16.jpg": {
@@ -496,7 +496,7 @@
     "bytes": 495507,
     "palette": ["#ed4f0f", "#9d1d1b", "#f6c856", "#280620", "#5a0c1b", "#15051c"],
     "accent": "#ed4f0f",
-    "accentPaper": "#bc3f0c",
+    "accentLight": "#bc3f0c",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-17.jpg": {
@@ -506,7 +506,7 @@
     "bytes": 1105414,
     "palette": ["#0c080c", "#241817", "#453126", "#f0dd93", "#6e563b", "#b39a65"],
     "accent": "#b39a65",
-    "accentPaper": "#776743",
+    "accentLight": "#776743",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-18.png": {
@@ -516,7 +516,7 @@
     "bytes": 1432156,
     "palette": ["#f96741", "#171c26", "#4f3237", "#62565a", "#b1433b", "#edc57c"],
     "accent": "#f96741",
-    "accentPaper": "#b0492e",
+    "accentLight": "#b0492e",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-19.jpg": {
@@ -526,7 +526,7 @@
     "bytes": 530299,
     "palette": ["#271512", "#80858b", "#e5dccb", "#53525a", "#beb7af", "#87caf5"],
     "accent": "#87caf5",
-    "accentPaper": "#496d85",
+    "accentLight": "#496d85",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-2.jpg": {
@@ -536,7 +536,7 @@
     "bytes": 1777761,
     "palette": ["#0e0801", "#2e1403", "#f9cc34", "#db7020", "#72320b", "#f7edad"],
     "accent": "#f9cc34",
-    "accentPaper": "#7c661a",
+    "accentLight": "#7c661a",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-20.jpg": {
@@ -546,7 +546,7 @@
     "bytes": 337712,
     "palette": ["#d56610", "#3d091d", "#983317", "#f48d0d", "#fcd30c", "#e4bd86"],
     "accent": "#f48d0d",
-    "accentPaper": "#985808",
+    "accentLight": "#985808",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-21.jpg": {
@@ -556,7 +556,7 @@
     "bytes": 798103,
     "palette": ["#243a3c", "#161918", "#694329", "#b17437", "#5f6358", "#e5c167"],
     "accent": "#e5c167",
-    "accentPaper": "#7c6938",
+    "accentLight": "#7c6938",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-22.jpg": {
@@ -566,7 +566,7 @@
     "bytes": 866758,
     "palette": ["#62200d", "#b22a0e", "#2b1510", "#311d0b", "#f05a26", "#fbd6bc"],
     "accent": "#f05a26",
-    "accentPaper": "#be471e",
+    "accentLight": "#be471e",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-23.jpg": {
@@ -576,7 +576,7 @@
     "bytes": 2292520,
     "palette": ["#120d36", "#dedee8", "#acc4e9", "#70b2e4", "#18386f", "#2382ba"],
     "accent": "#70b2e4",
-    "accentPaper": "#466f8e",
+    "accentLight": "#466f8e",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-24.jpg": {
@@ -586,7 +586,7 @@
     "bytes": 2129941,
     "palette": ["#1f0c08", "#813f2b", "#992416", "#cd1a0c", "#531f13", "#93593c"],
     "accent": "#da5349",
-    "accentPaper": "#cd1a0c",
+    "accentLight": "#cd1a0c",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-25.jpg": {
@@ -596,7 +596,7 @@
     "bytes": 1229395,
     "palette": ["#363025", "#061104", "#6b2d17", "#ab3209", "#281d0c", "#ed790f"],
     "accent": "#ed790f",
-    "accentPaper": "#a8560b",
+    "accentLight": "#a8560b",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-26.jpg": {
@@ -606,7 +606,7 @@
     "bytes": 2048307,
     "palette": ["#f5f9de", "#a8691a", "#3b1f08", "#7f2f0a", "#e6a51a", "#e1cc66"],
     "accent": "#e6a51a",
-    "accentPaper": "#86600f",
+    "accentLight": "#86600f",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-4.jpg": {
@@ -616,7 +616,7 @@
     "bytes": 1469038,
     "palette": ["#c4c8d5", "#7c4807", "#96a9c1", "#e3b60d", "#5a7fb0", "#f3eaec"],
     "accent": "#e3b60d",
-    "accentPaper": "#846a08",
+    "accentLight": "#846a08",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-5.jpg": {
@@ -626,7 +626,7 @@
     "bytes": 463223,
     "palette": ["#29292b", "#413736", "#644b42", "#ecd6c5", "#8c7062", "#ba9d8b"],
     "accent": "#ba9d8b",
-    "accentPaper": "#7c695d",
+    "accentLight": "#7c695d",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-7.jpg": {
@@ -636,7 +636,7 @@
     "bytes": 1588896,
     "palette": ["#170c12", "#511918", "#2e1217", "#89281c", "#cd4b27", "#f8b54f"],
     "accent": "#f8b54f",
-    "accentPaper": "#86622b",
+    "accentLight": "#86622b",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-8.jpg": {
@@ -646,7 +646,7 @@
     "bytes": 732536,
     "palette": ["#2f1119", "#e5dee1", "#9696b0", "#f2d64d", "#99502c", "#bf974b"],
     "accent": "#bf974b",
-    "accentPaper": "#7f6532",
+    "accentLight": "#7f6532",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-9.jpg": {
@@ -656,7 +656,7 @@
     "bytes": 428640,
     "palette": ["#1d1008", "#0b0705", "#3d1d0c", "#79300b", "#dd6c10", "#fbd770"],
     "accent": "#dd6c10",
-    "accentPaper": "#a6510c",
+    "accentLight": "#a6510c",
     "tags": ["dominik-mayer"]
   },
   "dragon.jpg": {
@@ -666,7 +666,7 @@
     "bytes": 6587784,
     "palette": ["#b7aab6", "#dbc6c7", "#6c7690", "#99899c", "#f7ece2", "#525e7a"],
     "accent": "#dbc6c7",
-    "accentPaper": "#776b6c",
+    "accentLight": "#776b6c",
     "tags": ["fantasy"]
   },
   "droplets.png": {
@@ -676,7 +676,7 @@
     "bytes": 1337200,
     "palette": ["#62655d", "#52554f", "#737768", "#333d3f", "#888f76", "#a5b18a"],
     "accent": "#a5b18a",
-    "accentPaper": "#676f56",
+    "accentLight": "#676f56",
     "tags": []
   },
   "eclipse.jpg": {
@@ -686,7 +686,7 @@
     "bytes": 482059,
     "palette": ["#241f34", "#492639", "#7a353f", "#080914", "#191424", "#b24b4b"],
     "accent": "#bc6262",
-    "accentPaper": "#b24b4b",
+    "accentLight": "#b24b4b",
     "tags": ["space"]
   },
   "excalibur-lake.jpg": {
@@ -696,7 +696,7 @@
     "bytes": 584071,
     "palette": ["#114155", "#175264", "#0c3447", "#246d7b", "#21919f", "#0b2730"],
     "accent": "#21919f",
-    "accentPaper": "#1c7984",
+    "accentLight": "#1c7984",
     "tags": ["fantasy", "landscape"]
   },
   "fantasy-city.jpg": {
@@ -706,7 +706,7 @@
     "bytes": 4331442,
     "palette": ["#6a5845", "#463c2f", "#9c8467", "#c3cac0", "#2a281f", "#11140f"],
     "accent": "#9c8467",
-    "accentPaper": "#7c6852",
+    "accentLight": "#7c6852",
     "tags": ["urban"]
   },
   "firewatch.jpg": {
@@ -716,7 +716,7 @@
     "bytes": 1553181,
     "palette": ["#291933", "#421f47", "#592d69", "#1a1121", "#a1324c", "#15152a"],
     "accent": "#b86579",
-    "accentPaper": "#a1324c",
+    "accentLight": "#a1324c",
     "tags": []
   },
   "flower-field-3.png": {
@@ -726,7 +726,7 @@
     "bytes": 6119250,
     "palette": ["#f0d8b2", "#e5b37b", "#cb884c", "#845c40", "#46382e", "#9d7d68"],
     "accent": "#e5b37b",
-    "accentPaper": "#866848",
+    "accentLight": "#866848",
     "tags": []
   },
   "flower-field.jpg": {
@@ -736,7 +736,7 @@
     "bytes": 4014257,
     "palette": ["#f4eae2", "#ebc9b9", "#c7e3f5", "#cf9c94", "#737774", "#6dcafb"],
     "accent": "#6dcafb",
-    "accentPaper": "#3b6d88",
+    "accentLight": "#3b6d88",
     "tags": []
   },
   "flower.jpg": {
@@ -746,7 +746,7 @@
     "bytes": 570151,
     "palette": ["#3c2c3b", "#593743", "#2c2434", "#211d2d", "#8a4e50", "#d7927f"],
     "accent": "#d7927f",
-    "accentPaper": "#8f6155",
+    "accentLight": "#8f6155",
     "tags": []
   },
   "flowering-rain.png": {
@@ -756,7 +756,7 @@
     "bytes": 2581219,
     "palette": ["#5f849b", "#1c2829", "#26343a", "#4b6c83", "#304154", "#3e5470"],
     "accent": "#5f849b",
-    "accentPaper": "#4f6e81",
+    "accentLight": "#4f6e81",
     "tags": []
   },
   "flowers-1.jpg": {
@@ -766,7 +766,7 @@
     "bytes": 650058,
     "palette": ["#0c0c0c", "#161616", "#252527", "#433e43", "#865c6b", "#c0a2b5"],
     "accent": "#c0a2b5",
-    "accentPaper": "#786571",
+    "accentLight": "#786571",
     "tags": ["flowers"]
   },
   "flowers-10.jpg": {
@@ -776,7 +776,7 @@
     "bytes": 3625996,
     "palette": ["#dad2cc", "#ad9d8f", "#75665b", "#1c1b29", "#31384b", "#554338"],
     "accent": "#ad9d8f",
-    "accentPaper": "#73695f",
+    "accentLight": "#73695f",
     "tags": ["flowers"]
   },
   "flowers-11.jpg": {
@@ -786,7 +786,7 @@
     "bytes": 815788,
     "palette": ["#48682c", "#354e25", "#1c2a19", "#6b7150", "#9b9e7b", "#d1d2c6"],
     "accent": "#9b9e7b",
-    "accentPaper": "#6e7057",
+    "accentLight": "#6e7057",
     "tags": ["flowers"]
   },
   "flowers-12.jpg": {
@@ -796,7 +796,7 @@
     "bytes": 220384,
     "palette": ["#c75858", "#464626", "#e38792", "#302b16", "#773e3e", "#181507"],
     "accent": "#e38792",
-    "accentPaper": "#975a61",
+    "accentLight": "#975a61",
     "tags": ["flowers"]
   },
   "flowers-13.jpg": {
@@ -806,7 +806,7 @@
     "bytes": 1169057,
     "palette": ["#041f24", "#0a2b31", "#412b3b", "#89444f", "#c88287", "#1d1e26"],
     "accent": "#c88287",
-    "accentPaper": "#8e5c60",
+    "accentLight": "#8e5c60",
     "tags": ["flowers"]
   },
   "flowers-14.jpg": {
@@ -816,7 +816,7 @@
     "bytes": 645038,
     "palette": ["#262e2a", "#4a5242", "#9b4450", "#8a8969", "#db8688", "#e8d3bd"],
     "accent": "#db8688",
-    "accentPaper": "#92595b",
+    "accentLight": "#92595b",
     "tags": ["flowers"]
   },
   "flowers-15.jpg": {
@@ -826,7 +826,7 @@
     "bytes": 3030011,
     "palette": ["#19170e", "#3f3832", "#635f5c", "#8b8c8b", "#b5b6b8", "#e7e9ec"],
     "accent": "#b5b6b8",
-    "accentPaper": "#6a6a6b",
+    "accentLight": "#6a6a6b",
     "tags": ["flowers"]
   },
   "flowers-16.jpg": {
@@ -836,7 +836,7 @@
     "bytes": 219292,
     "palette": ["#e8ecf9", "#dcc8d2", "#e2dce9", "#d2acb5", "#bc878c", "#845a58"],
     "accent": "#d2acb5",
-    "accentPaper": "#7a646a",
+    "accentLight": "#7a646a",
     "tags": ["flowers"]
   },
   "flowers-18.jpg": {
@@ -846,7 +846,7 @@
     "bytes": 4609659,
     "palette": ["#b37874", "#c1908f", "#cba7a7", "#d4bdbd", "#dcd4d3", "#905e53"],
     "accent": "#c1908f",
-    "accentPaper": "#81605f",
+    "accentLight": "#81605f",
     "tags": ["flowers"]
   },
   "flowers-19.jpg": {
@@ -856,7 +856,7 @@
     "bytes": 197303,
     "palette": ["#cea098", "#ddb3ad", "#be8780", "#935752", "#e6c2bd", "#fadad6"],
     "accent": "#cea098",
-    "accentPaper": "#81645f",
+    "accentLight": "#81645f",
     "tags": ["flowers"]
   },
   "flowers-2.jpg": {
@@ -866,7 +866,7 @@
     "bytes": 1017163,
     "palette": ["#02151c", "#011820", "#072127", "#1f2d30", "#583a3d", "#9a8670"],
     "accent": "#9a8670",
-    "accentPaper": "#7a6a59",
+    "accentLight": "#7a6a59",
     "tags": ["flowers"]
   },
   "flowers-20.jpg": {
@@ -876,7 +876,7 @@
     "bytes": 316307,
     "palette": ["#d3b2b8", "#e7d2d0", "#856789", "#bc8999", "#7f95c2", "#77424a"],
     "accent": "#7f95c2",
-    "accentPaper": "#5a6a89",
+    "accentLight": "#5a6a89",
     "tags": ["flowers"]
   },
   "flowers-21.png": {
@@ -886,7 +886,7 @@
     "bytes": 20525311,
     "palette": ["#0f0f0f", "#1e1b1c", "#37272a", "#474042", "#903145", "#95737a"],
     "accent": "#997980",
-    "accentPaper": "#82656b",
+    "accentLight": "#82656b",
     "tags": ["flowers"]
   },
   "flowers-3.jpg": {
@@ -896,7 +896,7 @@
     "bytes": 573163,
     "palette": ["#212209", "#423d1f", "#7c293f", "#655d43", "#a04667", "#a0958b"],
     "accent": "#b46d87",
-    "accentPaper": "#a04667",
+    "accentLight": "#a04667",
     "tags": ["flowers"]
   },
   "flowers-4.jpg": {
@@ -906,7 +906,7 @@
     "bytes": 310698,
     "palette": ["#0f1a0c", "#1b2b1a", "#2c4127", "#445c42", "#ccbdb9", "#937f71"],
     "accent": "#ccbdb9",
-    "accentPaper": "#6f6664",
+    "accentLight": "#6f6664",
     "tags": ["flowers"]
   },
   "flowers-5.jpg": {
@@ -916,7 +916,7 @@
     "bytes": 1206547,
     "palette": ["#524b49", "#867e75", "#302a29", "#cbc8c3", "#1a1614", "#080605"],
     "accent": "#867e75",
-    "accentPaper": "#706962",
+    "accentLight": "#706962",
     "tags": ["flowers"]
   },
   "flowers-6.jpg": {
@@ -926,7 +926,7 @@
     "bytes": 1278171,
     "palette": ["#dcebf8", "#bf8992", "#cfb7c2", "#a65f66", "#873c3d", "#45201c"],
     "accent": "#bf8992",
-    "accentPaper": "#876167",
+    "accentLight": "#876167",
     "tags": ["flowers"]
   },
   "flowers-7.jpg": {
@@ -936,7 +936,7 @@
     "bytes": 2487047,
     "palette": ["#172528", "#124744", "#493129", "#8d4726", "#cb7b2c", "#4c7f7b"],
     "accent": "#cb7b2c",
-    "accentPaper": "#985c21",
+    "accentLight": "#985c21",
     "tags": ["flowers"]
   },
   "flowers-8.jpg": {
@@ -946,7 +946,7 @@
     "bytes": 881178,
     "palette": ["#061009", "#260607", "#13271a", "#620712", "#243e2e", "#42574a"],
     "accent": "#a36e75",
-    "accentPaper": "#620712",
+    "accentLight": "#620712",
     "tags": ["flowers"]
   },
   "flowers-9.jpg": {
@@ -956,7 +956,7 @@
     "bytes": 691412,
     "palette": ["#444142", "#333231", "#282725", "#5e5661", "#f8f8f7", "#979094"],
     "accent": "#979094",
-    "accentPaper": "#716c6f",
+    "accentLight": "#716c6f",
     "tags": ["flowers"]
   },
   "flying-comets-clouds.jpg": {
@@ -966,7 +966,7 @@
     "bytes": 3764274,
     "palette": ["#46384b", "#5c4f6d", "#2a2537", "#171624", "#9f7678", "#f0b789"],
     "accent": "#f0b789",
-    "accentPaper": "#82634a",
+    "accentLight": "#82634a",
     "tags": ["landscape", "space"]
   },
   "foggy-city.jpg": {
@@ -976,7 +976,7 @@
     "bytes": 1452113,
     "palette": ["#080f16", "#353b39", "#2a3131", "#192125", "#63483b", "#b0643c"],
     "accent": "#b36a44",
-    "accentPaper": "#a15c37",
+    "accentLight": "#a15c37",
     "tags": ["urban"]
   },
   "fumo-fumo.jpg": {
@@ -986,7 +986,7 @@
     "bytes": 1374263,
     "palette": ["#dae2f2", "#818fae", "#50617a", "#acb9d0", "#0e121e", "#303c52"],
     "accent": "#acb9d0",
-    "accentPaper": "#646c79",
+    "accentLight": "#646c79",
     "tags": ["anime"]
   },
   "fw13-pro.png": {
@@ -996,7 +996,7 @@
     "bytes": 6965471,
     "palette": ["#000000", "#010101", "#030305", "#5e5b70", "#34323f", "#110f14"],
     "accent": "#807d8e",
-    "accentPaper": "#5e5b70",
+    "accentLight": "#5e5b70",
     "tags": []
   },
   "galaxy-waves.jpg": {
@@ -1006,7 +1006,7 @@
     "bytes": 1515775,
     "palette": ["#0f2c72", "#0c1c53", "#1551a0", "#0a133c", "#3394d2", "#0a0c29"],
     "accent": "#3394d2",
-    "accentPaper": "#266f9e",
+    "accentLight": "#266f9e",
     "tags": ["landscape", "space"]
   },
   "genshin-landscape.png": {
@@ -1016,7 +1016,7 @@
     "bytes": 2502309,
     "palette": ["#059fdb", "#7ad2f1", "#7fb690", "#11995f", "#07714f", "#286c8d"],
     "accent": "#059fdb",
-    "accentPaper": "#04719b",
+    "accentLight": "#04719b",
     "tags": []
   },
   "gentlemen-sunset.png": {
@@ -1026,7 +1026,7 @@
     "bytes": 3135791,
     "palette": ["#322825", "#5a4132", "#986b42", "#d7ad75", "#1f1b1a", "#101519"],
     "accent": "#d7ad75",
-    "accentPaper": "#7d6544",
+    "accentLight": "#7d6544",
     "tags": ["sunset"]
   },
   "gingerbread-house.jpg": {
@@ -1036,7 +1036,7 @@
     "bytes": 2438704,
     "palette": ["#83442b", "#5a281a", "#ad6638", "#d8a050", "#ad7d67", "#d9bc97"],
     "accent": "#d8a050",
-    "accentPaper": "#876432",
+    "accentLight": "#876432",
     "tags": []
   },
   "grandfather-tree.jpg": {
@@ -1046,7 +1046,7 @@
     "bytes": 4594636,
     "palette": ["#5d609f", "#9f7fb2", "#d69fc6", "#d3c7ea", "#8e99d6", "#f7f0fa"],
     "accent": "#8e99d6",
-    "accentPaper": "#5f668f",
+    "accentLight": "#5f668f",
     "tags": ["landscape"]
   },
   "grassy-well.jpg": {
@@ -1056,7 +1056,7 @@
     "bytes": 164317,
     "palette": ["#8db649", "#729555", "#9fb480", "#516946", "#4998cb", "#add7e2"],
     "accent": "#8db649",
-    "accentPaper": "#58722e",
+    "accentLight": "#58722e",
     "tags": []
   },
   "green-bridge.jpg": {
@@ -1066,7 +1066,7 @@
     "bytes": 758339,
     "palette": ["#06371e", "#255935", "#488446", "#c1e29d", "#79aa7f", "#86c052"],
     "accent": "#86c052",
-    "accentPaper": "#547833",
+    "accentLight": "#547833",
     "tags": []
   },
   "greenbus.jpg": {
@@ -1076,7 +1076,7 @@
     "bytes": 974774,
     "palette": ["#20312d", "#354a38", "#53663c", "#667d5e", "#a6b57a", "#859337"],
     "accent": "#a6b57a",
-    "accentPaper": "#68714c",
+    "accentLight": "#68714c",
     "tags": ["urban"]
   },
   "harbor.jpg": {
@@ -1086,7 +1086,7 @@
     "bytes": 456607,
     "palette": ["#226298", "#3c85b8", "#82c5e9", "#2c3248", "#75a3bf", "#c3ecf7"],
     "accent": "#82c5e9",
-    "accentPaper": "#4c7388",
+    "accentLight": "#4c7388",
     "tags": []
   },
   "haunted-house.jpg": {
@@ -1096,7 +1096,7 @@
     "bytes": 1313180,
     "palette": ["#120816", "#190a1a", "#2c1022", "#0f0814", "#7b244b", "#e28db8"],
     "accent": "#e28db8",
-    "accentPaper": "#8d5873",
+    "accentLight": "#8d5873",
     "tags": []
   },
   "hollow-knight.jpg": {
@@ -1106,7 +1106,7 @@
     "bytes": 3056907,
     "palette": ["#1f285d", "#475aa6", "#303d80", "#688bd4", "#b6cef7", "#131940"],
     "accent": "#688bd4",
-    "accentPaper": "#4e689f",
+    "accentLight": "#4e689f",
     "tags": ["fantasy"]
   },
   "hollow-knight.png": {
@@ -1116,7 +1116,7 @@
     "bytes": 2769118,
     "palette": ["#0b0f12", "#0b1215", "#0c171b", "#111f24", "#30292b", "#6a423c"],
     "accent": "#957975",
-    "accentPaper": "#6a423c",
+    "accentLight": "#6a423c",
     "tags": ["fantasy"]
   },
   "hollow.jpg": {
@@ -1126,7 +1126,7 @@
     "bytes": 3212247,
     "palette": ["#1a292d", "#243b47", "#365065", "#111718", "#566b85", "#7a8fa4"],
     "accent": "#7a8fa4",
-    "accentPaper": "#5c6b7b",
+    "accentLight": "#5c6b7b",
     "tags": []
   },
   "horizon-2.jpg": {
@@ -1136,7 +1136,7 @@
     "bytes": 991206,
     "palette": ["#e7a685", "#8a84b4", "#2d134a", "#69367d", "#5c5ca9", "#ce5074"],
     "accent": "#e7a685",
-    "accentPaper": "#87614e",
+    "accentLight": "#87614e",
     "tags": ["sunset"]
   },
   "horizon.jpg": {
@@ -1146,7 +1146,7 @@
     "bytes": 547417,
     "palette": ["#183e85", "#112961", "#266db5", "#0d1d43", "#6d4e8f", "#bf91ae"],
     "accent": "#bf91ae",
-    "accentPaper": "#7f6174",
+    "accentLight": "#7f6174",
     "tags": ["sunset"]
   },
   "i-touch-this.jpg": {
@@ -1156,7 +1156,7 @@
     "bytes": 4079020,
     "palette": ["#8bb047", "#aac962", "#6d973f", "#4e7a39", "#2e5d30", "#1a4a26"],
     "accent": "#aac962",
-    "accentPaper": "#5c6d35",
+    "accentLight": "#5c6d35",
     "tags": []
   },
   "isekai.jpg": {
@@ -1166,7 +1166,7 @@
     "bytes": 245803,
     "palette": ["#0a061e", "#0e0625", "#400365", "#260448", "#150531", "#8b058c"],
     "accent": "#b663b7",
-    "accentPaper": "#8b058c",
+    "accentLight": "#8b058c",
     "tags": []
   },
   "japan-alley.png": {
@@ -1176,7 +1176,7 @@
     "bytes": 670388,
     "palette": ["#2c3232", "#1e2021", "#222526", "#285055", "#d3c299", "#6d7a69"],
     "accent": "#d3c299",
-    "accentPaper": "#726953",
+    "accentLight": "#726953",
     "tags": []
   },
   "japan-tower-pink.jpg": {
@@ -1186,7 +1186,7 @@
     "bytes": 157123,
     "palette": ["#e686a1", "#4c1624", "#ca4d6e", "#6d2034", "#9d3651", "#ed8ba7"],
     "accent": "#ed8ba7",
-    "accentPaper": "#945768",
+    "accentLight": "#945768",
     "tags": []
   },
   "jellyfish.jpg": {
@@ -1196,7 +1196,7 @@
     "bytes": 280028,
     "palette": ["#0f161e"],
     "accent": "#7d8185",
-    "accentPaper": "#0f161e",
+    "accentLight": "#0f161e",
     "tags": []
   },
   "jupiter.png": {
@@ -1206,7 +1206,7 @@
     "bytes": 39555,
     "palette": ["#1b1d2d", "#33334c", "#5c5872", "#9ba6ad", "#b96c66", "#181929"],
     "accent": "#b96c66",
-    "accentPaper": "#9a5a55",
+    "accentLight": "#9a5a55",
     "tags": ["space"]
   },
   "kaiju.png": {
@@ -1216,7 +1216,7 @@
     "bytes": 3846297,
     "palette": ["#bb3e27", "#221c1b", "#66241e", "#3a221e", "#8d3125", "#56352b"],
     "accent": "#c65e4b",
-    "accentPaper": "#bb3e27",
+    "accentLight": "#bb3e27",
     "tags": ["fantasy"]
   },
   "kitchen.png": {
@@ -1226,7 +1226,7 @@
     "bytes": 593535,
     "palette": ["#2d3648", "#20262e", "#3c4c68", "#583436", "#8c4240", "#b9524b"],
     "accent": "#c26862",
-    "accentPaper": "#b14f48",
+    "accentLight": "#b14f48",
     "tags": []
   },
   "kitty.jpg": {
@@ -1236,7 +1236,7 @@
     "bytes": 1948405,
     "palette": ["#797264", "#3c3727", "#5b593a", "#bdb087", "#efeaca", "#749638"],
     "accent": "#bdb087",
-    "accentPaper": "#6e674f",
+    "accentLight": "#6e674f",
     "tags": []
   },
   "kloir.jpg": {
@@ -1246,7 +1246,7 @@
     "bytes": 885682,
     "palette": ["#15357f", "#1151bc", "#0b1f67", "#070b4c", "#2f86e7", "#525a7e"],
     "accent": "#2f86e7",
-    "accentPaper": "#256ab7",
+    "accentLight": "#256ab7",
     "tags": []
   },
   "knight-building.png": {
@@ -1256,7 +1256,7 @@
     "bytes": 4618444,
     "palette": ["#393d41", "#0f1519", "#1e2427", "#080d11", "#696766", "#04080d"],
     "accent": "#828080",
-    "accentPaper": "#696766",
+    "accentLight": "#696766",
     "tags": ["fantasy"]
   },
   "knight-sit.png": {
@@ -1266,7 +1266,7 @@
     "bytes": 14552,
     "palette": ["#4f3e35", "#5b4935", "#4a3833", "#442f2f", "#3c242c", "#7b6466"],
     "accent": "#917e80",
-    "accentPaper": "#7b6466",
+    "accentLight": "#7b6466",
     "tags": ["fantasy"]
   },
   "knight-templar.jpg": {
@@ -1276,7 +1276,7 @@
     "bytes": 554921,
     "palette": ["#191b1b", "#2d384c", "#22262c", "#110f0f", "#ed3048", "#6c5662"],
     "accent": "#ed3048",
-    "accentPaper": "#cf2a3f",
+    "accentLight": "#cf2a3f",
     "tags": ["fantasy"]
   },
   "knights-radiant.jpg": {
@@ -1286,7 +1286,7 @@
     "bytes": 273370,
     "palette": ["#1b171e", "#393439", "#595058", "#897a7f", "#b9aba8", "#ece6de"],
     "accent": "#b9aba8",
-    "accentPaper": "#746b69",
+    "accentLight": "#746b69",
     "tags": ["fantasy"]
   },
   "koi.jpg": {
@@ -1296,7 +1296,7 @@
     "bytes": 4867116,
     "palette": ["#223f74", "#3362a0", "#2f9cde", "#6b4c58", "#212441", "#cd9a79"],
     "accent": "#2f9cde",
-    "accentPaper": "#216e9d",
+    "accentLight": "#216e9d",
     "tags": ["anime"]
   },
   "koishi.jpg": {
@@ -1306,7 +1306,7 @@
     "bytes": 3075503,
     "palette": ["#2c4e5b", "#0d1e2d", "#3f7092", "#6495a7", "#7ec6cb", "#c2eded"],
     "accent": "#7ec6cb",
-    "accentPaper": "#497376",
+    "accentLight": "#497376",
     "tags": ["anime"]
   },
   "kusuriya.png": {
@@ -1316,7 +1316,7 @@
     "bytes": 2515339,
     "palette": ["#15100f", "#1f1b1a", "#312c2a", "#e2e6e9", "#100c0a", "#4c4858"],
     "accent": "#807d89",
-    "accentPaper": "#4c4858",
+    "accentLight": "#4c4858",
     "tags": ["anime"]
   },
   "lain.jpg": {
@@ -1326,7 +1326,7 @@
     "bytes": 220677,
     "palette": ["#bee6ed", "#64abc9", "#34729f", "#244a6e", "#1c2b46", "#0f151d"],
     "accent": "#64abc9",
-    "accentPaper": "#437286",
+    "accentLight": "#437286",
     "tags": ["anime"]
   },
   "lake-hylia.jpg": {
@@ -1336,7 +1336,7 @@
     "bytes": 2732429,
     "palette": ["#cc7a7e", "#13202f", "#203343", "#a384a4", "#4a4f62", "#8c646c"],
     "accent": "#cc7a7e",
-    "accentPaper": "#995c5e",
+    "accentLight": "#995c5e",
     "tags": ["gaming", "landscape"]
   },
   "lantern-light-room.png": {
@@ -1346,7 +1346,7 @@
     "bytes": 2993954,
     "palette": ["#916849", "#764f34", "#a37e61", "#b68f6f", "#c3a07e", "#c1bfba"],
     "accent": "#c3a07e",
-    "accentPaper": "#7a644f",
+    "accentLight": "#7a644f",
     "tags": []
   },
   "laundry.jpg": {
@@ -1356,7 +1356,7 @@
     "bytes": 1941413,
     "palette": ["#444089", "#795b9d", "#322a68", "#c588b5", "#3875b9", "#972c79"],
     "accent": "#c588b5",
-    "accentPaper": "#8c6080",
+    "accentLight": "#8c6080",
     "tags": []
   },
   "lighthouse-2.png": {
@@ -1366,7 +1366,7 @@
     "bytes": 467625,
     "palette": ["#5077b6", "#6e4964", "#b4707f", "#efbf92", "#5f80b8", "#605f90"],
     "accent": "#efbf92",
-    "accentPaper": "#81674f",
+    "accentLight": "#81674f",
     "tags": []
   },
   "lighthouse.jpg": {
@@ -1376,7 +1376,7 @@
     "bytes": 994981,
     "palette": ["#3e5a61", "#547479", "#2e3a41", "#738d93", "#97a7ac", "#b1c0c2"],
     "accent": "#97a7ac",
-    "accentPaper": "#656f73",
+    "accentLight": "#656f73",
     "tags": []
   },
   "mage.jpg": {
@@ -1386,7 +1386,7 @@
     "bytes": 799086,
     "palette": ["#061843", "#1d8afa", "#3bd3fc", "#0d3893", "#092566", "#1355ce"],
     "accent": "#3bd3fc",
-    "accentPaper": "#207289",
+    "accentLight": "#207289",
     "tags": []
   },
   "main-street.png": {
@@ -1396,7 +1396,7 @@
     "bytes": 3990007,
     "palette": ["#4f3a62", "#69527b", "#352945", "#89799d", "#b8b8c1", "#b47c5e"],
     "accent": "#b47c5e",
-    "accentPaper": "#8e624a",
+    "accentLight": "#8e624a",
     "tags": ["landscape", "urban"]
   },
   "maji-no-tabitabi-3.jpg": {
@@ -1406,7 +1406,7 @@
     "bytes": 3345257,
     "palette": ["#7b82a0", "#44373b", "#c5b4b0", "#7c6969", "#5e4c4c", "#2b2229"],
     "accent": "#c5b4b0",
-    "accentPaper": "#736967",
+    "accentLight": "#736967",
     "tags": ["anime"]
   },
   "map.png": {
@@ -1416,7 +1416,7 @@
     "bytes": 437007,
     "palette": ["#373737", "#3b3b3b", "#383838", "#3f3f3f", "#393939", "#494949"],
     "accent": "#828282",
-    "accentPaper": "#373737",
+    "accentLight": "#373737",
     "tags": []
   },
   "marine-tunnel.jpg": {
@@ -1426,7 +1426,7 @@
     "bytes": 200392,
     "palette": ["#02242f", "#021b2a", "#0e3b3b", "#04111c", "#485e45", "#d09a48"],
     "accent": "#d09a48",
-    "accentPaper": "#8b6730",
+    "accentLight": "#8b6730",
     "tags": []
   },
   "math.png": {
@@ -1436,7 +1436,7 @@
     "bytes": 78760,
     "palette": ["#2d333f", "#373b47", "#41444f", "#4a4e59", "#565962", "#686b72"],
     "accent": "#7b7e84",
-    "accentPaper": "#686b72",
+    "accentLight": "#686b72",
     "tags": []
   },
   "min-forest.jpg": {
@@ -1446,7 +1446,7 @@
     "bytes": 148078,
     "palette": ["#a6d5dd", "#192b3b", "#355e72", "#548799", "#77abb8", "#b3dde6"],
     "accent": "#77abb8",
-    "accentPaper": "#4f727b",
+    "accentLight": "#4f727b",
     "tags": ["landscape"]
   },
   "misty-boat.jpg": {
@@ -1456,7 +1456,7 @@
     "bytes": 1425282,
     "palette": ["#3b3a5d", "#14172d", "#232544", "#5e577f", "#9d83a4", "#f0cfdf"],
     "accent": "#9d83a4",
-    "accentPaper": "#76627b",
+    "accentLight": "#76627b",
     "tags": []
   },
   "moon-beach.png": {
@@ -1466,7 +1466,7 @@
     "bytes": 10723796,
     "palette": ["#497ca0", "#85b4d1", "#25516b", "#10314b", "#081b30", "#030c1b"],
     "accent": "#85b4d1",
-    "accentPaper": "#537083",
+    "accentLight": "#537083",
     "tags": ["landscape"]
   },
   "moscow.jpg": {
@@ -1476,7 +1476,7 @@
     "bytes": 9838959,
     "palette": ["#1f261a", "#a9c4e6", "#44513b", "#647d5a", "#97b09b", "#a28d63"],
     "accent": "#a9c4e6",
-    "accentPaper": "#5c6a7d",
+    "accentLight": "#5c6a7d",
     "tags": []
   },
   "mountain-range.jpg": {
@@ -1486,7 +1486,7 @@
     "bytes": 874922,
     "palette": ["#212473", "#250d25", "#e67247", "#1959dd", "#a13838", "#91557d"],
     "accent": "#e67247",
-    "accentPaper": "#a35132",
+    "accentLight": "#a35132",
     "tags": ["landscape"]
   },
   "mushishi.jpg": {
@@ -1496,7 +1496,7 @@
     "bytes": 769260,
     "palette": ["#344c35", "#222e22", "#131811", "#c2d1c7", "#657a5b", "#4d78cb"],
     "accent": "#547ecd",
-    "accentPaper": "#4369b2",
+    "accentLight": "#4369b2",
     "tags": ["anime"]
   },
   "myron.png": {
@@ -1506,7 +1506,7 @@
     "bytes": 9944508,
     "palette": ["#4c666f", "#e1be60", "#af6341", "#1e0b13", "#3f5cd5", "#c0ced6"],
     "accent": "#e1be60",
-    "accentPaper": "#7a6734",
+    "accentLight": "#7a6734",
     "tags": []
   },
   "nature-valley-1.jpg": {
@@ -1516,7 +1516,7 @@
     "bytes": 2147913,
     "palette": ["#264b52", "#43707b", "#0e2a30", "#859769", "#4f6f4a", "#a0b8a0"],
     "accent": "#859769",
-    "accentPaper": "#64714f",
+    "accentLight": "#64714f",
     "tags": ["landscape"]
   },
   "nature-valley-2.jpg": {
@@ -1526,7 +1526,7 @@
     "bytes": 2080532,
     "palette": ["#194258", "#2d616b", "#11323b", "#619c7a", "#0c232c", "#0b1722"],
     "accent": "#619c7a",
-    "accentPaper": "#49755c",
+    "accentLight": "#49755c",
     "tags": ["landscape"]
   },
   "old-car.jpg": {
@@ -1536,7 +1536,7 @@
     "bytes": 1815426,
     "palette": ["#3e4936", "#307f9a", "#96833e", "#629b9a", "#a0aa86", "#d9d091"],
     "accent": "#d9d091",
-    "accentPaper": "#6c6848",
+    "accentLight": "#6c6848",
     "tags": []
   },
   "old-computer.png": {
@@ -1546,7 +1546,7 @@
     "bytes": 723806,
     "palette": ["#1a1b26", "#473b4c", "#8c93be", "#745a76", "#282835", "#13121a"],
     "accent": "#8c93be",
-    "accentPaper": "#636887",
+    "accentLight": "#636887",
     "tags": []
   },
   "outset-island-day.jpg": {
@@ -1556,7 +1556,7 @@
     "bytes": 4606629,
     "palette": ["#4495bb", "#114159", "#5cb5c3", "#9cc9c9", "#24779f", "#5b7b66"],
     "accent": "#5cb5c3",
-    "accentPaper": "#3a717a",
+    "accentLight": "#3a717a",
     "tags": ["gaming"]
   },
   "outset-island-evening.jpg": {
@@ -1566,7 +1566,7 @@
     "bytes": 3759389,
     "palette": ["#2e3646", "#5d8498", "#4b5965", "#7f9393", "#a79e84", "#e6b572"],
     "accent": "#e6b572",
-    "accentPaper": "#7d623e",
+    "accentLight": "#7d623e",
     "tags": ["gaming"]
   },
   "outset-island-morning.jpg": {
@@ -1576,7 +1576,7 @@
     "bytes": 4093755,
     "palette": ["#25303e", "#6784ba", "#596076", "#8193bc", "#a797a1", "#d1a392"],
     "accent": "#d1a392",
-    "accentPaper": "#83665b",
+    "accentLight": "#83665b",
     "tags": ["gaming"]
   },
   "outset-island-night.jpg": {
@@ -1586,7 +1586,7 @@
     "bytes": 3751666,
     "palette": ["#204d7a", "#24386a", "#032442", "#1f5d8a", "#093859", "#2c729a"],
     "accent": "#4684a7",
-    "accentPaper": "#2c729a",
+    "accentLight": "#2c729a",
     "tags": ["gaming"]
   },
   "oversized-cat.jpg": {
@@ -1596,7 +1596,7 @@
     "bytes": 3206744,
     "palette": ["#150d0c", "#4e4d50", "#1e1a1b", "#313031", "#877e78", "#c3b4a8"],
     "accent": "#c3b4a8",
-    "accentPaper": "#726962",
+    "accentLight": "#726962",
     "tags": []
   },
   "paint.jpg": {
@@ -1606,7 +1606,7 @@
     "bytes": 311375,
     "palette": ["#3f2c3a", "#9a97a7", "#67474c", "#b0cbe1", "#666385", "#977368"],
     "accent": "#b0cbe1",
-    "accentPaper": "#5f6e7a",
+    "accentLight": "#5f6e7a",
     "tags": []
   },
   "painting-standing.jpg": {
@@ -1616,7 +1616,7 @@
     "bytes": 1306631,
     "palette": ["#8c892e", "#526439", "#363621", "#55a7d9", "#addbe4", "#9cbd8b"],
     "accent": "#55a7d9",
-    "accentPaper": "#396f91",
+    "accentLight": "#396f91",
     "tags": []
   },
   "painting.jpg": {
@@ -1626,7 +1626,7 @@
     "bytes": 1215678,
     "palette": ["#3d2219", "#478e99", "#2f555d", "#b1c3b2", "#a4977b", "#bd7137"],
     "accent": "#bd7137",
-    "accentPaper": "#9e5e2e",
+    "accentLight": "#9e5e2e",
     "tags": []
   },
   "pine.jpg": {
@@ -1636,7 +1636,7 @@
     "bytes": 826338,
     "palette": ["#2e2628", "#373031", "#281f23", "#48413f", "#5b5c58", "#7b817e"],
     "accent": "#7b817e",
-    "accentPaper": "#666c69",
+    "accentLight": "#666c69",
     "tags": []
   },
   "pink-clouds.jpg": {
@@ -1646,7 +1646,7 @@
     "bytes": 2800161,
     "palette": ["#f8b2ba", "#ddadc4", "#d888ae", "#9cacd7", "#fdd3c9", "#c0a9ca"],
     "accent": "#d888ae",
-    "accentPaper": "#905b74",
+    "accentLight": "#905b74",
     "tags": ["landscape"]
   },
   "pixel-car.png": {
@@ -1656,7 +1656,7 @@
     "bytes": 396725,
     "palette": ["#422541", "#3c1835", "#523b53", "#675e6d", "#380e2b", "#9b9994"],
     "accent": "#9b9994",
-    "accentPaper": "#6e6c69",
+    "accentLight": "#6e6c69",
     "tags": ["pixel-art"]
   },
   "pixel-castle.png": {
@@ -1666,7 +1666,7 @@
     "bytes": 14589578,
     "palette": ["#aa5443", "#15243a", "#7c443c", "#45323b", "#20273a", "#0c213a"],
     "accent": "#b5695a",
-    "accentPaper": "#aa5443",
+    "accentLight": "#aa5443",
     "tags": ["pixel-art"]
   },
   "pixel-earth.png": {
@@ -1676,7 +1676,7 @@
     "bytes": 4385,
     "palette": ["#2e3440"],
     "accent": "#7c8088",
-    "accentPaper": "#2e3440",
+    "accentLight": "#2e3440",
     "tags": ["pixel-art"]
   },
   "pixel-galaxy.png": {
@@ -1686,7 +1686,7 @@
     "bytes": 8839474,
     "palette": ["#242435", "#80457d", "#4b3657", "#23263e", "#372f47", "#222334"],
     "accent": "#a0749e",
-    "accentPaper": "#80457d",
+    "accentLight": "#80457d",
     "tags": ["pixel-art", "space"]
   },
   "pixel-napping.png": {
@@ -1696,7 +1696,7 @@
     "bytes": 49178,
     "palette": ["#133e2f", "#2f8e4b", "#1c5a34", "#44575d", "#67bc4d", "#0e2927"],
     "accent": "#67bc4d",
-    "accentPaper": "#407630",
+    "accentLight": "#407630",
     "tags": ["pixel-art"]
   },
   "pixel-prairie.jpg": {
@@ -1706,7 +1706,7 @@
     "bytes": 204288,
     "palette": ["#becfc6", "#e1ebe4", "#829837", "#405529", "#7e996e", "#9bb390"],
     "accent": "#829837",
-    "accentPaper": "#627229",
+    "accentLight": "#627229",
     "tags": ["pixel-art"]
   },
   "pixel-reading.png": {
@@ -1716,7 +1716,7 @@
     "bytes": 20697,
     "palette": ["#201e1f", "#2e322a", "#3e2627", "#544637", "#93663a", "#d5b06a"],
     "accent": "#d5b06a",
-    "accentPaper": "#7c673e",
+    "accentLight": "#7c673e",
     "tags": ["pixel-art"]
   },
   "plane-purple.png": {
@@ -1726,7 +1726,7 @@
     "bytes": 319163,
     "palette": ["#aaafc5", "#2e2a34", "#939dcf", "#e2e2e3", "#745a73", "#c9cad2"],
     "accent": "#939dcf",
-    "accentPaper": "#62698a",
+    "accentLight": "#62698a",
     "tags": []
   },
   "platform.jpg": {
@@ -1736,7 +1736,7 @@
     "bytes": 2628399,
     "palette": ["#572d43", "#604651", "#745e60", "#8f7868", "#ad8c69", "#995440"],
     "accent": "#ad8c69",
-    "accentPaper": "#82694f",
+    "accentLight": "#82694f",
     "tags": []
   },
   "pompeii.png": {
@@ -1746,7 +1746,7 @@
     "bytes": 14058015,
     "palette": ["#0e0909", "#040202", "#171313", "#2d1612", "#5a2c1b", "#b55521"],
     "accent": "#be6a3d",
-    "accentPaper": "#ad5120",
+    "accentLight": "#ad5120",
     "tags": []
   },
   "powerline.jpg": {
@@ -1756,7 +1756,7 @@
     "bytes": 128025,
     "palette": ["#7f848b", "#5b6168", "#b3b8b9", "#1a1f20", "#3c444c", "#21282d"],
     "accent": "#b3b8b9",
-    "accentPaper": "#686b6c",
+    "accentLight": "#686b6c",
     "tags": []
   },
   "puffy-stars.jpg": {
@@ -1766,7 +1766,7 @@
     "bytes": 3266584,
     "palette": ["#3a296a", "#704995", "#211c53", "#13143a", "#090e2e", "#d074b0"],
     "accent": "#d074b0",
-    "accentPaper": "#9c5784",
+    "accentLight": "#9c5784",
     "tags": ["space"]
   },
   "purple-horizon.jpg": {
@@ -1776,7 +1776,7 @@
     "bytes": 956407,
     "palette": ["#0b1139", "#3f3680", "#6e559e", "#b485b8", "#1f205c", "#f1cdd3"],
     "accent": "#b485b8",
-    "accentPaper": "#7f5e82",
+    "accentLight": "#7f5e82",
     "tags": ["sunset"]
   },
   "purpled-night.jpg": {
@@ -1786,7 +1786,7 @@
     "bytes": 147257,
     "palette": ["#220a35", "#2a0f4b", "#1b0a2a", "#13061c", "#392480", "#4958be"],
     "accent": "#6f7bcc",
-    "accentPaper": "#4958be",
+    "accentLight": "#4958be",
     "tags": []
   },
   "railroad-2.jpg": {
@@ -1796,7 +1796,7 @@
     "bytes": 661407,
     "palette": ["#3e5766", "#c6694e", "#1a181a", "#6c4746", "#eac47b", "#8b8173"],
     "accent": "#eac47b",
-    "accentPaper": "#7f6a43",
+    "accentLight": "#7f6a43",
     "tags": []
   },
   "railroad-cat.png": {
@@ -1806,7 +1806,7 @@
     "bytes": 5529764,
     "palette": ["#a3a797", "#95998b", "#bebca5", "#393a32", "#6e6b5b", "#d8d6c2"],
     "accent": "#bebca5",
-    "accentPaper": "#6f6e60",
+    "accentLight": "#6f6e60",
     "tags": []
   },
   "railroad-flowers.jpg": {
@@ -1816,7 +1816,7 @@
     "bytes": 506355,
     "palette": ["#3d230f", "#28150b", "#5e3e1a", "#916a2f", "#f5eee1", "#c7a96f"],
     "accent": "#c7a96f",
-    "accentPaper": "#7c6a45",
+    "accentLight": "#7c6a45",
     "tags": []
   },
   "railroad-horizon.png": {
@@ -1826,7 +1826,7 @@
     "bytes": 8931626,
     "palette": ["#35426c", "#1a2c4f", "#5d6592", "#0d1e3a", "#b19ba8", "#070f22"],
     "accent": "#b19ba8",
-    "accentPaper": "#766770",
+    "accentLight": "#766770",
     "tags": ["sunset"]
   },
   "red-city.png": {
@@ -1836,7 +1836,7 @@
     "bytes": 3836339,
     "palette": ["#574141", "#825650", "#34272b", "#6ebda9", "#828365", "#bad5bc"],
     "accent": "#6ebda9",
-    "accentPaper": "#45766a",
+    "accentLight": "#45766a",
     "tags": ["urban"]
   },
   "river-city.jpg": {
@@ -1846,7 +1846,7 @@
     "bytes": 4987029,
     "palette": ["#0b2c5a", "#101b33", "#38344e", "#2d4c77", "#6e6f86", "#b7b4c0"],
     "accent": "#b7b4c0",
-    "accentPaper": "#6b6970",
+    "accentLight": "#6b6970",
     "tags": ["landscape", "urban"]
   },
   "rocket-launch.jpg": {
@@ -1856,7 +1856,7 @@
     "bytes": 6623103,
     "palette": ["#a0a0c6", "#afb7d8", "#c6c9de", "#b66d84", "#8587a9", "#50587e"],
     "accent": "#afb7d8",
-    "accentPaper": "#666b7e",
+    "accentLight": "#666b7e",
     "tags": []
   },
   "rocket-schematics.jpg": {
@@ -1866,7 +1866,7 @@
     "bytes": 2048990,
     "palette": ["#101011", "#282a29", "#181919", "#4b5152", "#8f9598", "#09090a"],
     "accent": "#8f9598",
-    "accentPaper": "#656a6c",
+    "accentLight": "#656a6c",
     "tags": []
   },
   "rooftops.jpg": {
@@ -1876,7 +1876,7 @@
     "bytes": 4443296,
     "palette": ["#485744", "#6c7055", "#2c3e2f", "#0d7097", "#8b8b74", "#97b4b2"],
     "accent": "#97b4b2",
-    "accentPaper": "#5e706f",
+    "accentLight": "#5e706f",
     "tags": []
   },
   "ruins.jpg": {
@@ -1886,7 +1886,7 @@
     "bytes": 735818,
     "palette": ["#121117", "#1c1d23", "#3b3a3d", "#0c080b", "#6b6a6d", "#b7b9bb"],
     "accent": "#b7b9bb",
-    "accentPaper": "#6b6c6d",
+    "accentLight": "#6b6c6d",
     "tags": []
   },
   "sakura-gate.jpg": {
@@ -1896,7 +1896,7 @@
     "bytes": 4593852,
     "palette": ["#2e313c", "#494e5e", "#738094", "#1f1c24", "#a6ccdd", "#150f13"],
     "accent": "#a6ccdd",
-    "accentPaper": "#5a6f78",
+    "accentLight": "#5a6f78",
     "tags": ["anime"]
   },
   "sakura-trees-over-river.jpg": {
@@ -1906,7 +1906,7 @@
     "bytes": 3657301,
     "palette": ["#e5e9f5", "#f7c9d4", "#ee99b0", "#c3b9d9", "#a593c0", "#737297"],
     "accent": "#ee99b0",
-    "accentPaper": "#8b5967",
+    "accentLight": "#8b5967",
     "tags": ["anime", "landscape"]
   },
   "samurai.jpg": {
@@ -1916,7 +1916,7 @@
     "bytes": 3485676,
     "palette": ["#1f9dae", "#adae4e", "#e5daa5", "#91bda8", "#64936d", "#2e6667"],
     "accent": "#adae4e",
-    "accentPaper": "#6c6d31",
+    "accentLight": "#6c6d31",
     "tags": ["fantasy"]
   },
   "satellite.png": {
@@ -1926,7 +1926,7 @@
     "bytes": 469900,
     "palette": ["#171724", "#7c839d", "#4f5468", "#151421", "#2d3040", "#10101c"],
     "accent": "#7c839d",
-    "accentPaper": "#676d83",
+    "accentLight": "#676d83",
     "tags": []
   },
   "scifi.jpg": {
@@ -1936,7 +1936,7 @@
     "bytes": 1103958,
     "palette": ["#3e413c", "#33302d", "#4f5750", "#727461", "#261f21", "#979c84"],
     "accent": "#979c84",
-    "accentPaper": "#6b6e5d",
+    "accentLight": "#6b6e5d",
     "tags": []
   },
   "serenity.jpg": {
@@ -1946,7 +1946,7 @@
     "bytes": 573673,
     "palette": ["#1c2734", "#0d1b25", "#264153", "#071219", "#427285", "#915461"],
     "accent": "#5a8494",
-    "accentPaper": "#427285",
+    "accentLight": "#427285",
     "tags": []
   },
   "ship-2.png": {
@@ -1956,7 +1956,7 @@
     "bytes": 4619302,
     "palette": ["#505186", "#786593", "#a17ea1", "#292d49", "#cc97aa", "#eab8bc"],
     "accent": "#cc97aa",
-    "accentPaper": "#805e6a",
+    "accentLight": "#805e6a",
     "tags": []
   },
   "ship-3.jpg": {
@@ -1966,7 +1966,7 @@
     "bytes": 1109176,
     "palette": ["#c3dff8", "#526490", "#6d83af", "#91a9ca", "#37405e", "#70b3fc"],
     "accent": "#70b3fc",
-    "accentPaper": "#46709e",
+    "accentLight": "#46709e",
     "tags": []
   },
   "snowflakes.jpg": {
@@ -1976,7 +1976,7 @@
     "bytes": 4362505,
     "palette": ["#3a6295", "#5b89bb", "#284772", "#9bc3e8", "#1a3154", "#10223e"],
     "accent": "#9bc3e8",
-    "accentPaper": "#546a7e",
+    "accentLight": "#546a7e",
     "tags": ["landscape"]
   },
   "snowy-train.jpg": {
@@ -1986,7 +1986,7 @@
     "bytes": 199252,
     "palette": ["#b7d9e3", "#a7ccdd", "#6b7899", "#949ab4", "#4f5976", "#dceee7"],
     "accent": "#a7ccdd",
-    "accentPaper": "#5a6f78",
+    "accentLight": "#5a6f78",
     "tags": []
   },
   "soft-rose.jpg": {
@@ -1996,7 +1996,7 @@
     "bytes": 202072,
     "palette": ["#1e222b"],
     "accent": "#7c7e83",
-    "accentPaper": "#1e222b",
+    "accentLight": "#1e222b",
     "tags": []
   },
   "sousou-no-frieren-flowers.png": {
@@ -2006,7 +2006,7 @@
     "bytes": 8012845,
     "palette": ["#3f3a5e", "#b85968", "#455c93", "#558ed4", "#b769e8", "#b4e7f2"],
     "accent": "#558ed4",
-    "accentPaper": "#4370a8",
+    "accentLight": "#4370a8",
     "tags": ["anime"]
   },
   "space-piano.png": {
@@ -2016,7 +2016,7 @@
     "bytes": 1032674,
     "palette": ["#303642", "#3f4758", "#4f5b73", "#a47f97", "#597092", "#786e89"],
     "accent": "#a47f97",
-    "accentPaper": "#826578",
+    "accentLight": "#826578",
     "tags": ["space"]
   },
   "space.jpg": {
@@ -2026,7 +2026,7 @@
     "bytes": 118140,
     "palette": ["#2f3541", "#3e4350", "#2c323e", "#bec3cf", "#6b707d", "#272d39"],
     "accent": "#bec3cf",
-    "accentPaper": "#676a70",
+    "accentLight": "#676a70",
     "tags": ["space"]
   },
   "space.png": {
@@ -2036,7 +2036,7 @@
     "bytes": 1649896,
     "palette": ["#262c3c", "#83a5cd", "#222531", "#1f212b", "#2e3d56", "#47617d"],
     "accent": "#83a5cd",
-    "accentPaper": "#576e89",
+    "accentLight": "#576e89",
     "tags": ["space"]
   },
   "square-city.jpg": {
@@ -2046,7 +2046,7 @@
     "bytes": 411009,
     "palette": ["#503243", "#6d435a", "#3b2635", "#e6b5cc", "#a17089", "#a2474e"],
     "accent": "#e6b5cc",
-    "accentPaper": "#7d626f",
+    "accentLight": "#7d626f",
     "tags": ["urban"]
   },
   "stall.jpg": {
@@ -2056,7 +2056,7 @@
     "bytes": 2015442,
     "palette": ["#537a7b", "#849e84", "#3c4666", "#b6a3ce", "#bbe2f8", "#9270a9"],
     "accent": "#b6a3ce",
-    "accentPaper": "#726681",
+    "accentLight": "#726681",
     "tags": []
   },
   "stay-vigil-by-pndora.jpg": {
@@ -2066,7 +2066,7 @@
     "bytes": 2024955,
     "palette": ["#555f6b", "#2a252b", "#848992", "#cccdd2", "#403d44", "#8e4a53"],
     "accent": "#a67077",
-    "accentPaper": "#8e4a53",
+    "accentLight": "#8e4a53",
     "tags": []
   },
   "storm.jpg": {
@@ -2076,7 +2076,7 @@
     "bytes": 1407385,
     "palette": ["#718183", "#909794", "#264a5a", "#4b656e", "#0b2a3b", "#c2bbae"],
     "accent": "#c2bbae",
-    "accentPaper": "#716d65",
+    "accentLight": "#716d65",
     "tags": []
   },
   "stormlight-archive.png": {
@@ -2086,7 +2086,7 @@
     "bytes": 1804364,
     "palette": ["#082638", "#2f4756", "#022134", "#677276", "#b8bab3", "#001a2f"],
     "accent": "#b8bab3",
-    "accentPaper": "#6b6c68",
+    "accentLight": "#6b6c68",
     "tags": []
   },
   "street-4.png": {
@@ -2096,7 +2096,7 @@
     "bytes": 1774179,
     "palette": ["#272726", "#3b3a3f", "#453024", "#6e452f", "#ab614a", "#51587a"],
     "accent": "#b26e59",
-    "accentPaper": "#9d5944",
+    "accentLight": "#9d5944",
     "tags": ["landscape", "urban"]
   },
   "street.png": {
@@ -2106,7 +2106,7 @@
     "bytes": 3787366,
     "palette": ["#6a8393", "#364140", "#4d585c", "#263033", "#1b252c", "#a8c0d6"],
     "accent": "#a8c0d6",
-    "accentPaper": "#5b6874",
+    "accentLight": "#5b6874",
     "tags": ["landscape", "urban"]
   },
   "subway.jpg": {
@@ -2116,7 +2116,7 @@
     "bytes": 1999151,
     "palette": ["#562e42", "#6c5257", "#877167", "#af8f6e", "#833c40", "#b15844"],
     "accent": "#af8f6e",
-    "accentPaper": "#7c654e",
+    "accentLight": "#7c654e",
     "tags": ["urban"]
   },
   "sunken-tower.png": {
@@ -2126,7 +2126,7 @@
     "bytes": 6471960,
     "palette": ["#0b3a5f", "#104e73", "#197095", "#3fa6be", "#092b49", "#abe4e7"],
     "accent": "#3fa6be",
-    "accentPaper": "#2d7687",
+    "accentLight": "#2d7687",
     "tags": []
   },
   "sunlit-ruins.png": {
@@ -2136,7 +2136,7 @@
     "bytes": 4873691,
     "palette": ["#6f89a1", "#526c84", "#3c4f5c", "#203440", "#97a6b5", "#dfd9d2"],
     "accent": "#97a6b5",
-    "accentPaper": "#656f79",
+    "accentLight": "#656f79",
     "tags": []
   },
   "sunset.jpg": {
@@ -2146,7 +2146,7 @@
     "bytes": 210761,
     "palette": ["#5f3a33", "#a34f24", "#321810", "#4d4d5a", "#ea942c", "#78abad"],
     "accent": "#ea942c",
-    "accentPaper": "#925c1c",
+    "accentLight": "#925c1c",
     "tags": ["sunset"]
   },
   "sushi.jpg": {
@@ -2156,7 +2156,7 @@
     "bytes": 1123059,
     "palette": ["#0e1119", "#262645", "#1d1b2d", "#483869", "#f20229", "#8f1233"],
     "accent": "#f42244",
-    "accentPaper": "#d40224",
+    "accentLight": "#d40224",
     "tags": []
   },
   "swirls.jpg": {
@@ -2166,7 +2166,7 @@
     "bytes": 1030859,
     "palette": ["#358ca3", "#14627f", "#70b6ba", "#7a6c7b", "#dae5e8", "#c76d70"],
     "accent": "#70b6ba",
-    "accentPaper": "#467274",
+    "accentLight": "#467274",
     "tags": []
   },
   "swirly-painting.jpg": {
@@ -2176,7 +2176,7 @@
     "bytes": 597191,
     "palette": ["#5a5a8d", "#313336", "#8a6d88", "#ce808f", "#e4adad", "#42465d"],
     "accent": "#ce808f",
-    "accentPaper": "#925b65",
+    "accentLight": "#925b65",
     "tags": []
   },
   "sword.jpg": {
@@ -2186,7 +2186,7 @@
     "bytes": 664134,
     "palette": ["#ffcdce", "#f9cacc", "#e1bcbd", "#c09c9f", "#736269", "#fcd6d5"],
     "accent": "#c09c9f",
-    "accentPaper": "#80686a",
+    "accentLight": "#80686a",
     "tags": ["fantasy"]
   },
   "tank.jpg": {
@@ -2196,7 +2196,7 @@
     "bytes": 426398,
     "palette": ["#8e6f46", "#d4d2cf", "#879fb8", "#788597", "#b3bcc4", "#392e28"],
     "accent": "#879fb8",
-    "accentPaper": "#5a6a7b",
+    "accentLight": "#5a6a7b",
     "tags": []
   },
   "temple.jpg": {
@@ -2206,7 +2206,7 @@
     "bytes": 3573189,
     "palette": ["#afbfd9", "#e0cbd0", "#7299c1", "#f7ebe9", "#c59698", "#79596e"],
     "accent": "#7299c1",
-    "accentPaper": "#516c89",
+    "accentLight": "#516c89",
     "tags": []
   },
   "touhou-lake.jpg": {
@@ -2216,7 +2216,7 @@
     "bytes": 1485750,
     "palette": ["#c1aab4", "#703334", "#884e57", "#ab7986", "#dfe9ed", "#e34e5e"],
     "accent": "#e34e5e",
-    "accentPaper": "#bd414e",
+    "accentLight": "#bd414e",
     "tags": ["anime", "landscape"]
   },
   "tower.png": {
@@ -2226,7 +2226,7 @@
     "bytes": 7059646,
     "palette": ["#1f333c", "#375059", "#b7a192", "#4c6b75", "#797c78", "#f3cca9"],
     "accent": "#f3cca9",
-    "accentPaper": "#7a6654",
+    "accentLight": "#7a6654",
     "tags": []
   },
   "train-sideview.png": {
@@ -2236,7 +2236,7 @@
     "bytes": 5347207,
     "palette": ["#484345", "#5b5c5c", "#264c5d", "#161c1a", "#0c3a52", "#c78d52"],
     "accent": "#c78d52",
-    "accentPaper": "#8d643a",
+    "accentLight": "#8d643a",
     "tags": []
   },
   "train-station.jpg": {
@@ -2246,7 +2246,7 @@
     "bytes": 1381832,
     "palette": ["#372628", "#553c3d", "#906960", "#7d4b3c", "#bb9381", "#e8dcd7"],
     "accent": "#bb9381",
-    "accentPaper": "#84685b",
+    "accentLight": "#84685b",
     "tags": ["urban"]
   },
   "tree-stump.jpg": {
@@ -2256,7 +2256,7 @@
     "bytes": 2401652,
     "palette": ["#1b3414", "#3327fa", "#3b3cf1", "#2f18fe", "#9eb6e2", "#6575d3"],
     "accent": "#9eb6e2",
-    "accentPaper": "#5c6a84",
+    "accentLight": "#5c6a84",
     "tags": ["landscape"]
   },
   "tree.jpg": {
@@ -2266,7 +2266,7 @@
     "bytes": 493739,
     "palette": ["#85385b", "#061f5f", "#021a35", "#093a84", "#2e5b9d", "#eb585a"],
     "accent": "#eb585a",
-    "accentPaper": "#ba4647",
+    "accentLight": "#ba4647",
     "tags": ["landscape"]
   },
   "trippy-purple.png": {
@@ -2276,7 +2276,7 @@
     "bytes": 20540923,
     "palette": ["#000001", "#0c0418", "#170d38", "#32206d", "#06010a", "#7351b8"],
     "accent": "#8a6ec4",
-    "accentPaper": "#7351b8",
+    "accentLight": "#7351b8",
     "tags": []
   },
   "trolley.jpg": {
@@ -2286,7 +2286,7 @@
     "bytes": 947687,
     "palette": ["#130a07", "#1f1416", "#2f2127", "#3b303b", "#5b464a", "#d1bca7"],
     "accent": "#d1bca7",
-    "accentPaper": "#71665a",
+    "accentLight": "#71665a",
     "tags": ["urban"]
   },
   "underwater-deep.jpg": {
@@ -2296,7 +2296,7 @@
     "bytes": 3393013,
     "palette": ["#52dafd", "#2eaef4", "#a1eefe", "#2b8ddc", "#1d6fc3", "#1a5ead"],
     "accent": "#2eaef4",
-    "accentPaper": "#1f74a3",
+    "accentLight": "#1f74a3",
     "tags": []
   },
   "van-chilling.png": {
@@ -2306,7 +2306,7 @@
     "bytes": 4964959,
     "palette": ["#d39759", "#9c7649", "#725a43", "#514438", "#39322a", "#252221"],
     "accent": "#d39759",
-    "accentPaper": "#8d653b",
+    "accentLight": "#8d653b",
     "tags": []
   },
   "venice-market.png": {
@@ -2316,7 +2316,7 @@
     "bytes": 14982935,
     "palette": ["#202f2e", "#83624d", "#51443c", "#b69064", "#297367", "#c4ba8e"],
     "accent": "#b69064",
-    "accentPaper": "#816647",
+    "accentLight": "#816647",
     "tags": ["urban"]
   },
   "vibrant-gate.png": {
@@ -2326,7 +2326,7 @@
     "bytes": 15447776,
     "palette": ["#4b4b49", "#6d686e", "#9d95a7", "#d1d3e4", "#252e31", "#452a40"],
     "accent": "#9d95a7",
-    "accentPaper": "#6f6a76",
+    "accentLight": "#6f6a76",
     "tags": []
   },
   "village-gate.jpg": {
@@ -2336,7 +2336,7 @@
     "bytes": 1185248,
     "palette": ["#565041", "#8d7e60", "#38362e", "#d1c2ac", "#272821", "#1c1d1b"],
     "accent": "#d1c2ac",
-    "accentPaper": "#71695d",
+    "accentLight": "#71695d",
     "tags": []
   },
   "voxel-city.jpg": {
@@ -2346,7 +2346,7 @@
     "bytes": 339136,
     "palette": ["#20273f", "#2e4156", "#191327", "#506671", "#6b4742", "#9d9e8a"],
     "accent": "#9d9e8a",
-    "accentPaper": "#69695c",
+    "accentLight": "#69695c",
     "tags": ["urban", "voxel"]
   },
   "voxel-houses-monochrome.png": {
@@ -2356,7 +2356,7 @@
     "bytes": 3139782,
     "palette": ["#494339", "#595249", "#3a352a", "#2b271c", "#1b180b", "#72685e"],
     "accent": "#847b72",
-    "accentPaper": "#72685e",
+    "accentLight": "#72685e",
     "tags": ["voxel"]
   },
   "voyager-10.jpg": {
@@ -2366,7 +2366,7 @@
     "bytes": 1522890,
     "palette": ["#123657", "#0f223a", "#1b4f79", "#3576a1", "#050f20", "#8ec7dc"],
     "accent": "#8ec7dc",
-    "accentPaper": "#4d6c77",
+    "accentLight": "#4d6c77",
     "tags": ["voyager"]
   },
   "voyager-11.jpg": {
@@ -2376,7 +2376,7 @@
     "bytes": 1617475,
     "palette": ["#e69175", "#c4c8bc", "#7c949e", "#4c6679", "#503643", "#a7695f"],
     "accent": "#e69175",
-    "accentPaper": "#905b49",
+    "accentLight": "#905b49",
     "tags": ["voyager"]
   },
   "voyager-12.jpg": {
@@ -2386,7 +2386,7 @@
     "bytes": 909781,
     "palette": ["#f7f0e3", "#cee4ed", "#e2d4c4", "#957277", "#bba9a1", "#5a4d58"],
     "accent": "#bba9a1",
-    "accentPaper": "#756a65",
+    "accentLight": "#756a65",
     "tags": ["voyager"]
   },
   "voyager-13.jpg": {
@@ -2396,7 +2396,7 @@
     "bytes": 1827368,
     "palette": ["#354540", "#747b45", "#c0c570", "#beebd4", "#50aaaa", "#2e7678"],
     "accent": "#c0c570",
-    "accentPaper": "#686b3d",
+    "accentLight": "#686b3d",
     "tags": ["voyager"]
   },
   "voyager-14.jpg": {
@@ -2406,7 +2406,7 @@
     "bytes": 1730347,
     "palette": ["#98999a", "#817b77", "#a7b5b7", "#caf1ef", "#b5d5d7", "#6d5056"],
     "accent": "#b5d5d7",
-    "accentPaper": "#5a6a6c",
+    "accentLight": "#5a6a6c",
     "tags": ["voyager"]
   },
   "voyager-15.jpg": {
@@ -2416,7 +2416,7 @@
     "bytes": 1559026,
     "palette": ["#88746d", "#a3ac9d", "#a88b53", "#c5eaeb", "#654b5a", "#2e2a46"],
     "accent": "#a88b53",
-    "accentPaper": "#7e683e",
+    "accentLight": "#7e683e",
     "tags": ["voyager"]
   },
   "voyager-16.jpg": {
@@ -2426,7 +2426,7 @@
     "bytes": 1710437,
     "palette": ["#6a7b44", "#3b4f51", "#a1c5b3", "#597d85", "#8da167", "#1a2f2b"],
     "accent": "#8da167",
-    "accentPaper": "#647249",
+    "accentLight": "#647249",
     "tags": ["voyager"]
   },
   "voyager-2.jpg": {
@@ -2436,7 +2436,7 @@
     "bytes": 877643,
     "palette": ["#60313c", "#0e0a14", "#865a5b", "#d0d3bb", "#8b8c88", "#2c1e2a"],
     "accent": "#d0d3bb",
-    "accentPaper": "#686a5e",
+    "accentLight": "#686a5e",
     "tags": ["voyager"]
   },
   "voyager-20.jpg": {
@@ -2446,7 +2446,7 @@
     "bytes": 1411351,
     "palette": ["#433e3a", "#2d2c2e", "#675648", "#1f2228", "#171a1c", "#b18b5e"],
     "accent": "#b18b5e",
-    "accentPaper": "#856846",
+    "accentLight": "#856846",
     "tags": ["voyager"]
   },
   "voyager-3.jpg": {
@@ -2456,7 +2456,7 @@
     "bytes": 1397753,
     "palette": ["#dff8f8", "#c5dded", "#a3a8ac", "#b7c3ce", "#86868f", "#5f535e"],
     "accent": "#b7c3ce",
-    "accentPaper": "#636a70",
+    "accentLight": "#636a70",
     "tags": ["voyager"]
   },
   "voyager-4.jpg": {
@@ -2466,7 +2466,7 @@
     "bytes": 1468709,
     "palette": ["#708644", "#3f593a", "#486664", "#749b82", "#112c3c", "#afbe56"],
     "accent": "#afbe56",
-    "accentPaper": "#666f32",
+    "accentLight": "#666f32",
     "tags": ["voyager"]
   },
   "voyager-5.jpg": {
@@ -2476,7 +2476,7 @@
     "bytes": 1309819,
     "palette": ["#5b7158", "#285456", "#05262b", "#153f3b", "#b49d56", "#021122"],
     "accent": "#b49d56",
-    "accentPaper": "#786939",
+    "accentLight": "#786939",
     "tags": ["voyager"]
   },
   "voyager-6.jpg": {
@@ -2486,7 +2486,7 @@
     "bytes": 1421662,
     "palette": ["#4ab2f7", "#56bdf7", "#546b4c", "#a1d3ef", "#edf6fd", "#4999d6"],
     "accent": "#4ab2f7",
-    "accentPaper": "#2e6f9a",
+    "accentLight": "#2e6f9a",
     "tags": ["voyager"]
   },
   "voyager-7.jpg": {
@@ -2496,7 +2496,7 @@
     "bytes": 1572940,
     "palette": ["#5e6138", "#8d8a59", "#9edbea", "#84a8a4", "#603a4c", "#2f3921"],
     "accent": "#9edbea",
-    "accentPaper": "#4f6e75",
+    "accentLight": "#4f6e75",
     "tags": ["voyager"]
   },
   "voyager-8.jpg": {
@@ -2506,7 +2506,7 @@
     "bytes": 1081182,
     "palette": ["#364da6", "#b869ce", "#6f54bf", "#e492d1", "#341268", "#792b89"],
     "accent": "#e492d1",
-    "accentPaper": "#8e5b83",
+    "accentLight": "#8e5b83",
     "tags": ["voyager"]
   },
   "voyager-9.jpg": {
@@ -2516,7 +2516,7 @@
     "bytes": 1769858,
     "palette": ["#a0c4c6", "#e1f4eb", "#c0dfd9", "#74a3b5", "#496a7c", "#8c9780"],
     "accent": "#74a3b5",
-    "accentPaper": "#527380",
+    "accentLight": "#527380",
     "tags": ["voyager"]
   },
   "wall.jpg": {
@@ -2526,7 +2526,7 @@
     "bytes": 1146447,
     "palette": ["#be9b7c", "#6e886d", "#2a3f4b", "#c1d5c3", "#0f2130", "#8a4862"],
     "accent": "#be9b7c",
-    "accentPaper": "#7f6753",
+    "accentLight": "#7f6753",
     "tags": []
   },
   "wallhaven-vqoo1p.jpg": {
@@ -2536,7 +2536,7 @@
     "bytes": 2849891,
     "palette": ["#54899b", "#7dae7e", "#6cafc6", "#497765", "#b3aaa5", "#c0dae3"],
     "accent": "#6cafc6",
-    "accentPaper": "#446d7c",
+    "accentLight": "#446d7c",
     "tags": []
   },
   "wanderer.jpg": {
@@ -2546,7 +2546,7 @@
     "bytes": 1667964,
     "palette": ["#bac0d0", "#c8cddd", "#1c1b1f", "#a5adb8", "#d4dbed", "#788189"],
     "accent": "#bac0d0",
-    "accentPaper": "#656871",
+    "accentLight": "#656871",
     "tags": []
   },
   "waterfall.png": {
@@ -2556,7 +2556,7 @@
     "bytes": 107401,
     "palette": ["#111a1a", "#081f1e", "#052d25", "#245241", "#192e27", "#4e8b65"],
     "accent": "#4e8b65",
-    "accentPaper": "#417454",
+    "accentLight": "#417454",
     "tags": []
   },
   "waves.png": {
@@ -2566,7 +2566,7 @@
     "bytes": 6962250,
     "palette": ["#edceab", "#9091a5", "#c3a0a0", "#efa38a", "#657896", "#435a7b"],
     "accent": "#efa38a",
-    "accentPaper": "#8b5f50",
+    "accentLight": "#8b5f50",
     "tags": ["landscape"]
   },
   "whale.jpg": {
@@ -2576,7 +2576,7 @@
     "bytes": 1232144,
     "palette": ["#7d563f", "#d17946", "#534c45", "#eab79a", "#35260b", "#234853"],
     "accent": "#d17946",
-    "accentPaper": "#9d5b34",
+    "accentLight": "#9d5b34",
     "tags": []
   },
   "wheat.png": {
@@ -2586,7 +2586,7 @@
     "bytes": 7153273,
     "palette": ["#793a14", "#b7aa9d", "#bf7024", "#eda841", "#8b7f86", "#e0cba2"],
     "accent": "#eda841",
-    "accentPaper": "#8a6226",
+    "accentLight": "#8a6226",
     "tags": []
   },
   "windows-xp.jpg": {
@@ -2596,7 +2596,7 @@
     "bytes": 1863410,
     "palette": ["#2c4e1e", "#627825", "#e8ecee", "#93bad8", "#5f9ec6", "#c5d7e5"],
     "accent": "#5f9ec6",
-    "accentPaper": "#43708c",
+    "accentLight": "#43708c",
     "tags": []
   },
   "winter-flowers.jpg": {
@@ -2606,7 +2606,7 @@
     "bytes": 261383,
     "palette": ["#cce2f2", "#e6f2fa", "#b3c9da", "#8fadc2", "#68869d", "#3a5263"],
     "accent": "#8fadc2",
-    "accentPaper": "#596c79",
+    "accentLight": "#596c79",
     "tags": []
   },
   "zuchold-archtecture.jpg": {
@@ -2616,7 +2616,7 @@
     "bytes": 13125717,
     "palette": ["#836e6e", "#97898d", "#504d5a", "#bba8a4", "#bd917d", "#d0c2c0"],
     "accent": "#bd917d",
-    "accentPaper": "#866759",
+    "accentLight": "#866759",
     "tags": []
   }
 }

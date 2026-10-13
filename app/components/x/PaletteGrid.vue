@@ -30,7 +30,7 @@ const swatches = computed<Swatch[]>(() => {
 const liveAccent = computed<string | null>(() => {
   const m = meta.value;
   if (!m) return null;
-  return resolvedTheme.value === "ink" ? m.accent : (m.accentPaper ?? m.accent);
+  return resolvedTheme.value === "dark" ? m.accent : (m.accentLight ?? m.accent);
 });
 </script>
 

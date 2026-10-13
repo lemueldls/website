@@ -120,7 +120,7 @@
   font-size: inherit;
 }
 
-[data-theme="ink"] .shiki span {
+[data-theme="dark"] .shiki span {
   color: var(--shiki-dark);
   background: var(--shiki-dark-bg);
   font-style: var(--shiki-dark-font-style);
@@ -128,7 +128,7 @@
   text-decoration: var(--shiki-dark-text-decoration);
 }
 
-[data-theme="paper"] .shiki span {
+[data-theme="light"] .shiki span {
   color: var(--shiki-light);
   background: var(--shiki-light-bg);
   font-style: var(--shiki-light-font-style);

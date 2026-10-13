@@ -1,4 +1,4 @@
-[data-theme="ink"] {
+[data-theme="dark"] {
   color-scheme: dark;
 
   --c-bg: #11111b;
@@ -31,7 +31,7 @@
   --c-print-bg: #ffffff;
   --c-print-fg: #1e1e2e;
 }
-[data-theme="paper"] {
+[data-theme="light"] {
   color-scheme: light;
 
   --c-bg: #eff1f5;

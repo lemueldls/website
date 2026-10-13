@@ -1,12 +1,12 @@
 import { createSharedComposable } from "@vueuse/core";
 
-export type ThemeName = "ink" | "paper" | "system";
+export type ThemeName = "dark" | "light" | "system";
 
 const STORAGE_KEY = "x-theme";
 
 interface ThemeState {
   stored: Ref<ThemeName | null>;
-  resolvedTheme: ComputedRef<"ink" | "paper">;
+  resolvedTheme: ComputedRef<"dark" | "light">;
   setTheme: (next: ThemeName) => void;
   toggleTheme: () => void;
 }
@@ -19,19 +19,19 @@ const useSharedTheme = createSharedComposable(() => {
     path: "/",
   });
 
-  const prefersPaper = ref(false);
+  const prefersLight = ref(false);
 
   if (import.meta.client) {
     const mq = window.matchMedia("(prefers-color-scheme: light)");
-    prefersPaper.value = mq.matches;
+    prefersLight.value = mq.matches;
     mq.addEventListener("change", (e) => {
-      prefersPaper.value = e.matches;
+      prefersLight.value = e.matches;
     });
   }
 
-  const resolvedTheme = computed<"ink" | "paper">(() => {
-    const pref = stored.value ?? "ink";
-    if (pref === "system") return prefersPaper.value ? "paper" : "ink";
+  const resolvedTheme = computed<"dark" | "light">(() => {
+    const pref = stored.value ?? "dark";
+    if (pref === "system") return prefersLight.value ? "light" : "dark";
     return pref;
   });
 
@@ -40,7 +40,7 @@ const useSharedTheme = createSharedComposable(() => {
   }
 
   function toggleTheme() {
-    stored.value = resolvedTheme.value === "ink" ? "paper" : "ink";
+    stored.value = resolvedTheme.value === "dark" ? "light" : "dark";
   }
 
   return { stored, resolvedTheme, setTheme, toggleTheme };

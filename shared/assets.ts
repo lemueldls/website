@@ -7,12 +7,9 @@ export interface FontMetrics {
   glyphs: number;
   ascender: number;
   descender: number;
-
   xHeight?: number;
   capHeight?: number;
-
   measure?: number;
-
   spacing?: "monospaced" | "proportional";
 }
 
@@ -36,13 +33,9 @@ export interface WallpaperMeta {
   width: number;
   height: number;
   bytes: number;
-
   palette: string[];
-
   accent: string;
-
-  accentPaper: string;
-
+  accentLight: string;
   tags: string[];
 }
 

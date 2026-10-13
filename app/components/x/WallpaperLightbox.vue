@@ -45,7 +45,7 @@ const paletteVars = computed<Record<string, string>>(() => {
     vars[`--lb-p${i + 1}`] = colour;
   });
   vars["--lb-accent"] =
-    resolvedTheme.value === "ink" ? meta.accent : (meta.accentPaper ?? meta.accent);
+    resolvedTheme.value === "dark" ? meta.accent : (meta.accentLight ?? meta.accent);
   vars["--lb-ribbon"] =
     meta.palette.length > 1 ? `linear-gradient(90deg, ${meta.palette.join(", ")})` : "none";
   return vars;
@@ -156,7 +156,7 @@ watch([() => props.meta?.file, variant], async () => {
         <!-- <p v-if="applied" class="lightbox__note">
           Applied now. Accent clamped to
           <code>{{
-            resolvedTheme === "ink" ? meta.accent : (meta.accentPaper ?? meta.accent)
+            resolvedTheme === "dark" ? meta.accent : (meta.accentLight ?? meta.accent)
           }}</code>
           for this theme.
         </p> -->

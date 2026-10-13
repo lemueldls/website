@@ -147,9 +147,9 @@ const useSharedWallpaper = createSharedComposable(() => {
     if (!meta.value) return "";
 
     const accent =
-      resolvedTheme.value === "ink"
+      resolvedTheme.value === "dark"
         ? meta.value.accent
-        : (meta.value.accentPaper ?? meta.value.accent);
+        : (meta.value.accentLight ?? meta.value.accent);
     return `--c-accent: ${accent};`;
   });
 

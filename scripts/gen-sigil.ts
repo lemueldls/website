@@ -120,6 +120,6 @@ await writeFile(
 const fromEndpoint = source === SOURCE_URL;
 console.log(
   `[gen:sigil] ${fromEndpoint ? "fetched" : "local"} ${source} U+2042 → ${VIEWBOX}px box, ` +
-    `ink ${inkWidth.toFixed(0)}×${inkHeight.toFixed(0)} units, scale ${scale.toFixed(4)}` +
+    `dark ${inkWidth.toFixed(0)}×${inkHeight.toFixed(0)} units, scale ${scale.toFixed(4)}` +
     `${fromEndpoint ? "" : " (set ASSETS_BASE_URL to prefer the published build)"}`,
 );
