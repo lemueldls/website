@@ -72,6 +72,7 @@ export default defineNuxtConfig({
     cloudflare: { apiToken: "", accountId: "" },
     github: { token: "" },
     assets: { baseUrl: "https://assets.lemueldls.dev" },
+    cvPdfStamp: Date.now().toString(36),
   },
 
   nitro: {
@@ -100,7 +101,7 @@ export default defineNuxtConfig({
     },
 
     storage: {
-      stats: {
+      cache: {
         driver: "cloudflare-kv-binding",
         binding: "CACHE",
       },
@@ -111,7 +112,7 @@ export default defineNuxtConfig({
     },
 
     devStorage: {
-      stats: { driver: "memory" },
+      cache: { driver: "memory" },
       views: { driver: "memory" },
     },
     prerender: {

@@ -8,16 +8,13 @@ import { presets } from "~/composables/about";
 
 const MAX_AGE = 60 * 60 * 24 * 7;
 
-const CACHE_PREFIX = "cv:pdf:v1:";
+const CACHE_PREFIX = "cv:pdf:v2:";
 
 const VIEWPORT = { width: 816, height: 1056, deviceScaleFactor: 2 };
-
-// const PAPER_MARGIN = "0.5in";
 
 const PDF_OPTIONS = {
   format: "letter" as const,
   printBackground: true,
-  // margin: { top: PAPER_MARGIN, right: PAPER_MARGIN, bottom: PAPER_MARGIN, left: PAPER_MARGIN },
 };
 
 interface BrowserBinding {
@@ -37,25 +34,11 @@ function targetUrl(event: H3Event, options: CvOptions): string {
   return `${protocol}://${host}/cv${search ? `?${search}` : ""}`;
 }
 
-async function fetchCvHtml(url: string): Promise<string | null> {
-  return fetch(url)
-    .then((response) => (response.ok ? response.text() : null))
-    .catch(() => null);
-}
+function cacheKey(event: H3Event, options: CvOptions): string {
+  const stamp = useRuntimeConfig(event).cvPdfStamp || "dev";
+  const query = new URLSearchParams(serializeCvOptions(options)).toString();
 
-function cacheKeyFor(url: string, html: string | null): Promise<string> | string {
-  const query = new URL(url).search;
-
-  if (!html) return CACHE_PREFIX + query;
-
-  return digest(html).then((fingerprint) => `${CACHE_PREFIX}${fingerprint}?${query}`);
-}
-
-async function digest(body: string): Promise<string> {
-  const bytes = new TextEncoder().encode(body.replace(/<head[\s\S]*?<\/head>/i, ""));
-  const hash = await crypto.subtle.digest("SHA-256", bytes);
-
-  return [...new Uint8Array(hash)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  return `${CACHE_PREFIX}${stamp}~${query}`;
 }
 
 function downloadName(preset: string): string {
@@ -82,16 +65,16 @@ export default defineEventHandler(async (event) => {
     return sendRedirect(event, url, 302);
   }
 
-  const html = await fetchCvHtml(url);
-  const cacheKey = await cacheKeyFor(url, html);
+  const key = cacheKey(event, options);
 
-  const cached = await useStorage("stats")
-    .getItem<string>(cacheKey)
+  const cached = await useStorage("cache")
+    .getItem<string>(key)
     .catch(() => null);
 
   if (cached) {
     return pdfResponse(cached, options.preset);
   }
+
   const browser = await puppeteer.launch(binding);
 
   try {
@@ -110,8 +93,8 @@ export default defineEventHandler(async (event) => {
     const pdf = await page.pdf(PDF_OPTIONS);
     const encoded = Buffer.from(pdf).toString("base64");
 
-    await useStorage("stats")
-      .setItem(cacheKey, encoded)
+    await useStorage("cache")
+      .setItem(cacheKey(event, options), encoded)
       .catch(() => {});
 
     return pdfResponse(encoded, options.preset);

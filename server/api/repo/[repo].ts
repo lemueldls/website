@@ -82,7 +82,7 @@ const loadRepo = defineCachedFunction(
     };
   },
   {
-    base: "stats",
+    base: "cache",
     group: "repo",
     name: "meta",
     maxAge: MAX_AGE,

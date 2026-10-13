@@ -4,9 +4,9 @@ const USERNAME = "lemueldls";
 
 const MAX_AGE = 60 * 60;
 
-const CACHE_KEY = ["stats", "github", "stats", "v1.json"].join(":");
+const CACHE_KEY = ["cache", "github", "stats", "v1.json"].join(":");
 
-const CACHE_KEY_RELATIVE = CACHE_KEY.slice("stats:".length);
+const CACHE_KEY_RELATIVE = CACHE_KEY.slice("cache:".length);
 
 const REPO_LIMIT = 100;
 
@@ -105,7 +105,7 @@ const loadStats = defineCachedFunction(
     };
   },
   {
-    base: "stats",
+    base: "cache",
     group: "github",
     name: "stats",
 
@@ -134,7 +134,7 @@ export default defineEventHandler(async (event) => {
 });
 
 async function readLastGood(): Promise<StatsPayload | null> {
-  const entry = await useStorage("stats")
+  const entry = await useStorage("cache")
     .getItem<{ value?: StatsPayload }>(CACHE_KEY_RELATIVE)
     .catch(() => null);
 
