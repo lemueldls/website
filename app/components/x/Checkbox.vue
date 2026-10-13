@@ -1,17 +1,23 @@
 <script setup lang="ts">
+import { CheckboxRoot, CheckboxIndicator } from "reka-ui";
+
 const model = defineModel<boolean>();
 
 defineProps<{ label?: string }>();
+
+const uid = useId();
 </script>
 
 <template>
-  <label class="check">
-    <input v-model="model" type="checkbox" class="check__input" v-bind="$attrs" />
-    <span class="check__box" aria-hidden="true" />
-    <span v-if="$slots.default || label" class="check__label"
-      ><slot>{{ label }}</slot></span
-    >
-  </label>
+  <div class="check">
+    <CheckboxRoot :id="uid" v-model="model" v-bind="$attrs" class="check__box">
+      <CheckboxIndicator force-mount class="check__tick" aria-hidden="true" />
+    </CheckboxRoot>
+
+    <label v-if="$slots.default || label" :for="uid" class="check__label">
+      <slot>{{ label }}</slot>
+    </label>
+  </div>
 </template>
 
 <style scoped>
@@ -21,14 +27,6 @@ defineProps<{ label?: string }>();
   gap: 0.5em;
   cursor: pointer;
   font-size: var(--t-9);
-}
-
-.check__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  overflow: hidden;
 }
 
 .check__box {
@@ -44,38 +42,56 @@ defineProps<{ label?: string }>();
     background-color var(--dur-fast) var(--ease);
 }
 
-.check__input:checked + .check__box {
+.check__box[data-state="checked"] {
   border-color: var(--c-accent);
   background: var(--c-accent);
 }
 
-.check__input:checked + .check__box::after {
-  content: "";
+.check__tick {
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 0.42em;
-  height: 0.22em;
+  width: 0.5rem;
+  height: 0.22rem;
   border-left: 1.5px solid var(--c-accent-contrast);
   border-bottom: 1.5px solid var(--c-accent-contrast);
   rotate: -45deg;
-  translate: 0 -0.05em;
+  translate: 0 -0.05rem;
+  transition:
+    opacity var(--dur-fast) var(--ease),
+    scale var(--dur-fast) var(--ease);
 }
 
-.check__input:focus-visible + .check__box {
+.check__tick[data-state="unchecked"] {
+  opacity: 0;
+  scale: 0.5;
+}
+
+.check__box:focus-visible {
   outline: var(--rule-width) solid var(--c-accent);
   outline-offset: 2px;
 }
 
-.check:hover .check__box {
+.check:hover .check__box:not([data-disabled]) {
   border-color: var(--c-accent);
 }
 
 .check__label {
   color: var(--c-dim);
+  transition: color var(--dur-fast) var(--ease);
 }
 
 .check:hover .check__label {
   color: var(--c-fg);
+}
+
+.check__box[data-disabled] {
+  border-color: var(--c-rule);
+  background: var(--c-sheet-2);
+  cursor: not-allowed;
+}
+
+.check__box[data-disabled] ~ .check__label {
+  color: var(--c-dimmer);
 }
 </style>
