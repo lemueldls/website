@@ -99,10 +99,9 @@ const lightboxMeta = computed<WallpaperMeta | null>(() =>
   lightboxFile.value ? (wallpapers[lightboxFile.value] ?? null) : null,
 );
 
-function openLightbox(file: string) {
+function openLightbox(file: string, variant: WallpaperVariant = "base") {
   lightboxFile.value = file;
-  lightboxVariant.value =
-    variant.value === "base" ? (resolvedTheme.value === "light" ? "light" : "dark") : variant.value;
+  lightboxVariant.value = variant ?? (resolvedTheme.value === "light" ? "light" : "dark");
   lightboxOpen.value = true;
 }
 
@@ -397,7 +396,7 @@ useHead(heroLink);
             type="button"
             class="gallery__applied-hit"
             :title="`Inspect ${selected}`"
-            @click="openLightbox(selected!)"
+            @click="openLightbox(selected!, 'base')"
           >
             <img
               :src="wallpaperThumbUrl(selected!, 'base', HERO_WIDTHS[0], { quality: HERO_QUALITY })"
@@ -532,7 +531,7 @@ useHead(heroLink);
               type="button"
               class="tile__hit"
               :title="`Inspect ${file}`"
-              @click="openLightbox(file)"
+              @click="openLightbox(file, variant)"
             >
               <span class="tile__frame" :style="frameStyle(file)">
                 <img
