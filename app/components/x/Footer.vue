@@ -31,16 +31,18 @@ const { socials, email, rings } = useAbout();
                 size="sm"
                 square
                 :href="ring.prev"
+                same-tab
                 :title="`Previous in ${ring.name}`"
               >
                 <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="xs" />
               </XButton>
-              <XLink class="ftr__ring-link" :href="ring.home">{{ ring.name }}</XLink>
+              <XLink class="ftr__ring-link" :href="ring.home" same-tab>{{ ring.name }}</XLink>
               <!-- <XButton
                 variant="ghost"
                 size="sm"
                 square
                 :href="ring.rand"
+                same-tab
                 :title="`Random site in ${ring.name}`"
               >
                 <XIcon name="material-symbols:casino-sharp" size="xs" />
@@ -50,6 +52,7 @@ const { socials, email, rings } = useAbout();
                 size="sm"
                 square
                 :href="ring.next"
+                same-tab
                 :title="`Next in ${ring.name}`"
               >
                 <XIcon name="material-symbols:keyboard-double-arrow-right-sharp" size="xs" />
@@ -71,6 +74,8 @@ const { socials, email, rings } = useAbout();
         </span>
 
         <span class="ftr__meta-badges">
+          <XSiteBadge to="/badges" />
+
           <XVisitorCounter />
         </span>
       </p>
@@ -127,7 +132,7 @@ const { socials, email, rings } = useAbout();
 .ftr__rings {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  /* gap: var(--space-1); */
 }
 
 .ftr__ring {
@@ -163,8 +168,8 @@ const { socials, email, rings } = useAbout();
 
 .ftr__social-icon {
   display: inline-flex;
-  margin-left: 0.5em;
-  margin-right: 0.25em;
+  margin-left: 0.25em;
+  margin-right: 0.125em;
   color: var(--c-dimmer);
 }
 

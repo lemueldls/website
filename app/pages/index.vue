@@ -281,8 +281,8 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 
 .hero__social-icon {
   display: inline-flex;
-  margin-left: 0.5em;
-  margin-right: 0.25em;
+  margin-left: 0.25em;
+  margin-right: 0.125em;
   color: var(--c-dimmer);
 }
 

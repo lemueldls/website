@@ -38,7 +38,7 @@ const leave = computed(() => newTabAttrs(!props.sameTab && isExternalHref(props.
 <style>
 .xlink {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.25em;
   color: var(--c-fg);
   text-decoration: none;
