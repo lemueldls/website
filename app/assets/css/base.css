@@ -256,19 +256,15 @@ legend {
   margin: 0.5in;
 }
 
-@page :first {
-  margin: 0;
-}
-
 @media print {
+  html {
+    color-scheme: light !important;
+  }
+
   html,
   body {
     background: #ffffff !important;
     color: #1e1e2e !important;
-  }
-
-  body {
-    margin: 0.5in;
   }
 
   .no-print {
