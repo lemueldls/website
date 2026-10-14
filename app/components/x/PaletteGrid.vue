@@ -18,13 +18,13 @@ const swatches = computed<Swatch[]>(() => {
   const m = meta.value;
   if (!m) return [];
 
-  const accentColour = liveAccent.value ?? m.accent;
+  const accentColor = liveAccent.value ?? m.accent;
   const samples = (m.palette ?? []).map((hex, i) => ({
     hex,
     role: ROLES[i] ?? `extra ${i - ROLES.length + 1}`,
   }));
 
-  return [{ hex: accentColour, role: "accent", accent: true }, ...samples];
+  return [{ hex: accentColor, role: "accent", accent: true }, ...samples];
 });
 
 const liveAccent = computed<string | null>(() => {

@@ -88,7 +88,7 @@ so a document that cannot be repaired does not spin forever.
 
 There are two granularities. Blanking a whole block is too blunt for equations, because a single
 wrong variable name in a multi-line formula would take out the whole expression while you are still
-typing the next term. So math gets a scalpel instead: splice a colour wrapper around only the broken
+typing the next term. So math gets a scalpel instead: splice a color wrapper around only the broken
 identifier, and the healthy half of the equation keeps rendering in its normal styling while the
 broken half renders visibly broken.
 

@@ -29,7 +29,7 @@ withDefaults(defineProps<{ size?: number }>(), { size: 9 });
   position: absolute;
   background: var(--c-rule-strong);
 
-  /* The colour lives on the two rules rather than on `.fold`, so the transition
+  /* The color lives on the two rules rather than on `.fold`, so the transition
      has to sit beside it: on the parent it is a transition for a property
      nothing there ever changes, and the accent snaps instead of easing in. */
   transition: background-color var(--dur-fast) var(--ease);

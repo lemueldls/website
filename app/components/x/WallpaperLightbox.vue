@@ -41,8 +41,8 @@ const paletteVars = computed<Record<string, string>>(() => {
   const meta = props.meta;
   if (!meta) return {};
   const vars: Record<string, string> = {};
-  meta.palette.forEach((colour, i) => {
-    vars[`--lb-p${i + 1}`] = colour;
+  meta.palette.forEach((color, i) => {
+    vars[`--lb-p${i + 1}`] = color;
   });
   vars["--lb-accent"] =
     resolvedTheme.value === "dark" ? meta.accent : (meta.accentLight ?? meta.accent);
@@ -124,15 +124,19 @@ watch([() => props.meta?.file, variant], async () => {
             <dt class="label">Variant</dt>
             <dd>{{ variant }}</dd>
           </div>
+          <div class="lightbox__fact">
+            <dt class="label">Color</dt>
+            <dd>{{ meta.hue }}</dd>
+          </div>
         </dl>
 
         <div v-if="meta.palette.length" class="lightbox__swatches">
           <span
-            v-for="colour in meta.palette"
-            :key="colour"
+            v-for="color in meta.palette"
+            :key="color"
             class="lightbox__swatch"
-            :style="{ background: colour }"
-            :title="colour"
+            :style="{ background: color }"
+            :title="color"
           />
         </div>
 
