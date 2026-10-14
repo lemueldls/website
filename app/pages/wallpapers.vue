@@ -248,7 +248,7 @@ function layoutGrid() {
   if (width <= 0) return;
 
   const items = Array.from(grid.children) as HTMLElement[];
-  const key = `${cols}@${width}@${items.length}`;
+  const key = `${cols}@${width}@${items.length}@${visible.value.join("\u0000")}`;
   if (key === lastKey) return;
   lastKey = key;
 
@@ -952,10 +952,16 @@ useHead(heroLink);
   }
 }
 
+.gallery__grid:not([data-packed]) {
+  display: grid;
+  grid-template-columns: repeat(var(--masonry-cols), minmax(0, 1fr));
+  gap: var(--masonry-gap);
+  align-items: start;
+}
+
 .gallery__grid:not([data-packed]) > .tile {
   position: static;
   width: 100%;
-  margin-block-end: var(--space-5);
 }
 
 .gallery__grid[data-packed] > .tile {
