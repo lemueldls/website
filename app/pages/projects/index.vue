@@ -273,12 +273,12 @@ function toggleTechnology(name: string) {
   margin-top: var(--space-2);
   font-size: var(--t-8);
   letter-spacing: 0.06em;
-  text-transform: lowercase;
   color: var(--c-dimmer);
 }
 
 .project__role {
   color: var(--c-accent);
+  text-transform: lowercase;
 }
 
 .project__description {

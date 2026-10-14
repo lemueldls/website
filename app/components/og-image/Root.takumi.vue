@@ -42,9 +42,9 @@ const props = withDefaults(
   }>(),
   {
     colorMode: "dark",
-    label: "front sheet",
+    label: "website",
     title: "Lemuel De Los Santos",
-    description: "Math and Computer Science research student.",
+    description: "Math & Computer Science research student.",
     meta: "lem.my",
   },
 );

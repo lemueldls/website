@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: "Lemuel De Los Santos",
-  description: "Math and Computer Science Research Student",
+  description: "Math & Computer Science Research Student",
 });
 
 defineOgImage("Root", {
@@ -48,7 +48,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         Lemuel <span class="hero__last-name">De Los Santos</span>
       </h1>
 
-      <p class="hero__standfirst">Math and Computer Science Research Student</p>
+      <p class="hero__standfirst">Math & Computer Science Research Student</p>
 
       <div class="hero__rule" aria-hidden="true" />
 
@@ -133,7 +133,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
             <XLink v-if="project.link" :href="project.link.href" external>{{
               project.link.text
             }}</XLink>
-            <XLink v-if="project.github" :href="project.github.href" external>github</XLink>
+            <XLink v-if="project.github" :href="project.github.href" external>GitHub</XLink>
           </span>
         </li>
       </ul>

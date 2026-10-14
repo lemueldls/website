@@ -10,7 +10,7 @@ useSeoMeta({
 useSchemaOrg([
   definePerson({
     name: "Lemuel De Los Santos",
-    description: "Math and Computer Science Research Student",
+    description: "Math & Computer Science Research Student",
     url: "https://lem.my",
     sameAs: [
       "https://lem.my",
