@@ -2,6 +2,24 @@ export const ASSETS_BASE_URL = "https://assets.lemueldls.dev";
 
 export type WallpaperVariant = "base" | "light" | "dark";
 
+export const WALLPAPER_HUES = [
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "teal",
+  "blue",
+  "purple",
+  "pink",
+  "neutral",
+] as const;
+
+export type WallpaperHue = (typeof WALLPAPER_HUES)[number];
+
+export const WALLPAPER_APPLY_KEY = "i";
+export const WALLPAPER_INSPECT_KEY = "v";
+export const WALLPAPER_APPLIED_KEY = "a";
+
 export interface FontMetrics {
   unitsPerEm: number;
   glyphs: number;
@@ -36,6 +54,7 @@ export interface WallpaperMeta {
   palette: string[];
   accent: string;
   accentLight: string;
+  hue: WallpaperHue;
   tags: string[];
 }
 

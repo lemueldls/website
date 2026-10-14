@@ -12,10 +12,21 @@ import {
   HERO_QUALITY,
   VIEW_WIDTHS,
   VIEW_QUALITY,
+  WALLPAPER_INSPECT_KEY,
   type WallpaperVariant,
+  type WallpaperHue,
+  type WallpaperMeta,
 } from "#shared/assets";
 
-import { wallpapers, wallpaperFiles, sortedWallpaperTags, variants } from "~/composables/wallpaper";
+import {
+  wallpapers,
+  wallpaperFiles,
+  sortedWallpaperTags,
+  sortedWallpaperHues,
+  wallpaperHueTint,
+  variants,
+  resolveWallpaperRef,
+} from "~/composables/wallpaper";
 
 useSeoMeta({ title: "Wallpapers" });
 
@@ -38,30 +49,17 @@ const {
 const { resolvedTheme } = useTheme();
 
 const activeTag = ref<string | null>(null);
+const activeHues = ref<WallpaperHue[]>([]);
 const search = ref("");
+
+function toggleHue(hue: WallpaperHue) {
+  activeHues.value = activeHues.value.includes(hue)
+    ? activeHues.value.filter((entry) => entry !== hue)
+    : [...activeHues.value, hue];
+}
 
 const route = useRoute();
 const router = useRouter();
-
-function syncPermalink() {
-  if (!import.meta.client) return;
-  if (!selected.value && !route.query.a) return;
-
-  const query = { ...route.query };
-  if (selected.value) query.a = selected.value;
-  else delete query.a;
-
-  router.replace({ query });
-}
-
-onMounted(() => {
-  const file = route.query.a;
-  if (typeof file === "string" && file in wallpapers) setWallpaper(file);
-
-  syncPermalink();
-});
-
-watch(selected, syncPermalink);
 
 const variant = ref<WallpaperVariant>(resolvedTheme.value === "light" ? "light" : "dark");
 
@@ -75,8 +73,10 @@ const HERO_SIZES = "(min-width: 720px) 20rem, 92vw";
 
 const matches = computed(() => {
   const needle = search.value.trim().toLowerCase();
+  const hues = activeHues.value;
   return wallpaperFiles
     .filter((file) => (activeTag.value ? wallpapers[file]!.tags.includes(activeTag.value) : true))
+    .filter((file) => (hues.length ? hues.includes(wallpapers[file]!.hue) : true))
     .filter((file) => (needle ? file.toLowerCase().includes(needle) : true))
     .sort((a, b) => a.localeCompare(b));
 });
@@ -87,15 +87,15 @@ const remaining = computed(() => matches.value.length - shown.value);
 
 const previewFile = ref<string | null>(null);
 
-watch([activeTag, search, variant], () => {
+watch([activeTag, activeHues, search, variant], () => {
   shown.value = PAGE_SIZE;
 });
-
-const INSPECT_KEY = "i";
 
 const lightboxOpen = ref(false);
 const lightboxFile = ref<string | null>(null);
 const lightboxVariant = ref<WallpaperVariant>("base");
+
+const INSPECT_KEY = WALLPAPER_INSPECT_KEY;
 
 let inspectPushed = false;
 
@@ -111,8 +111,10 @@ function withoutInspect(): Record<string, string | number | null | Array<string 
 
 watch(
   () => route.query[INSPECT_KEY],
-  (file) => {
-    if (typeof file !== "string" || !(file in wallpapers)) {
+  (value) => {
+    const file = typeof value === "string" ? resolveWallpaperRef(value) : null;
+
+    if (!file) {
       lightboxOpen.value = false;
       inspectPushed = false;
       return;
@@ -160,6 +162,11 @@ function stepLightbox(delta: number) {
 
 function onLightboxApply(apply: boolean) {
   setWallpaper(apply ? lightboxFile.value : null);
+}
+
+function onLightboxFilter(tag: string) {
+  activeTag.value = activeTag.value === tag ? null : tag;
+  lightboxOpen.value = false;
 }
 
 const ASPECT_MIN = 0.75;
@@ -467,16 +474,16 @@ useHead(heroLink);
             <XLabel variant="accent">Currently applied</XLabel>
             <h2 class="gallery__applied-name">{{ selected }}</h2>
             <p class="meta gallery__applied-meta">
-              {{ resolutionLabel(currentMeta) }} &middot; {{ byteLabel(currentMeta.bytes) }}
+              {{ resolutionLabel(currentMeta) }} // {{ byteLabel(currentMeta.bytes) }}
             </p>
 
             <div class="gallery__swatches">
               <span
-                v-for="colour in currentMeta.palette"
-                :key="colour"
+                v-for="color in currentMeta.palette"
+                :key="color"
                 class="gallery__swatch"
-                :style="{ background: colour }"
-                :title="colour"
+                :style="{ background: color }"
+                :title="color"
               />
             </div>
 
@@ -486,7 +493,7 @@ useHead(heroLink);
             </p> -->
 
             <div class="gallery__applied-actions">
-              <XButton :href="wallpaperUrl(selected!, 'base')" variant="sheet" external>
+              <XButton :href="wallpaperUrl(selected!, 'base')" variant="sheet">
                 Download
                 <XIcon name="material-symbols:download-sharp" />
               </XButton>
@@ -530,24 +537,28 @@ useHead(heroLink);
 
       <ul class="gallery__tags">
         <li>
-          <button
-            type="button"
-            class="chip"
-            :class="{ 'chip--active': activeTag === null }"
-            @click="activeTag = null"
-          >
-            All
-          </button>
+          <XChip :active="activeTag === null" @click="activeTag = null">All</XChip>
         </li>
         <li v-for="tag in sortedWallpaperTags" :key="tag">
-          <button
-            type="button"
-            class="chip"
-            :class="{ 'chip--active': activeTag === tag }"
-            @click="activeTag = activeTag === tag ? null : tag"
-          >
+          <XChip :active="activeTag === tag" @click="activeTag = activeTag === tag ? null : tag">
             {{ tag }}
-          </button>
+          </XChip>
+        </li>
+      </ul>
+
+      <ul class="gallery__hues" aria-label="Color">
+        <li>
+          <XChip :active="activeHues.length === 0" @click="activeHues = []">any color</XChip>
+        </li>
+        <li v-for="hue in sortedWallpaperHues" :key="hue">
+          <XChip
+            :active="activeHues.includes(hue)"
+            :swatch="wallpaperHueTint[hue]"
+            :title="`${hue} wallpapers`"
+            @click="toggleHue(hue)"
+          >
+            {{ hue }}
+          </XChip>
         </li>
       </ul>
     </XSheet>
@@ -600,6 +611,11 @@ useHead(heroLink);
             </button>
 
             <div class="tile__caption">
+              <span
+                class="tile__dot"
+                :style="{ background: wallpaperHueTint[wallpapers[file]!.hue] }"
+                :title="wallpapers[file]!.hue"
+              />
               <span class="tile__name" :title="file">{{ file }}</span>
 
               <XButton
@@ -642,8 +658,10 @@ useHead(heroLink);
       v-model:variant="lightboxVariant"
       :meta="lightboxMeta"
       :applied="lightboxFile !== null && lightboxFile === selected"
+      :active-tag="activeTag"
       @step="stepLightbox"
       @apply="onLightboxApply"
+      @filter="onLightboxFilter"
     />
   </div>
 </template>
@@ -668,7 +686,7 @@ useHead(heroLink);
   font-family: var(--f-display);
   font-size: var(--t-14);
   color: var(--c-dim);
-  line-height: 1.55;
+  /* line-height: 1.55; */
   max-width: 62ch;
 }
 
@@ -904,31 +922,13 @@ useHead(heroLink);
   padding: 0;
 }
 
-.chip {
-  padding: 0.25em 0.6em;
-  border: var(--rule-width) solid var(--c-rule);
-  background: transparent;
-  color: var(--c-dim);
-  font-family: var(--f-label);
-  font-size: var(--t-6);
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
-  cursor: pointer;
-  transition:
-    border-color var(--dur-fast) var(--ease),
-    color var(--dur-fast) var(--ease),
-    background-color var(--dur-fast) var(--ease);
-}
-
-.chip:hover {
-  border-color: var(--c-rule-strong);
-  color: var(--c-fg);
-}
-
-.chip--active {
-  border-color: var(--c-accent);
-  background: var(--c-accent);
-  color: var(--c-accent-contrast);
+.gallery__hues {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: var(--space-2) 0 0;
+  padding: 0;
 }
 
 .gallery__grid {
@@ -1072,11 +1072,18 @@ useHead(heroLink);
 .tile__caption {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: var(--space-2);
   height: var(--tile-foot);
-  padding: 0 var(--space-1p5);
+  padding: 0 var(--space-1p5) 0 var(--space-3);
   min-width: 0;
+}
+
+.tile__dot {
+  flex-shrink: 0;
+  width: 0.45rem;
+  height: 0.45rem;
+  border: var(--rule-width) solid var(--c-rule-strong);
 }
 
 .tile__name {
@@ -1087,8 +1094,9 @@ useHead(heroLink);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  flex-shrink: 0;
+  flex: 0 1 auto;
+  margin-right: auto;
+  min-width: 0;
   transition: color var(--dur-fast) var(--ease);
 }
 

@@ -4,7 +4,13 @@ import { hashString } from "../lib/rand";
 
 import wallsMeta from "~/assets/walls.meta.json";
 
-import { wallpaperThumbUrl, type WallpaperVariant, type WallpaperMeta } from "#shared/assets";
+import {
+  wallpaperThumbUrl,
+  WALLPAPER_HUES,
+  type WallpaperVariant,
+  type WallpaperMeta,
+  type WallpaperHue,
+} from "#shared/assets";
 
 export type { WallpaperVariant };
 
@@ -26,6 +32,36 @@ const wallpaperTally = wallpaperFiles
 export const sortedWallpaperTags = Object.entries(wallpaperTally)
   .sort((a, b) => b[1] - a[1])
   .map(([tag]) => tag);
+
+const hueTally = wallpaperFiles.reduce<Partial<Record<WallpaperHue, number>>>((acc, file) => {
+  const hue = wallpapers[file]!.hue;
+  acc[hue] = (acc[hue] ?? 0) + 1;
+  return acc;
+}, {});
+
+export const sortedWallpaperHues = WALLPAPER_HUES.map((hue) => [hue, hueTally[hue] ?? 0] as const)
+  .filter(([, count]) => count > 0)
+  .sort((a, b) => b[1] - a[1])
+  .map(([hue]) => hue);
+
+export const wallpaperHueTint: Record<string, string> = Object.fromEntries(
+  Object.entries(hueTally).map(([hue]) => {
+    const members = wallpaperFiles.filter((file) => wallpapers[file]!.hue === hue);
+    const sum = members.reduce<[number, number, number]>(
+      (rgb, file) => {
+        const [r, g, b] = parseHex(wallpapers[file]!.accent);
+        return [rgb[0] + r, rgb[1] + g, rgb[2] + b];
+      },
+      [0, 0, 0],
+    );
+
+    return [hue, toHex(sum.map((channel) => channel / members.length) as RGB)];
+  }),
+);
+
+export function wallpaperHueOf(file: string): WallpaperHue | null {
+  return wallpapers[file]?.hue ?? null;
+}
 
 type RGB = [number, number, number];
 
@@ -200,6 +236,23 @@ export function wallpaperPermalink(file: string): string {
 export function useWallpaperPermalink(): ComputedRef<string> {
   const { selected } = useWallpaper();
   return computed(() => (selected.value ? wallpaperPermalink(selected.value) : WALLPAPERS_PATH));
+}
+
+export function resolveWallpaperRef(value: string): string | null {
+  const trimmed = value.trim();
+  if (!trimmed) return null;
+
+  if (/^\d+$/.test(trimmed)) {
+    const index = Number.parseInt(trimmed, 10) - 1;
+    return wallpaperFiles[index] ?? null;
+  }
+
+  return trimmed in wallpapers ? trimmed : null;
+}
+
+export function wallpaperNumber(file: string): number | null {
+  const index = wallpaperFiles.indexOf(file);
+  return index < 0 ? null : index + 1;
 }
 export const useWallpapers = createSharedComposable(() => wallpapers);
 export const useWallpaperFiles = createSharedComposable(() => wallpaperFiles);

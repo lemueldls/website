@@ -28,8 +28,6 @@ const EXPECTED = {
       }
     }
 
-    // An archive is only worth linking if it names a format and a size, both of
-    // which the publisher wrote beside the zip.
     for (const [family, entries] of Object.entries(archives)) {
       if (!families[family]) throw new Error(`${family}: archives for an unknown family`);
       for (const entry of entries as Record<string, unknown>[]) {
@@ -44,8 +42,24 @@ const EXPECTED = {
     return names;
   },
   "walls.meta.json": (meta: unknown) => {
-    const entries = Object.keys(meta as Record<string, unknown>);
+    const walls = meta as Record<string, Record<string, unknown>>;
+    const entries = Object.keys(walls);
     if (entries.length === 0) throw new Error("no wallpapers");
+
+    for (const [file, entry] of Object.entries(walls)) {
+      for (const field of ["palette", "accent", "accentLight", "hue"]) {
+        if (entry[field] === undefined) {
+          const hint =
+            field === "accentLight" ? " (is the origin still calling it accentPaper?)" : "";
+          throw new Error(`${file}: missing ${field}${hint}`);
+        }
+      }
+
+      if (typeof entry.hue !== "string" || entry.hue.length === 0) {
+        throw new Error(`${file}: hue is not a family name`);
+      }
+    }
+
     return entries;
   },
 } as const;

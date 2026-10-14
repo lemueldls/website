@@ -7,6 +7,7 @@
     "palette": ["#0c0c0a", "#251f1d", "#5b4641", "#0a0908", "#8e8782", "#030202"],
     "accent": "#8e8782",
     "accentLight": "#706b67",
+    "hue": "neutral",
     "tags": []
   },
   "abandoned-trainstation.jpg": {
@@ -17,6 +18,7 @@
     "palette": ["#42733c", "#6aa24e", "#9ad068", "#1a4546", "#b6dbd5", "#2997b2"],
     "accent": "#9ad068",
     "accentLight": "#537138",
+    "hue": "green",
     "tags": ["urban"]
   },
   "abstract-swirls.jpg": {
@@ -27,6 +29,7 @@
     "palette": ["#070340", "#110d5e", "#1f2492", "#040130", "#020121", "#4a58ce"],
     "accent": "#6874d6",
     "accentLight": "#4a58ce",
+    "hue": "blue",
     "tags": []
   },
   "asian-village.png": {
@@ -37,6 +40,7 @@
     "palette": ["#2e363e", "#37495c", "#415e81", "#202028", "#b8bb9c", "#787e64"],
     "accent": "#b8bb9c",
     "accentLight": "#6b6d5b",
+    "hue": "yellow",
     "tags": []
   },
   "astronaut.png": {
@@ -47,6 +51,7 @@
     "palette": ["#d4a088", "#392a2f", "#524d55", "#966e67", "#f7d2ae", "#793a35"],
     "accent": "#d4a088",
     "accentLight": "#846455",
+    "hue": "orange",
     "tags": []
   },
   "basement.jpg": {
@@ -57,6 +62,7 @@
     "palette": ["#06121e", "#162132", "#03090f", "#010204", "#2a3b51", "#5f6b75"],
     "accent": "#737e86",
     "accentLight": "#5f6b75",
+    "hue": "neutral",
     "tags": []
   },
   "beach-path.jpg": {
@@ -67,6 +73,7 @@
     "palette": ["#09140a", "#283919", "#547524", "#95be2b", "#b8c3c0", "#327fb5"],
     "accent": "#95be2b",
     "accentLight": "#5d771b",
+    "hue": "green",
     "tags": ["landscape"]
   },
   "beach.jpg": {
@@ -77,6 +84,7 @@
     "palette": ["#b5cedf", "#86d2ee", "#d4e5f0", "#59c6ec", "#45afe2", "#368ed3"],
     "accent": "#59c6ec",
     "accentLight": "#34738a",
+    "hue": "teal",
     "tags": ["landscape"]
   },
   "biking-sunset.jpg": {
@@ -87,6 +95,7 @@
     "palette": ["#3f466b", "#2e3352", "#66587a", "#837ca7", "#b3a6ca", "#415c93"],
     "accent": "#b3a6ca",
     "accentLight": "#70687e",
+    "hue": "purple",
     "tags": ["sunset"]
   },
   "black-hole.png": {
@@ -97,6 +106,7 @@
     "palette": ["#1e0828", "#310c3a", "#120519", "#5c234e", "#9b6796", "#f1f0ce"],
     "accent": "#9f6d9a",
     "accentLight": "#8e5e8a",
+    "hue": "pink",
     "tags": ["space"]
   },
   "blue-flowers.jpg": {
@@ -107,6 +117,7 @@
     "palette": ["#144453", "#2c5d6c", "#4c7b8b", "#092f39", "#79a0af", "#051414"],
     "accent": "#79a0af",
     "accentLight": "#56717c",
+    "hue": "teal",
     "tags": []
   },
   "blue-landscape.png": {
@@ -117,6 +128,7 @@
     "palette": ["#3f91be", "#326d71", "#1b4b55", "#90d1de", "#7bb56b", "#0f3039"],
     "accent": "#7bb56b",
     "accentLight": "#4d7143",
+    "hue": "green",
     "tags": []
   },
   "bluehour.jpg": {
@@ -127,6 +139,7 @@
     "palette": ["#36417a", "#222c5d", "#6d5b82", "#111d49", "#c57f7f", "#0d1439"],
     "accent": "#c57f7f",
     "accentLight": "#945f5f",
+    "hue": "red",
     "tags": ["sunset"]
   },
   "bunnies-road.png": {
@@ -137,6 +150,7 @@
     "palette": ["#070923", "#0b123b", "#050517", "#3350b3", "#142a74", "#04020e"],
     "accent": "#667cc6",
     "accentLight": "#3350b3",
+    "hue": "blue",
     "tags": []
   },
   "c4-spring-sakura-sky.jpg": {
@@ -147,6 +161,7 @@
     "palette": ["#529fd7", "#2b3844", "#505960", "#c2d7eb", "#7f8385", "#a4acb4"],
     "accent": "#529fd7",
     "accentLight": "#3a7198",
+    "hue": "blue",
     "tags": ["anime"]
   },
   "cabin-3.png": {
@@ -157,6 +172,7 @@
     "palette": ["#3c5c86", "#344f77", "#436e93", "#2d3f56", "#6d7c88", "#252b35"],
     "accent": "#6286a5",
     "accentLight": "#436e93",
+    "hue": "blue",
     "tags": []
   },
   "cabin.png": {
@@ -167,6 +183,7 @@
     "palette": ["#0a1b1f", "#14262b", "#051417", "#050f10", "#223d42", "#396365"],
     "accent": "#628485",
     "accentLight": "#396365",
+    "hue": "teal",
     "tags": []
   },
   "car-wreck.png": {
@@ -177,6 +194,7 @@
     "palette": ["#0c1225", "#0f1a2c", "#162636", "#173a4d", "#2287a0", "#1a5970"],
     "accent": "#2287a0",
     "accentLight": "#1e768c",
+    "hue": "teal",
     "tags": []
   },
   "cartoon-castle.png": {
@@ -187,6 +205,7 @@
     "palette": ["#dbd7b7", "#a19c75", "#343d2f", "#474f3d", "#7a7658", "#272f23"],
     "accent": "#a19c75",
     "accentLight": "#726e53",
+    "hue": "yellow",
     "tags": []
   },
   "cat-in-clouds.png": {
@@ -197,6 +216,7 @@
     "palette": ["#19aedc", "#77c0db", "#c9eef2", "#1c6755", "#94c13f", "#0cacdd"],
     "accent": "#0cacdd",
     "accentLight": "#087393",
+    "hue": "teal",
     "tags": ["landscape"]
   },
   "chess-gate.jpg": {
@@ -207,6 +227,7 @@
     "palette": ["#18172b", "#12121e", "#dad0c9", "#28223b", "#584256", "#98878c"],
     "accent": "#98878c",
     "accentLight": "#726569",
+    "hue": "neutral",
     "tags": []
   },
   "city-horizon.jpg": {
@@ -217,6 +238,7 @@
     "palette": ["#4a6d8d", "#23282a", "#363a3f", "#94484a", "#dd5432", "#5c5369"],
     "accent": "#dd5432",
     "accentLight": "#b8462a",
+    "hue": "red",
     "tags": ["sunset", "urban"]
   },
   "city-on-water.jpg": {
@@ -227,6 +249,7 @@
     "palette": ["#657c8b", "#8c9ca5", "#3c647a", "#8ed4e2", "#3a9abe", "#234a5e"],
     "accent": "#3a9abe",
     "accentLight": "#2c748e",
+    "hue": "teal",
     "tags": ["urban"]
   },
   "city.png": {
@@ -237,6 +260,7 @@
     "palette": ["#c6edf9", "#bec2c7", "#8791b7", "#afa77c", "#675774", "#b67284"],
     "accent": "#afa77c",
     "accentLight": "#6d684e",
+    "hue": "yellow",
     "tags": ["urban"]
   },
   "clearing.png": {
@@ -244,9 +268,10 @@
     "width": 1920,
     "height": 1080,
     "bytes": 436311,
-    "palette": ["#2a2f3a"],
-    "accent": "#7a7d84",
-    "accentLight": "#2a2f3a",
+    "palette": ["#2e333f", "#434757", "#55627b", "#687ea0", "#755c67", "#b08382"],
+    "accent": "#b08382",
+    "accentLight": "#846262",
+    "hue": "red",
     "tags": []
   },
   "cloud-coffee.jpg": {
@@ -257,6 +282,7 @@
     "palette": ["#dbe0dd", "#a2b0b9", "#132b46", "#677a8d", "#3b5266", "#071426"],
     "accent": "#a2b0b9",
     "accentLight": "#656e74",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "clouds-2.png": {
@@ -267,6 +293,7 @@
     "palette": ["#9633c2", "#0b0535", "#3934a6", "#d29f95", "#4f92df", "#1a1a6d"],
     "accent": "#4f92df",
     "accentLight": "#3b6ea7",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "clouds-3.jpg": {
@@ -277,6 +304,7 @@
     "palette": ["#908bbd", "#2546ab", "#d6bbcb", "#4868be", "#1c348b", "#19256b"],
     "accent": "#908bbd",
     "accentLight": "#6c688e",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "clouds-3.png": {
@@ -287,6 +315,7 @@
     "palette": ["#2d282b", "#b95d4d", "#baadb0", "#483226", "#eca771", "#84400c"],
     "accent": "#eca771",
     "accentLight": "#8a6142",
+    "hue": "orange",
     "tags": ["landscape"]
   },
   "clouds.png": {
@@ -297,6 +326,7 @@
     "palette": ["#41578d", "#38497b", "#4f679d", "#303d62", "#758cb4", "#b1c3db"],
     "accent": "#b1c3db",
     "accentLight": "#606a77",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "cool.jpg": {
@@ -307,6 +337,7 @@
     "palette": ["#16101e", "#201229", "#0f0d13", "#112930", "#532a2c", "#b06820"],
     "accent": "#b36e29",
     "accentLight": "#9a5b1c",
+    "hue": "orange",
     "tags": []
   },
   "corals-fish-underwater.jpg": {
@@ -317,6 +348,7 @@
     "palette": ["#1870a9", "#24a9db", "#0e4f85", "#93e1f8", "#073763", "#022547"],
     "accent": "#24a9db",
     "accentLight": "#187192",
+    "hue": "teal",
     "tags": []
   },
   "cottages-river.png": {
@@ -327,6 +359,7 @@
     "palette": ["#5f79cb", "#343566", "#3a529f", "#242845", "#121c28", "#7c5762"],
     "accent": "#5f79cb",
     "accentLight": "#536ab2",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "crane.png": {
@@ -337,6 +370,7 @@
     "palette": ["#129bb8", "#0e7c99", "#043445", "#108baa", "#14a7c5", "#115969"],
     "accent": "#14a7c5",
     "accentLight": "#0e768c",
+    "hue": "teal",
     "tags": []
   },
   "dark-forest.jpg": {
@@ -347,6 +381,7 @@
     "palette": ["#132a33", "#21424c", "#061016", "#0a1820", "#040c11", "#467d88"],
     "accent": "#558892",
     "accentLight": "#40737d",
+    "hue": "teal",
     "tags": ["landscape"]
   },
   "dark-star.jpg": {
@@ -357,6 +392,7 @@
     "palette": ["#111013", "#201f28", "#040518", "#0d0e21", "#4b3c56", "#568bb6"],
     "accent": "#568bb6",
     "accentLight": "#446e90",
+    "hue": "blue",
     "tags": []
   },
   "dark-waves.jpg": {
@@ -367,6 +403,7 @@
     "palette": ["#21263a", "#1e1f2c", "#293654", "#1d1c23", "#446283", "#1b191d"],
     "accent": "#6b839d",
     "accentLight": "#446283",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "deer-glade.jpg": {
@@ -377,6 +414,7 @@
     "palette": ["#ae7f2f", "#965d37", "#bba25b", "#473a25", "#873c1e", "#968ba9"],
     "accent": "#bba25b",
     "accentLight": "#7d6c3d",
+    "hue": "orange",
     "tags": []
   },
   "degirled.png": {
@@ -387,6 +425,7 @@
     "palette": ["#2c7980", "#d5bca6", "#181f1f", "#453f34", "#929290", "#656864"],
     "accent": "#d5bca6",
     "accentLight": "#73665a",
+    "hue": "orange",
     "tags": []
   },
   "diner-lonely-road.jpg": {
@@ -397,6 +436,7 @@
     "palette": ["#2bb8f1", "#203654", "#1d2434", "#2b4e79", "#2480c4", "#675852"],
     "accent": "#2bb8f1",
     "accentLight": "#1b7397",
+    "hue": "teal",
     "tags": []
   },
   "dino.jpg": {
@@ -407,6 +447,7 @@
     "palette": ["#e8ae9b", "#d48191", "#b55a71", "#a82f53", "#faf0df", "#86d6b9"],
     "accent": "#e8ae9b",
     "accentLight": "#87655a",
+    "hue": "red",
     "tags": []
   },
   "disco.png": {
@@ -417,6 +458,7 @@
     "palette": ["#14171f", "#3f393a", "#6f6051", "#bd9b70", "#0e2b42", "#2a4f6c"],
     "accent": "#bd9b70",
     "accentLight": "#7e674b",
+    "hue": "orange",
     "tags": []
   },
   "dominik-mayer-1.jpg": {
@@ -427,6 +469,7 @@
     "palette": ["#822808", "#cd4f0f", "#e8832f", "#331002", "#f9c95e", "#fbf2c5"],
     "accent": "#e8832f",
     "accentLight": "#9b571f",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-10.jpg": {
@@ -437,6 +480,7 @@
     "palette": ["#303c40", "#262e30", "#4a6268", "#0e100e", "#171b19", "#a2dbe2"],
     "accent": "#a2dbe2",
     "accentLight": "#516e71",
+    "hue": "teal",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-11.jpg": {
@@ -447,6 +491,7 @@
     "palette": ["#010d14", "#103942", "#3cd0dc", "#0a2028", "#165e68", "#1d929e"],
     "accent": "#3cd0dc",
     "accentLight": "#237980",
+    "hue": "teal",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-12.jpg": {
@@ -457,6 +502,7 @@
     "palette": ["#58130f", "#c03a2f", "#746769", "#da9d6b", "#fae9cf", "#303f65"],
     "accent": "#da9d6b",
     "accentLight": "#886243",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-13.jpg": {
@@ -467,6 +513,7 @@
     "palette": ["#b23516", "#ee6f21", "#3f211c", "#201613", "#f7d36d", "#550e09"],
     "accent": "#ee6f21",
     "accentLight": "#a94f17",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-14.jpg": {
@@ -477,6 +524,7 @@
     "palette": ["#fad961", "#290a04", "#e5a843", "#ba6327", "#8a3613", "#fbf4af"],
     "accent": "#e5a843",
     "accentLight": "#866227",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-15.jpg": {
@@ -487,6 +535,7 @@
     "palette": ["#19223d", "#25355c", "#355080", "#0b0e1d", "#7d3844", "#db5f3f"],
     "accent": "#db5f3f",
     "accentLight": "#ad4b32",
+    "hue": "red",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-16.jpg": {
@@ -497,6 +546,7 @@
     "palette": ["#ed4f0f", "#9d1d1b", "#f6c856", "#280620", "#5a0c1b", "#15051c"],
     "accent": "#ed4f0f",
     "accentLight": "#bc3f0c",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-17.jpg": {
@@ -507,6 +557,7 @@
     "palette": ["#0c080c", "#241817", "#453126", "#f0dd93", "#6e563b", "#b39a65"],
     "accent": "#b39a65",
     "accentLight": "#776743",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-18.png": {
@@ -517,6 +568,7 @@
     "palette": ["#f96741", "#171c26", "#4f3237", "#62565a", "#b1433b", "#edc57c"],
     "accent": "#f96741",
     "accentLight": "#b0492e",
+    "hue": "red",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-19.jpg": {
@@ -527,6 +579,7 @@
     "palette": ["#271512", "#80858b", "#e5dccb", "#53525a", "#beb7af", "#87caf5"],
     "accent": "#87caf5",
     "accentLight": "#496d85",
+    "hue": "blue",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-2.jpg": {
@@ -537,6 +590,7 @@
     "palette": ["#0e0801", "#2e1403", "#f9cc34", "#db7020", "#72320b", "#f7edad"],
     "accent": "#f9cc34",
     "accentLight": "#7c661a",
+    "hue": "yellow",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-20.jpg": {
@@ -547,6 +601,7 @@
     "palette": ["#d56610", "#3d091d", "#983317", "#f48d0d", "#fcd30c", "#e4bd86"],
     "accent": "#f48d0d",
     "accentLight": "#985808",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-21.jpg": {
@@ -557,6 +612,7 @@
     "palette": ["#243a3c", "#161918", "#694329", "#b17437", "#5f6358", "#e5c167"],
     "accent": "#e5c167",
     "accentLight": "#7c6938",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-22.jpg": {
@@ -567,6 +623,7 @@
     "palette": ["#62200d", "#b22a0e", "#2b1510", "#311d0b", "#f05a26", "#fbd6bc"],
     "accent": "#f05a26",
     "accentLight": "#be471e",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-23.jpg": {
@@ -577,6 +634,7 @@
     "palette": ["#120d36", "#dedee8", "#acc4e9", "#70b2e4", "#18386f", "#2382ba"],
     "accent": "#70b2e4",
     "accentLight": "#466f8e",
+    "hue": "blue",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-24.jpg": {
@@ -587,6 +645,7 @@
     "palette": ["#1f0c08", "#813f2b", "#992416", "#cd1a0c", "#531f13", "#93593c"],
     "accent": "#da5349",
     "accentLight": "#cd1a0c",
+    "hue": "red",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-25.jpg": {
@@ -597,6 +656,7 @@
     "palette": ["#363025", "#061104", "#6b2d17", "#ab3209", "#281d0c", "#ed790f"],
     "accent": "#ed790f",
     "accentLight": "#a8560b",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-26.jpg": {
@@ -607,6 +667,7 @@
     "palette": ["#f5f9de", "#a8691a", "#3b1f08", "#7f2f0a", "#e6a51a", "#e1cc66"],
     "accent": "#e6a51a",
     "accentLight": "#86600f",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-4.jpg": {
@@ -617,6 +678,7 @@
     "palette": ["#c4c8d5", "#7c4807", "#96a9c1", "#e3b60d", "#5a7fb0", "#f3eaec"],
     "accent": "#e3b60d",
     "accentLight": "#846a08",
+    "hue": "yellow",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-5.jpg": {
@@ -627,6 +689,7 @@
     "palette": ["#29292b", "#413736", "#644b42", "#ecd6c5", "#8c7062", "#ba9d8b"],
     "accent": "#ba9d8b",
     "accentLight": "#7c695d",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-7.jpg": {
@@ -637,6 +700,7 @@
     "palette": ["#170c12", "#511918", "#2e1217", "#89281c", "#cd4b27", "#f8b54f"],
     "accent": "#f8b54f",
     "accentLight": "#86622b",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-8.jpg": {
@@ -647,6 +711,7 @@
     "palette": ["#2f1119", "#e5dee1", "#9696b0", "#f2d64d", "#99502c", "#bf974b"],
     "accent": "#bf974b",
     "accentLight": "#7f6532",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dominik-mayer-9.jpg": {
@@ -657,6 +722,7 @@
     "palette": ["#1d1008", "#0b0705", "#3d1d0c", "#79300b", "#dd6c10", "#fbd770"],
     "accent": "#dd6c10",
     "accentLight": "#a6510c",
+    "hue": "orange",
     "tags": ["dominik-mayer"]
   },
   "dragon.jpg": {
@@ -667,6 +733,7 @@
     "palette": ["#b7aab6", "#dbc6c7", "#6c7690", "#99899c", "#f7ece2", "#525e7a"],
     "accent": "#dbc6c7",
     "accentLight": "#776b6c",
+    "hue": "red",
     "tags": ["fantasy"]
   },
   "droplets.png": {
@@ -677,6 +744,7 @@
     "palette": ["#62655d", "#52554f", "#737768", "#333d3f", "#888f76", "#a5b18a"],
     "accent": "#a5b18a",
     "accentLight": "#676f56",
+    "hue": "green",
     "tags": []
   },
   "eclipse.jpg": {
@@ -687,6 +755,7 @@
     "palette": ["#241f34", "#492639", "#7a353f", "#080914", "#191424", "#b24b4b"],
     "accent": "#bc6262",
     "accentLight": "#b24b4b",
+    "hue": "red",
     "tags": ["space"]
   },
   "excalibur-lake.jpg": {
@@ -697,6 +766,7 @@
     "palette": ["#114155", "#175264", "#0c3447", "#246d7b", "#21919f", "#0b2730"],
     "accent": "#21919f",
     "accentLight": "#1c7984",
+    "hue": "teal",
     "tags": ["fantasy", "landscape"]
   },
   "fantasy-city.jpg": {
@@ -707,6 +777,7 @@
     "palette": ["#6a5845", "#463c2f", "#9c8467", "#c3cac0", "#2a281f", "#11140f"],
     "accent": "#9c8467",
     "accentLight": "#7c6852",
+    "hue": "orange",
     "tags": ["urban"]
   },
   "firewatch.jpg": {
@@ -717,6 +788,7 @@
     "palette": ["#291933", "#421f47", "#592d69", "#1a1121", "#a1324c", "#15152a"],
     "accent": "#b86579",
     "accentLight": "#a1324c",
+    "hue": "red",
     "tags": []
   },
   "flower-field-3.png": {
@@ -727,6 +799,7 @@
     "palette": ["#f0d8b2", "#e5b37b", "#cb884c", "#845c40", "#46382e", "#9d7d68"],
     "accent": "#e5b37b",
     "accentLight": "#866848",
+    "hue": "orange",
     "tags": []
   },
   "flower-field.jpg": {
@@ -737,6 +810,7 @@
     "palette": ["#f4eae2", "#ebc9b9", "#c7e3f5", "#cf9c94", "#737774", "#6dcafb"],
     "accent": "#6dcafb",
     "accentLight": "#3b6d88",
+    "hue": "blue",
     "tags": []
   },
   "flower.jpg": {
@@ -747,6 +821,7 @@
     "palette": ["#3c2c3b", "#593743", "#2c2434", "#211d2d", "#8a4e50", "#d7927f"],
     "accent": "#d7927f",
     "accentLight": "#8f6155",
+    "hue": "red",
     "tags": []
   },
   "flowering-rain.png": {
@@ -757,6 +832,7 @@
     "palette": ["#5f849b", "#1c2829", "#26343a", "#4b6c83", "#304154", "#3e5470"],
     "accent": "#5f849b",
     "accentLight": "#4f6e81",
+    "hue": "blue",
     "tags": []
   },
   "flowers-1.jpg": {
@@ -767,6 +843,7 @@
     "palette": ["#0c0c0c", "#161616", "#252527", "#433e43", "#865c6b", "#c0a2b5"],
     "accent": "#c0a2b5",
     "accentLight": "#786571",
+    "hue": "pink",
     "tags": ["flowers"]
   },
   "flowers-10.jpg": {
@@ -777,6 +854,7 @@
     "palette": ["#dad2cc", "#ad9d8f", "#75665b", "#1c1b29", "#31384b", "#554338"],
     "accent": "#ad9d8f",
     "accentLight": "#73695f",
+    "hue": "orange",
     "tags": ["flowers"]
   },
   "flowers-11.jpg": {
@@ -787,6 +865,7 @@
     "palette": ["#48682c", "#354e25", "#1c2a19", "#6b7150", "#9b9e7b", "#d1d2c6"],
     "accent": "#9b9e7b",
     "accentLight": "#6e7057",
+    "hue": "yellow",
     "tags": ["flowers"]
   },
   "flowers-12.jpg": {
@@ -797,6 +876,7 @@
     "palette": ["#c75858", "#464626", "#e38792", "#302b16", "#773e3e", "#181507"],
     "accent": "#e38792",
     "accentLight": "#975a61",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-13.jpg": {
@@ -807,6 +887,7 @@
     "palette": ["#041f24", "#0a2b31", "#412b3b", "#89444f", "#c88287", "#1d1e26"],
     "accent": "#c88287",
     "accentLight": "#8e5c60",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-14.jpg": {
@@ -817,6 +898,7 @@
     "palette": ["#262e2a", "#4a5242", "#9b4450", "#8a8969", "#db8688", "#e8d3bd"],
     "accent": "#db8688",
     "accentLight": "#92595b",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-15.jpg": {
@@ -827,6 +909,7 @@
     "palette": ["#19170e", "#3f3832", "#635f5c", "#8b8c8b", "#b5b6b8", "#e7e9ec"],
     "accent": "#b5b6b8",
     "accentLight": "#6a6a6b",
+    "hue": "neutral",
     "tags": ["flowers"]
   },
   "flowers-16.jpg": {
@@ -837,6 +920,7 @@
     "palette": ["#e8ecf9", "#dcc8d2", "#e2dce9", "#d2acb5", "#bc878c", "#845a58"],
     "accent": "#d2acb5",
     "accentLight": "#7a646a",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-18.jpg": {
@@ -847,6 +931,7 @@
     "palette": ["#b37874", "#c1908f", "#cba7a7", "#d4bdbd", "#dcd4d3", "#905e53"],
     "accent": "#c1908f",
     "accentLight": "#81605f",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-19.jpg": {
@@ -857,6 +942,7 @@
     "palette": ["#cea098", "#ddb3ad", "#be8780", "#935752", "#e6c2bd", "#fadad6"],
     "accent": "#cea098",
     "accentLight": "#81645f",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-2.jpg": {
@@ -867,6 +953,7 @@
     "palette": ["#02151c", "#011820", "#072127", "#1f2d30", "#583a3d", "#9a8670"],
     "accent": "#9a8670",
     "accentLight": "#7a6a59",
+    "hue": "orange",
     "tags": ["flowers"]
   },
   "flowers-20.jpg": {
@@ -877,6 +964,7 @@
     "palette": ["#d3b2b8", "#e7d2d0", "#856789", "#bc8999", "#7f95c2", "#77424a"],
     "accent": "#7f95c2",
     "accentLight": "#5a6a89",
+    "hue": "blue",
     "tags": ["flowers"]
   },
   "flowers-21.png": {
@@ -887,6 +975,7 @@
     "palette": ["#0f0f0f", "#1e1b1c", "#37272a", "#474042", "#903145", "#95737a"],
     "accent": "#997980",
     "accentLight": "#82656b",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-3.jpg": {
@@ -897,6 +986,7 @@
     "palette": ["#212209", "#423d1f", "#7c293f", "#655d43", "#a04667", "#a0958b"],
     "accent": "#b46d87",
     "accentLight": "#a04667",
+    "hue": "pink",
     "tags": ["flowers"]
   },
   "flowers-4.jpg": {
@@ -907,6 +997,7 @@
     "palette": ["#0f1a0c", "#1b2b1a", "#2c4127", "#445c42", "#ccbdb9", "#937f71"],
     "accent": "#ccbdb9",
     "accentLight": "#6f6664",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-5.jpg": {
@@ -917,6 +1008,7 @@
     "palette": ["#524b49", "#867e75", "#302a29", "#cbc8c3", "#1a1614", "#080605"],
     "accent": "#867e75",
     "accentLight": "#706962",
+    "hue": "neutral",
     "tags": ["flowers"]
   },
   "flowers-6.jpg": {
@@ -927,6 +1019,7 @@
     "palette": ["#dcebf8", "#bf8992", "#cfb7c2", "#a65f66", "#873c3d", "#45201c"],
     "accent": "#bf8992",
     "accentLight": "#876167",
+    "hue": "red",
     "tags": ["flowers"]
   },
   "flowers-7.jpg": {
@@ -937,6 +1030,7 @@
     "palette": ["#172528", "#124744", "#493129", "#8d4726", "#cb7b2c", "#4c7f7b"],
     "accent": "#cb7b2c",
     "accentLight": "#985c21",
+    "hue": "orange",
     "tags": ["flowers"]
   },
   "flowers-8.jpg": {
@@ -947,6 +1041,7 @@
     "palette": ["#061009", "#260607", "#13271a", "#620712", "#243e2e", "#42574a"],
     "accent": "#a36e75",
     "accentLight": "#620712",
+    "hue": "neutral",
     "tags": ["flowers"]
   },
   "flowers-9.jpg": {
@@ -957,6 +1052,7 @@
     "palette": ["#444142", "#333231", "#282725", "#5e5661", "#f8f8f7", "#979094"],
     "accent": "#979094",
     "accentLight": "#716c6f",
+    "hue": "neutral",
     "tags": ["flowers"]
   },
   "flying-comets-clouds.jpg": {
@@ -967,6 +1063,7 @@
     "palette": ["#46384b", "#5c4f6d", "#2a2537", "#171624", "#9f7678", "#f0b789"],
     "accent": "#f0b789",
     "accentLight": "#82634a",
+    "hue": "orange",
     "tags": ["landscape", "space"]
   },
   "foggy-city.jpg": {
@@ -977,6 +1074,7 @@
     "palette": ["#080f16", "#353b39", "#2a3131", "#192125", "#63483b", "#b0643c"],
     "accent": "#b36a44",
     "accentLight": "#a15c37",
+    "hue": "orange",
     "tags": ["urban"]
   },
   "fumo-fumo.jpg": {
@@ -987,6 +1085,7 @@
     "palette": ["#dae2f2", "#818fae", "#50617a", "#acb9d0", "#0e121e", "#303c52"],
     "accent": "#acb9d0",
     "accentLight": "#646c79",
+    "hue": "blue",
     "tags": ["anime"]
   },
   "fw13-pro.png": {
@@ -997,6 +1096,7 @@
     "palette": ["#000000", "#010101", "#030305", "#5e5b70", "#34323f", "#110f14"],
     "accent": "#807d8e",
     "accentLight": "#5e5b70",
+    "hue": "neutral",
     "tags": []
   },
   "galaxy-waves.jpg": {
@@ -1007,6 +1107,7 @@
     "palette": ["#0f2c72", "#0c1c53", "#1551a0", "#0a133c", "#3394d2", "#0a0c29"],
     "accent": "#3394d2",
     "accentLight": "#266f9e",
+    "hue": "blue",
     "tags": ["landscape", "space"]
   },
   "genshin-landscape.png": {
@@ -1017,6 +1118,7 @@
     "palette": ["#059fdb", "#7ad2f1", "#7fb690", "#11995f", "#07714f", "#286c8d"],
     "accent": "#059fdb",
     "accentLight": "#04719b",
+    "hue": "teal",
     "tags": []
   },
   "gentlemen-sunset.png": {
@@ -1027,6 +1129,7 @@
     "palette": ["#322825", "#5a4132", "#986b42", "#d7ad75", "#1f1b1a", "#101519"],
     "accent": "#d7ad75",
     "accentLight": "#7d6544",
+    "hue": "orange",
     "tags": ["sunset"]
   },
   "gingerbread-house.jpg": {
@@ -1037,6 +1140,7 @@
     "palette": ["#83442b", "#5a281a", "#ad6638", "#d8a050", "#ad7d67", "#d9bc97"],
     "accent": "#d8a050",
     "accentLight": "#876432",
+    "hue": "orange",
     "tags": []
   },
   "grandfather-tree.jpg": {
@@ -1047,6 +1151,7 @@
     "palette": ["#5d609f", "#9f7fb2", "#d69fc6", "#d3c7ea", "#8e99d6", "#f7f0fa"],
     "accent": "#8e99d6",
     "accentLight": "#5f668f",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "grassy-well.jpg": {
@@ -1057,6 +1162,7 @@
     "palette": ["#8db649", "#729555", "#9fb480", "#516946", "#4998cb", "#add7e2"],
     "accent": "#8db649",
     "accentLight": "#58722e",
+    "hue": "green",
     "tags": []
   },
   "green-bridge.jpg": {
@@ -1067,6 +1173,7 @@
     "palette": ["#06371e", "#255935", "#488446", "#c1e29d", "#79aa7f", "#86c052"],
     "accent": "#86c052",
     "accentLight": "#547833",
+    "hue": "green",
     "tags": []
   },
   "greenbus.jpg": {
@@ -1077,6 +1184,7 @@
     "palette": ["#20312d", "#354a38", "#53663c", "#667d5e", "#a6b57a", "#859337"],
     "accent": "#a6b57a",
     "accentLight": "#68714c",
+    "hue": "green",
     "tags": ["urban"]
   },
   "harbor.jpg": {
@@ -1087,6 +1195,7 @@
     "palette": ["#226298", "#3c85b8", "#82c5e9", "#2c3248", "#75a3bf", "#c3ecf7"],
     "accent": "#82c5e9",
     "accentLight": "#4c7388",
+    "hue": "blue",
     "tags": []
   },
   "haunted-house.jpg": {
@@ -1097,6 +1206,7 @@
     "palette": ["#120816", "#190a1a", "#2c1022", "#0f0814", "#7b244b", "#e28db8"],
     "accent": "#e28db8",
     "accentLight": "#8d5873",
+    "hue": "pink",
     "tags": []
   },
   "hollow-knight.jpg": {
@@ -1107,6 +1217,7 @@
     "palette": ["#1f285d", "#475aa6", "#303d80", "#688bd4", "#b6cef7", "#131940"],
     "accent": "#688bd4",
     "accentLight": "#4e689f",
+    "hue": "blue",
     "tags": ["fantasy"]
   },
   "hollow-knight.png": {
@@ -1117,6 +1228,7 @@
     "palette": ["#0b0f12", "#0b1215", "#0c171b", "#111f24", "#30292b", "#6a423c"],
     "accent": "#957975",
     "accentLight": "#6a423c",
+    "hue": "red",
     "tags": ["fantasy"]
   },
   "hollow.jpg": {
@@ -1127,6 +1239,7 @@
     "palette": ["#1a292d", "#243b47", "#365065", "#111718", "#566b85", "#7a8fa4"],
     "accent": "#7a8fa4",
     "accentLight": "#5c6b7b",
+    "hue": "blue",
     "tags": []
   },
   "horizon-2.jpg": {
@@ -1137,6 +1250,7 @@
     "palette": ["#e7a685", "#8a84b4", "#2d134a", "#69367d", "#5c5ca9", "#ce5074"],
     "accent": "#e7a685",
     "accentLight": "#87614e",
+    "hue": "orange",
     "tags": ["sunset"]
   },
   "horizon.jpg": {
@@ -1147,6 +1261,7 @@
     "palette": ["#183e85", "#112961", "#266db5", "#0d1d43", "#6d4e8f", "#bf91ae"],
     "accent": "#bf91ae",
     "accentLight": "#7f6174",
+    "hue": "pink",
     "tags": ["sunset"]
   },
   "i-touch-this.jpg": {
@@ -1157,6 +1272,7 @@
     "palette": ["#8bb047", "#aac962", "#6d973f", "#4e7a39", "#2e5d30", "#1a4a26"],
     "accent": "#aac962",
     "accentLight": "#5c6d35",
+    "hue": "green",
     "tags": []
   },
   "isekai.jpg": {
@@ -1167,6 +1283,7 @@
     "palette": ["#0a061e", "#0e0625", "#400365", "#260448", "#150531", "#8b058c"],
     "accent": "#b663b7",
     "accentLight": "#8b058c",
+    "hue": "pink",
     "tags": []
   },
   "japan-alley.png": {
@@ -1177,6 +1294,7 @@
     "palette": ["#2c3232", "#1e2021", "#222526", "#285055", "#d3c299", "#6d7a69"],
     "accent": "#d3c299",
     "accentLight": "#726953",
+    "hue": "orange",
     "tags": []
   },
   "japan-tower-pink.jpg": {
@@ -1187,6 +1305,7 @@
     "palette": ["#e686a1", "#4c1624", "#ca4d6e", "#6d2034", "#9d3651", "#ed8ba7"],
     "accent": "#ed8ba7",
     "accentLight": "#945768",
+    "hue": "pink",
     "tags": []
   },
   "jellyfish.jpg": {
@@ -1194,9 +1313,10 @@
     "width": 2537,
     "height": 1421,
     "bytes": 280028,
-    "palette": ["#0f161e"],
-    "accent": "#7d8185",
-    "accentLight": "#0f161e",
+    "palette": ["#10161e", "#262b34", "#444140", "#a97e63", "#518466", "#4bbb80"],
+    "accent": "#4bbb80",
+    "accentLight": "#2f7550",
+    "hue": "green",
     "tags": []
   },
   "jupiter.png": {
@@ -1207,6 +1327,7 @@
     "palette": ["#1b1d2d", "#33334c", "#5c5872", "#9ba6ad", "#b96c66", "#181929"],
     "accent": "#b96c66",
     "accentLight": "#9a5a55",
+    "hue": "red",
     "tags": ["space"]
   },
   "kaiju.png": {
@@ -1217,6 +1338,7 @@
     "palette": ["#bb3e27", "#221c1b", "#66241e", "#3a221e", "#8d3125", "#56352b"],
     "accent": "#c65e4b",
     "accentLight": "#bb3e27",
+    "hue": "red",
     "tags": ["fantasy"]
   },
   "kitchen.png": {
@@ -1227,6 +1349,7 @@
     "palette": ["#2d3648", "#20262e", "#3c4c68", "#583436", "#8c4240", "#b9524b"],
     "accent": "#c26862",
     "accentLight": "#b14f48",
+    "hue": "red",
     "tags": []
   },
   "kitty.jpg": {
@@ -1237,6 +1360,7 @@
     "palette": ["#797264", "#3c3727", "#5b593a", "#bdb087", "#efeaca", "#749638"],
     "accent": "#bdb087",
     "accentLight": "#6e674f",
+    "hue": "yellow",
     "tags": []
   },
   "kloir.jpg": {
@@ -1247,6 +1371,7 @@
     "palette": ["#15357f", "#1151bc", "#0b1f67", "#070b4c", "#2f86e7", "#525a7e"],
     "accent": "#2f86e7",
     "accentLight": "#256ab7",
+    "hue": "blue",
     "tags": []
   },
   "knight-building.png": {
@@ -1257,6 +1382,7 @@
     "palette": ["#393d41", "#0f1519", "#1e2427", "#080d11", "#696766", "#04080d"],
     "accent": "#828080",
     "accentLight": "#696766",
+    "hue": "neutral",
     "tags": ["fantasy"]
   },
   "knight-sit.png": {
@@ -1267,6 +1393,7 @@
     "palette": ["#4f3e35", "#5b4935", "#4a3833", "#442f2f", "#3c242c", "#7b6466"],
     "accent": "#917e80",
     "accentLight": "#7b6466",
+    "hue": "neutral",
     "tags": ["fantasy"]
   },
   "knight-templar.jpg": {
@@ -1277,6 +1404,7 @@
     "palette": ["#191b1b", "#2d384c", "#22262c", "#110f0f", "#ed3048", "#6c5662"],
     "accent": "#ed3048",
     "accentLight": "#cf2a3f",
+    "hue": "red",
     "tags": ["fantasy"]
   },
   "knights-radiant.jpg": {
@@ -1287,6 +1415,7 @@
     "palette": ["#1b171e", "#393439", "#595058", "#897a7f", "#b9aba8", "#ece6de"],
     "accent": "#b9aba8",
     "accentLight": "#746b69",
+    "hue": "neutral",
     "tags": ["fantasy"]
   },
   "koi.jpg": {
@@ -1297,6 +1426,7 @@
     "palette": ["#223f74", "#3362a0", "#2f9cde", "#6b4c58", "#212441", "#cd9a79"],
     "accent": "#2f9cde",
     "accentLight": "#216e9d",
+    "hue": "blue",
     "tags": ["anime"]
   },
   "koishi.jpg": {
@@ -1307,6 +1437,7 @@
     "palette": ["#2c4e5b", "#0d1e2d", "#3f7092", "#6495a7", "#7ec6cb", "#c2eded"],
     "accent": "#7ec6cb",
     "accentLight": "#497376",
+    "hue": "teal",
     "tags": ["anime"]
   },
   "kusuriya.png": {
@@ -1317,6 +1448,7 @@
     "palette": ["#15100f", "#1f1b1a", "#312c2a", "#e2e6e9", "#100c0a", "#4c4858"],
     "accent": "#807d89",
     "accentLight": "#4c4858",
+    "hue": "neutral",
     "tags": ["anime"]
   },
   "lain.jpg": {
@@ -1327,6 +1459,7 @@
     "palette": ["#bee6ed", "#64abc9", "#34729f", "#244a6e", "#1c2b46", "#0f151d"],
     "accent": "#64abc9",
     "accentLight": "#437286",
+    "hue": "teal",
     "tags": ["anime"]
   },
   "lake-hylia.jpg": {
@@ -1337,6 +1470,7 @@
     "palette": ["#cc7a7e", "#13202f", "#203343", "#a384a4", "#4a4f62", "#8c646c"],
     "accent": "#cc7a7e",
     "accentLight": "#995c5e",
+    "hue": "red",
     "tags": ["gaming", "landscape"]
   },
   "lantern-light-room.png": {
@@ -1347,6 +1481,7 @@
     "palette": ["#916849", "#764f34", "#a37e61", "#b68f6f", "#c3a07e", "#c1bfba"],
     "accent": "#c3a07e",
     "accentLight": "#7a644f",
+    "hue": "orange",
     "tags": []
   },
   "laundry.jpg": {
@@ -1357,6 +1492,7 @@
     "palette": ["#444089", "#795b9d", "#322a68", "#c588b5", "#3875b9", "#972c79"],
     "accent": "#c588b5",
     "accentLight": "#8c6080",
+    "hue": "pink",
     "tags": []
   },
   "lighthouse-2.png": {
@@ -1367,6 +1503,7 @@
     "palette": ["#5077b6", "#6e4964", "#b4707f", "#efbf92", "#5f80b8", "#605f90"],
     "accent": "#efbf92",
     "accentLight": "#81674f",
+    "hue": "orange",
     "tags": []
   },
   "lighthouse.jpg": {
@@ -1377,6 +1514,7 @@
     "palette": ["#3e5a61", "#547479", "#2e3a41", "#738d93", "#97a7ac", "#b1c0c2"],
     "accent": "#97a7ac",
     "accentLight": "#656f73",
+    "hue": "neutral",
     "tags": []
   },
   "mage.jpg": {
@@ -1387,6 +1525,7 @@
     "palette": ["#061843", "#1d8afa", "#3bd3fc", "#0d3893", "#092566", "#1355ce"],
     "accent": "#3bd3fc",
     "accentLight": "#207289",
+    "hue": "teal",
     "tags": []
   },
   "main-street.png": {
@@ -1397,6 +1536,7 @@
     "palette": ["#4f3a62", "#69527b", "#352945", "#89799d", "#b8b8c1", "#b47c5e"],
     "accent": "#b47c5e",
     "accentLight": "#8e624a",
+    "hue": "orange",
     "tags": ["landscape", "urban"]
   },
   "maji-no-tabitabi-3.jpg": {
@@ -1407,6 +1547,7 @@
     "palette": ["#7b82a0", "#44373b", "#c5b4b0", "#7c6969", "#5e4c4c", "#2b2229"],
     "accent": "#c5b4b0",
     "accentLight": "#736967",
+    "hue": "red",
     "tags": ["anime"]
   },
   "map.png": {
@@ -1417,6 +1558,7 @@
     "palette": ["#373737", "#3b3b3b", "#383838", "#3f3f3f", "#393939", "#494949"],
     "accent": "#828282",
     "accentLight": "#373737",
+    "hue": "neutral",
     "tags": []
   },
   "marine-tunnel.jpg": {
@@ -1427,6 +1569,7 @@
     "palette": ["#02242f", "#021b2a", "#0e3b3b", "#04111c", "#485e45", "#d09a48"],
     "accent": "#d09a48",
     "accentLight": "#8b6730",
+    "hue": "orange",
     "tags": []
   },
   "math.png": {
@@ -1437,6 +1580,7 @@
     "palette": ["#2d333f", "#373b47", "#41444f", "#4a4e59", "#565962", "#686b72"],
     "accent": "#7b7e84",
     "accentLight": "#686b72",
+    "hue": "neutral",
     "tags": []
   },
   "min-forest.jpg": {
@@ -1447,6 +1591,7 @@
     "palette": ["#a6d5dd", "#192b3b", "#355e72", "#548799", "#77abb8", "#b3dde6"],
     "accent": "#77abb8",
     "accentLight": "#4f727b",
+    "hue": "teal",
     "tags": ["landscape"]
   },
   "misty-boat.jpg": {
@@ -1457,6 +1602,7 @@
     "palette": ["#3b3a5d", "#14172d", "#232544", "#5e577f", "#9d83a4", "#f0cfdf"],
     "accent": "#9d83a4",
     "accentLight": "#76627b",
+    "hue": "purple",
     "tags": []
   },
   "moon-beach.png": {
@@ -1467,6 +1613,7 @@
     "palette": ["#497ca0", "#85b4d1", "#25516b", "#10314b", "#081b30", "#030c1b"],
     "accent": "#85b4d1",
     "accentLight": "#537083",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "moscow.jpg": {
@@ -1477,6 +1624,7 @@
     "palette": ["#1f261a", "#a9c4e6", "#44513b", "#647d5a", "#97b09b", "#a28d63"],
     "accent": "#a9c4e6",
     "accentLight": "#5c6a7d",
+    "hue": "blue",
     "tags": []
   },
   "mountain-range.jpg": {
@@ -1487,6 +1635,7 @@
     "palette": ["#212473", "#250d25", "#e67247", "#1959dd", "#a13838", "#91557d"],
     "accent": "#e67247",
     "accentLight": "#a35132",
+    "hue": "orange",
     "tags": ["landscape"]
   },
   "mushishi.jpg": {
@@ -1497,6 +1646,7 @@
     "palette": ["#344c35", "#222e22", "#131811", "#c2d1c7", "#657a5b", "#4d78cb"],
     "accent": "#547ecd",
     "accentLight": "#4369b2",
+    "hue": "blue",
     "tags": ["anime"]
   },
   "myron.png": {
@@ -1507,6 +1657,7 @@
     "palette": ["#4c666f", "#e1be60", "#af6341", "#1e0b13", "#3f5cd5", "#c0ced6"],
     "accent": "#e1be60",
     "accentLight": "#7a6734",
+    "hue": "orange",
     "tags": []
   },
   "nature-valley-1.jpg": {
@@ -1517,6 +1668,7 @@
     "palette": ["#264b52", "#43707b", "#0e2a30", "#859769", "#4f6f4a", "#a0b8a0"],
     "accent": "#859769",
     "accentLight": "#64714f",
+    "hue": "green",
     "tags": ["landscape"]
   },
   "nature-valley-2.jpg": {
@@ -1527,6 +1679,7 @@
     "palette": ["#194258", "#2d616b", "#11323b", "#619c7a", "#0c232c", "#0b1722"],
     "accent": "#619c7a",
     "accentLight": "#49755c",
+    "hue": "green",
     "tags": ["landscape"]
   },
   "old-car.jpg": {
@@ -1537,6 +1690,7 @@
     "palette": ["#3e4936", "#307f9a", "#96833e", "#629b9a", "#a0aa86", "#d9d091"],
     "accent": "#d9d091",
     "accentLight": "#6c6848",
+    "hue": "yellow",
     "tags": []
   },
   "old-computer.png": {
@@ -1547,6 +1701,7 @@
     "palette": ["#1a1b26", "#473b4c", "#8c93be", "#745a76", "#282835", "#13121a"],
     "accent": "#8c93be",
     "accentLight": "#636887",
+    "hue": "blue",
     "tags": []
   },
   "outset-island-day.jpg": {
@@ -1557,6 +1712,7 @@
     "palette": ["#4495bb", "#114159", "#5cb5c3", "#9cc9c9", "#24779f", "#5b7b66"],
     "accent": "#5cb5c3",
     "accentLight": "#3a717a",
+    "hue": "teal",
     "tags": ["gaming"]
   },
   "outset-island-evening.jpg": {
@@ -1567,6 +1723,7 @@
     "palette": ["#2e3646", "#5d8498", "#4b5965", "#7f9393", "#a79e84", "#e6b572"],
     "accent": "#e6b572",
     "accentLight": "#7d623e",
+    "hue": "orange",
     "tags": ["gaming"]
   },
   "outset-island-morning.jpg": {
@@ -1577,6 +1734,7 @@
     "palette": ["#25303e", "#6784ba", "#596076", "#8193bc", "#a797a1", "#d1a392"],
     "accent": "#d1a392",
     "accentLight": "#83665b",
+    "hue": "orange",
     "tags": ["gaming"]
   },
   "outset-island-night.jpg": {
@@ -1587,6 +1745,7 @@
     "palette": ["#204d7a", "#24386a", "#032442", "#1f5d8a", "#093859", "#2c729a"],
     "accent": "#4684a7",
     "accentLight": "#2c729a",
+    "hue": "blue",
     "tags": ["gaming"]
   },
   "oversized-cat.jpg": {
@@ -1597,6 +1756,7 @@
     "palette": ["#150d0c", "#4e4d50", "#1e1a1b", "#313031", "#877e78", "#c3b4a8"],
     "accent": "#c3b4a8",
     "accentLight": "#726962",
+    "hue": "orange",
     "tags": []
   },
   "paint.jpg": {
@@ -1607,6 +1767,7 @@
     "palette": ["#3f2c3a", "#9a97a7", "#67474c", "#b0cbe1", "#666385", "#977368"],
     "accent": "#b0cbe1",
     "accentLight": "#5f6e7a",
+    "hue": "blue",
     "tags": []
   },
   "painting-standing.jpg": {
@@ -1617,6 +1778,7 @@
     "palette": ["#8c892e", "#526439", "#363621", "#55a7d9", "#addbe4", "#9cbd8b"],
     "accent": "#55a7d9",
     "accentLight": "#396f91",
+    "hue": "blue",
     "tags": []
   },
   "painting.jpg": {
@@ -1627,6 +1789,7 @@
     "palette": ["#3d2219", "#478e99", "#2f555d", "#b1c3b2", "#a4977b", "#bd7137"],
     "accent": "#bd7137",
     "accentLight": "#9e5e2e",
+    "hue": "orange",
     "tags": []
   },
   "pine.jpg": {
@@ -1637,6 +1800,7 @@
     "palette": ["#2e2628", "#373031", "#281f23", "#48413f", "#5b5c58", "#7b817e"],
     "accent": "#7b817e",
     "accentLight": "#666c69",
+    "hue": "neutral",
     "tags": []
   },
   "pink-clouds.jpg": {
@@ -1647,6 +1811,7 @@
     "palette": ["#f8b2ba", "#ddadc4", "#d888ae", "#9cacd7", "#fdd3c9", "#c0a9ca"],
     "accent": "#d888ae",
     "accentLight": "#905b74",
+    "hue": "pink",
     "tags": ["landscape"]
   },
   "pixel-car.png": {
@@ -1657,6 +1822,7 @@
     "palette": ["#422541", "#3c1835", "#523b53", "#675e6d", "#380e2b", "#9b9994"],
     "accent": "#9b9994",
     "accentLight": "#6e6c69",
+    "hue": "neutral",
     "tags": ["pixel-art"]
   },
   "pixel-castle.png": {
@@ -1667,6 +1833,7 @@
     "palette": ["#aa5443", "#15243a", "#7c443c", "#45323b", "#20273a", "#0c213a"],
     "accent": "#b5695a",
     "accentLight": "#aa5443",
+    "hue": "red",
     "tags": ["pixel-art"]
   },
   "pixel-earth.png": {
@@ -1674,9 +1841,10 @@
     "width": 1920,
     "height": 1080,
     "bytes": 4385,
-    "palette": ["#2e3440"],
-    "accent": "#7c8088",
-    "accentLight": "#2e3440",
+    "palette": ["#2e3440", "#4c4c56", "#a5b58c", "#63656a", "#dadfde", "#c0c1b9"],
+    "accent": "#a5b58c",
+    "accentLight": "#677158",
+    "hue": "green",
     "tags": ["pixel-art"]
   },
   "pixel-galaxy.png": {
@@ -1687,6 +1855,7 @@
     "palette": ["#242435", "#80457d", "#4b3657", "#23263e", "#372f47", "#222334"],
     "accent": "#a0749e",
     "accentLight": "#80457d",
+    "hue": "pink",
     "tags": ["pixel-art", "space"]
   },
   "pixel-napping.png": {
@@ -1697,6 +1866,7 @@
     "palette": ["#133e2f", "#2f8e4b", "#1c5a34", "#44575d", "#67bc4d", "#0e2927"],
     "accent": "#67bc4d",
     "accentLight": "#407630",
+    "hue": "green",
     "tags": ["pixel-art"]
   },
   "pixel-prairie.jpg": {
@@ -1707,6 +1877,7 @@
     "palette": ["#becfc6", "#e1ebe4", "#829837", "#405529", "#7e996e", "#9bb390"],
     "accent": "#829837",
     "accentLight": "#627229",
+    "hue": "green",
     "tags": ["pixel-art"]
   },
   "pixel-reading.png": {
@@ -1717,6 +1888,7 @@
     "palette": ["#201e1f", "#2e322a", "#3e2627", "#544637", "#93663a", "#d5b06a"],
     "accent": "#d5b06a",
     "accentLight": "#7c673e",
+    "hue": "orange",
     "tags": ["pixel-art"]
   },
   "plane-purple.png": {
@@ -1727,6 +1899,7 @@
     "palette": ["#aaafc5", "#2e2a34", "#939dcf", "#e2e2e3", "#745a73", "#c9cad2"],
     "accent": "#939dcf",
     "accentLight": "#62698a",
+    "hue": "blue",
     "tags": []
   },
   "platform.jpg": {
@@ -1737,6 +1910,7 @@
     "palette": ["#572d43", "#604651", "#745e60", "#8f7868", "#ad8c69", "#995440"],
     "accent": "#ad8c69",
     "accentLight": "#82694f",
+    "hue": "orange",
     "tags": []
   },
   "pompeii.png": {
@@ -1747,6 +1921,7 @@
     "palette": ["#0e0909", "#040202", "#171313", "#2d1612", "#5a2c1b", "#b55521"],
     "accent": "#be6a3d",
     "accentLight": "#ad5120",
+    "hue": "orange",
     "tags": []
   },
   "powerline.jpg": {
@@ -1757,6 +1932,7 @@
     "palette": ["#7f848b", "#5b6168", "#b3b8b9", "#1a1f20", "#3c444c", "#21282d"],
     "accent": "#b3b8b9",
     "accentLight": "#686b6c",
+    "hue": "neutral",
     "tags": []
   },
   "puffy-stars.jpg": {
@@ -1767,6 +1943,7 @@
     "palette": ["#3a296a", "#704995", "#211c53", "#13143a", "#090e2e", "#d074b0"],
     "accent": "#d074b0",
     "accentLight": "#9c5784",
+    "hue": "pink",
     "tags": ["space"]
   },
   "purple-horizon.jpg": {
@@ -1777,6 +1954,7 @@
     "palette": ["#0b1139", "#3f3680", "#6e559e", "#b485b8", "#1f205c", "#f1cdd3"],
     "accent": "#b485b8",
     "accentLight": "#7f5e82",
+    "hue": "pink",
     "tags": ["sunset"]
   },
   "purpled-night.jpg": {
@@ -1787,6 +1965,7 @@
     "palette": ["#220a35", "#2a0f4b", "#1b0a2a", "#13061c", "#392480", "#4958be"],
     "accent": "#6f7bcc",
     "accentLight": "#4958be",
+    "hue": "blue",
     "tags": []
   },
   "railroad-2.jpg": {
@@ -1797,6 +1976,7 @@
     "palette": ["#3e5766", "#c6694e", "#1a181a", "#6c4746", "#eac47b", "#8b8173"],
     "accent": "#eac47b",
     "accentLight": "#7f6a43",
+    "hue": "orange",
     "tags": []
   },
   "railroad-cat.png": {
@@ -1807,6 +1987,7 @@
     "palette": ["#a3a797", "#95998b", "#bebca5", "#393a32", "#6e6b5b", "#d8d6c2"],
     "accent": "#bebca5",
     "accentLight": "#6f6e60",
+    "hue": "yellow",
     "tags": []
   },
   "railroad-flowers.jpg": {
@@ -1817,6 +1998,7 @@
     "palette": ["#3d230f", "#28150b", "#5e3e1a", "#916a2f", "#f5eee1", "#c7a96f"],
     "accent": "#c7a96f",
     "accentLight": "#7c6a45",
+    "hue": "orange",
     "tags": []
   },
   "railroad-horizon.png": {
@@ -1827,6 +2009,7 @@
     "palette": ["#35426c", "#1a2c4f", "#5d6592", "#0d1e3a", "#b19ba8", "#070f22"],
     "accent": "#b19ba8",
     "accentLight": "#766770",
+    "hue": "pink",
     "tags": ["sunset"]
   },
   "red-city.png": {
@@ -1837,6 +2020,7 @@
     "palette": ["#574141", "#825650", "#34272b", "#6ebda9", "#828365", "#bad5bc"],
     "accent": "#6ebda9",
     "accentLight": "#45766a",
+    "hue": "green",
     "tags": ["urban"]
   },
   "river-city.jpg": {
@@ -1847,6 +2031,7 @@
     "palette": ["#0b2c5a", "#101b33", "#38344e", "#2d4c77", "#6e6f86", "#b7b4c0"],
     "accent": "#b7b4c0",
     "accentLight": "#6b6970",
+    "hue": "neutral",
     "tags": ["landscape", "urban"]
   },
   "rocket-launch.jpg": {
@@ -1857,6 +2042,7 @@
     "palette": ["#a0a0c6", "#afb7d8", "#c6c9de", "#b66d84", "#8587a9", "#50587e"],
     "accent": "#afb7d8",
     "accentLight": "#666b7e",
+    "hue": "blue",
     "tags": []
   },
   "rocket-schematics.jpg": {
@@ -1867,6 +2053,7 @@
     "palette": ["#101011", "#282a29", "#181919", "#4b5152", "#8f9598", "#09090a"],
     "accent": "#8f9598",
     "accentLight": "#656a6c",
+    "hue": "neutral",
     "tags": []
   },
   "rooftops.jpg": {
@@ -1877,6 +2064,7 @@
     "palette": ["#485744", "#6c7055", "#2c3e2f", "#0d7097", "#8b8b74", "#97b4b2"],
     "accent": "#97b4b2",
     "accentLight": "#5e706f",
+    "hue": "teal",
     "tags": []
   },
   "ruins.jpg": {
@@ -1887,6 +2075,7 @@
     "palette": ["#121117", "#1c1d23", "#3b3a3d", "#0c080b", "#6b6a6d", "#b7b9bb"],
     "accent": "#b7b9bb",
     "accentLight": "#6b6c6d",
+    "hue": "neutral",
     "tags": []
   },
   "sakura-gate.jpg": {
@@ -1897,6 +2086,7 @@
     "palette": ["#2e313c", "#494e5e", "#738094", "#1f1c24", "#a6ccdd", "#150f13"],
     "accent": "#a6ccdd",
     "accentLight": "#5a6f78",
+    "hue": "teal",
     "tags": ["anime"]
   },
   "sakura-trees-over-river.jpg": {
@@ -1907,6 +2097,7 @@
     "palette": ["#e5e9f5", "#f7c9d4", "#ee99b0", "#c3b9d9", "#a593c0", "#737297"],
     "accent": "#ee99b0",
     "accentLight": "#8b5967",
+    "hue": "pink",
     "tags": ["anime", "landscape"]
   },
   "samurai.jpg": {
@@ -1917,6 +2108,7 @@
     "palette": ["#1f9dae", "#adae4e", "#e5daa5", "#91bda8", "#64936d", "#2e6667"],
     "accent": "#adae4e",
     "accentLight": "#6c6d31",
+    "hue": "yellow",
     "tags": ["fantasy"]
   },
   "satellite.png": {
@@ -1927,6 +2119,7 @@
     "palette": ["#171724", "#7c839d", "#4f5468", "#151421", "#2d3040", "#10101c"],
     "accent": "#7c839d",
     "accentLight": "#676d83",
+    "hue": "blue",
     "tags": []
   },
   "scifi.jpg": {
@@ -1937,6 +2130,7 @@
     "palette": ["#3e413c", "#33302d", "#4f5750", "#727461", "#261f21", "#979c84"],
     "accent": "#979c84",
     "accentLight": "#6b6e5d",
+    "hue": "neutral",
     "tags": []
   },
   "serenity.jpg": {
@@ -1947,6 +2141,7 @@
     "palette": ["#1c2734", "#0d1b25", "#264153", "#071219", "#427285", "#915461"],
     "accent": "#5a8494",
     "accentLight": "#427285",
+    "hue": "teal",
     "tags": []
   },
   "ship-2.png": {
@@ -1957,6 +2152,7 @@
     "palette": ["#505186", "#786593", "#a17ea1", "#292d49", "#cc97aa", "#eab8bc"],
     "accent": "#cc97aa",
     "accentLight": "#805e6a",
+    "hue": "pink",
     "tags": []
   },
   "ship-3.jpg": {
@@ -1967,6 +2163,7 @@
     "palette": ["#c3dff8", "#526490", "#6d83af", "#91a9ca", "#37405e", "#70b3fc"],
     "accent": "#70b3fc",
     "accentLight": "#46709e",
+    "hue": "blue",
     "tags": []
   },
   "snowflakes.jpg": {
@@ -1977,6 +2174,7 @@
     "palette": ["#3a6295", "#5b89bb", "#284772", "#9bc3e8", "#1a3154", "#10223e"],
     "accent": "#9bc3e8",
     "accentLight": "#546a7e",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "snowy-train.jpg": {
@@ -1987,6 +2185,7 @@
     "palette": ["#b7d9e3", "#a7ccdd", "#6b7899", "#949ab4", "#4f5976", "#dceee7"],
     "accent": "#a7ccdd",
     "accentLight": "#5a6f78",
+    "hue": "teal",
     "tags": []
   },
   "soft-rose.jpg": {
@@ -1994,9 +2193,10 @@
     "width": 3876,
     "height": 2180,
     "bytes": 202072,
-    "palette": ["#1e222b"],
-    "accent": "#7c7e83",
-    "accentLight": "#1e222b",
+    "palette": ["#1e222b", "#514953", "#776b79", "#a7899c", "#c1b3c4", "#be6a75"],
+    "accent": "#be6a75",
+    "accentLight": "#9e5862",
+    "hue": "red",
     "tags": []
   },
   "sousou-no-frieren-flowers.png": {
@@ -2007,6 +2207,7 @@
     "palette": ["#3f3a5e", "#b85968", "#455c93", "#558ed4", "#b769e8", "#b4e7f2"],
     "accent": "#558ed4",
     "accentLight": "#4370a8",
+    "hue": "blue",
     "tags": ["anime"]
   },
   "space-piano.png": {
@@ -2017,6 +2218,7 @@
     "palette": ["#303642", "#3f4758", "#4f5b73", "#a47f97", "#597092", "#786e89"],
     "accent": "#a47f97",
     "accentLight": "#826578",
+    "hue": "pink",
     "tags": ["space"]
   },
   "space.jpg": {
@@ -2027,6 +2229,7 @@
     "palette": ["#2f3541", "#3e4350", "#2c323e", "#bec3cf", "#6b707d", "#272d39"],
     "accent": "#bec3cf",
     "accentLight": "#676a70",
+    "hue": "blue",
     "tags": ["space"]
   },
   "space.png": {
@@ -2037,6 +2240,7 @@
     "palette": ["#262c3c", "#83a5cd", "#222531", "#1f212b", "#2e3d56", "#47617d"],
     "accent": "#83a5cd",
     "accentLight": "#576e89",
+    "hue": "blue",
     "tags": ["space"]
   },
   "square-city.jpg": {
@@ -2047,6 +2251,7 @@
     "palette": ["#503243", "#6d435a", "#3b2635", "#e6b5cc", "#a17089", "#a2474e"],
     "accent": "#e6b5cc",
     "accentLight": "#7d626f",
+    "hue": "pink",
     "tags": ["urban"]
   },
   "stall.jpg": {
@@ -2057,6 +2262,7 @@
     "palette": ["#537a7b", "#849e84", "#3c4666", "#b6a3ce", "#bbe2f8", "#9270a9"],
     "accent": "#b6a3ce",
     "accentLight": "#726681",
+    "hue": "purple",
     "tags": []
   },
   "stay-vigil-by-pndora.jpg": {
@@ -2067,6 +2273,7 @@
     "palette": ["#555f6b", "#2a252b", "#848992", "#cccdd2", "#403d44", "#8e4a53"],
     "accent": "#a67077",
     "accentLight": "#8e4a53",
+    "hue": "red",
     "tags": []
   },
   "storm.jpg": {
@@ -2077,6 +2284,7 @@
     "palette": ["#718183", "#909794", "#264a5a", "#4b656e", "#0b2a3b", "#c2bbae"],
     "accent": "#c2bbae",
     "accentLight": "#716d65",
+    "hue": "orange",
     "tags": []
   },
   "stormlight-archive.png": {
@@ -2087,6 +2295,7 @@
     "palette": ["#082638", "#2f4756", "#022134", "#677276", "#b8bab3", "#001a2f"],
     "accent": "#b8bab3",
     "accentLight": "#6b6c68",
+    "hue": "neutral",
     "tags": []
   },
   "street-4.png": {
@@ -2097,6 +2306,7 @@
     "palette": ["#272726", "#3b3a3f", "#453024", "#6e452f", "#ab614a", "#51587a"],
     "accent": "#b26e59",
     "accentLight": "#9d5944",
+    "hue": "red",
     "tags": ["landscape", "urban"]
   },
   "street.png": {
@@ -2107,6 +2317,7 @@
     "palette": ["#6a8393", "#364140", "#4d585c", "#263033", "#1b252c", "#a8c0d6"],
     "accent": "#a8c0d6",
     "accentLight": "#5b6874",
+    "hue": "blue",
     "tags": ["landscape", "urban"]
   },
   "subway.jpg": {
@@ -2117,6 +2328,7 @@
     "palette": ["#562e42", "#6c5257", "#877167", "#af8f6e", "#833c40", "#b15844"],
     "accent": "#af8f6e",
     "accentLight": "#7c654e",
+    "hue": "orange",
     "tags": ["urban"]
   },
   "sunken-tower.png": {
@@ -2127,6 +2339,7 @@
     "palette": ["#0b3a5f", "#104e73", "#197095", "#3fa6be", "#092b49", "#abe4e7"],
     "accent": "#3fa6be",
     "accentLight": "#2d7687",
+    "hue": "teal",
     "tags": []
   },
   "sunlit-ruins.png": {
@@ -2137,6 +2350,7 @@
     "palette": ["#6f89a1", "#526c84", "#3c4f5c", "#203440", "#97a6b5", "#dfd9d2"],
     "accent": "#97a6b5",
     "accentLight": "#656f79",
+    "hue": "blue",
     "tags": []
   },
   "sunset.jpg": {
@@ -2147,6 +2361,7 @@
     "palette": ["#5f3a33", "#a34f24", "#321810", "#4d4d5a", "#ea942c", "#78abad"],
     "accent": "#ea942c",
     "accentLight": "#925c1c",
+    "hue": "orange",
     "tags": ["sunset"]
   },
   "sushi.jpg": {
@@ -2157,6 +2372,7 @@
     "palette": ["#0e1119", "#262645", "#1d1b2d", "#483869", "#f20229", "#8f1233"],
     "accent": "#f42244",
     "accentLight": "#d40224",
+    "hue": "red",
     "tags": []
   },
   "swirls.jpg": {
@@ -2167,6 +2383,7 @@
     "palette": ["#358ca3", "#14627f", "#70b6ba", "#7a6c7b", "#dae5e8", "#c76d70"],
     "accent": "#70b6ba",
     "accentLight": "#467274",
+    "hue": "teal",
     "tags": []
   },
   "swirly-painting.jpg": {
@@ -2177,6 +2394,7 @@
     "palette": ["#5a5a8d", "#313336", "#8a6d88", "#ce808f", "#e4adad", "#42465d"],
     "accent": "#ce808f",
     "accentLight": "#925b65",
+    "hue": "red",
     "tags": []
   },
   "sword.jpg": {
@@ -2187,6 +2405,7 @@
     "palette": ["#ffcdce", "#f9cacc", "#e1bcbd", "#c09c9f", "#736269", "#fcd6d5"],
     "accent": "#c09c9f",
     "accentLight": "#80686a",
+    "hue": "red",
     "tags": ["fantasy"]
   },
   "tank.jpg": {
@@ -2197,6 +2416,7 @@
     "palette": ["#8e6f46", "#d4d2cf", "#879fb8", "#788597", "#b3bcc4", "#392e28"],
     "accent": "#879fb8",
     "accentLight": "#5a6a7b",
+    "hue": "blue",
     "tags": []
   },
   "temple.jpg": {
@@ -2207,6 +2427,7 @@
     "palette": ["#afbfd9", "#e0cbd0", "#7299c1", "#f7ebe9", "#c59698", "#79596e"],
     "accent": "#7299c1",
     "accentLight": "#516c89",
+    "hue": "blue",
     "tags": []
   },
   "touhou-lake.jpg": {
@@ -2217,6 +2438,7 @@
     "palette": ["#c1aab4", "#703334", "#884e57", "#ab7986", "#dfe9ed", "#e34e5e"],
     "accent": "#e34e5e",
     "accentLight": "#bd414e",
+    "hue": "red",
     "tags": ["anime", "landscape"]
   },
   "tower.png": {
@@ -2227,6 +2449,7 @@
     "palette": ["#1f333c", "#375059", "#b7a192", "#4c6b75", "#797c78", "#f3cca9"],
     "accent": "#f3cca9",
     "accentLight": "#7a6654",
+    "hue": "orange",
     "tags": []
   },
   "train-sideview.png": {
@@ -2237,6 +2460,7 @@
     "palette": ["#484345", "#5b5c5c", "#264c5d", "#161c1a", "#0c3a52", "#c78d52"],
     "accent": "#c78d52",
     "accentLight": "#8d643a",
+    "hue": "orange",
     "tags": []
   },
   "train-station.jpg": {
@@ -2247,6 +2471,7 @@
     "palette": ["#372628", "#553c3d", "#906960", "#7d4b3c", "#bb9381", "#e8dcd7"],
     "accent": "#bb9381",
     "accentLight": "#84685b",
+    "hue": "orange",
     "tags": ["urban"]
   },
   "tree-stump.jpg": {
@@ -2257,6 +2482,7 @@
     "palette": ["#1b3414", "#3327fa", "#3b3cf1", "#2f18fe", "#9eb6e2", "#6575d3"],
     "accent": "#9eb6e2",
     "accentLight": "#5c6a84",
+    "hue": "blue",
     "tags": ["landscape"]
   },
   "tree.jpg": {
@@ -2267,6 +2493,7 @@
     "palette": ["#85385b", "#061f5f", "#021a35", "#093a84", "#2e5b9d", "#eb585a"],
     "accent": "#eb585a",
     "accentLight": "#ba4647",
+    "hue": "red",
     "tags": ["landscape"]
   },
   "trippy-purple.png": {
@@ -2277,6 +2504,7 @@
     "palette": ["#000001", "#0c0418", "#170d38", "#32206d", "#06010a", "#7351b8"],
     "accent": "#8a6ec4",
     "accentLight": "#7351b8",
+    "hue": "purple",
     "tags": []
   },
   "trolley.jpg": {
@@ -2287,6 +2515,7 @@
     "palette": ["#130a07", "#1f1416", "#2f2127", "#3b303b", "#5b464a", "#d1bca7"],
     "accent": "#d1bca7",
     "accentLight": "#71665a",
+    "hue": "orange",
     "tags": ["urban"]
   },
   "underwater-deep.jpg": {
@@ -2297,6 +2526,7 @@
     "palette": ["#52dafd", "#2eaef4", "#a1eefe", "#2b8ddc", "#1d6fc3", "#1a5ead"],
     "accent": "#2eaef4",
     "accentLight": "#1f74a3",
+    "hue": "blue",
     "tags": []
   },
   "van-chilling.png": {
@@ -2307,6 +2537,7 @@
     "palette": ["#d39759", "#9c7649", "#725a43", "#514438", "#39322a", "#252221"],
     "accent": "#d39759",
     "accentLight": "#8d653b",
+    "hue": "orange",
     "tags": []
   },
   "venice-market.png": {
@@ -2317,6 +2548,7 @@
     "palette": ["#202f2e", "#83624d", "#51443c", "#b69064", "#297367", "#c4ba8e"],
     "accent": "#b69064",
     "accentLight": "#816647",
+    "hue": "orange",
     "tags": ["urban"]
   },
   "vibrant-gate.png": {
@@ -2327,6 +2559,7 @@
     "palette": ["#4b4b49", "#6d686e", "#9d95a7", "#d1d3e4", "#252e31", "#452a40"],
     "accent": "#9d95a7",
     "accentLight": "#6f6a76",
+    "hue": "neutral",
     "tags": []
   },
   "village-gate.jpg": {
@@ -2337,6 +2570,7 @@
     "palette": ["#565041", "#8d7e60", "#38362e", "#d1c2ac", "#272821", "#1c1d1b"],
     "accent": "#d1c2ac",
     "accentLight": "#71695d",
+    "hue": "orange",
     "tags": []
   },
   "voxel-city.jpg": {
@@ -2347,6 +2581,7 @@
     "palette": ["#20273f", "#2e4156", "#191327", "#506671", "#6b4742", "#9d9e8a"],
     "accent": "#9d9e8a",
     "accentLight": "#69695c",
+    "hue": "neutral",
     "tags": ["urban", "voxel"]
   },
   "voxel-houses-monochrome.png": {
@@ -2357,6 +2592,7 @@
     "palette": ["#494339", "#595249", "#3a352a", "#2b271c", "#1b180b", "#72685e"],
     "accent": "#847b72",
     "accentLight": "#72685e",
+    "hue": "neutral",
     "tags": ["voxel"]
   },
   "voyager-10.jpg": {
@@ -2367,6 +2603,7 @@
     "palette": ["#123657", "#0f223a", "#1b4f79", "#3576a1", "#050f20", "#8ec7dc"],
     "accent": "#8ec7dc",
     "accentLight": "#4d6c77",
+    "hue": "teal",
     "tags": ["voyager"]
   },
   "voyager-11.jpg": {
@@ -2377,6 +2614,7 @@
     "palette": ["#e69175", "#c4c8bc", "#7c949e", "#4c6679", "#503643", "#a7695f"],
     "accent": "#e69175",
     "accentLight": "#905b49",
+    "hue": "red",
     "tags": ["voyager"]
   },
   "voyager-12.jpg": {
@@ -2387,6 +2625,7 @@
     "palette": ["#f7f0e3", "#cee4ed", "#e2d4c4", "#957277", "#bba9a1", "#5a4d58"],
     "accent": "#bba9a1",
     "accentLight": "#756a65",
+    "hue": "orange",
     "tags": ["voyager"]
   },
   "voyager-13.jpg": {
@@ -2397,6 +2636,7 @@
     "palette": ["#354540", "#747b45", "#c0c570", "#beebd4", "#50aaaa", "#2e7678"],
     "accent": "#c0c570",
     "accentLight": "#686b3d",
+    "hue": "yellow",
     "tags": ["voyager"]
   },
   "voyager-14.jpg": {
@@ -2407,6 +2647,7 @@
     "palette": ["#98999a", "#817b77", "#a7b5b7", "#caf1ef", "#b5d5d7", "#6d5056"],
     "accent": "#b5d5d7",
     "accentLight": "#5a6a6c",
+    "hue": "teal",
     "tags": ["voyager"]
   },
   "voyager-15.jpg": {
@@ -2417,6 +2658,7 @@
     "palette": ["#88746d", "#a3ac9d", "#a88b53", "#c5eaeb", "#654b5a", "#2e2a46"],
     "accent": "#a88b53",
     "accentLight": "#7e683e",
+    "hue": "orange",
     "tags": ["voyager"]
   },
   "voyager-16.jpg": {
@@ -2427,6 +2669,7 @@
     "palette": ["#6a7b44", "#3b4f51", "#a1c5b3", "#597d85", "#8da167", "#1a2f2b"],
     "accent": "#8da167",
     "accentLight": "#647249",
+    "hue": "green",
     "tags": ["voyager"]
   },
   "voyager-2.jpg": {
@@ -2437,6 +2680,7 @@
     "palette": ["#60313c", "#0e0a14", "#865a5b", "#d0d3bb", "#8b8c88", "#2c1e2a"],
     "accent": "#d0d3bb",
     "accentLight": "#686a5e",
+    "hue": "yellow",
     "tags": ["voyager"]
   },
   "voyager-20.jpg": {
@@ -2447,6 +2691,7 @@
     "palette": ["#433e3a", "#2d2c2e", "#675648", "#1f2228", "#171a1c", "#b18b5e"],
     "accent": "#b18b5e",
     "accentLight": "#856846",
+    "hue": "orange",
     "tags": ["voyager"]
   },
   "voyager-3.jpg": {
@@ -2457,6 +2702,7 @@
     "palette": ["#dff8f8", "#c5dded", "#a3a8ac", "#b7c3ce", "#86868f", "#5f535e"],
     "accent": "#b7c3ce",
     "accentLight": "#636a70",
+    "hue": "blue",
     "tags": ["voyager"]
   },
   "voyager-4.jpg": {
@@ -2467,6 +2713,7 @@
     "palette": ["#708644", "#3f593a", "#486664", "#749b82", "#112c3c", "#afbe56"],
     "accent": "#afbe56",
     "accentLight": "#666f32",
+    "hue": "yellow",
     "tags": ["voyager"]
   },
   "voyager-5.jpg": {
@@ -2477,6 +2724,7 @@
     "palette": ["#5b7158", "#285456", "#05262b", "#153f3b", "#b49d56", "#021122"],
     "accent": "#b49d56",
     "accentLight": "#786939",
+    "hue": "yellow",
     "tags": ["voyager"]
   },
   "voyager-6.jpg": {
@@ -2487,6 +2735,7 @@
     "palette": ["#4ab2f7", "#56bdf7", "#546b4c", "#a1d3ef", "#edf6fd", "#4999d6"],
     "accent": "#4ab2f7",
     "accentLight": "#2e6f9a",
+    "hue": "blue",
     "tags": ["voyager"]
   },
   "voyager-7.jpg": {
@@ -2497,6 +2746,7 @@
     "palette": ["#5e6138", "#8d8a59", "#9edbea", "#84a8a4", "#603a4c", "#2f3921"],
     "accent": "#9edbea",
     "accentLight": "#4f6e75",
+    "hue": "teal",
     "tags": ["voyager"]
   },
   "voyager-8.jpg": {
@@ -2507,6 +2757,7 @@
     "palette": ["#364da6", "#b869ce", "#6f54bf", "#e492d1", "#341268", "#792b89"],
     "accent": "#e492d1",
     "accentLight": "#8e5b83",
+    "hue": "pink",
     "tags": ["voyager"]
   },
   "voyager-9.jpg": {
@@ -2517,6 +2768,7 @@
     "palette": ["#a0c4c6", "#e1f4eb", "#c0dfd9", "#74a3b5", "#496a7c", "#8c9780"],
     "accent": "#74a3b5",
     "accentLight": "#527380",
+    "hue": "teal",
     "tags": ["voyager"]
   },
   "wall.jpg": {
@@ -2527,6 +2779,7 @@
     "palette": ["#be9b7c", "#6e886d", "#2a3f4b", "#c1d5c3", "#0f2130", "#8a4862"],
     "accent": "#be9b7c",
     "accentLight": "#7f6753",
+    "hue": "orange",
     "tags": []
   },
   "wallhaven-vqoo1p.jpg": {
@@ -2537,6 +2790,7 @@
     "palette": ["#54899b", "#7dae7e", "#6cafc6", "#497765", "#b3aaa5", "#c0dae3"],
     "accent": "#6cafc6",
     "accentLight": "#446d7c",
+    "hue": "teal",
     "tags": []
   },
   "wanderer.jpg": {
@@ -2547,6 +2801,7 @@
     "palette": ["#bac0d0", "#c8cddd", "#1c1b1f", "#a5adb8", "#d4dbed", "#788189"],
     "accent": "#bac0d0",
     "accentLight": "#656871",
+    "hue": "blue",
     "tags": []
   },
   "waterfall.png": {
@@ -2557,6 +2812,7 @@
     "palette": ["#111a1a", "#081f1e", "#052d25", "#245241", "#192e27", "#4e8b65"],
     "accent": "#4e8b65",
     "accentLight": "#417454",
+    "hue": "green",
     "tags": []
   },
   "waves.png": {
@@ -2567,6 +2823,7 @@
     "palette": ["#edceab", "#9091a5", "#c3a0a0", "#efa38a", "#657896", "#435a7b"],
     "accent": "#efa38a",
     "accentLight": "#8b5f50",
+    "hue": "red",
     "tags": ["landscape"]
   },
   "whale.jpg": {
@@ -2577,6 +2834,7 @@
     "palette": ["#7d563f", "#d17946", "#534c45", "#eab79a", "#35260b", "#234853"],
     "accent": "#d17946",
     "accentLight": "#9d5b34",
+    "hue": "orange",
     "tags": []
   },
   "wheat.png": {
@@ -2587,6 +2845,7 @@
     "palette": ["#793a14", "#b7aa9d", "#bf7024", "#eda841", "#8b7f86", "#e0cba2"],
     "accent": "#eda841",
     "accentLight": "#8a6226",
+    "hue": "orange",
     "tags": []
   },
   "windows-xp.jpg": {
@@ -2597,6 +2856,7 @@
     "palette": ["#2c4e1e", "#627825", "#e8ecee", "#93bad8", "#5f9ec6", "#c5d7e5"],
     "accent": "#5f9ec6",
     "accentLight": "#43708c",
+    "hue": "blue",
     "tags": []
   },
   "winter-flowers.jpg": {
@@ -2607,6 +2867,7 @@
     "palette": ["#cce2f2", "#e6f2fa", "#b3c9da", "#8fadc2", "#68869d", "#3a5263"],
     "accent": "#8fadc2",
     "accentLight": "#596c79",
+    "hue": "blue",
     "tags": []
   },
   "zuchold-archtecture.jpg": {
@@ -2617,6 +2878,7 @@
     "palette": ["#836e6e", "#97898d", "#504d5a", "#bba8a4", "#bd917d", "#d0c2c0"],
     "accent": "#bd917d",
     "accentLight": "#866759",
+    "hue": "orange",
     "tags": []
   }
 }

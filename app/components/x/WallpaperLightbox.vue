@@ -14,23 +14,27 @@ import {
   type WallpaperVariant,
 } from "#shared/assets";
 
-import { variants } from "~/composables/wallpaper";
+import { variants, wallpaperFiles, wallpaperNumber } from "~/composables/wallpaper";
 
 const open = defineModel<boolean>("open", { required: true });
 const variant = defineModel<WallpaperVariant>("variant", { required: true });
 const props = defineProps<{
   meta: WallpaperMeta | null;
-
   applied: boolean;
+  activeTag?: string | null;
 }>();
 
 const emit = defineEmits<{
   step: [delta: number];
-
   apply: [apply: boolean];
+  filter: [tag: string];
 }>();
 
 const { resolvedTheme } = useTheme();
+
+const total = wallpaperFiles.length;
+
+const number = computed(() => (props.meta ? wallpaperNumber(props.meta.file) : null));
 
 onKeyDown(["ArrowLeft", "ArrowRight"], (event) => {
   if (!open.value) return;
@@ -89,25 +93,6 @@ watch([() => props.meta?.file, variant], async () => {
           loading="eager"
           decoding="async"
         />
-
-        <XButton
-          square
-          class="lightbox__arrow lightbox__arrow--prev"
-          title="Previous wallpaper"
-          aria-label="Previous wallpaper"
-          @click="emit('step', -1)"
-        >
-          <XIcon name="material-symbols:chevron-left-sharp" size="lg" />
-        </XButton>
-        <XButton
-          square
-          class="lightbox__arrow lightbox__arrow--next"
-          title="Next wallpaper"
-          aria-label="Next wallpaper"
-          @click="emit('step', 1)"
-        >
-          <XIcon name="material-symbols:chevron-right-sharp" size="lg" />
-        </XButton>
       </figure>
 
       <div class="lightbox__side">
@@ -127,6 +112,12 @@ watch([() => props.meta?.file, variant], async () => {
           <div class="lightbox__fact">
             <dt class="label">Color</dt>
             <dd>{{ meta.hue }}</dd>
+          </div>
+          <div class="lightbox__fact">
+            <dt class="label">Index</dt>
+            <dd>
+              {{ number }} <span class="lightbox__of">of {{ total }}</span>
+            </dd>
           </div>
         </dl>
 
@@ -166,7 +157,15 @@ watch([() => props.meta?.file, variant], async () => {
         </p> -->
 
         <div class="lightbox__tags" v-if="meta.tags.length">
-          <span v-for="tag in meta.tags" :key="tag" class="lightbox__chip">{{ tag }}</span>
+          <XChip
+            v-for="tag in meta.tags"
+            :key="tag"
+            :active="activeTag === tag"
+            :title="`Show only ${tag} wallpapers`"
+            @click="emit('filter', tag)"
+          >
+            {{ tag }}
+          </XChip>
         </div>
 
         <div class="lightbox__actions">
@@ -187,6 +186,29 @@ watch([() => props.meta?.file, variant], async () => {
             Download
           </XButton>
         </div>
+
+        <div class="lightbox__nav">
+          <XButton
+            variant="rule"
+            title="Previous wallpaper"
+            aria-label="Previous wallpaper"
+            class="lightbox__prev"
+            @click="emit('step', -1)"
+          >
+            <XIcon name="material-symbols:chevron-left-sharp" size="lg" />
+            Previous
+          </XButton>
+          <XButton
+            variant="rule"
+            title="Next wallpaper"
+            aria-label="Next wallpaper"
+            class="lightbox__next"
+            @click="emit('step', 1)"
+          >
+            Next
+            <XIcon name="material-symbols:chevron-right-sharp" size="lg" />
+          </XButton>
+        </div>
       </div>
     </div>
   </XDialog>
@@ -195,6 +217,7 @@ watch([() => props.meta?.file, variant], async () => {
 <style scoped>
 .lightbox {
   display: grid;
+  height: 100%;
   grid-template-columns: minmax(0, 1fr) 20rem;
   gap: var(--space-6);
   align-items: start;
@@ -227,46 +250,9 @@ watch([() => props.meta?.file, variant], async () => {
 }
 
 .lightbox__stage {
-  position: relative;
   margin: 0;
   display: flex;
   flex-direction: column;
-}
-
-.lightbox__arrow {
-  position: absolute;
-  top: 50%;
-  translate: 0 -50%;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--space-8);
-  height: var(--space-8);
-
-  padding: 0;
-  border: var(--rule-width) solid var(--c-rule-strong);
-
-  background: color-mix(in srgb, var(--c-sheet) 82%, transparent);
-  backdrop-filter: blur(4px);
-  color: var(--c-fg);
-  cursor: pointer;
-  transition:
-    border-color var(--dur-fast) var(--ease),
-    scale var(--dur-fast) var(--ease-folio);
-}
-
-.lightbox__arrow:hover {
-  border-color: var(--lb-accent, var(--c-accent));
-  scale: 1.08;
-}
-
-.lightbox__arrow--prev {
-  left: var(--space-4);
-}
-
-.lightbox__arrow--next {
-  right: var(--space-4);
 }
 
 .lightbox__image {
@@ -313,12 +299,17 @@ watch([() => props.meta?.file, variant], async () => {
   overflow-wrap: anywhere;
 }
 
+.lightbox__of {
+  color: var(--c-dim);
+}
+
 .lightbox__facts {
   margin: 0;
 }
 
 .lightbox__side {
   display: flex;
+  height: 100%;
   flex-direction: column;
   padding: var(--space-4);
   gap: var(--space-3);
@@ -345,9 +336,12 @@ watch([() => props.meta?.file, variant], async () => {
 }
 
 .lightbox__group {
+  --c-accent: var(--lb-accent, var(--c-accent));
+  --c-accent-contrast: var(--c-bg);
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
+  flex: 1;
 }
 
 .lightbox__note {
@@ -366,14 +360,19 @@ watch([() => props.meta?.file, variant], async () => {
   gap: var(--space-1);
 }
 
-.lightbox__chip {
-  font-family: var(--f-label);
-  font-size: var(--t-6);
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
-  color: var(--c-dim);
-  border: var(--rule-width) solid var(--c-rule);
-  padding: 0.2em 0.6em;
+.lightbox__nav {
+  display: flex;
+  /* align-self: flex-end; */
+  /* justify-content: flex-end; */
+  gap: var(--space-2);
+}
+
+.lightbox__prev {
+  flex: 1;
+}
+
+.lightbox__next {
+  flex: 1;
 }
 
 .lightbox__actions {
@@ -398,9 +397,9 @@ watch([() => props.meta?.file, variant], async () => {
   color: var(--c-dim);
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
-  padding: 0.35em 0.7em;
+  padding: var(--space-2);
   cursor: pointer;
   flex: 1;
   transition:
