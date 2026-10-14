@@ -190,10 +190,10 @@ const headWouldPrint = (section: {
       <div class="cv__identity">
         <h1>Lemuel De Los Santos</h1>
         <address>
-          <span>he/him</span>
-          <span aria-hidden="true">·</span>
+          <span>He/Him</span>
+          <span class="meta" aria-hidden="true">·</span>
           <span>New York, NY</span>
-          <span aria-hidden="true">·</span>
+          <span class="meta" aria-hidden="true">·</span>
           <a href="mailto:hi@lem.my">hi@lem.my</a>
         </address>
       </div>
@@ -407,11 +407,21 @@ const headWouldPrint = (section: {
   margin-top: var(--space-1);
 }
 
+.cv__section-body {
+  padding: 0 var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .cv__section-body {
+    padding: 0;
+  }
+}
+
 .cv__head {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: var(--space-4) var(--space-7);
   padding-bottom: var(--space-3);
   /* border-bottom: 1px solid var(--c-rule-strong); */
@@ -424,7 +434,7 @@ const headWouldPrint = (section: {
 }
 
 .cv__identity h1 {
-  font-size: var(--t-14);
+  font-size: var(--t-16);
   line-height: 1.1;
 }
 
@@ -459,7 +469,7 @@ const headWouldPrint = (section: {
 }
 
 .cv__summary {
-  margin-top: var(--space-3);
+  margin-top: var(--space-1);
   /* max-width: var(--measure-text); */
 }
 

@@ -22,15 +22,21 @@ defineProps<{
   align-items: baseline;
   gap: var(--space-2);
   /* margin-block: var(--space-2) var(--space-1); */
-  padding-bottom: var(--space-1);
-  font-size: 0.8em;
+  /* padding-bottom: var(--space-1); */
+  font-size: var(--t-9);
   font-family: var(--f-display);
   font-weight: 600;
   letter-spacing: 0.02em;
   font-variant: small-caps;
   text-decoration: none;
-  color: var(--c-fg);
+  color: var(--c-dim);
   border-bottom: var(--rule-width) solid var(--c-rule-strong);
+}
+
+.cv-head__label:hover {
+  color: var(--c-fg);
+  text-decoration: none !important;
+  /* border-color: var(--c-rule); */
 }
 
 .cv-head__label {
