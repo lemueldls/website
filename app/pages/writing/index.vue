@@ -73,7 +73,7 @@ defineOgImage("Root", {
   font-size: var(--t-14);
   color: var(--c-dim);
   max-width: 52ch;
-  line-height: 1.55;
+  /* line-height: 1.55; */
 }
 
 .writing__rule {

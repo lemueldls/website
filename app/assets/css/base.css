@@ -24,11 +24,11 @@ body {
   background: var(--c-bg);
   color: var(--c-fg);
   font-family: var(--f-text);
-  font-size: var(--t-105);
+  font-size: var(--t-1p5);
   font-feature-settings: "kern", "liga", "calt", "zero";
   font-variant-ligatures: contextual;
   font-variant-numeric: tabular-nums;
-  line-height: 1.55;
+  /* line-height: 1.55; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
@@ -43,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: var(--t-105);
+  font-size: var(--t-1p5);
   font-family: var(--f-display);
   font-weight: 600;
   line-height: 1.15;
