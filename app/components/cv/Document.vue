@@ -437,7 +437,7 @@ const headWouldPrint = (section: {
   align-items: flex-end;
   justify-content: space-evenly;
   gap: var(--space-4) var(--space-7);
-  padding-bottom: var(--space-2);
+  padding-bottom: var(--space-1);
   /* border-bottom: 1px solid var(--c-rule-strong); */
 }
 
