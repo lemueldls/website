@@ -31,18 +31,18 @@ const { socials, email, rings } = useAbout();
                 size="sm"
                 square
                 :href="ring.prev"
-                same-tab
+                target="_self"
                 :title="`Previous in ${ring.name}`"
               >
                 <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="xs" />
               </XButton>
-              <XLink class="ftr__ring-link" :href="ring.home" same-tab>{{ ring.name }}</XLink>
+              <XLink class="ftr__ring-link" :href="ring.home" target="_self">{{ ring.name }}</XLink>
               <!-- <XButton
                 variant="ghost"
                 size="sm"
                 square
                 :href="ring.rand"
-                same-tab
+                target="_self"
                 :title="`Random site in ${ring.name}`"
               >
                 <XIcon name="material-symbols:casino-sharp" size="xs" />
@@ -52,7 +52,7 @@ const { socials, email, rings } = useAbout();
                 size="sm"
                 square
                 :href="ring.next"
-                same-tab
+                target="_self"
                 :title="`Next in ${ring.name}`"
               >
                 <XIcon name="material-symbols:keyboard-double-arrow-right-sharp" size="xs" />
@@ -74,7 +74,7 @@ const { socials, email, rings } = useAbout();
         </span>
 
         <span class="ftr__meta-badges">
-          <XSiteBadge to="/badges" />
+          <!-- <XSiteBadge to="/badges" /> -->
 
           <XVisitorCounter />
         </span>

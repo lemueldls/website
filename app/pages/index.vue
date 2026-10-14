@@ -89,18 +89,18 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
                 size="sm"
                 square
                 :href="ring.prev"
-                same-tab
+                target="_self"
                 :title="`Previous in ${ring.name}`"
               >
                 <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="sm" />
               </XButton>
-              <XLink :href="ring.home" same-tab>{{ ring.name }}</XLink>
+              <XLink :href="ring.home" target="_self">{{ ring.name }}</XLink>
               <XButton
                 variant="ghost"
                 size="sm"
                 square
                 :href="ring.next"
-                same-tab
+                target="_self"
                 :title="`Next in ${ring.name}`"
               >
                 <XIcon name="material-symbols:keyboard-double-arrow-right-sharp" size="sm" />

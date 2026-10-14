@@ -11,7 +11,7 @@ const props = withDefaults(
     square?: boolean;
     block?: boolean;
     disabled?: boolean;
-    sameTab?: boolean;
+    target?: "_blank" | "_self";
   }>(),
   {
     type: "button",
@@ -29,7 +29,9 @@ const tag = computed(() => {
   return "button";
 });
 
-const leave = computed(() => newTabAttrs(!props.sameTab && isExternalHref(props.href)));
+const leave = computed(() =>
+  newTabAttrs(props.target ? props.target === "_blank" : isExternalHref(props.href)),
+);
 </script>
 
 <template>

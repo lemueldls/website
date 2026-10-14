@@ -102,7 +102,7 @@ const pdfHref = computed(() => {
                 {{ showPreview ? "Exit preview" : "Print preview" }}
               </XButton>
 
-              <XButton :href="pdfHref" variant="accent" size="lg">
+              <XButton :href="pdfHref" target="_blank" variant="accent" size="lg">
                 <XIcon name="material-symbols:download-sharp" size="lg" />
                 Download PDF
               </XButton>
@@ -121,7 +121,7 @@ const pdfHref = computed(() => {
         <span class="label">Print preview</span>
         <span class="meta cv__preview-note">What the PDF will look like</span>
 
-        <XButton variant="accent" :href="pdfHref">
+        <XButton variant="accent" :href="pdfHref" target="_blank">
           <XIcon name="material-symbols:download-sharp" />
           PDF
         </XButton>
