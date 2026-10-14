@@ -1,8 +1,23 @@
 <script setup lang="ts">
 import keywords from "~/assets/keywords.json";
 
+import { isExternalHref, newTabAttrs } from "~/lib/links";
+
 import { CV_SECTIONS, cvEntryKey, isCvKeyOn, type CvOptions, type CvSectionKey } from "#shared/cv";
 import { isResearchEntry, useAbout, type Education, type Experience } from "~/composables/about";
+
+const MASTHEAD_LINKS: { icon: string; href: string; label: string }[] = [
+  {
+    icon: "simple-icons:github",
+    href: "https://github.com/lemueldls/",
+    label: "github.com/lemueldls",
+  },
+  {
+    icon: "simple-icons:linkedin",
+    href: "https://www.linkedin.com/in/lemueldls/",
+    label: "linkedin.com/in/lemueldls",
+  },
+];
 
 const props = defineProps<{
   options: CvOptions;
@@ -199,13 +214,9 @@ const headWouldPrint = (section: {
       </div>
 
       <ul class="cv__links">
-        <li>
-          <XIcon name="simple-icons:github" class="cv__link-icon" size="xs" />
-          <a href="https://github.com/lemueldls/">github.com/lemueldls</a>
-        </li>
-        <li>
-          <XIcon name="simple-icons:linkedin" class="cv__link-icon" size="xs" />
-          <a href="https://www.linkedin.com/in/lemueldls/">linkedin.com/in/lemueldls</a>
+        <li v-for="link in MASTHEAD_LINKS" :key="link.href">
+          <XIcon :name="link.icon" class="cv__link-icon" size="xs" />
+          <a :href="link.href" v-bind="newTabAttrs(isExternalHref(link.href))">{{ link.label }}</a>
         </li>
       </ul>
     </header>
@@ -319,7 +330,12 @@ const headWouldPrint = (section: {
           :class="{ 'no-print': !entry.printable }"
         >
           <div class="cv__entry-row">
-            <component :is="entry.href ? 'a' : 'span'" :href="entry.href" class="cv__entry-name">
+            <component
+              :is="entry.href ? 'a' : 'span'"
+              :href="entry.href"
+              v-bind="newTabAttrs(isExternalHref(entry.href))"
+              class="cv__entry-name"
+            >
               {{ entry.name
               }}<span v-if="entry.kind === 'role' && entry.role" class="cv__entry-role">{{
                 entry.role

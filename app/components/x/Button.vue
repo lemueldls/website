@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { isExternalHref, newTabAttrs } from "~/lib/links";
+
 const props = withDefaults(
   defineProps<{
     to?: string;
@@ -6,10 +8,10 @@ const props = withDefaults(
     type?: "button" | "submit" | "reset";
     variant?: "rule" | "sheet" | "accent" | "ghost";
     size?: "sm" | "md" | "lg";
-
     square?: boolean;
     block?: boolean;
     disabled?: boolean;
+    sameTab?: boolean;
   }>(),
   {
     type: "button",
@@ -26,6 +28,8 @@ const tag = computed(() => {
   if (props.href) return "a";
   return "button";
 });
+
+const leave = computed(() => newTabAttrs(!props.sameTab && isExternalHref(props.href)));
 </script>
 
 <template>
@@ -35,6 +39,7 @@ const tag = computed(() => {
     :href="href"
     :type="tag === 'button' ? type : undefined"
     :disabled="tag === 'button' ? disabled : undefined"
+    v-bind="leave"
     :class="[
       'xbtn',
       `xbtn--${variant}`,
@@ -73,7 +78,8 @@ const tag = computed(() => {
 
 .xbtn--sm {
   font-size: var(--t-6);
-  padding: 0.3em 0.6em;
+  /* padding: 0.3em 0.6em; */
+  padding: 0.45em 0.9em;
 }
 .xbtn--md {
   padding: 0.45em 0.9em;

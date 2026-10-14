@@ -1,13 +1,17 @@
 <script setup lang="ts">
-withDefaults(
+import { isExternalHref, newTabAttrs } from "~/lib/links";
+
+const props = withDefaults(
   defineProps<{
     to?: string;
     href?: string;
-
     external?: boolean;
+    sameTab?: boolean;
   }>(),
   { external: false },
 );
+
+const leave = computed(() => newTabAttrs(!props.sameTab && isExternalHref(props.href)));
 </script>
 
 <template>
@@ -20,7 +24,7 @@ withDefaults(
       class="xlink__icon"
     />
   </NuxtLink>
-  <a v-else :href class="xlink">
+  <a v-else :href class="xlink" v-bind="leave">
     <slot />
     <XIcon
       v-if="external"
