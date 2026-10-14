@@ -246,7 +246,9 @@ async function drawAscii(file: string, size: Viewport) {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, el.width, el.height);
 
-  ctx.setTransform(dpr, 0, 0, dpr, 0, HEADROOM * dpr);
+  const slack = h - plate.rows * CELL_H;
+  plateOffsetY = slack - HEADROOM;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, plateOffsetY * dpr);
 
   ctx.font = `${FONT_SIZE}px "Asterism Code"`;
   ctx.textAlign = "center";
@@ -329,6 +331,8 @@ let scanTimer: ReturnType<typeof setInterval> | undefined;
 let liveCtx: CanvasRenderingContext2D | null = null;
 let livePlate: Plate | null = null;
 let liveInk: [number, number, number] = [255, 255, 255];
+
+let plateOffsetY = HEADROOM;
 
 function stopScan(): number {
   if (scanTimer) clearInterval(scanTimer);
@@ -448,7 +452,7 @@ function glowStep() {
 
   const at = pointerAt && {
     x: pointerAt.x,
-    y: pointerAt.y - parallax.value,
+    y: pointerAt.y + HEADROOM - parallax.value - plateOffsetY,
   };
 
   let instantX = 0;
