@@ -5,11 +5,11 @@
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Regular.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-Regular.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 400,
         "patch": "base",
         "features": [
@@ -55,17 +55,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2058692
+        "bytes": 523116
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Italic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-Italic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 400,
         "patch": "base",
         "features": [
@@ -111,18 +111,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2201172,
+        "bytes": 582236,
         "style": "italic"
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Medium.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-Medium.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 500,
         "patch": "base",
         "features": [
@@ -168,17 +168,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2054504
+        "bytes": 520972
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-MediumItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-MediumItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 500,
         "patch": "base",
         "features": [
@@ -224,18 +224,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2205676,
+        "bytes": 583236,
         "style": "italic"
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-SemiBold.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-SemiBold.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 600,
         "patch": "base",
         "features": [
@@ -281,17 +281,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2071524
+        "bytes": 523148
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-SemiBoldItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-SemiBoldItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 600,
         "patch": "base",
         "features": [
@@ -337,18 +337,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2223816,
+        "bytes": 583220,
         "style": "italic"
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Bold.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-Bold.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 700,
         "patch": "base",
         "features": [
@@ -394,17 +394,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2062992
+        "bytes": 521916
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-BoldItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-BoldItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 700,
         "patch": "base",
         "features": [
@@ -450,18 +450,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2222024,
+        "bytes": 586188,
         "style": "italic"
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-ExtraBold.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-ExtraBold.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 800,
         "patch": "base",
         "features": [
@@ -507,17 +507,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2073000
+        "bytes": 523036
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-ExtraBoldItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-ExtraBoldItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 800,
         "patch": "base",
         "features": [
@@ -563,18 +563,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2227276,
+        "bytes": 586440,
         "style": "italic"
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-Black.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-Black.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 950,
         "patch": "base",
         "features": [
@@ -620,17 +620,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2073760
+        "bytes": 502712
       },
       {
         "name": "Asterism Code",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismCode-BlackItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismCode-BlackItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 950,
         "patch": "base",
         "features": [
@@ -676,7 +676,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 2219528,
+        "bytes": 562124,
         "style": "italic"
       },
       {
@@ -1393,7 +1393,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3853616
+        "bytes": 3857872
       },
       {
         "name": "Asterism Ruby",
@@ -1429,7 +1429,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3895628
+        "bytes": 3896052
       },
       {
         "name": "Asterism Ruby",
@@ -1465,7 +1465,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3937352
+        "bytes": 3936572
       },
       {
         "name": "Asterism Ruby",
@@ -1501,7 +1501,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3564964
+        "bytes": 3564424
       },
       {
         "name": "Asterism Ruby",
@@ -1573,7 +1573,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3645284
+        "bytes": 3644588
       }
     ],
     "Asterism Slim": [
@@ -2021,11 +2021,11 @@
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Regular.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-Regular.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 400,
         "patch": "base",
         "features": [
@@ -2069,17 +2069,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1652496
+        "bytes": 431700
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Italic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-Italic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 400,
         "patch": "base",
         "features": [
@@ -2123,18 +2123,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1758980,
+        "bytes": 479368,
         "style": "italic"
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Medium.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-Medium.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 500,
         "patch": "base",
         "features": [
@@ -2178,17 +2178,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1650644
+        "bytes": 430356
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-MediumItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-MediumItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 500,
         "patch": "base",
         "features": [
@@ -2232,18 +2232,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1761028,
+        "bytes": 479720,
         "style": "italic"
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-SemiBold.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-SemiBold.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 600,
         "patch": "base",
         "features": [
@@ -2287,17 +2287,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1645492
+        "bytes": 428824
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-SemiBoldItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-SemiBoldItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 600,
         "patch": "base",
         "features": [
@@ -2341,18 +2341,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1767184,
+        "bytes": 479136,
         "style": "italic"
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Bold.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-Bold.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 700,
         "patch": "base",
         "features": [
@@ -2396,17 +2396,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1650300
+        "bytes": 429204
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-BoldItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-BoldItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 700,
         "patch": "base",
         "features": [
@@ -2450,18 +2450,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1772732,
+        "bytes": 481828,
         "style": "italic"
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-ExtraBold.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-ExtraBold.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 800,
         "patch": "base",
         "features": [
@@ -2505,17 +2505,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1657120
+        "bytes": 429660
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-ExtraBoldItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-ExtraBoldItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 800,
         "patch": "base",
         "features": [
@@ -2559,18 +2559,18 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1777420,
+        "bytes": 481520,
         "style": "italic"
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-Black.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-Black.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 950,
         "patch": "base",
         "features": [
@@ -2614,17 +2614,17 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1651596
+        "bytes": 408040
       },
       {
         "name": "Asterism Term",
         "src": [
           {
-            "url": "https://assets.lemueldls.dev/fonts/truetype/AsterismTerm-BlackItalic.ttf",
-            "format": "truetype"
+            "url": "https://assets.lemueldls.dev/fonts/woff2/AsterismTerm-BlackItalic.woff2",
+            "format": "woff2"
           }
         ],
-        "format": "truetype",
+        "format": "woff2",
         "weight": 950,
         "patch": "base",
         "features": [
@@ -2668,7 +2668,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 1767300,
+        "bytes": 456188,
         "style": "italic"
       },
       {
@@ -3800,7 +3800,7 @@
       },
       {
         "format": "woff2",
-        "bytes": 6611099,
+        "bytes": 6604531,
         "patch": "base"
       }
     ],
@@ -3812,29 +3812,29 @@
       },
       {
         "format": "woff2",
-        "bytes": 5428283,
+        "bytes": 5421731,
         "patch": "base"
       }
     ],
     "Asterism Ruby": [
       {
         "format": "truetype",
-        "bytes": 48442589,
+        "bytes": 48458845,
         "patch": "Pinyin"
       },
       {
         "format": "woff2",
-        "bytes": 11691617,
+        "bytes": 11695517,
         "patch": "Pinyin"
       },
       {
         "format": "truetype",
-        "bytes": 26207101,
+        "bytes": 26207093,
         "patch": "Romaji"
       },
       {
         "format": "woff2",
-        "bytes": 10822105,
+        "bytes": 10820869,
         "patch": "Romaji"
       }
     ]

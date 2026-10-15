@@ -2,7 +2,35 @@ import { readFileSync } from "node:fs";
 
 import { createResolver } from "nuxt/kit";
 
+import { sampleFor } from "./shared/assets";
+import type { FontsIndex } from "./shared/assets";
+import type { FontStyles } from "unifont";
+
 const { resolve } = createResolver(import.meta.url);
+
+const fontsMeta = JSON.parse(
+  readFileSync(new URL("./app/assets/fonts.meta.json", import.meta.url), "utf-8"),
+) as FontsIndex;
+
+const SAMPLE_CUTS = ["Asterism Slim", "Asterism Code", "Asterism Term", "Asterism Ruby"] as const;
+
+const sampleGlyphs = Object.fromEntries(
+  SAMPLE_CUTS.flatMap((name) => {
+    const faces = fontsMeta.families[name];
+    return faces ? [[name, [...new Set(sampleFor(faces) + name)].join("")]] : [];
+  }),
+);
+
+const sampleStyles: FontStyles[] = ["normal"];
+
+const sampleFontFamilies = SAMPLE_CUTS.map((name) => ({
+  name,
+  provider: "assets",
+  weights: [400],
+  styles: sampleStyles,
+  glyphs: sampleGlyphs[name],
+  global: true,
+}));
 
 export default defineNuxtConfig({
   modules: [
@@ -156,6 +184,7 @@ export default defineNuxtConfig({
         weights: [400, 600],
         global: true,
       },
+      ...sampleFontFamilies,
     ],
   },
 
@@ -202,4 +231,9 @@ export default defineNuxtConfig({
   linkChecker: {
     excludeLinks: [/^\/cv\.pdf(\?|$)/, /^\/fonts\/[\w-]+\?/],
   },
+
+  aiReady: false,
+  skewProtection: false,
+
+  nuxtseo: { tips: false },
 });

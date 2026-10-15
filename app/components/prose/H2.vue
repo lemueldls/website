@@ -8,7 +8,7 @@ const { headings } = useRuntimeConfig().public.mdc;
 const linked = computed(() => {
   const links = headings?.anchorLinks;
 
-  return Boolean(props.id && (links === true || (typeof links === "object" && links?.h2 === true)));
+  return Boolean(props.id && typeof links === "object" && links?.h2);
 });
 </script>
 
