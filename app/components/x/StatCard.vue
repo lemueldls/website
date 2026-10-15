@@ -40,7 +40,7 @@ const { label, value, note } = toRefs(props);
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--c-fg);
-  font-variant-numeric: tabular-nums;
+  /* font-variant-numeric: tabular-nums; */
 }
 
 .stat__note {

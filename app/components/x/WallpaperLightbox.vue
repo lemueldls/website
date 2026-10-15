@@ -295,7 +295,7 @@ watch([() => props.meta?.file, variant], async () => {
   font-family: var(--f-label);
   font-size: var(--t-8);
   color: var(--c-fg);
-  font-variant-numeric: tabular-nums;
+  /* font-variant-numeric: tabular-nums; */
   overflow-wrap: anywhere;
 }
 

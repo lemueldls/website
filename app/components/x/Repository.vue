@@ -143,7 +143,7 @@ function formatYear(iso: string): string {
   font-size: var(--t-12);
   font-weight: 600;
   color: var(--c-fg);
-  font-variant-numeric: tabular-nums;
+  /* font-variant-numeric: tabular-nums; */
 }
 
 .repo__langs {

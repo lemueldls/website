@@ -392,7 +392,7 @@ const headWouldPrint = (section: {
 
 .cv__page--besley {
   font-family: var(--f-display);
-  font-variant-numeric: oldstyle-nums;
+  /* font-variant-numeric: oldstyle-nums; */
 }
 
 .cv__page--besley-narrow {

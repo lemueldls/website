@@ -22,14 +22,14 @@
 .num {
   font-family: var(--f-label);
   color: var(--c-dim);
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum", "zero";
+  /* font-variant-numeric: tabular-nums; */
+  /* font-feature-settings: "tnum", "zero"; */
 }
 
 .meta {
   font-family: var(--f-label);
   font-size: var(--t-8);
-  font-variant-numeric: tabular-nums;
+  /* font-variant-numeric: tabular-nums; */
   color: var(--c-dimmer);
 }
 

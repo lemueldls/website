@@ -83,7 +83,7 @@ const note = computed(() => {
   color: var(--c-fg);
   background: var(--c-sheet);
   border: var(--rule-width) solid var(--c-rule);
-  font-variant-numeric: tabular-nums;
+  /* font-variant-numeric: tabular-nums; */
   transition: border-color var(--dur-fast) var(--ease);
 }
 

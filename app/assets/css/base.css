@@ -25,9 +25,9 @@ body {
   color: var(--c-fg);
   font-family: var(--f-text);
   font-size: var(--t-1p5);
-  font-feature-settings: "kern", "liga", "calt", "zero";
+  /* font-feature-settings: "kern", "liga", "calt", "zero"; */
   font-variant-ligatures: contextual;
-  font-variant-numeric: tabular-nums;
+  /* font-variant-numeric: tabular-nums; */
   /* line-height: 1.55; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
