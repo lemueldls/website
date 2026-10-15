@@ -184,6 +184,18 @@ export default defineNuxtConfig({
         weights: [400, 600],
         global: true,
       },
+      {
+        name: "Asterism Code",
+        provider: "assets",
+        weights: [400, 600],
+        global: true,
+      },
+      {
+        name: "Asterism Term",
+        provider: "assets",
+        weights: [400, 600],
+        global: true,
+      },
       ...sampleFontFamilies,
     ],
   },
