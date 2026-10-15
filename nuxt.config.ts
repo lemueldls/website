@@ -13,7 +13,8 @@ const fontsMeta = JSON.parse(
 ) as FontsIndex;
 
 const SAMPLE_CUTS = [
-  // "Asterism Slim",
+  // "Asterism Text",
+  "Asterism Slim",
   // "Asterism Code",
   // "Asterism Term",
   "Asterism Ruby",
