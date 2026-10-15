@@ -109,6 +109,7 @@ function onOpenChange(next: boolean) {
   letter-spacing: 0.08em;
   text-transform: lowercase;
   color: var(--c-accent);
+  transition: color var(--dur) var(--ease);
 }
 
 .dialog__close {

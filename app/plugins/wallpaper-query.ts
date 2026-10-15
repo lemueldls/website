@@ -1,4 +1,4 @@
-import { WALLPAPER_APPLIED_KEY, WALLPAPER_APPLY_KEY } from "#shared/assets";
+import { WALLPAPER_APPLIED_KEY, WALLPAPER_APPLY_KEY, WALLPAPER_NONE } from "#shared/assets";
 
 const APPLY_KEYS = [WALLPAPER_APPLY_KEY, WALLPAPER_APPLIED_KEY] as const;
 
@@ -9,13 +9,15 @@ export default defineNuxtPlugin(() => {
   const route = useRoute();
   const { setWallpaper } = useWallpaper();
 
-  function requested(): string | null {
+  function requested(): { file: string | null } | null {
     for (const key of APPLY_KEYS) {
       const raw = route.query[key];
       if (typeof raw !== "string") continue;
 
+      if (raw === WALLPAPER_NONE) return { file: null };
+
       const file = resolveWallpaperRef(raw);
-      if (file) return file;
+      if (file) return { file };
     }
 
     return null;
@@ -30,8 +32,8 @@ export default defineNuxtPlugin(() => {
     router.replace({ query });
   }
 
-  const file = requested();
-  if (file) setWallpaper(file);
+  const command = requested();
+  if (command) setWallpaper(command.file);
 
   onMounted(stripApplyKeys);
 
@@ -39,7 +41,7 @@ export default defineNuxtPlugin(() => {
     () => route.query,
     () => {
       const next = requested();
-      if (next) setWallpaper(next);
+      if (next) setWallpaper(next.file);
 
       stripApplyKeys();
     },

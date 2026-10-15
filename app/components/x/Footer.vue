@@ -171,6 +171,7 @@ const { socials, email, rings } = useAbout();
   margin-left: 0.25em;
   margin-right: 0.125em;
   color: var(--c-dimmer);
+  transition: color var(--dur-fast) var(--ease);
 }
 
 .ftr__social-link:hover .ftr__social-icon {

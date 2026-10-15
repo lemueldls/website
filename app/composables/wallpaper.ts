@@ -7,6 +7,7 @@ import wallsMeta from "~/assets/walls.meta.json";
 import {
   wallpaperThumbUrl,
   WALLPAPER_HUES,
+  WALLPAPER_NONE,
   type WallpaperVariant,
   type WallpaperMeta,
   type WallpaperHue,
@@ -148,10 +149,10 @@ interface WallpaperState {
 const useSharedWallpaper = createSharedComposable(() => {
   const { resolvedTheme } = useTheme();
 
-  const NONE = "";
+  const EMPTY = "";
 
   const wallpaperCookie = useCookie<string>("x-wallpaper", {
-    default: () => NONE,
+    default: () => EMPTY,
     maxAge: 60 * 60 * 24 * 365,
     sameSite: "lax",
     path: "/",
@@ -162,7 +163,7 @@ const useSharedWallpaper = createSharedComposable(() => {
     return file && file in wallpapers ? file : null;
   });
 
-  const untouched = computed(() => wallpaperCookie.value === NONE);
+  const untouched = computed(() => wallpaperCookie.value === EMPTY);
 
   const meta = computed(() => (selected.value ? wallpapers[selected.value] : null));
 
@@ -183,12 +184,14 @@ const useSharedWallpaper = createSharedComposable(() => {
       : (meta.value.accentLight ?? meta.value.accent);
   });
 
-  const accentOverride = computed<string>(() =>
-    accent.value ? `--c-accent: ${accent.value};` : "",
-  );
+  const accentOverride = computed<string>(() => {
+    if (accent.value) return `--c-accent: ${accent.value};`;
+
+    return untouched.value ? "" : "--c-accent: var(--c-accent-teal);";
+  });
 
   function setWallpaper(file: string | null) {
-    wallpaperCookie.value = file && file in wallpapers ? file : NONE;
+    wallpaperCookie.value = file && file in wallpapers ? file : WALLPAPER_NONE;
   }
 
   function randomWallpaper(): string | null {

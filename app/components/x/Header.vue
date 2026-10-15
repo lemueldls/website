@@ -193,6 +193,7 @@ onBeforeUnmount(() => {
 .hdr__sigil {
   color: var(--c-accent);
   margin-left: var(--space-1);
+  transition: color var(--dur) var(--ease);
 }
 
 .hdr__wordmark {
@@ -208,6 +209,7 @@ onBeforeUnmount(() => {
 
 .hdr__last-name {
   color: var(--c-dim);
+  transition: color var(--dur-fast) var(--ease);
 }
 
 .hdr__mark:hover .hdr__last-name {

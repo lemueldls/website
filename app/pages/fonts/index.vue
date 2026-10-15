@@ -381,6 +381,7 @@ defineOgImage("Root", {
   letter-spacing: 0.08em;
   font-variant: small-caps;
   color: var(--c-accent);
+  transition: color var(--dur) var(--ease);
 }
 
 .patch__note {
@@ -434,6 +435,9 @@ defineOgImage("Root", {
 .inventory a {
   text-decoration: none;
   border-bottom: var(--rule-width) solid transparent;
+  transition:
+    color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
 }
 
 .inventory a:hover {

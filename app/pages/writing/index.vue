@@ -165,6 +165,7 @@ defineOgImage("Root", {
   letter-spacing: 0.06em;
   text-transform: lowercase;
   color: var(--c-accent);
+  transition: color var(--dur) var(--ease);
 }
 
 .entry__more :deep(svg) {

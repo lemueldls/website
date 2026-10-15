@@ -20,6 +20,8 @@ export const WALLPAPER_APPLY_KEY = "i";
 export const WALLPAPER_INSPECT_KEY = "v";
 export const WALLPAPER_APPLIED_KEY = "a";
 
+export const WALLPAPER_NONE = "0";
+
 export interface FontMetrics {
   unitsPerEm: number;
   glyphs: number;

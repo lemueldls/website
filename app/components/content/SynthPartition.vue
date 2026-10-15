@@ -367,6 +367,7 @@ function listing(block: Block) {
   font-family: var(--f-label);
   font-size: var(--t-7);
   color: var(--c-accent);
+  transition: color var(--dur) var(--ease);
 }
 
 .partition__drop {

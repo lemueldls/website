@@ -243,6 +243,7 @@ const pdfHref = computed(() => {
 
 .cv__preview-bar .label {
   color: var(--c-accent);
+  transition: color var(--dur) var(--ease);
 }
 
 .cv__preview-note {

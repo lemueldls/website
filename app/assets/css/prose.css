@@ -175,7 +175,9 @@
   text-decoration-color: var(--c-accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.22em;
-  transition: color var(--dur-fast) var(--ease);
+  transition:
+    color var(--dur-fast) var(--ease),
+    text-decoration-color var(--dur) var(--ease);
 }
 
 .prose a:hover {

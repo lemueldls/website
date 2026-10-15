@@ -284,6 +284,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   margin-left: 0.25em;
   margin-right: 0.125em;
   color: var(--c-dimmer);
+  transition: color var(--dur-fast) var(--ease);
 }
 
 .hero__social-link:hover .hero__social-icon {
@@ -302,6 +303,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__disciplines li::before {
   content: "+ ";
   color: var(--c-accent);
+  transition: color var(--dur) var(--ease);
 }
 
 .hero__work {

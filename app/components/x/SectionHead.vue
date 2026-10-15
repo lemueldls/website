@@ -37,6 +37,7 @@ defineProps<{
   font-variant: small-caps;
   color: var(--c-accent);
   white-space: nowrap;
+  transition: color var(--dur) var(--ease);
 }
 
 .section-head__leader {

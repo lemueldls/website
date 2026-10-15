@@ -14,11 +14,10 @@
   --c-dim: #9399b2;
   --c-dimmer: #6c7086;
 
-  --c-accent: #00a896;
+  --c-accent: var(--c-fg);
   --c-accent-contrast: #11111b;
   --c-mark: #cba6f7;
 
-  /* Semantic tones for inline code marks and MDC callouts. */
   --c-danger: #f38ba8;
   --c-error: #f38ba8;
   --c-info: #89b4fa;
@@ -47,11 +46,10 @@
   --c-dim: #4c4f69;
   --c-dimmer: #6c7086;
 
-  --c-accent: #00a896;
+  --c-accent: var(--c-fg);
   --c-accent-contrast: #ffffff;
   --c-mark: #8839ef;
 
-  /* Semantic tones for inline code marks and MDC callouts. */
   --c-danger: #d20f39;
   --c-error: #d20f39;
   --c-info: #1e66f5;
@@ -140,4 +138,6 @@
   --wallpaper-opacity: 0.055;
   --leading: 1.55;
   --f-display-weight: 600;
+
+  --c-accent-teal: #00a896;
 }

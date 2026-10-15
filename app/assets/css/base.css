@@ -26,7 +26,7 @@ body {
   font-family: var(--f-text);
   font-size: var(--t-1p5);
   /* font-feature-settings: "kern", "liga", "calt", "zero"; */
-  font-variant-ligatures: contextual;
+  /* font-variant-ligatures: contextual; */
   /* font-variant-numeric: tabular-nums; */
   /* line-height: 1.55; */
   text-rendering: optimizeLegibility;
@@ -85,7 +85,9 @@ a {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.22em;
-  transition: color var(--dur-fast) var(--ease);
+  transition:
+    color var(--dur-fast) var(--ease),
+    text-decoration-color var(--dur-fast) var(--ease);
 }
 
 a:hover {
@@ -103,7 +105,7 @@ samp,
 pre {
   font-family: var(--f-mono);
   font-size: 0.92em;
-  font-variant-ligatures: none;
+  /* font-variant-ligatures: none; */
 }
 
 code {

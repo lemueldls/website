@@ -12,6 +12,7 @@
 
 .label--accent {
   color: var(--c-accent);
+  transition: color var(--dur) var(--ease);
 }
 
 .label--strong {

@@ -279,6 +279,7 @@ function toggleTechnology(name: string) {
 .project__role {
   color: var(--c-accent);
   text-transform: lowercase;
+  transition: color var(--dur) var(--ease);
 }
 
 .project__description {

@@ -96,6 +96,7 @@ function onChange(value: unknown) {
 
 .tabs__count {
   color: var(--c-dimmer);
+  transition: color var(--dur-fast) var(--ease);
 }
 
 .tabs__trigger[data-state="active"] .tabs__count {
