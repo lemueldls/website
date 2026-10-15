@@ -173,7 +173,7 @@ watch([() => props.meta?.file, variant], async () => {
             <XIcon name="material-symbols:check-sharp" />
             Apply
           </XButton>
-          <XButton v-else variant="ghost" block @click="emit('apply', false)">Remove</XButton>
+          <XButton v-else variant="rule" block @click="emit('apply', false)">Remove</XButton>
 
           <XButton
             :href="wallpaperUrl(meta.file, variant)"
@@ -189,7 +189,7 @@ watch([() => props.meta?.file, variant], async () => {
 
         <div class="lightbox__nav">
           <XButton
-            variant="rule"
+            variant="ghost"
             title="Previous wallpaper"
             aria-label="Previous wallpaper"
             class="lightbox__prev"
@@ -199,7 +199,7 @@ watch([() => props.meta?.file, variant], async () => {
             Previous
           </XButton>
           <XButton
-            variant="rule"
+            variant="ghost"
             title="Next wallpaper"
             aria-label="Next wallpaper"
             class="lightbox__next"
