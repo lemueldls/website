@@ -12,7 +12,12 @@ const fontsMeta = JSON.parse(
   readFileSync(new URL("./app/assets/fonts.meta.json", import.meta.url), "utf-8"),
 ) as FontsIndex;
 
-const SAMPLE_CUTS = ["Asterism Slim", "Asterism Code", "Asterism Term", "Asterism Ruby"] as const;
+const SAMPLE_CUTS = [
+  // "Asterism Slim",
+  // "Asterism Code",
+  // "Asterism Term",
+  "Asterism Ruby",
+] as const;
 
 const sampleGlyphs = Object.fromEntries(
   SAMPLE_CUTS.flatMap((name) => {
@@ -196,7 +201,7 @@ export default defineNuxtConfig({
         weights: [400],
         global: true,
       },
-      // ...sampleFontFamilies,
+      ...sampleFontFamilies,
     ],
   },
 
