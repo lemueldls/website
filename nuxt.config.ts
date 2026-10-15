@@ -187,16 +187,16 @@ export default defineNuxtConfig({
       {
         name: "Asterism Code",
         provider: "assets",
-        weights: [400, 600],
+        weights: [400],
         global: true,
       },
       {
         name: "Asterism Term",
         provider: "assets",
-        weights: [400, 600],
+        weights: [400],
         global: true,
       },
-      ...sampleFontFamilies,
+      // ...sampleFontFamilies,
     ],
   },
 
