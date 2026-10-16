@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const { toggleTheme, resolvedTheme } = useTheme();
-
-const isDark = computed(() => resolvedTheme.value === "dark");
-const themeLabel = computed(() => (isDark.value ? "Switch to Light" : "Switch to Dark"));
+const { toggleTheme } = useTheme();
 
 const nav = [
   { to: "/cv", label: "Curriculum Vitae" },
@@ -103,13 +100,20 @@ onBeforeUnmount(() => {
           </nav>
 
           <div class="hdr__tools">
-            <XButton variant="ghost" square :title="themeLabel" @click="toggleTheme()">
+            <XButton
+              variant="ghost"
+              square
+              title="Toggle theme"
+              aria-label="Toggle theme"
+              @click="toggleTheme()"
+            >
               <XIcon
-                :name="
-                  isDark
-                    ? 'material-symbols:dark-mode-outline-sharp'
-                    : 'material-symbols:light-mode-outline-sharp'
-                "
+                class="hdr__icon hdr__icon--dark"
+                name="material-symbols:dark-mode-outline-sharp"
+              />
+              <XIcon
+                class="hdr__icon hdr__icon--light"
+                name="material-symbols:light-mode-outline-sharp"
               />
             </XButton>
 
@@ -265,6 +269,11 @@ onBeforeUnmount(() => {
 .hdr__link--active {
   color: var(--c-accent);
   box-shadow: inset 0 -2px 0 var(--c-accent);
+}
+
+[data-theme="dark"] .hdr__icon--dark,
+[data-theme="light"] .hdr__icon--light {
+  display: none;
 }
 
 .hdr__tools {

@@ -1,6 +1,6 @@
 import { createSharedComposable } from "@vueuse/core";
 
-export type ThemeName = "dark" | "light" | "system";
+export type ThemeName = "dark" | "light";
 
 const STORAGE_KEY = "x-theme";
 
@@ -30,9 +30,9 @@ const useSharedTheme = createSharedComposable(() => {
   }
 
   const resolvedTheme = computed<"dark" | "light">(() => {
-    const pref = stored.value ?? "dark";
-    if (pref === "system") return prefersLight.value ? "light" : "dark";
-    return pref;
+    const pref = stored.value;
+    if (pref === "dark" || pref === "light") return pref;
+    return prefersLight.value ? "light" : "dark";
   });
 
   function setTheme(next: ThemeName) {

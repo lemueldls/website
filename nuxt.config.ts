@@ -58,6 +58,19 @@ export default defineNuxtConfig({
       templateParams: { separator: "//" },
       htmlAttrs: { lang: "en" },
       link: [{ key: "icon", rel: "icon", type: "image/svg+xml", href: "/icon.svg" }],
+      script: [
+        {
+          innerHTML:
+            "(function(){try{" +
+            "var m=document.cookie.match(/(?:^|;\\s*)x-theme=([^;]+)/);" +
+            'var p=m?decodeURIComponent(m[1]):"";' +
+            'var light=p==="light"||(p!=="dark"&&window.matchMedia("(prefers-color-scheme: light)").matches);' +
+            "var e=document.documentElement;" +
+            'e.setAttribute("data-theme",light?"light":"dark");' +
+            'e.style.colorScheme=light?"light":"dark";' +
+            "}catch(_){}})();",
+        },
+      ],
     },
   },
 
