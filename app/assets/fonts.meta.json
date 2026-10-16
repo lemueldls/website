@@ -55,7 +55,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 523116
+        "bytes": 522608
       },
       {
         "name": "Asterism Code",
@@ -111,7 +111,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 582236,
+        "bytes": 582456,
         "style": "italic"
       },
       {
@@ -168,7 +168,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 520972
+        "bytes": 521192
       },
       {
         "name": "Asterism Code",
@@ -224,7 +224,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 583236,
+        "bytes": 583532,
         "style": "italic"
       },
       {
@@ -281,7 +281,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 523148
+        "bytes": 523492
       },
       {
         "name": "Asterism Code",
@@ -337,7 +337,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 583220,
+        "bytes": 583312,
         "style": "italic"
       },
       {
@@ -394,7 +394,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 521916
+        "bytes": 522292
       },
       {
         "name": "Asterism Code",
@@ -450,7 +450,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 586188,
+        "bytes": 586848,
         "style": "italic"
       },
       {
@@ -507,7 +507,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 523036
+        "bytes": 522732
       },
       {
         "name": "Asterism Code",
@@ -563,7 +563,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 586440,
+        "bytes": 586864,
         "style": "italic"
       },
       {
@@ -620,7 +620,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 502712
+        "bytes": 502668
       },
       {
         "name": "Asterism Code",
@@ -676,7 +676,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 562124,
+        "bytes": 561776,
         "style": "italic"
       },
       {
@@ -733,7 +733,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4859964
+        "bytes": 4860680
       },
       {
         "name": "Asterism Code",
@@ -789,7 +789,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 5003720,
+        "bytes": 5004436,
         "style": "italic"
       },
       {
@@ -846,7 +846,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4856288
+        "bytes": 4857000
       },
       {
         "name": "Asterism Code",
@@ -902,7 +902,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 5008236,
+        "bytes": 5008952,
         "style": "italic"
       },
       {
@@ -959,7 +959,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4872948
+        "bytes": 4873664
       },
       {
         "name": "Asterism Code",
@@ -1015,7 +1015,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 5026108,
+        "bytes": 5026820,
         "style": "italic"
       },
       {
@@ -1072,7 +1072,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4864612
+        "bytes": 4865328
       },
       {
         "name": "Asterism Code",
@@ -1128,7 +1128,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 5024380,
+        "bytes": 5025096,
         "style": "italic"
       },
       {
@@ -1185,7 +1185,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4874192
+        "bytes": 4874904
       },
       {
         "name": "Asterism Code",
@@ -1241,7 +1241,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 5029756,
+        "bytes": 5030472,
         "style": "italic"
       },
       {
@@ -1298,7 +1298,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4876248
+        "bytes": 4876960
       },
       {
         "name": "Asterism Code",
@@ -1354,7 +1354,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 5022872,
+        "bytes": 5023588,
         "style": "italic"
       }
     ],
@@ -1381,11 +1381,22 @@
           "lnum",
           "numr",
           "onum",
+          "zero",
+          "APLF",
+          "MOSC",
+          "NWID",
+          "THND",
+          "WWID",
+          "dnom",
+          "frac",
+          "lnum",
+          "numr",
+          "onum",
           "zero"
         ],
         "metrics": {
           "unitsPerEm": 1000,
-          "glyphs": 32595,
+          "glyphs": 52140,
           "ascender": 969,
           "descender": -241,
           "xHeight": 545,
@@ -1393,7 +1404,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3857872
+        "bytes": 6647384
       },
       {
         "name": "Asterism Ruby",
@@ -1417,11 +1428,22 @@
           "lnum",
           "numr",
           "onum",
+          "zero",
+          "APLF",
+          "MOSC",
+          "NWID",
+          "THND",
+          "WWID",
+          "dnom",
+          "frac",
+          "lnum",
+          "numr",
+          "onum",
           "zero"
         ],
         "metrics": {
           "unitsPerEm": 1000,
-          "glyphs": 32595,
+          "glyphs": 52140,
           "ascender": 969,
           "descender": -241,
           "xHeight": 545,
@@ -1429,7 +1451,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3896052
+        "bytes": 6713228
       },
       {
         "name": "Asterism Ruby",
@@ -1453,11 +1475,22 @@
           "lnum",
           "numr",
           "onum",
+          "zero",
+          "APLF",
+          "MOSC",
+          "NWID",
+          "THND",
+          "WWID",
+          "dnom",
+          "frac",
+          "lnum",
+          "numr",
+          "onum",
           "zero"
         ],
         "metrics": {
           "unitsPerEm": 1000,
-          "glyphs": 32595,
+          "glyphs": 52140,
           "ascender": 969,
           "descender": -241,
           "xHeight": 545,
@@ -1465,7 +1498,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3936572
+        "bytes": 6776480
       },
       {
         "name": "Asterism Ruby",
@@ -1489,11 +1522,22 @@
           "lnum",
           "numr",
           "onum",
+          "zero",
+          "APLF",
+          "MOSC",
+          "NWID",
+          "THND",
+          "WWID",
+          "dnom",
+          "frac",
+          "lnum",
+          "numr",
+          "onum",
           "zero"
         ],
         "metrics": {
           "unitsPerEm": 1000,
-          "glyphs": 32784,
+          "glyphs": 60307,
           "ascender": 969,
           "descender": -241,
           "xHeight": 545,
@@ -1501,7 +1545,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3564424
+        "bytes": 7120124
       },
       {
         "name": "Asterism Ruby",
@@ -1525,11 +1569,22 @@
           "lnum",
           "numr",
           "onum",
+          "zero",
+          "APLF",
+          "MOSC",
+          "NWID",
+          "THND",
+          "WWID",
+          "dnom",
+          "frac",
+          "lnum",
+          "numr",
+          "onum",
           "zero"
         ],
         "metrics": {
           "unitsPerEm": 1000,
-          "glyphs": 32784,
+          "glyphs": 60307,
           "ascender": 969,
           "descender": -241,
           "xHeight": 545,
@@ -1537,7 +1592,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3606836
+        "bytes": 7184224
       },
       {
         "name": "Asterism Ruby",
@@ -1561,11 +1616,22 @@
           "lnum",
           "numr",
           "onum",
+          "zero",
+          "APLF",
+          "MOSC",
+          "NWID",
+          "THND",
+          "WWID",
+          "dnom",
+          "frac",
+          "lnum",
+          "numr",
+          "onum",
           "zero"
         ],
         "metrics": {
           "unitsPerEm": 1000,
-          "glyphs": 32784,
+          "glyphs": 60307,
           "ascender": 969,
           "descender": -241,
           "xHeight": 545,
@@ -1573,7 +1639,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 3644588
+        "bytes": 7243656
       }
     ],
     "Asterism Slim": [
@@ -1611,7 +1677,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 513924
+        "bytes": 513952
       },
       {
         "name": "Asterism Slim",
@@ -1647,7 +1713,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 573428,
+        "bytes": 574072,
         "style": "italic"
       },
       {
@@ -1684,7 +1750,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 514756
+        "bytes": 515024
       },
       {
         "name": "Asterism Slim",
@@ -1720,7 +1786,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 573764,
+        "bytes": 573756,
         "style": "italic"
       },
       {
@@ -1757,7 +1823,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 512036
+        "bytes": 512084
       },
       {
         "name": "Asterism Slim",
@@ -1793,7 +1859,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 572600,
+        "bytes": 572780,
         "style": "italic"
       },
       {
@@ -1830,7 +1896,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 513136
+        "bytes": 512696
       },
       {
         "name": "Asterism Slim",
@@ -1866,7 +1932,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 573996,
+        "bytes": 574560,
         "style": "italic"
       },
       {
@@ -1903,7 +1969,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 512540
+        "bytes": 512780
       },
       {
         "name": "Asterism Slim",
@@ -1939,7 +2005,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 571420,
+        "bytes": 571276,
         "style": "italic"
       },
       {
@@ -1976,7 +2042,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 491440
+        "bytes": 491940
       },
       {
         "name": "Asterism Slim",
@@ -2012,7 +2078,7 @@
           "measure": 0.5,
           "spacing": "proportional"
         },
-        "bytes": 547348,
+        "bytes": 547504,
         "style": "italic"
       }
     ],
@@ -2069,7 +2135,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 431700
+        "bytes": 431908
       },
       {
         "name": "Asterism Term",
@@ -2123,7 +2189,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 479368,
+        "bytes": 479104,
         "style": "italic"
       },
       {
@@ -2178,7 +2244,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 430356
+        "bytes": 429980
       },
       {
         "name": "Asterism Term",
@@ -2232,7 +2298,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 479720,
+        "bytes": 480064,
         "style": "italic"
       },
       {
@@ -2287,7 +2353,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 428824
+        "bytes": 428908
       },
       {
         "name": "Asterism Term",
@@ -2341,7 +2407,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 479136,
+        "bytes": 479320,
         "style": "italic"
       },
       {
@@ -2396,7 +2462,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 429204
+        "bytes": 429364
       },
       {
         "name": "Asterism Term",
@@ -2450,7 +2516,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 481828,
+        "bytes": 481552,
         "style": "italic"
       },
       {
@@ -2505,7 +2571,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 429660
+        "bytes": 429840
       },
       {
         "name": "Asterism Term",
@@ -2559,7 +2625,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 481520,
+        "bytes": 481364,
         "style": "italic"
       },
       {
@@ -2614,7 +2680,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 408040
+        "bytes": 408044
       },
       {
         "name": "Asterism Term",
@@ -2668,7 +2734,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 456188,
+        "bytes": 456288,
         "style": "italic"
       },
       {
@@ -2723,7 +2789,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4273428
+        "bytes": 4274144
       },
       {
         "name": "Asterism Term",
@@ -2777,7 +2843,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4380872,
+        "bytes": 4381588,
         "style": "italic"
       },
       {
@@ -2832,7 +2898,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4272176
+        "bytes": 4272888
       },
       {
         "name": "Asterism Term",
@@ -2886,7 +2952,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4383020,
+        "bytes": 4383736,
         "style": "italic"
       },
       {
@@ -2941,7 +3007,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4266852
+        "bytes": 4267568
       },
       {
         "name": "Asterism Term",
@@ -2995,7 +3061,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4389064,
+        "bytes": 4389776,
         "style": "italic"
       },
       {
@@ -3050,7 +3116,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4271672
+        "bytes": 4272388
       },
       {
         "name": "Asterism Term",
@@ -3104,7 +3170,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4394552,
+        "bytes": 4395268,
         "style": "italic"
       },
       {
@@ -3159,7 +3225,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4278072
+        "bytes": 4278784
       },
       {
         "name": "Asterism Term",
@@ -3213,7 +3279,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4399348,
+        "bytes": 4400064,
         "style": "italic"
       },
       {
@@ -3268,7 +3334,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4273784
+        "bytes": 4274496
       },
       {
         "name": "Asterism Term",
@@ -3322,7 +3388,7 @@
           "measure": 0.6,
           "spacing": "monospaced"
         },
-        "bytes": 4390048,
+        "bytes": 4390764,
         "style": "italic"
       }
     ],
@@ -3361,7 +3427,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 514028
+        "bytes": 513968
       },
       {
         "name": "Asterism Text",
@@ -3397,7 +3463,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 570952,
+        "bytes": 571456,
         "style": "italic"
       },
       {
@@ -3434,7 +3500,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 511752
+        "bytes": 512244
       },
       {
         "name": "Asterism Text",
@@ -3470,7 +3536,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 572528,
+        "bytes": 572840,
         "style": "italic"
       },
       {
@@ -3507,7 +3573,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 510600
+        "bytes": 510000
       },
       {
         "name": "Asterism Text",
@@ -3543,7 +3609,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 570340,
+        "bytes": 570876,
         "style": "italic"
       },
       {
@@ -3580,7 +3646,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 509776
+        "bytes": 510028
       },
       {
         "name": "Asterism Text",
@@ -3616,7 +3682,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 574060,
+        "bytes": 574044,
         "style": "italic"
       },
       {
@@ -3653,7 +3719,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 511256
+        "bytes": 511312
       },
       {
         "name": "Asterism Text",
@@ -3689,7 +3755,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 574004,
+        "bytes": 573508,
         "style": "italic"
       },
       {
@@ -3726,7 +3792,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 490080
+        "bytes": 490320
       },
       {
         "name": "Asterism Text",
@@ -3762,7 +3828,7 @@
           "measure": 0.6,
           "spacing": "proportional"
         },
-        "bytes": 547932,
+        "bytes": 548288,
         "style": "italic"
       }
     ]
@@ -3771,70 +3837,70 @@
     "Asterism Text": [
       {
         "format": "truetype",
-        "bytes": 24953319,
+        "bytes": 24961815,
         "patch": "base"
       },
       {
         "format": "woff2",
-        "bytes": 6463495,
+        "bytes": 6465071,
         "patch": "base"
       }
     ],
     "Asterism Slim": [
       {
         "format": "truetype",
-        "bytes": 25715339,
+        "bytes": 25723835,
         "patch": "base"
       },
       {
         "format": "woff2",
-        "bytes": 6476575,
+        "bytes": 6478611,
         "patch": "base"
       }
     ],
     "Asterism Code": [
       {
         "format": "truetype",
-        "bytes": 25700103,
+        "bytes": 25708599,
         "patch": "base"
       },
       {
         "format": "woff2",
-        "bytes": 6604531,
+        "bytes": 6605959,
         "patch": "base"
       }
     ],
     "Asterism Term": [
       {
         "format": "truetype",
-        "bytes": 20518431,
+        "bytes": 20526927,
         "patch": "base"
       },
       {
         "format": "woff2",
-        "bytes": 5421731,
+        "bytes": 5421923,
         "patch": "base"
       }
     ],
     "Asterism Ruby": [
       {
         "format": "truetype",
-        "bytes": 48458845,
+        "bytes": 99804989,
         "patch": "Pinyin"
       },
       {
         "format": "woff2",
-        "bytes": 11695517,
+        "bytes": 20142113,
         "patch": "Pinyin"
       },
       {
         "format": "truetype",
-        "bytes": 26207093,
+        "bytes": 130548069,
         "patch": "Romaji"
       },
       {
         "format": "woff2",
-        "bytes": 10820869,
+        "bytes": 21553025,
         "patch": "Romaji"
       }
     ]
