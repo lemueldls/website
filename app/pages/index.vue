@@ -54,7 +54,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         <div class="hero__col">
           <XLabel>Pronouns</XLabel>
           <p class="hero__value">he/him</p>
-          <span :style="{ height: '1em' }" />
+          <span :style="{ height: '0.5em' }" />
           <XLabel>Location</XLabel>
           <p class="hero__value">New York, NY</p>
         </div>
@@ -142,7 +142,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         <XButton to="/cv" variant="sheet">Curriculum Vitae</XButton>
         <XButton to="/projects" variant="accent">
           All projects
-          <XIcon name="material-symbols:arrow-right-alt-rounded" />
+          <!-- <XIcon name="material-symbols:arrow-right-alt-rounded" /> -->
         </XButton>
       </div>
     </XSection>
@@ -165,7 +165,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
       <div class="hero__writing-actions">
         <XButton to="/writing" variant="accent">
           All writing
-          <XIcon name="material-symbols:arrow-right-alt-rounded" />
+          <!-- <XIcon name="material-symbols:arrow-right-alt-rounded" /> -->
         </XButton>
       </div>
     </XSection>
