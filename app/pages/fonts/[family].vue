@@ -134,7 +134,12 @@ function useAsDisplayFace() {
 <template>
   <div class="family sheet-grid">
     <header class="family__head">
-      <XLabel variant="accent">Specimen</XLabel>
+      <div class="head-row">
+        <XLabel variant="accent">Specimen</XLabel>
+        <XLink to="/fonts" class="backlink">
+          <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All fonts
+        </XLink>
+      </div>
       <h1 class="family__name" :style="{ fontFamily: `'${family}'` }">{{ family }}</h1>
 
       <p class="meta family__metrics">
@@ -281,7 +286,7 @@ function useAsDisplayFace() {
       </XSheet>
     </XSection>
 
-    <XLink to="/fonts" class="family__back">
+    <XLink to="/fonts" class="backlink">
       <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All fonts
     </XLink>
 
@@ -414,13 +419,6 @@ function useAsDisplayFace() {
   overflow-wrap: break-word;
   line-height: 1.7;
   color: var(--c-dim);
-}
-
-.family__back {
-  font-family: var(--f-label);
-  font-size: var(--t-8);
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
 }
 
 .family__inventory {

@@ -54,7 +54,12 @@ defineOgImage(
 <template>
   <article class="article sheet-grid">
     <header class="article__head">
-      <p class="label label--accent">Article</p>
+      <div class="head-row">
+        <p class="label label--accent">Article</p>
+        <XLink to="/writing" class="backlink">
+          <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All writing
+        </XLink>
+      </div>
 
       <h1 class="article__title">{{ title }}</h1>
 
@@ -74,7 +79,7 @@ defineOgImage(
       <div class="prose prose--wide article__body">
         <ContentRenderer v-if="post" :value="post" />
 
-        <XLink to="/writing" class="article__back">
+        <XLink to="/writing" class="backlink article__back">
           <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All writing
         </XLink>
       </div>
@@ -129,15 +134,9 @@ defineOgImage(
 }
 
 .article__back {
-  display: inline-block;
-  width: 100%;
   margin-top: var(--space-9);
   padding-top: var(--space-5);
   /* border-top: var(--rule-width) solid var(--c-rule); */
-  font-family: var(--f-label);
-  font-size: var(--t-8);
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
 }
 
 /* .article__body :deep(.katex-display) {

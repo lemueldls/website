@@ -45,7 +45,12 @@ const neighbours = computed(() => {
 <template>
   <article v-if="entry" class="detail sheet-grid">
     <header class="detail__head">
-      <p class="label label--accent">{{ entry.role }}</p>
+      <div class="head-row">
+        <p class="label label--accent">{{ entry.role }}</p>
+        <XLink to="/projects" class="backlink">
+          <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All projects
+        </XLink>
+      </div>
 
       <h1 class="detail__title">{{ entry.name }}</h1>
 

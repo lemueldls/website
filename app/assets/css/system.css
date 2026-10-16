@@ -39,6 +39,23 @@
   font-weight: 600;
 }
 
+.head-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+}
+
+.backlink {
+  flex-shrink: 0;
+  justify-self: start;
+  font-family: var(--f-label);
+  font-size: var(--t-8);
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+
 .sheet-grid {
   display: grid;
   grid-template-columns: minmax(0, calc(var(--sheet-max) - var(--gutter) * 2));
