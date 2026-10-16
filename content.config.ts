@@ -24,8 +24,9 @@ export default defineContentConfig({
       schema: z.object({
         name: z.string(),
         role: z.string(),
-        date: z.string(),
-        endDate: z.optional(z.string()),
+        since: z.string(),
+        lastActive: z.optional(z.string()),
+        status: z.optional(z.enum(["active", "maintained", "dormant", "archived"])),
         description: z.string(),
         technologies: z.array(z.string()).default([]),
         github: z.optional(z.string()),

@@ -40,6 +40,11 @@ export interface GitHubStats {
 
 export type TopLanguage = Language;
 
+export interface RepoActivity {
+  pushedAt: string;
+  archived: boolean;
+}
+
 export interface RepoMeta {
   name: string;
   fullName: string;

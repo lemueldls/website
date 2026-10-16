@@ -1,8 +1,9 @@
 ---
 name: Language of Meaning & Types
 role: Creator
-date: 2024-03-01
-endDate: 2024-06-30
+since: 2024-03
+lastActive: 2024-06
+status: archived
 description: Language of Meaning and Types (LMT) is a proof-oriented meta-programming and specification language.
 technologies:
   - Rust

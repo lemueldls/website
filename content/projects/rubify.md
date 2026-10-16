@@ -1,8 +1,9 @@
 ---
 name: Rubify
 role: Creator
-date: 2026-01-01
-endDate: 2026-03-31
+since: 2026-01
+lastActive: 2026-03
+status: archived
 description: Rubify is a program made to automatically annotate any font with ruby characters.
 technologies:
   - Rust

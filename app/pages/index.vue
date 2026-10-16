@@ -13,9 +13,7 @@ defineOgImage("Root", {
 
 const { projects, socials, email, rings } = useAbout();
 
-const currentProjects = computed(() =>
-  projects.value.filter((p) => p.to === "Present").slice(0, 2),
-);
+const currentProjects = computed(() => projects.value.filter(isActiveProject).slice(0, 2));
 
 const { selected, randomWallpaper } = useWallpaper();
 
@@ -128,7 +126,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
           <span class="hero__work-meta meta">
             <span class="hero__work-role">{{ project.role }}</span>
             <span class="hero__work-dot" aria-hidden="true">//</span>
-            since <span class="num">{{ project.from }}</span>
+            <span class="num">{{ formatProjectDates(project) }}</span>
           </span>
 
           <span class="hero__work-links">
@@ -142,7 +140,10 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 
       <div class="hero__actions">
         <XButton to="/cv" variant="sheet">Curriculum Vitae</XButton>
-        <XButton to="/projects" variant="rule">All projects</XButton>
+        <XButton to="/projects" variant="accent">
+          All projects
+          <XIcon name="material-symbols:arrow-right-alt-rounded" />
+        </XButton>
       </div>
     </XSection>
 
@@ -162,7 +163,10 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
       </ul>
 
       <div class="hero__writing-actions">
-        <XButton to="/writing" variant="rule">All writing</XButton>
+        <XButton to="/writing" variant="accent">
+          All writing
+          <XIcon name="material-symbols:arrow-right-alt-rounded" />
+        </XButton>
       </div>
     </XSection>
   </div>

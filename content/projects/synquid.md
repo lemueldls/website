@@ -1,8 +1,9 @@
 ---
 name: Synquid
 role: Creator
-date: 2024-05-01
-endDate: 2024-08-31
+since: 2024-05
+lastActive: 2024-08
+status: archived
 description: Synquid is a program synthesizer that uses refinement types to generate functional programs.
 technologies:
   - Rust

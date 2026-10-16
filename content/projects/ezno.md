@@ -1,8 +1,9 @@
 ---
 name: Ezno
 role: Contributor
-date: 2024-03-01
-endDate: 2025-02-28
+since: 2024-03
+lastActive: 2025-02
+status: archived
 description: Ezno is a correct and efficient TypeScript type checker and compiler with additional experiments.
 technologies:
   - Rust

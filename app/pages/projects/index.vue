@@ -91,10 +91,7 @@ function toggleTechnology(name: string) {
             <h2 class="project__name">
               <XLink :to="`/projects/${p.slug}`">{{ p.name }}</XLink>
             </h2>
-            <span class="project__date meta">
-              From <span class="project__date-value">{{ p.from }}</span> to
-              <span class="project__date-value">{{ p.to }}</span>
-            </span>
+            <XProjectDates :project="p" />
           </div>
 
           <div class="project__meta">
@@ -251,18 +248,6 @@ function toggleTechnology(name: string) {
   font-family: var(--f-display);
   font-size: var(--t-18);
   font-weight: 600;
-}
-
-.project__date {
-  font-size: var(--t-9);
-  color: var(--c-dim);
-  white-space: nowrap;
-  /* flex-shrink: 0; */
-}
-
-.project__date-value {
-  font-weight: 600;
-  color: var(--c-fg);
 }
 
 .project__meta {

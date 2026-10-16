@@ -2,11 +2,9 @@ import { Octokit } from "octokit";
 
 import { parseMarkdown } from "@nuxtjs/mdc/runtime";
 
-const OWNER = "lemueldls";
-
 const MAX_AGE = 60 * 60;
 
-const NAME_RE = /^[\w][\w.-]{0,99}$/;
+const SEGMENT_RE = /^[\w][\w.-]{0,99}$/;
 
 interface StatsPayload {
   name: string;
@@ -27,25 +25,21 @@ interface StatsPayload {
   pushedAt: string;
   archived: boolean;
   fork: boolean;
-
   readme: string | null;
-
   readmeAst: unknown;
 }
 
 const loadRepo = defineCachedFunction(
-  async (repo: string): Promise<StatsPayload | null> => {
+  async (owner: string, repo: string): Promise<StatsPayload | null> => {
     const octokit = new Octokit({
       auth: useRuntimeConfig().github.token || undefined,
       retry: { limit: 1 },
     });
 
     const [repoRes, readmeRes, languagesRes] = await Promise.all([
-      octokit.rest.repos.get({ owner: OWNER, repo }).catch(() => null),
-      octokit.rest.repos
-        .getReadme({ owner: OWNER, repo, mediaType: { format: "raw" } })
-        .catch(() => null),
-      octokit.rest.repos.listLanguages({ owner: OWNER, repo }).catch(() => null),
+      octokit.rest.repos.get({ owner, repo }).catch(() => null),
+      octokit.rest.repos.getReadme({ owner, repo, mediaType: { format: "raw" } }).catch(() => null),
+      octokit.rest.repos.listLanguages({ owner, repo }).catch(() => null),
     ]);
 
     if (!repoRes?.data) return null;
@@ -54,7 +48,7 @@ const loadRepo = defineCachedFunction(
     const rawReadme = typeof readmeRes?.data === "string" ? readmeRes.data : null;
 
     const readme = rawReadme
-      ? resolveRelativeImages(rawReadme, data.name, data.default_branch)
+      ? resolveRelativeImages(rawReadme, owner, data.name, data.default_branch)
       : null;
 
     return {
@@ -90,8 +84,13 @@ const loadRepo = defineCachedFunction(
   },
 );
 
-function resolveRelativeImages(markdown: string, repo: string, branch: string): string {
-  const root = `https://raw.githubusercontent.com/${OWNER}/${repo}/${branch}/`;
+function resolveRelativeImages(
+  markdown: string,
+  owner: string,
+  repo: string,
+  branch: string,
+): string {
+  const root = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/`;
 
   return markdown.replace(
     /(!\[[^\]]*\]\()\s*([^)\s]+)(\s+(?:"[^"]*"|'[^']*'))?\s*\)/g,
@@ -103,13 +102,18 @@ function resolveRelativeImages(markdown: string, repo: string, branch: string): 
 }
 
 export default defineEventHandler(async (event) => {
-  const repo = String(event.context.params?.repo ?? "");
+  // `[...path]` carries `<owner>/<repo>` so the section works for a project hosted
+  // anywhere, not only under the site owner's account.
+  const segments = String(event.context.params?.path ?? "")
+    .split("/")
+    .filter(Boolean);
 
-  if (!NAME_RE.test(repo)) {
-    throw createError({ statusCode: 400, statusMessage: "Invalid repository name" });
+  if (segments.length !== 2 || !segments.every((segment) => SEGMENT_RE.test(segment))) {
+    throw createError({ statusCode: 400, statusMessage: "Invalid repository path" });
   }
 
-  const payload = await loadRepo(repo);
+  const [owner, repo] = segments as [string, string];
+  const payload = await loadRepo(owner, repo);
 
   if (!payload) {
     throw createError({ statusCode: 404, statusMessage: "No such repository" });

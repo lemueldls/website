@@ -1,8 +1,8 @@
 ---
 name: Koffi
 role: Creator
-date: 2026-05-01
-endDate: 2026-09-30
+since: 2026-05
+status: active
 description: Koffi is a novel cross-platform framework and integrated ecosystem for Rust × Kotlin Multiplatform projects.
 technologies:
   - Rust

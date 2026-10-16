@@ -1,8 +1,8 @@
 ---
 name: Mnemo
 role: Creator
-date: 2023-06-01
-endDate: present
+since: 2023-06
+status: active
 description: Mnemo is a local-first note-taking app built on the Typst ecosystem, designed to minimize distractions.
 technologies:
   - Sass

@@ -4,7 +4,13 @@ import keywords from "~/assets/keywords.json";
 import { isExternalHref, newTabAttrs } from "~/lib/links";
 
 import { CV_SECTIONS, cvEntryKey, isCvKeyOn, type CvOptions, type CvSectionKey } from "#shared/cv";
-import { isResearchEntry, useAbout, type Education, type Experience } from "~/composables/about";
+import {
+  isResearchEntry,
+  useAbout,
+  type Education,
+  type Experience,
+  type Project,
+} from "~/composables/about";
 
 const MASTHEAD_LINKS: { icon: string; href: string; label: string }[] = [
   {
@@ -36,7 +42,8 @@ const hideDescriptions = computed(() => props.options.hideDescriptions);
 
 type CvDate =
   | { kind: "range"; from: string; to: string }
-  | { kind: "status"; status: string; to: string };
+  | { kind: "status"; status: string; to: string }
+  | { kind: "point"; at: string };
 
 interface EntryBase {
   slug: string;
@@ -64,7 +71,10 @@ interface RoleEntry extends EntryBase {
 
 type EntryView = EducationEntry | RoleEntry;
 
-const homeOf = (entry: Experience): string | undefined =>
+/** The shape `roleView` needs — everything an experience and a project share. */
+type RoleInput = Omit<Experience, "from" | "to">;
+
+const homeOf = (entry: RoleInput): string | undefined =>
   "github" in entry ? `/projects/${entry.slug}` : entry.link?.href;
 
 const educationView = (entry: Education, section: CvSectionKey): EducationEntry => ({
@@ -80,10 +90,10 @@ const educationView = (entry: Education, section: CvSectionKey): EducationEntry 
   printable: !entry.hidePrint && on(cvEntryKey(section, entry.slug)),
 });
 
-const githubOf = (entry: Experience) =>
+const githubOf = (entry: RoleInput) =>
   "github" in entry ? (entry.github as { href: string; text: string }) : undefined;
 
-const roleView = (entry: Experience, section: CvSectionKey): RoleEntry => ({
+const roleView = (entry: RoleInput, section: CvSectionKey, date: CvDate): RoleEntry => ({
   kind: "role",
   slug: entry.slug,
   name: entry.name,
@@ -93,9 +103,31 @@ const roleView = (entry: Experience, section: CvSectionKey): RoleEntry => ({
   technologies: entry.technologies,
   github: githubOf(entry),
   href: homeOf(entry),
-  date: { kind: "range", from: entry.from, to: entry.to ?? "Present" },
+  date,
   printable: !entry.hidePrint && on(cvEntryKey(section, entry.slug)),
 });
+
+const experienceDate = (entry: Experience): CvDate => ({
+  kind: "range",
+  from: entry.from,
+  to: entry.to ?? "Present",
+});
+
+/**
+ * Only an `active` project reads as "Present" on the CV. Its "still working on it"
+ * claim is the one a reader holds you to, so a maintained or paused project keeps a
+ * real end date — otherwise a section that lists eight projects would claim eight
+ * simultaneous ones. The end is the last-active date, which GitHub keeps advancing.
+ */
+const projectDate = (project: Project): CvDate => {
+  if ((project.status ?? "active") === "active") {
+    return { kind: "range", from: project.since, to: "Present" };
+  }
+
+  return project.lastActive && project.lastActive !== project.since
+    ? { kind: "range", from: project.since, to: project.lastActive }
+    : { kind: "point", at: project.lastActive ?? project.since };
+};
 
 const experienceEntries = computed(() =>
   experiences.value.filter((e) => mergeResearch.value || !isResearchEntry(e)),
@@ -112,8 +144,11 @@ const researchEntries = computed(() =>
 );
 
 const sectionEntries = computed<Record<CvSectionKey, EntryView[]>>(() => {
-  const role = (entries: readonly Experience[], section: CvSectionKey) =>
-    entries.map((entry) => roleView(entry, section));
+  const role = <T extends RoleInput>(
+    entries: readonly T[],
+    section: CvSectionKey,
+    date: (entry: T) => CvDate,
+  ) => entries.map((entry) => roleView(entry, section, date(entry)));
 
   return {
     summary: [],
@@ -123,11 +158,13 @@ const sectionEntries = computed<Record<CvSectionKey, EntryView[]>>(() => {
     talks: [],
 
     education: education.value.map((entry) => educationView(entry, "education")),
-    experience: role(experienceEntries.value, "experience"),
-    projects: role(projectEntries.value, "projects"),
-    affiliations: role(affiliations.value, "affiliations"),
+    experience: role(experienceEntries.value, "experience", experienceDate),
+    projects: role(projectEntries.value, "projects", projectDate),
+    affiliations: role(affiliations.value, "affiliations", experienceDate),
 
-    research: researchEntries.value.map((entry) => roleView(entry, "research")),
+    research: researchEntries.value.map((entry) =>
+      roleView(entry, "research", experienceDate(entry)),
+    ),
   };
 });
 
@@ -343,6 +380,9 @@ const headWouldPrint = (section: {
             <span v-if="entry.date.kind === 'range'" class="cv__entry-date">
               From <span class="cv__entry-date-value">{{ entry.date.from }}</span> to
               <span class="cv__entry-date-value">{{ entry.date.to }}</span>
+            </span>
+            <span v-else-if="entry.date.kind === 'point'" class="cv__entry-date">
+              <span class="cv__entry-date-value">{{ entry.date.at }}</span>
             </span>
             <span v-else class="cv__entry-date">
               {{ entry.date.status }}

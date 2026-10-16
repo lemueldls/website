@@ -197,8 +197,8 @@ function formatYear(iso: string): string {
 }
 
 .repo__readme-heading {
-  font-family: var(--f-display);
-  font-size: var(--t-12);
+  /* font-family: var(--f-display); */
+  /* font-size: var(--t-12); */
   font-weight: 600;
   margin: 0;
   padding: var(--space-6) var(--space-4) 0;

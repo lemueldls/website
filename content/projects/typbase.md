@@ -1,8 +1,8 @@
 ---
 name: Typbase
 role: Creator
-date: 2026-08-28
-endDate: present
+since: 2026-08
+status: active
 description: Typbase is a local-first knowledge base made for the Typst language and the Atmosphere protocol.
 technologies:
   - Rust

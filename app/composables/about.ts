@@ -1,6 +1,10 @@
 import { computed, toValue } from "vue";
 import type { ComputedRef, MaybeRefOrGetter } from "vue";
 
+import type { RepoActivity } from "#shared/github";
+
+import reposMeta from "~/assets/repos.meta.json";
+
 interface Social {
   title: string;
   href: string;
@@ -47,8 +51,112 @@ export interface Experience {
   hidePrint?: boolean;
 }
 
-export interface Project extends Experience {
+export type ProjectStatus = "active" | "maintained" | "dormant" | "archived";
+
+export interface Project extends Omit<Experience, "from" | "to"> {
   github: { href: string; text: string };
+  since: string;
+  lastActive?: string;
+  status?: ProjectStatus;
+}
+
+export type ProjectDateParts =
+  | { kind: "open"; since: string; lastActive?: string }
+  | { kind: "range"; from: string; to: string }
+  | { kind: "point"; at: string };
+
+export function projectDateParts(project: Project): ProjectDateParts {
+  const { since, lastActive } = project;
+  const status = project.status ?? "active";
+
+  if (status === "archived") {
+    return lastActive && lastActive !== since
+      ? { kind: "range", from: since, to: lastActive }
+      : { kind: "point", at: since };
+  }
+
+  if (status !== "active" && lastActive && lastActive !== since) {
+    return { kind: "open", since, lastActive };
+  }
+
+  return { kind: "open", since };
+}
+
+export function formatProjectDates(project: Project): string {
+  const parts = projectDateParts(project);
+
+  switch (parts.kind) {
+    case "range":
+      return `${parts.from} to ${parts.to}`;
+    case "point":
+      return parts.at;
+    case "open":
+      return `since ${parts.since}${parts.lastActive ? ` // last active ${parts.lastActive}` : ""}`;
+  }
+}
+
+export const isActiveProject = (project: Pick<Project, "status">): boolean =>
+  (project.status ?? "active") === "active";
+
+const OWN_GITHUB_OWNER = "lemueldls";
+
+export function githubSlug(href: string): string | null {
+  const match = href.match(/github\.com\/([^/]+)\/([^/]+?)\/?$/);
+  return match ? `${match[1]}/${match[2]}` : null;
+}
+
+const repoActivity = reposMeta as Record<string, RepoActivity>;
+
+const MONTH_YEAR = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
+const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function monthYear(iso: string): string {
+  return MONTH_YEAR.format(new Date(iso));
+}
+
+function monthOrdinal(label: string): number {
+  const [month, year] = label.split(" ");
+  const index = MONTHS.indexOf(month ?? "");
+  return index < 0 ? -1 : Number(year) * 12 + index;
+}
+
+function mostRecent(a: string | undefined, b: string | undefined): string | undefined {
+  if (!a) return b;
+  if (!b) return a;
+  return monthOrdinal(b) > monthOrdinal(a) ? b : a;
+}
+
+function resolveProject(source: Project): Project {
+  const slug = githubSlug(source.github.href);
+  const meta = slug ? repoActivity[slug] : undefined;
+  const owned = slug?.startsWith(`${OWN_GITHUB_OWNER}/`) ?? false;
+
+  const lastActive =
+    owned && meta ? mostRecent(source.lastActive, monthYear(meta.pushedAt)) : source.lastActive;
+
+  return {
+    ...source,
+    lastActive,
+    status: meta?.archived ? "archived" : source.status,
+  };
 }
 
 const socials: Social[] = [
@@ -385,8 +493,8 @@ const projects = [
     description:
       "Typbase is a local-first knowledge base made for the Typst language and the Atmosphere protocol.",
     role: "Creator",
-    from: "August 2026",
-    to: "Present",
+    since: "August 2026",
+    status: "active",
     contributions: [
       "Designed the workspace as a queryable document model so pages and categories can be read from inside.",
       "Built an inline WYSIWYG editor where compiled output replaces the source as you type with a WebAssembly engine.",
@@ -414,8 +522,8 @@ const projects = [
     description:
       "Koffi is a novel cross-platform framework and integrated ecosystem for Rust × Kotlin Multiplatform projects.",
     role: "Creator",
-    from: "May 2026",
-    to: "Present",
+    since: "May 2026",
+    status: "active",
     contributions: [
       "Created an FFI bindings generator for Rust/Kotlin interoperability across JVM (FFM/JNI) and native targets.",
       "Invented a static metadata extraction engine that embeds type/function descriptors into compiled binaries using link-time reflection, generating C interop definitions and Kotlin wrappers without manual header maintenance.",
@@ -430,8 +538,9 @@ const projects = [
     description:
       "Rubify is a program made to automatically annotate any font with ruby characters.",
     role: "Creator",
-    from: "January 2026",
-    to: "March 2026",
+    since: "January 2026",
+    lastActive: "March 2026",
+    status: "maintained",
     contributions: [
       "Implemented annotations of ruby characters for the romanization of Mandarin Chinese and Japanese.",
       "Published fonts compiled from multiple different families annotated with all supported romanizations.",
@@ -446,8 +555,9 @@ const projects = [
     description:
       "Ezno is a correct and efficient TypeScript type checker and compiler with additional experiments.",
     role: "Contributor",
-    from: "March 2024",
-    to: "February 2025",
+    since: "March 2024",
+    lastActive: "February 2025",
+    status: "dormant",
     contributions: [
       "Diagnosed and fixed issues with property checking and subtype comparisons for class and object assignments.",
       "Added type checks for object destructuring patterns and handled context unbinding during property extractions.",
@@ -464,8 +574,8 @@ const projects = [
     description:
       "Mnemo is a local-first note-taking app leveraging the Typst ecosystem, designed to minimize distractions.",
     role: "Creator",
-    from: "June 2023",
-    to: "Present",
+    since: "June 2023",
+    status: "active",
     contributions: [
       "Implemented a custom rich text editor leveraging the Typst ecosystem for writing and styling notes.",
       "Used mnemonic memory techniques to help users remember information and improve overall learning.",
@@ -496,8 +606,9 @@ const projects = [
     description:
       "Synquid is a program synthesizer that uses refinement types to generate functional programs.",
     role: "Creator",
-    from: "May 2024",
-    to: "August 2024",
+    since: "May 2024",
+    lastActive: "August 2024",
+    status: "maintained",
     contributions: [
       "Reimplemented Synquid in Rust, improving memory and performance of the original Haskell implementation.",
       "Achieved complete byte-identical parity against the Haskell implementation across all 64 PLDI '16 programs.",
@@ -512,8 +623,9 @@ const projects = [
     description:
       "Language of Meaning and Types (LMT) is a proof-oriented meta-programming and specification language.",
     role: "Creator",
-    from: "March 2024",
-    to: "June 2024",
+    since: "March 2024",
+    lastActive: "June 2024",
+    status: "maintained",
     contributions: [
       "Designed a novel theory and programming language where types and values can live in the same logical space.",
       "Engineered a dual-mode program synthesis backend leveraging enumerative search to infer and discover goals.",
@@ -528,8 +640,9 @@ const projects = [
     description:
       "avast is an error reporting library that specializes in easy to read and write error construction.",
     role: "Creator",
-    from: "April 2023",
-    to: "January 2024",
+    since: "April 2023",
+    lastActive: "January 2024",
+    status: "maintained",
     contributions: [
       "Designed an ergonomic API for constructing and reporting errors in Rust applications.",
     ],
@@ -543,8 +656,9 @@ const projects = [
     description:
       "re-set is a regular expression (regex) set compiler that validates and constructs regexes at compile-time.",
     role: "Creator",
-    from: "February 2023",
-    to: "January 2024",
+    since: "February 2023",
+    lastActive: "January 2024",
+    status: "maintained",
     contributions: [
       "Beat the performance of the regex crate in certain benchmarks when testing speed and memory usage.",
       "Utilized compile-time pattern expansion to improve safety and performance of matching string data at runtime.",
@@ -561,8 +675,9 @@ const projects = [
     description:
       "pyret-rs is a port of an educational programming language originally developed at Brown University.",
     role: "Creator",
-    from: "April 2022",
-    to: "January 2024",
+    since: "April 2022",
+    lastActive: "January 2024",
+    status: "maintained",
     contributions: [
       "Ported the language to Rust, improving the overall performance and extensibility of the language.",
       "Created a custom non-deterministic finite automaton (NFA) for regular expressions, taking advantage of compile-time pattern expansion to improve performance of matching string data at runtime.",
@@ -581,8 +696,9 @@ const projects = [
     description:
       "Kaetram was an open-source MMORPG game built with modern web standards and cutting-edge technologies.",
     role: "Core Developer",
-    from: "November 2019",
-    to: "January 2025",
+    since: "November 2019",
+    lastActive: "January 2025",
+    status: "dormant",
     contributions: [
       "Maintained the project as a core developer, working on the game engine and it’s multiple clients.",
       "Managed a community of more than 4,000 users worldwide, and organized global development efforts.",
@@ -609,8 +725,9 @@ const projects = [
     description:
       "My AFSE was an application that helped students better navigate at the Academy for Software Engineering.",
     role: "Creator",
-    from: "January 2018",
-    to: "May 2022",
+    since: "January 2018",
+    lastActive: "May 2022",
+    status: "archived",
     contributions: [
       "Provided students with a holistic view of their academic standing and visual areas for improvement.",
       "Developed a web and mobile application that integrated grading systems, attendance tracking, class schedules, news, and events, improving student organization when better options were not available.",
@@ -636,8 +753,9 @@ const projects = [
     description:
       "Switchcord was a desktop application that allowed Discord Rich Presence for Nintendo Switch games.",
     role: "Creator",
-    from: "May 2021",
-    to: "October 2021",
+    since: "May 2021",
+    lastActive: "October 2021",
+    status: "archived",
     github: {
       href: "https://github.com/lemueldls/switchcord",
       text: "github.com/lemueldls/switchcord",
@@ -663,7 +781,8 @@ const projects = [
     description:
       "discordo was a collection of BetterDiscord plugins, most notably, the DeveloperOptions plugin.",
     role: "Creator",
-    from: "June 2021",
+    since: "June 2021",
+    status: "archived",
     github: {
       href: "https://github.com/lemueldls/discordo/",
       text: "github.com/lemueldls/discordo",
@@ -678,8 +797,9 @@ const projects = [
     slug: "due",
     description: "due was one of the first frameworks for Vue.js 3 built using Deno 1.",
     role: "Creator",
-    from: "May 2020",
-    to: "September 2020",
+    since: "May 2020",
+    lastActive: "September 2020",
+    status: "archived",
     github: { href: "https://github.com/lemueldls/due/", text: "github.com/lemueldls/due" },
     contributions: [
       "Developed a lightweight framework for building Vue.js 3 applications using Deno 1 and Skypack.",
@@ -691,8 +811,8 @@ const projects = [
     slug: "iridis",
     description: "Iridis was a Discord bot that was built using early artificial intelligence.",
     role: "Creator",
-    from: "February 2020",
-    to: "February 2020",
+    since: "February 2020",
+    status: "archived",
     github: { href: "https://github.com/lemueldls/iridis/", text: "github.com/lemueldls/iridis" },
     contributions: [
       "Built a Discord bot that used early artificial intelligence to respond to user messages.",
@@ -702,6 +822,8 @@ const projects = [
 ] as const satisfies Project[];
 
 export type ProjectSlug = (typeof projects)[number]["slug"];
+
+const resolvedProjects: Project[] = projects.map((source) => resolveProject(source));
 
 const affiliations = [
   { ...acmCcny, role: "Vice President" },
@@ -818,7 +940,7 @@ export function useAbout(presetKey: MaybeRefOrGetter<string> = "default") {
     experiences: computed<Experience[]>(() =>
       experiences.map(printHiddenFor(preset, "experiences")),
     ),
-    projects: computed<Project[]>(() => projects.map(printHiddenFor(preset, "projects"))),
+    projects: computed<Project[]>(() => resolvedProjects.map(printHiddenFor(preset, "projects"))),
     affiliations: computed<Experience[]>(() =>
       affiliations.map(printHiddenFor(preset, "affiliations")),
     ),

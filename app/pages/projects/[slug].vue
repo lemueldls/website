@@ -6,10 +6,7 @@ const { projects, socials } = useAbout();
 
 const entry = computed(() => projects.value.find((p) => p.slug === slug));
 
-const repoName = computed(() => {
-  const href = entry.value?.github?.href ?? "";
-  return href.replace(/\/+$/, "").split("/").pop() ?? null;
-});
+const repoPath = computed(() => githubSlug(entry.value?.github?.href ?? ""));
 
 const { data: page } = await useAsyncData(`project-${slug}`, () =>
   queryCollection("projects").path(`/projects/${slug}`).first(),
@@ -30,7 +27,7 @@ defineOgImage(
     label: entry.value!.role,
     title: entry.value!.name,
     description: entry.value!.description,
-    meta: `from ${entry.value!.from} to ${entry.value!.to ?? "present"}`,
+    meta: formatProjectDates(entry.value!),
   },
   { alt: `${entry.value!.name} // ${entry.value!.role}` },
 );
@@ -52,10 +49,7 @@ const neighbours = computed(() => {
 
       <h1 class="detail__title">{{ entry.name }}</h1>
 
-      <span class="detail__date meta">
-        From <span class="detail__date-value">{{ entry.from }}</span> to
-        <span class="detail__date-value">{{ entry.to }}</span>
-      </span>
+      <XProjectDates class="detail__date" :project="entry" />
 
       <div class="detail__rule" aria-hidden="true" />
 
@@ -79,7 +73,7 @@ const neighbours = computed(() => {
       </div>
     </XSheet> -->
 
-    <XRepository v-if="repoName" :repo="repoName" />
+    <XRepository v-if="repoPath" :repo="repoPath" />
 
     <nav class="detail__nav" aria-label="More projects">
       <XLink v-if="neighbours.prev" :to="`/projects/${neighbours.prev.slug}`">
@@ -104,20 +98,7 @@ const neighbours = computed(() => {
 .detail__title {
   font-family: var(--f-display);
   font-size: var(--t-36);
-  margin-block: var(--space-3) var(--space-2);
-}
-
-.detail__date {
-  font-size: var(--t-9);
-  color: var(--c-dim);
-  white-space: nowrap;
-  /* flex-shrink: 0; */
-  margin-top: var(--space-2);
-}
-
-.detail__date-value {
-  font-weight: 600;
-  color: var(--c-fg);
+  margin-block: var(--space-3);
 }
 
 .detail__note {

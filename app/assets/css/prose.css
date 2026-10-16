@@ -184,6 +184,12 @@
   color: var(--c-accent);
 }
 
+.prose img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .prose .callout,
 .prose .runner,
 .prose .range {
