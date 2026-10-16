@@ -1,3 +1,5 @@
+import type { LocationQuery, LocationQueryRaw } from "vue-router";
+
 import { WALLPAPER_APPLIED_KEY, WALLPAPER_APPLY_KEY, WALLPAPER_NONE } from "#shared/assets";
 
 const APPLY_KEYS = [WALLPAPER_APPLY_KEY, WALLPAPER_APPLIED_KEY] as const;
@@ -6,12 +8,11 @@ export default defineNuxtPlugin(() => {
   if (!import.meta.client) return;
 
   const router = useRouter();
-  const route = useRoute();
   const { setWallpaper } = useWallpaper();
 
-  function requested(): { file: string | null } | null {
+  function command(query: LocationQuery): { file: string | null } | null {
     for (const key of APPLY_KEYS) {
-      const raw = route.query[key];
+      const raw = query[key];
       if (typeof raw !== "string") continue;
 
       if (raw === WALLPAPER_NONE) return { file: null };
@@ -23,27 +24,19 @@ export default defineNuxtPlugin(() => {
     return null;
   }
 
-  function stripApplyKeys() {
-    const query = { ...route.query };
-    if (!APPLY_KEYS.some((key) => query[key] !== undefined)) return;
-
-    for (const key of APPLY_KEYS) delete query[key];
-
-    router.replace({ query });
+  function cleaned(query: LocationQuery): LocationQueryRaw {
+    const next = { ...query };
+    for (const key of APPLY_KEYS) delete next[key];
+    return next;
   }
 
-  const command = requested();
-  if (command) setWallpaper(command.file);
+  router.beforeEach((to) => {
+    const present = APPLY_KEYS.some((key) => to.query[key] !== undefined);
+    if (!present) return;
 
-  onMounted(stripApplyKeys);
+    const request = command(to.query);
+    if (request) setWallpaper(request.file);
 
-  watch(
-    () => route.query,
-    () => {
-      const next = requested();
-      if (next) setWallpaper(next.file);
-
-      stripApplyKeys();
-    },
-  );
+    return { path: to.path, query: cleaned(to.query), hash: to.hash, replace: true };
+  });
 });
