@@ -365,17 +365,19 @@ const headWouldPrint = (section: {
           :class="{ 'no-print': !entry.printable }"
         >
           <div class="cv__entry-row">
-            <component
-              :is="entry.href ? 'a' : 'span'"
-              :href="entry.href"
-              v-bind="newTabAttrs(isExternalHref(entry.href))"
-              class="cv__entry-name"
-            >
-              {{ entry.name
-              }}<span v-if="entry.kind === 'role' && entry.role" class="cv__entry-role">{{
-                entry.role
-              }}</span>
-            </component>
+            <span>
+              <component
+                :is="entry.href ? 'a' : 'span'"
+                :href="entry.href"
+                v-bind="newTabAttrs(isExternalHref(entry.href))"
+                class="cv__entry-name"
+              >
+                {{ entry.name }}
+              </component>
+              <span v-if="entry.kind === 'role' && entry.role" class="cv__entry-role">
+                {{ entry.role }}
+              </span>
+            </span>
 
             <span v-if="entry.date.kind === 'range'" class="cv__entry-date">
               From <span class="cv__entry-date-value">{{ entry.date.from }}</span> to
