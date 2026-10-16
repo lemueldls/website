@@ -7,6 +7,7 @@
     "deploy": "npm run build && wrangler deploy",
     "dev": "nuxt dev",
     "fetch:meta": "node --experimental-strip-types scripts/fetch-meta.ts",
+    "fetch:repos": "node --env-file-if-exists=.env --experimental-strip-types scripts/fetch-repos.ts",
     "fmt": "oxfmt app shared content.config.ts modules scripts nuxt.config.ts",
     "fmt:check": "oxfmt --check app shared content.config.ts modules scripts nuxt.config.ts",
     "gen:badges": "node --experimental-strip-types scripts/gen-badges.ts",
