@@ -15,5 +15,6 @@
   display: block;
   min-height: calc(100dvh - var(--header-h));
   padding-block: clamp(var(--space-7), 6vw, 5rem);
+  /* padding-block: var(--space-7); */
 }
 </style>

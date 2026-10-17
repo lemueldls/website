@@ -76,7 +76,7 @@ defineOgImage("Root", {
   font-size: var(--t-14);
   color: var(--c-dim);
   /* max-width: 52ch; */
-  /* line-height: 1.55; */
+  line-height: 1.55;
 }
 
 .writing__rule {
@@ -143,6 +143,7 @@ defineOgImage("Root", {
   margin-top: var(--space-2);
   /* max-width: var(--measure-narrow); */
   text-wrap: pretty;
+  /* letter-spacing: -0.01em; */
   transition: color var(--dur-fast) var(--ease);
 }
 
@@ -155,7 +156,7 @@ defineOgImage("Root", {
   font-size: var(--t-10);
   color: var(--c-dim);
   max-width: var(--measure-text);
-  /* line-height: 1.6; */
+  line-height: 1.6;
 }
 
 .entry__more {

@@ -67,7 +67,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         </div>
 
         <div class="hero__col">
-          <XLabel icon="material-symbols:alternate-email-outline-sharp">Socials</XLabel>
+          <XLabel icon="material-symbols:language-outline-sharp">Socials</XLabel>
           <ul class="hero__socials">
             <li v-for="social in socials" :key="social.title">
               <XLink class="hero__social-link" :href="social.href" external>
@@ -78,7 +78,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
           </ul>
         </div>
 
-        <div class="hero__col">
+        <!-- <div class="hero__col">
           <XLabel icon="material-symbols:language-outline-sharp">Webrings</XLabel>
           <div class="hero__rings">
             <span v-for="ring in rings" :key="ring.name" class="hero__ring">
@@ -108,7 +108,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
               </XButton>
             </span>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -188,8 +188,8 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   font-family: var(--f-display);
   font-size: var(--t-60);
   font-weight: var(--f-display-weight);
-  /* line-height: 1; */
-  /* letter-spacing: -0.025em; */
+  line-height: 1;
+  letter-spacing: -0.025em;
   margin-bottom: var(--space-6);
   text-wrap: balance;
 }
@@ -208,7 +208,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__standfirst {
   font-family: var(--f-display);
   font-size: var(--t-18);
-  /* line-height: 1.45; */
+  line-height: 1.45;
   color: var(--c-dimmer);
   max-width: 50ch;
   text-wrap: pretty;
@@ -218,7 +218,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__intro {
   margin-top: var(--space-4);
   font-size: var(--t-11);
-  /* line-height: 1.65; */
+  line-height: 1.65;
   color: var(--c-fg);
   max-width: var(--measure-text);
   text-wrap: pretty;
@@ -365,7 +365,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__work-desc {
   grid-area: desc;
   font-size: var(--t-10);
-  /* line-height: 1.6; */
+  line-height: 1.6;
   color: var(--c-dim);
   max-width: var(--measure-long);
   text-wrap: pretty;
@@ -449,7 +449,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   align-items: baseline;
   gap: var(--space-1) var(--space-2);
   font-size: var(--t-9);
-  /* line-height: 1.6; */
+  line-height: 1.6;
   color: var(--c-dim);
   max-width: var(--measure-text);
 }

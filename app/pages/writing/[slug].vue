@@ -55,9 +55,9 @@ defineOgImage(
   <article class="article sheet-grid">
     <header class="article__head">
       <div class="head-row">
-        <XLabel variant="accent" icon="material-symbols:article-outline-sharp">Article</XLabel>
+        <XLabel variant="accent" icon="material-symbols:article-sharp">Article</XLabel>
         <XLink to="/writing" class="backlink">
-          <XIcon name="material-symbols:arrow-back-outline-sharp" />All writing
+          <XIcon name="material-symbols:arrow-back-sharp" />All writing
         </XLink>
       </div>
 
@@ -80,7 +80,7 @@ defineOgImage(
         <ContentRenderer v-if="post" :value="post" />
 
         <XLink to="/writing" class="backlink article__back">
-          <XIcon name="material-symbols:arrow-back-outline-sharp" />All writing
+          <XIcon name="material-symbols:arrow-back-sharp" />All writing
         </XLink>
       </div>
     </XSheet>
@@ -96,6 +96,7 @@ defineOgImage(
   font-family: var(--f-display);
   font-size: var(--t-30);
   margin-block: var(--space-3) var(--space-2);
+  letter-spacing: -0.01em;
   max-width: 34ch;
 }
 
@@ -130,7 +131,7 @@ defineOgImage(
 
 .article__body {
   font-size: var(--t-1p5);
-  /* line-height: 1.6; */
+  line-height: 1.6;
 }
 
 .article__back {

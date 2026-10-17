@@ -31,13 +31,9 @@ const GROUND = { dark: "dark", light: "light" } as const;
 const props = withDefaults(
   defineProps<{
     colorMode?: keyof typeof GROUND;
-
     label?: string;
-
     title?: string;
-
     description?: string;
-
     meta?: string;
   }>(),
   {

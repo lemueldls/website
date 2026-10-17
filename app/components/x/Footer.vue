@@ -10,18 +10,6 @@ const { socials, email, rings } = useAbout();
 
     <div class="ftr__inner">
       <div class="ftr__col">
-        <XLabel icon="material-symbols:share-outline-sharp">Socials</XLabel>
-        <ul class="ftr__socials">
-          <li v-for="social in socials" :key="social.title">
-            <XLink class="ftr__social-link" :href="social.href" external>
-              <XIcon class="ftr__social-icon" :name="social.icon" />
-              {{ social.title }}
-            </XLink>
-          </li>
-        </ul>
-      </div>
-
-      <div class="ftr__col">
         <XLabel icon="material-symbols:public-outline-sharp">Webrings</XLabel>
         <div class="ftr__rings no-print-chrome">
           <div v-for="ring in rings" :key="ring.name" class="ftr__ring">
@@ -60,6 +48,18 @@ const { socials, email, rings } = useAbout();
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="ftr__col">
+        <XLabel icon="material-symbols:share-outline-sharp">Socials</XLabel>
+        <ul class="ftr__socials">
+          <li v-for="social in socials" :key="social.title">
+            <XLink class="ftr__social-link" :href="social.href" external>
+              <XIcon class="ftr__social-icon" :name="social.icon" size="xs" />
+              {{ social.title }}
+            </XLink>
+          </li>
+        </ul>
       </div>
 
       <div class="ftr__col">

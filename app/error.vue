@@ -10,11 +10,11 @@ defineProps<{ error: NuxtError }>();
 
   <div class="err">
     <XSheet class="err__sheet">
-      <XLabel variant="accent" icon="material-symbols:error-outline-sharp"
-        >Error {{ error.status }}</XLabel
-      >
+      <XLabel variant="accent" icon="material-symbols:error-outline-sharp">
+        Error {{ error.status }}
+      </XLabel>
       <h1 class="err__title">{{ error.statusText || "Not found" }}</h1>
-      <XButton :href="`/`" variant="accent"> Go back home </XButton>
+      <XButton :href="`/`" variant="accent">Go back home</XButton>
     </XSheet>
   </div>
 </template>
