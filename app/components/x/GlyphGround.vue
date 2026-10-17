@@ -7,7 +7,7 @@ const FONT_SIZE = 16;
 const CELL_W = FONT_SIZE * 0.6;
 const CELL_H = FONT_SIZE * 1.1;
 
-const RAMP = " .·:-=+*#@";
+const RAMP = " .·:-=+*#%@";
 
 const { selected } = useWallpaper();
 const { resolvedTheme } = useTheme();
