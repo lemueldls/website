@@ -155,7 +155,7 @@ const resetDefaults = () => {
         <span class="meta">{{ heldBack }} entries held back by the preset</span>
 
         <XButton variant="ghost" :disabled="allOff" @click="resetDefaults">
-          <XIcon name="material-symbols:restart-alt-sharp" />
+          <XIcon name="material-symbols:restart-alt-outline-sharp" />
           Reset
         </XButton>
       </div>

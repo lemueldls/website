@@ -24,7 +24,7 @@ const language = computed(() => {
   text-align: end;
   font-family: var(--f-label);
   font-size: var(--t-7);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   color: var(--c-dimmer);
   margin-block-end: 0.35em;
   user-select: none;

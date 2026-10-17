@@ -70,11 +70,11 @@ export interface RepoMeta {
   readmeAst: unknown;
 }
 
-export const TOTAL_LABELS: { key: keyof Totals; label: string }[] = [
-  { key: "commits", label: "Commits" },
-  { key: "stars", label: "Stars" },
-  { key: "pullRequests", label: "Pull requests" },
-  { key: "issues", label: "Issues" },
+export const TOTAL_LABELS: { key: keyof Totals; label: string; icon: string }[] = [
+  { key: "commits", label: "Commits", icon: "material-symbols:commit-outline-sharp" },
+  { key: "stars", label: "Stars", icon: "material-symbols:star-outline-sharp" },
+  { key: "pullRequests", label: "Pull requests", icon: "material-symbols:merge-outline-sharp" },
+  { key: "issues", label: "Issues", icon: "material-symbols:bug-report-outline-sharp" },
 ];
 
 export function formatCount(value: number): string {

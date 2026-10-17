@@ -17,7 +17,7 @@ const tone = computed(() => {
 
 <template>
   <aside class="callout" :class="tone">
-    <XIcon v-if="icon" :name="icon" class="callout__icon" size="xs" />
+    <XIcon v-if="icon" :name="icon" class="callout__icon" />
     <div class="callout__body">
       <slot />
     </div>

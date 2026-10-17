@@ -129,9 +129,9 @@
   --space-10: 4rem;
 
   --icon-xs: 0.75rem;
-  --icon-sm: 1rem;
-  --icon-md: 1.125rem;
-  --icon-lg: 1.25rem;
+  --icon-sm: 0.875rem;
+  --icon-md: 1.25rem;
+  --icon-lg: 1.125rem;
 }
 
 :root {

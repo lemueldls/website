@@ -47,7 +47,7 @@ const selectedLabel = computed(
           {{ selectedLabel }}
         </SelectValue>
         <SelectIcon class="xselect__icon">
-          <XIcon name="material-symbols:arrow-drop-down-sharp" size="lg" />
+          <XIcon name="material-symbols:arrow-drop-down-outline-sharp" size="lg" />
         </SelectIcon>
       </SelectTrigger>
 
@@ -74,7 +74,7 @@ const selectedLabel = computed(
             >
               <span class="xselect__indicator">
                 <SelectItemIndicator>
-                  <XIcon name="material-symbols:check-sharp" />
+                  <XIcon name="material-symbols:check-outline-sharp" />
                 </SelectItemIndicator>
               </span>
               <SelectItemText>{{ opt.label }}</SelectItemText>
@@ -96,7 +96,7 @@ const selectedLabel = computed(
 .xselect__label {
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dim);
 }

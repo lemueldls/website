@@ -127,7 +127,7 @@ const blocks = computed(() => {
   justify-content: space-between;
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dim);
 }

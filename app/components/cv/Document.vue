@@ -423,7 +423,7 @@ const headWouldPrint = (section: {
   padding: clamp(var(--space-6), 4vw, var(--space-9));
   color: var(--c-fg);
   font-size: 10.5pt;
-  line-height: 1.45;
+  /* line-height: 1.45; */
 }
 
 @media (max-width: 640px) {
@@ -439,8 +439,8 @@ const headWouldPrint = (section: {
 
 .cv__page--besley-narrow {
   font-family: var(--f-display);
-  letter-spacing: -0.008em;
-  line-height: 1.32;
+  /* letter-spacing: -0.008em; */
+  /* line-height: 1.32; */
 }
 
 .cv__page--text {
@@ -491,7 +491,7 @@ const headWouldPrint = (section: {
 
 .cv__identity h1 {
   font-size: var(--t-16);
-  line-height: 1.1;
+  /* line-height: 1.1; */
 }
 
 .cv__identity address {
@@ -605,7 +605,7 @@ a.cv__entry-name:hover {
   padding: 0;
   font-family: var(--f-label);
   font-size: var(--t-7);
-  letter-spacing: 0.04em;
+  /* letter-spacing: 0.04em; */
   text-transform: lowercase;
   color: var(--c-dimmer);
 }

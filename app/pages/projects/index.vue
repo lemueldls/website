@@ -13,10 +13,13 @@ const allTechnologies = computed(() => {
     .map(([name, count]) => ({ name, count }));
 });
 
+const description =
+  "Selection of personal and professional work including open-source contributions.";
+
 defineOgImage("Root", {
   label: "collection",
   title: "Projects",
-  description: "A collection of the software, research, and design work I've done.",
+  description,
   meta: `${projects.value.length} projects // ${allTechnologies.value.length} technologies`,
 });
 
@@ -51,11 +54,16 @@ function toggleTechnology(name: string) {
 <template>
   <div class="projects sheet-grid">
     <header class="projects__head">
-      <p class="label label--accent">collection</p>
+      <XLabel variant="accent" icon="material-symbols:folder-outline-sharp">collection</XLabel>
       <h1 class="projects__title">Projects</h1>
+      <p class="projects__lede">{{ description }}</p>
     </header>
 
-    <XSection label="Technologies" :count="allTechnologies.length">
+    <XSection
+      label="Technologies"
+      icon="material-symbols:tag-outline-sharp"
+      :count="allTechnologies.length"
+    >
       <ul class="projects__tags">
         <li v-for="t of allTechnologies" :key="t.name">
           <button
@@ -77,7 +85,12 @@ function toggleTechnology(name: string) {
         <strong class="num">{{ filtered.length }}</strong>
         of <span class="num">{{ projects.length }}</span>
       </span>
-      <XButton variant="ghost" :disabled="active.size === 0" @click="active.clear()">
+      <XButton
+        variant="ghost"
+        icon="material-symbols:filter-alt-off-outline-sharp"
+        :disabled="active.size === 0"
+        @click="active.clear()"
+      >
         Clear filters
       </XButton>
     </div>
@@ -126,10 +139,6 @@ function toggleTechnology(name: string) {
   padding-inline: clamp(var(--space-4), 3vw, var(--space-8));
 }
 
-.projects__head {
-  max-width: 62ch;
-}
-
 .projects__title {
   font-family: var(--f-display);
   font-size: var(--t-36);
@@ -140,7 +149,7 @@ function toggleTechnology(name: string) {
   font-family: var(--f-display);
   font-size: var(--t-14);
   color: var(--c-dim);
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 .projects__tags {
@@ -162,7 +171,7 @@ function toggleTechnology(name: string) {
   color: var(--c-dim);
   font-family: var(--f-label);
   font-size: var(--t-6);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   cursor: pointer;
   transition:
@@ -257,7 +266,7 @@ function toggleTechnology(name: string) {
   gap: var(--space-1) var(--space-4);
   margin-top: var(--space-2);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   color: var(--c-dimmer);
 }
 
@@ -284,7 +293,7 @@ function toggleTechnology(name: string) {
   padding: 0;
   font-family: var(--f-label);
   font-size: var(--t-6);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dimmer);
 }

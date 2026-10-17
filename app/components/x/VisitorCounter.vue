@@ -77,9 +77,8 @@ const note = computed(() => {
   justify-content: center;
   min-width: 1.6em;
   padding: 0.16em 0.28em;
-
   font-size: var(--t-12);
-  line-height: 1.2;
+  /* line-height: 1.2; */
   color: var(--c-fg);
   background: var(--c-sheet);
   border: var(--rule-width) solid var(--c-rule);

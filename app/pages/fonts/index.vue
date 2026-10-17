@@ -79,10 +79,12 @@ const inventory = computed(() =>
     .map((row, i, all) => ({ ...row, first: i === 0 || all[i - 1]!.name !== row.name })),
 );
 
+const description = "Custom typeface families with variety of patches and language variants.";
+
 defineOgImage("Root", {
   label: "collection",
   title: "Fonts",
-  description: "Unified design font with patches and language variants.",
+  description,
   meta: `${cuts.value.length} cuts // ${inventory.value.length} faces`,
 });
 </script>
@@ -90,11 +92,17 @@ defineOgImage("Root", {
 <template>
   <div class="fonts sheet-grid">
     <header class="fonts__section fonts__head">
-      <XLabel variant="accent">Collection</XLabel>
+      <XLabel variant="accent" icon="material-symbols:text-fields-outline-sharp">Collection</XLabel>
       <h1 class="fonts__title">Fonts</h1>
+      <p class="fonts__lede">{{ description }}</p>
     </header>
 
-    <XSection class="fonts__section" label="Cuts" :count="cuts.length">
+    <XSection
+      class="fonts__section"
+      label="Cuts"
+      icon="material-symbols:format-size-outline-sharp"
+      :count="cuts.length"
+    >
       <ul class="fonts__list" data-reveal-group>
         <li v-for="cut in cuts" :key="cut.name" class="card">
           <NuxtLink :to="`/fonts/${cut.slug}`" class="card__link">
@@ -142,6 +150,7 @@ defineOgImage("Root", {
       v-if="variants.length"
       class="fonts__section"
       label="Language variant"
+      icon="material-symbols:translate-outline-sharp"
       :count="variants.length"
     >
       <ul class="fonts__list" data-reveal-group>
@@ -203,7 +212,12 @@ defineOgImage("Root", {
       </ul>
     </XSection> -->
 
-    <XSection label="Faces" :count="inventory.length" class="fonts__section">
+    <XSection
+      label="Faces"
+      icon="material-symbols:table-outline-sharp"
+      :count="inventory.length"
+      class="fonts__section"
+    >
       <div class="inventory">
         <table>
           <thead>
@@ -254,10 +268,6 @@ defineOgImage("Root", {
   padding-inline: clamp(var(--space-4), 3vw, var(--space-8));
 }
 
-.fonts__head {
-  max-width: 80ch;
-}
-
 .fonts__title {
   font-family: var(--f-display);
   font-size: var(--t-36);
@@ -268,7 +278,7 @@ defineOgImage("Root", {
   font-family: var(--f-display);
   font-size: var(--t-14);
   color: var(--c-dim);
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 .fonts__lede strong {
@@ -351,7 +361,7 @@ defineOgImage("Root", {
   padding: 0;
   font-family: var(--f-label);
   font-size: var(--t-6);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dimmer);
 }
@@ -378,7 +388,7 @@ defineOgImage("Root", {
   font-family: var(--f-display);
   font-size: var(--t-11);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  /* letter-spacing: 0.08em; */
   font-variant: small-caps;
   color: var(--c-accent);
   transition: color var(--dur) var(--ease);
@@ -410,7 +420,7 @@ defineOgImage("Root", {
 .inventory th {
   text-align: left;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dimmer);
   padding: 0.35em 0.75em 0.35em 0;

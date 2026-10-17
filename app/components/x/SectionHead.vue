@@ -2,6 +2,7 @@
 defineProps<{
   label?: string;
   count?: number | string;
+  icon?: string;
 }>();
 </script>
 
@@ -9,6 +10,7 @@ defineProps<{
   <div :class="['section-head', $attrs.class]">
     <XFoldMark />
 
+    <!-- <XIcon v-if="icon" :name="icon"  class="section-head__icon" /> -->
     <span v-if="label" class="section-head__label">{{ label }}</span>
     <span class="section-head__leader" aria-hidden="true" />
     <span v-if="count !== undefined || $slots.tail" class="section-head__tail">
@@ -27,13 +29,19 @@ defineProps<{
   padding-block: 0.4em;
 }
 
+.section-head__icon {
+  align-self: center;
+  color: var(--c-accent);
+  opacity: 0.85;
+}
+
 .section-head__label {
   display: inline-block;
   font-family: var(--f-display);
   font-size: var(--t-11);
   font-weight: 600;
-  letter-spacing: 0.08em;
-  line-height: 1.4;
+  /* letter-spacing: 0.08em; */
+  /* line-height: 1.4; */
   font-variant: small-caps;
   color: var(--c-accent);
   white-space: nowrap;

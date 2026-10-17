@@ -40,14 +40,18 @@ onMounted(() => {
       @click="open = !open"
     >
       <XIcon
-        :name="open ? 'material-symbols:menu-open-sharp' : 'material-symbols:type-specimen-sharp'"
+        :name="
+          open
+            ? 'material-symbols:menu-open-outline-sharp'
+            : 'material-symbols:type-specimen-outline-sharp'
+        "
         size="sm"
       />
     </XButton>
 
     <Transition name="slide">
       <div v-if="open" class="rail__panel">
-        <XLabel variant="accent">Specimen</XLabel>
+        <XLabel variant="accent" icon="material-symbols:text-fields-outline-sharp">Specimen</XLabel>
 
         <XSelect v-model="family" label="Display" :options="familyOptions" class="rail__field" />
         <XSelect v-model="weight" label="Weight" :options="weightOptions" class="rail__field" />
@@ -63,7 +67,14 @@ onMounted(() => {
           :display="`${leading}`"
         />
 
-        <XButton variant="ghost" size="sm" block @click="reset">Reset to default</XButton>
+        <XButton
+          variant="ghost"
+          size="sm"
+          block
+          icon="material-symbols:restart-alt-outline-sharp"
+          @click="reset"
+          >Reset to default</XButton
+        >
 
         <p class="rail__hint">
           This page is set in fonts built here. <XLink to="/fonts">Specimen library</XLink>
@@ -103,7 +114,7 @@ onMounted(() => {
 .rail__hint {
   font-size: var(--t-6);
   color: var(--c-dimmer);
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 .slide-enter-active,

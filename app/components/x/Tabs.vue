@@ -36,7 +36,7 @@ function onChange(value: unknown) {
         :disabled="tab.disabled"
         class="tabs__trigger"
       >
-        <XIcon v-if="tab.icon" :name="tab.icon" class="tabs__icon" size="xs" />
+        <XIcon v-if="tab.icon" :name="tab.icon" class="tabs__icon" />
         <span>{{ tab.label }}</span>
         <span v-if="tab.count !== undefined" class="num tabs__count">{{ tab.count }}</span>
       </TabsTrigger>
@@ -71,7 +71,7 @@ function onChange(value: unknown) {
   cursor: pointer;
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   padding: 0.5em 0.7em;
   margin-bottom: -1px;

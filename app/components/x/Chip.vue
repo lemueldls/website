@@ -26,7 +26,7 @@ withDefaults(
   color: var(--c-dim);
   font-family: var(--f-label);
   font-size: var(--t-6);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   cursor: pointer;
   transition:

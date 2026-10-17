@@ -10,11 +10,11 @@ const { socials, email, rings } = useAbout();
 
     <div class="ftr__inner">
       <div class="ftr__col">
-        <XLabel>Socials</XLabel>
+        <XLabel icon="material-symbols:share-outline-sharp">Socials</XLabel>
         <ul class="ftr__socials">
           <li v-for="social in socials" :key="social.title">
             <XLink class="ftr__social-link" :href="social.href" external>
-              <XIcon class="ftr__social-icon" :name="social.icon" size="xs" />
+              <XIcon class="ftr__social-icon" :name="social.icon" />
               {{ social.title }}
             </XLink>
           </li>
@@ -22,7 +22,7 @@ const { socials, email, rings } = useAbout();
       </div>
 
       <div class="ftr__col">
-        <XLabel>Webrings</XLabel>
+        <XLabel icon="material-symbols:public-outline-sharp">Webrings</XLabel>
         <div class="ftr__rings no-print-chrome">
           <div v-for="ring in rings" :key="ring.name" class="ftr__ring">
             <div class="ftr__ring-nav">
@@ -34,7 +34,7 @@ const { socials, email, rings } = useAbout();
                 target="_self"
                 :title="`Previous in ${ring.name}`"
               >
-                <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="xs" />
+                <XIcon name="material-symbols:keyboard-double-arrow-left-outline-sharp" />
               </XButton>
               <XLink class="ftr__ring-link" :href="ring.home" target="_self">{{ ring.name }}</XLink>
               <!-- <XButton
@@ -45,7 +45,7 @@ const { socials, email, rings } = useAbout();
                 target="_self"
                 :title="`Random site in ${ring.name}`"
               >
-                <XIcon name="material-symbols:casino-sharp" size="xs" />
+                <XIcon name="material-symbols:ifl-outline-sharp"  />
               </XButton> -->
               <XButton
                 variant="ghost"
@@ -55,7 +55,7 @@ const { socials, email, rings } = useAbout();
                 target="_self"
                 :title="`Next in ${ring.name}`"
               >
-                <XIcon name="material-symbols:keyboard-double-arrow-right-sharp" size="xs" />
+                <XIcon name="material-symbols:keyboard-double-arrow-right-outline-sharp" />
               </XButton>
             </div>
           </div>
@@ -124,7 +124,7 @@ const { socials, email, rings } = useAbout();
 
 .ftr__note {
   font-size: var(--t-8);
-  line-height: 1.6;
+  /* line-height: 1.6; */
   color: var(--c-dimmer);
   max-width: 22rem;
 }

@@ -37,7 +37,7 @@ const linked = computed(() => {
 
 .prose-h3__mark {
   font-family: var(--f-label);
-  line-height: 1;
+  /* line-height: 1; */
   color: var(--c-dimmer);
   margin-inline-end: 0.5rem;
   user-select: none;

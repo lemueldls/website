@@ -34,7 +34,7 @@ function onOpenChange(next: boolean) {
           <DialogTitle v-if="title" class="dialog__title">{{ title }}</DialogTitle>
           <slot name="header" />
           <DialogClose class="dialog__close" aria-label="Close">
-            <XIcon name="material-symbols:close-sharp" size="md" />
+            <XIcon name="material-symbols:close-outline-sharp" size="md" />
           </DialogClose>
         </header>
 
@@ -106,7 +106,7 @@ function onOpenChange(next: boolean) {
   font-family: var(--f-label);
   font-size: var(--t-8);
   font-weight: 400;
-  letter-spacing: 0.08em;
+  /* letter-spacing: 0.08em; */
   text-transform: lowercase;
   color: var(--c-accent);
   transition: color var(--dur) var(--ease);

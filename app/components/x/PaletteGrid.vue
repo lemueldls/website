@@ -36,7 +36,7 @@ const liveAccent = computed<string | null>(() => {
 
 <template>
   <div class="palette">
-    <XLabel>Palette</XLabel>
+    <XLabel icon="material-symbols:palette-outline-sharp">Palette</XLabel>
 
     <div v-if="mounted && swatches.length" class="palette__row">
       <span
@@ -49,7 +49,9 @@ const liveAccent = computed<string | null>(() => {
       />
     </div>
 
-    <XLabel v-else class="palette__empty">No wallpaper selected</XLabel>
+    <XLabel v-else class="palette__empty" icon="material-symbols:hide-image-outline-sharp"
+      >No wallpaper selected</XLabel
+    >
 
     <XLabel v-if="mounted && selected">
       <XLink
@@ -88,7 +90,7 @@ const liveAccent = computed<string | null>(() => {
 
 .palette__hexes {
   font-size: var(--t-6);
-  line-height: 1.35;
+  /* line-height: 1.35; */
   color: var(--c-dim);
   word-break: break-all;
 }

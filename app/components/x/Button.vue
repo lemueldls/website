@@ -8,6 +8,7 @@ const props = withDefaults(
     type?: "button" | "submit" | "reset";
     variant?: "rule" | "sheet" | "accent" | "ghost";
     size?: "sm" | "md" | "lg";
+    icon?: string;
     square?: boolean;
     block?: boolean;
     disabled?: boolean;
@@ -50,7 +51,10 @@ const leave = computed(() =>
       block && 'xbtn--block',
     ]"
   >
-    <span v-if="$slots.leading" class="xbtn__lead"><slot name="leading" /></span>
+    <span v-if="icon || $slots.leading" class="xbtn__lead">
+      <XIcon v-if="icon" :name="icon" :size="size === 'lg' ? 'sm' : 'xs'" />
+      <slot name="leading" />
+    </span>
     <slot />
     <span v-if="$slots.trailing" class="xbtn__trail"><slot name="trailing" /></span>
   </component>
@@ -64,7 +68,7 @@ const leave = computed(() =>
   gap: var(--space-2);
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   text-decoration: none;
   white-space: nowrap;

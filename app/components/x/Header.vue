@@ -2,11 +2,15 @@
 const { toggleTheme } = useTheme();
 
 const nav = [
-  { to: "/cv", label: "Curriculum Vitae" },
-  { to: "/projects", label: "Projects" },
-  { to: "/writing", label: "Writing" },
-  { to: "/fonts", label: "Fonts" },
-  { to: "/wallpapers", label: "Wallpapers" },
+  { to: "/cv", label: "CV", icon: "material-symbols:work-history-outline-sharp" },
+  { to: "/projects", label: "Projects", icon: "material-symbols:code-xml-outline-sharp" },
+  { to: "/writing", label: "Writing", icon: "material-symbols:edit-note-outline-sharp" },
+  { to: "/fonts", label: "Fonts", icon: "material-symbols:text-fields-outline-sharp" },
+  {
+    to: "/wallpapers",
+    label: "Wallpapers",
+    icon: "material-symbols:wallpaper-outline-sharp",
+  },
 ];
 
 const menuOpen = ref(false);
@@ -95,6 +99,7 @@ onBeforeUnmount(() => {
               class="hdr__link"
               active-class="hdr__link--active"
             >
+              <XIcon class="hdr__link-icon" :name="item.icon" />
               {{ item.label }}
             </NuxtLink>
           </nav>
@@ -126,7 +131,11 @@ onBeforeUnmount(() => {
                 aria-label="Menu"
               >
                 <XIcon
-                  :name="menuOpen ? 'material-symbols:close-sharp' : 'material-symbols:menu-sharp'"
+                  :name="
+                    menuOpen
+                      ? 'material-symbols:close-outline-sharp'
+                      : 'material-symbols:menu-outline-sharp'
+                  "
                 />
               </XButton>
             </PopoverTrigger>
@@ -156,6 +165,7 @@ onBeforeUnmount(() => {
               class="hdr__link"
               active-class="hdr__link--active"
             >
+              <XIcon class="hdr__link-icon" :name="item.icon" />
               {{ item.label }}
             </NuxtLink>
           </nav>
@@ -179,7 +189,7 @@ onBeforeUnmount(() => {
   position: relative;
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-3);
   max-width: var(--sheet-max);
   margin-inline: auto;
   padding: var(--space-2);
@@ -204,7 +214,7 @@ onBeforeUnmount(() => {
   font-family: var(--f-display);
   font-size: var(--t-12);
   font-weight: 600;
-  letter-spacing: -0.01em;
+  /* letter-spacing: -0.01em; */
   white-space: nowrap;
   transition:
     opacity var(--dur) var(--ease-folio),
@@ -250,9 +260,12 @@ onBeforeUnmount(() => {
 }
 
 .hdr__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dim);
   text-decoration: none;
@@ -260,6 +273,19 @@ onBeforeUnmount(() => {
   border: none;
   white-space: nowrap;
   transition: color var(--dur-fast) var(--ease);
+}
+
+.hdr__link-icon {
+  color: var(--c-dimmer);
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.hdr__link:hover .hdr__link-icon {
+  color: var(--c-fg);
+}
+
+.hdr__link--active .hdr__link-icon {
+  color: var(--c-accent);
 }
 
 .hdr__link:hover {
@@ -288,10 +314,6 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 720px) {
-  .hdr__inner {
-    gap: var(--space-3);
-  }
-
   .hdr__menu {
     display: inline-flex !important;
   }

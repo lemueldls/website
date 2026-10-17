@@ -63,7 +63,7 @@ const onChange = (value: number[] | undefined) => {
   font-family: var(--f-label);
   font-size: var(--t-8);
   font-weight: 400;
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dim);
 }

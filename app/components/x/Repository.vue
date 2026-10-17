@@ -43,7 +43,7 @@ function formatYear(iso: string): string {
 
 <template>
   <section v-if="meta" class="repo">
-    <XSection label="Repository">
+    <XSection label="Repository" icon="material-symbols:folder-outline-sharp">
       <template v-if="meta.archived" #tail>
         <span class="meta">archived</span>
       </template>
@@ -51,40 +51,55 @@ function formatYear(iso: string): string {
       <XSheet class="repo__sheet">
         <dl class="repo__facts">
           <div class="repo__fact">
-            <dt class="label">Stars</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:star-outline-sharp" class="label__icon" />Stars
+            </dt>
             <dd class="repo__value num">{{ meta.stars }}</dd>
           </div>
 
           <div class="repo__fact">
-            <dt class="label">Forks</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:fork-right-outline-sharp" class="label__icon" />Forks
+            </dt>
             <dd class="repo__value num">{{ meta.forks }}</dd>
           </div>
 
           <div class="repo__fact">
-            <dt class="label">Open issues</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:bug-report-outline-sharp" class="label__icon" />Open
+              issues
+            </dt>
             <dd class="repo__value num">{{ meta.openIssues }}</dd>
           </div>
 
           <div class="repo__fact">
-            <dt class="label">License</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:license-outline-sharp" class="label__icon" />License
+            </dt>
             <dd class="repo__value">
               {{ meta.license ?? "None" }}
             </dd>
           </div>
 
           <div class="repo__fact">
-            <dt class="label">Language</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:code-outline-sharp" class="label__icon" />Language
+            </dt>
             <dd class="repo__value">{{ meta.language ?? "—" }}</dd>
           </div>
 
           <div class="repo__fact">
-            <dt class="label">Last push</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:history-outline-sharp" class="label__icon" />Last push
+            </dt>
             <dd class="repo__value num">{{ pushed }}</dd>
           </div>
         </dl>
 
         <div v-if="languageShares.length" class="repo__langs">
-          <span class="label">Breakdown</span>
+          <span class="label label--icon">
+            <XIcon name="material-symbols:bar-chart-outline-sharp" class="label__icon" />Breakdown
+          </span>
 
           <XLanguageShare :languages="languageShares" />
         </div>
@@ -98,7 +113,10 @@ function formatYear(iso: string): string {
         <template v-if="readmeBody">
           <div class="repo__rule" aria-hidden="true" />
 
-          <h2 class="repo__readme-heading label">README</h2>
+          <h2 class="repo__readme-heading label label--icon">
+            <!-- <XIcon name="material-symbols:menu-book-outline-sharp" class="label__icon" /> -->
+            README
+          </h2>
 
           <div class="prose prose--wide repo__readme">
             <ContentRenderer :value="{ body: readmeBody, title: 'README' }" />
@@ -186,7 +204,7 @@ function formatYear(iso: string): string {
   border: var(--rule-width) solid var(--c-rule);
   font-family: var(--f-label);
   font-size: var(--t-6);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dim);
 }

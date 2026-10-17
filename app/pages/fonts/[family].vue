@@ -135,9 +135,9 @@ function useAsDisplayFace() {
   <div class="family sheet-grid">
     <header class="family__head">
       <div class="head-row">
-        <XLabel variant="accent">Specimen</XLabel>
+        <XLabel variant="accent" icon="material-symbols:text-fields-outline-sharp">Specimen</XLabel>
         <XLink to="/fonts" class="backlink">
-          <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All fonts
+          <XIcon name="material-symbols:arrow-back-outline-sharp" />All fonts
         </XLink>
       </div>
       <h1 class="family__name" :style="{ fontFamily: `'${family}'` }">{{ family }}</h1>
@@ -218,12 +218,12 @@ function useAsDisplayFace() {
       </div>
 
       <label class="family__sample">
-        <span class="label">Sample</span>
+        <XLabel icon="material-symbols:edit-note-outline-sharp">Sample</XLabel>
         <textarea v-model="sampleText" rows="2" />
       </label>
 
       <div v-if="features.length" class="family__features">
-        <span class="label">Features</span>
+        <XLabel icon="material-symbols:tune-outline-sharp">Features</XLabel>
         <div class="family__feature-list">
           <XCheckbox
             v-for="f in features"
@@ -245,7 +245,7 @@ function useAsDisplayFace() {
       <p :style="previewStyle">{{ sampleText || "Type something..." }}</p>
     </XSheet>
 
-    <XSection label="Faces" :count="faces.length">
+    <XSection label="Faces" icon="material-symbols:table-outline-sharp" :count="faces.length">
       <div class="family__inventory">
         <table>
           <thead>
@@ -278,7 +278,7 @@ function useAsDisplayFace() {
       </div>
     </XSection>
 
-    <XSection label="Glyphs">
+    <XSection label="Glyphs" icon="material-symbols:abc-outline-sharp">
       <XSheet class="family__glyphs">
         <p :style="{ ...previewStyle, fontSize: `${Math.min(size, 28)}px`, maxWidth: 'none' }">
           {{ glyphRows }}
@@ -287,7 +287,7 @@ function useAsDisplayFace() {
     </XSection>
 
     <XLink to="/fonts" class="backlink">
-      <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All fonts
+      <XIcon name="material-symbols:arrow-back-outline-sharp" />All fonts
     </XLink>
 
     <!-- <div class="family__actions no-print">
@@ -322,7 +322,7 @@ function useAsDisplayFace() {
 
 .family__name {
   font-size: var(--t-60);
-  line-height: 1;
+  /* line-height: 1; */
   margin-block: var(--space-3) var(--space-2);
 }
 
@@ -417,7 +417,7 @@ function useAsDisplayFace() {
 
 .family__glyphs p {
   overflow-wrap: break-word;
-  line-height: 1.7;
+  /* line-height: 1.7; */
   color: var(--c-dim);
 }
 
@@ -436,7 +436,7 @@ function useAsDisplayFace() {
 .family__inventory th {
   text-align: left;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dimmer);
   padding: 0.35em 0.75em 0.35em 0;

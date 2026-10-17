@@ -2,7 +2,6 @@
 const props = withDefaults(
   defineProps<{
     name: string;
-
     size?: "xs" | "sm" | "md" | "lg";
   }>(),
   { size: "sm" },

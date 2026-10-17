@@ -98,23 +98,33 @@ watch([() => props.meta?.file, variant], async () => {
       <div class="lightbox__side">
         <dl class="lightbox__facts">
           <div class="lightbox__fact">
-            <dt class="label">Size</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:aspect-ratio-outline-sharp" class="label__icon" />Size
+            </dt>
             <dd>{{ resolutionLabel(meta) }}</dd>
           </div>
           <div class="lightbox__fact">
-            <dt class="label">Weight</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:data-usage-outline-sharp" class="label__icon" />Weight
+            </dt>
             <dd>{{ byteLabel(meta.bytes) }}</dd>
           </div>
           <div class="lightbox__fact">
-            <dt class="label">Variant</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:layers-outline-sharp" class="label__icon" />Variant
+            </dt>
             <dd>{{ variant }}</dd>
           </div>
           <div class="lightbox__fact">
-            <dt class="label">Color</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:palette-outline-sharp" class="label__icon" />Color
+            </dt>
             <dd>{{ meta.hue }}</dd>
           </div>
           <div class="lightbox__fact">
-            <dt class="label">Index</dt>
+            <dt class="label label--icon">
+              <XIcon name="material-symbols:tag-outline-sharp" class="label__icon" />Index
+            </dt>
             <dd>
               {{ number }} <span class="lightbox__of">of {{ total }}</span>
             </dd>
@@ -132,7 +142,9 @@ watch([() => props.meta?.file, variant], async () => {
         </div>
 
         <div class="lightbox__group">
-          <span class="label">Variant</span>
+          <span class="label label--icon">
+            <XIcon name="material-symbols:layers-outline-sharp" class="label__icon" />Variant
+          </span>
           <div class="segmented" role="group" aria-label="Variant">
             <button
               v-for="name in variants"
@@ -170,10 +182,17 @@ watch([() => props.meta?.file, variant], async () => {
 
         <div class="lightbox__actions">
           <XButton v-if="!applied" variant="accent" block @click="emit('apply', true)">
-            <XIcon name="material-symbols:check-sharp" />
+            <XIcon name="material-symbols:check-outline-sharp" />
             Apply
           </XButton>
-          <XButton v-else variant="rule" block @click="emit('apply', false)">Remove</XButton>
+          <XButton
+            v-else
+            variant="rule"
+            block
+            icon="material-symbols:close-outline-sharp"
+            @click="emit('apply', false)"
+            >Remove</XButton
+          >
 
           <XButton
             :href="wallpaperUrl(meta.file, variant)"
@@ -182,7 +201,7 @@ watch([() => props.meta?.file, variant], async () => {
             block
             download
           >
-            <XIcon name="material-symbols:download-sharp" />
+            <XIcon name="material-symbols:download-outline-sharp" />
             Download
           </XButton>
         </div>
@@ -195,7 +214,7 @@ watch([() => props.meta?.file, variant], async () => {
             class="lightbox__prev"
             @click="emit('step', -1)"
           >
-            <XIcon name="material-symbols:chevron-left-sharp" size="lg" />
+            <XIcon name="material-symbols:chevron-left-outline-sharp" size="lg" />
             Previous
           </XButton>
           <XButton
@@ -206,7 +225,7 @@ watch([() => props.meta?.file, variant], async () => {
             @click="emit('step', 1)"
           >
             Next
-            <XIcon name="material-symbols:chevron-right-sharp" size="lg" />
+            <XIcon name="material-symbols:chevron-right-outline-sharp" size="lg" />
           </XButton>
         </div>
       </div>
@@ -244,7 +263,7 @@ watch([() => props.meta?.file, variant], async () => {
 .lightbox__label {
   font-family: var(--f-label);
   font-size: var(--t-6);
-  letter-spacing: 0.08em;
+  /* letter-spacing: 0.08em; */
   text-transform: lowercase;
   color: var(--c-dimmer);
 }
@@ -347,7 +366,7 @@ watch([() => props.meta?.file, variant], async () => {
 .lightbox__note {
   font-size: var(--t-9);
   color: var(--c-dim);
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 .lightbox__note code {

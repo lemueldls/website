@@ -46,9 +46,11 @@ const neighbours = computed(() => {
   <article v-if="entry" class="detail sheet-grid">
     <header class="detail__head">
       <div class="head-row">
-        <p class="label label--accent">{{ entry.role }}</p>
+        <XLabel variant="accent" icon="material-symbols:work-outline-sharp">{{
+          entry.role
+        }}</XLabel>
         <XLink to="/projects" class="backlink">
-          <XIcon name="material-symbols:arrow-back-sharp" size="xs" />All projects
+          <XIcon name="material-symbols:arrow-back-outline-sharp" />All projects
         </XLink>
       </div>
 
@@ -82,14 +84,14 @@ const neighbours = computed(() => {
 
     <nav class="detail__nav" aria-label="More projects">
       <XLink v-if="neighbours.prev" :to="`/projects/${neighbours.prev.slug}`">
-        <XIcon name="material-symbols:arrow-back-sharp" size="xs" />{{ neighbours.prev.name }}
+        <XIcon name="material-symbols:arrow-back-outline-sharp" />{{ neighbours.prev.name }}
       </XLink>
       <XLink
         v-if="neighbours.next"
         :to="`/projects/${neighbours.next.slug}`"
         class="detail__nav-next"
       >
-        {{ neighbours.next.name }}<XIcon name="material-symbols:arrow-forward-sharp" size="xs" />
+        {{ neighbours.next.name }}<XIcon name="material-symbols:arrow-forward-outline-sharp" />
       </XLink>
     </nav>
   </article>
@@ -161,7 +163,7 @@ const neighbours = computed(() => {
   padding: 0;
   font-family: var(--f-label);
   font-size: var(--t-6);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dimmer);
 }
@@ -173,7 +175,7 @@ const neighbours = computed(() => {
   gap: var(--space-4);
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
 }
 

@@ -3,8 +3,8 @@
   font-family: var(--f-label);
   font-size: var(--t-8);
   font-weight: 400;
-  letter-spacing: 0.08em;
-  line-height: 1.4;
+  /* letter-spacing: 0.08em; */
+  /* line-height: 1.4; */
   text-transform: lowercase;
   color: var(--c-dim);
   white-space: nowrap;
@@ -18,6 +18,21 @@
 .label--strong {
   color: var(--c-fg);
   font-weight: 600;
+}
+
+.label--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.label__icon {
+  color: var(--c-dimmer);
+}
+
+.label--accent .label__icon {
+  color: inherit;
+  opacity: 0.85;
 }
 
 .num {
@@ -52,7 +67,7 @@
   justify-self: start;
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
 }
 

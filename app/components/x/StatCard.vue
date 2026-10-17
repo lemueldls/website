@@ -5,18 +5,19 @@ const props = withDefaults(
   defineProps<{
     label: string;
     value: number;
+    icon?: string;
 
     note?: string;
   }>(),
   {},
 );
 
-const { label, value, note } = toRefs(props);
+const { label, value, note, icon } = toRefs(props);
 </script>
 
 <template>
   <div class="stat">
-    <XLabel>{{ label }}</XLabel>
+    <XLabel :icon="icon">{{ label }}</XLabel>
 
     <strong class="stat__value num">{{ formatCount(value) }}</strong>
 
@@ -37,8 +38,8 @@ const { label, value, note } = toRefs(props);
   font-family: var(--f-display);
   font-size: clamp(var(--t-14), 28cqi, var(--t-36));
   font-weight: var(--f-display-weight);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  /* line-height: 1; */
+  /* letter-spacing: -0.02em; */
   color: var(--c-fg);
   /* font-variant-numeric: tabular-nums; */
 }

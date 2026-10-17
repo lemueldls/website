@@ -52,26 +52,26 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 
       <div class="hero__meta" data-reveal-group>
         <div class="hero__col">
-          <XLabel>Pronouns</XLabel>
+          <XLabel icon="material-symbols:person-outline-sharp">Pronouns</XLabel>
           <p class="hero__value">he/him</p>
           <span :style="{ height: '0.5em' }" />
-          <XLabel>Location</XLabel>
+          <XLabel icon="material-symbols:location-on-outline-sharp">Location</XLabel>
           <p class="hero__value">New York, NY</p>
         </div>
 
         <div class="hero__col">
-          <XLabel>Specializations</XLabel>
+          <XLabel icon="material-symbols:star-outline-sharp">Specializations</XLabel>
           <ul class="hero__disciplines">
             <li v-for="d in discipline" :key="d">{{ d }}</li>
           </ul>
         </div>
 
         <div class="hero__col">
-          <XLabel>Socials</XLabel>
+          <XLabel icon="material-symbols:alternate-email-outline-sharp">Socials</XLabel>
           <ul class="hero__socials">
             <li v-for="social in socials" :key="social.title">
               <XLink class="hero__social-link" :href="social.href" external>
-                <XIcon class="hero__social-icon" :name="social.icon" size="xs" />
+                <XIcon class="hero__social-icon" :name="social.icon" />
                 {{ social.title }}
               </XLink>
             </li>
@@ -79,7 +79,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
         </div>
 
         <div class="hero__col">
-          <XLabel>Webrings</XLabel>
+          <XLabel icon="material-symbols:language-outline-sharp">Webrings</XLabel>
           <div class="hero__rings">
             <span v-for="ring in rings" :key="ring.name" class="hero__ring">
               <XButton
@@ -90,7 +90,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
                 target="_self"
                 :title="`Previous in ${ring.name}`"
               >
-                <XIcon name="material-symbols:keyboard-double-arrow-left-sharp" size="sm" />
+                <XIcon name="material-symbols:keyboard-double-arrow-left-outline-sharp" size="sm" />
               </XButton>
               <XLink :href="ring.home" target="_self">{{ ring.name }}</XLink>
               <XButton
@@ -101,7 +101,10 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
                 target="_self"
                 :title="`Next in ${ring.name}`"
               >
-                <XIcon name="material-symbols:keyboard-double-arrow-right-sharp" size="sm" />
+                <XIcon
+                  name="material-symbols:keyboard-double-arrow-right-outline-sharp"
+                  size="sm"
+                />
               </XButton>
             </span>
           </div>
@@ -112,6 +115,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
     <XSection
       class="hero__current"
       label="Current work"
+      icon="material-symbols:work-outline-sharp"
       :count="currentProjects.length"
       data-reveal-group
     >
@@ -139,10 +143,12 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
       </ul>
 
       <div class="hero__actions">
-        <XButton to="/cv" variant="sheet">Curriculum Vitae</XButton>
+        <XButton to="/cv" variant="sheet" icon="material-symbols:work-history-outline-sharp">
+          Curriculum Vitae
+        </XButton>
         <XButton to="/projects" variant="accent">
           All projects
-          <!-- <XIcon name="material-symbols:arrow-right-alt-rounded" /> -->
+          <XIcon name="material-symbols:arrow-forward-outline-sharp" />
         </XButton>
       </div>
     </XSection>
@@ -150,6 +156,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
     <XSection
       class="hero__writing"
       label="Latest writing"
+      icon="material-symbols:edit-note-outline-sharp"
       :count="recentPosts.length"
       data-reveal-group
     >
@@ -165,7 +172,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
       <div class="hero__writing-actions">
         <XButton to="/writing" variant="accent">
           All writing
-          <!-- <XIcon name="material-symbols:arrow-right-alt-rounded" /> -->
+          <XIcon name="material-symbols:arrow-forward-outline-sharp" />
         </XButton>
       </div>
     </XSection>
@@ -181,8 +188,8 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   font-family: var(--f-display);
   font-size: var(--t-60);
   font-weight: var(--f-display-weight);
-  line-height: 1;
-  letter-spacing: -0.025em;
+  /* line-height: 1; */
+  /* letter-spacing: -0.025em; */
   margin-bottom: var(--space-6);
   text-wrap: balance;
 }
@@ -201,7 +208,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__standfirst {
   font-family: var(--f-display);
   font-size: var(--t-18);
-  line-height: 1.45;
+  /* line-height: 1.45; */
   color: var(--c-dimmer);
   max-width: 50ch;
   text-wrap: pretty;
@@ -211,7 +218,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__intro {
   margin-top: var(--space-4);
   font-size: var(--t-11);
-  line-height: 1.65;
+  /* line-height: 1.65; */
   color: var(--c-fg);
   max-width: var(--measure-text);
   text-wrap: pretty;
@@ -347,7 +354,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 }
 
 .hero__work-role {
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
 }
 
@@ -358,7 +365,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__work-desc {
   grid-area: desc;
   font-size: var(--t-10);
-  line-height: 1.6;
+  /* line-height: 1.6; */
   color: var(--c-dim);
   max-width: var(--measure-long);
   text-wrap: pretty;
@@ -442,7 +449,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
   align-items: baseline;
   gap: var(--space-1) var(--space-2);
   font-size: var(--t-9);
-  line-height: 1.6;
+  /* line-height: 1.6; */
   color: var(--c-dim);
   max-width: var(--measure-text);
 }

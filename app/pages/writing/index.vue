@@ -15,10 +15,12 @@ const { readingTime } = useReadingTime();
 
 useSeoMeta({ title: "Writing" });
 
+const description = "Long-form pieces on projects I've worked on.";
+
 defineOgImage("Root", {
   label: "blog",
   title: "Writing",
-  description: "Long-form pieces on compilers, type systems, and the tools built around them.",
+  description,
   meta: `${sorted.value.length} articles`,
 });
 </script>
@@ -26,13 +28,14 @@ defineOgImage("Root", {
 <template>
   <div class="writing sheet-grid">
     <header class="writing__head" data-reveal-group>
-      <XLabel variant="accent">blog</XLabel>
+      <XLabel variant="accent" icon="material-symbols:edit-note-outline-sharp">blog</XLabel>
       <h1 class="writing__title">Writing</h1>
+      <p class="writing__lede">{{ description }}</p>
 
       <div class="writing__rule" aria-hidden="true" />
     </header>
 
-    <XSection label="Articles" :count="sorted.length">
+    <XSection label="Articles" icon="material-symbols:article-outline-sharp" :count="sorted.length">
       <ol class="writing__list" data-reveal-group>
         <li v-for="post in sorted" :key="post.path" class="entry">
           <NuxtLink :to="`/writing/${slugOf(post)}`" class="entry__link">
@@ -48,7 +51,7 @@ defineOgImage("Root", {
 
             <span class="entry__more">
               Read
-              <XIcon name="material-symbols:arrow-forward-sharp" size="xs" />
+              <XIcon name="material-symbols:arrow-forward-outline-sharp" />
             </span>
           </NuxtLink>
         </li>
@@ -72,7 +75,7 @@ defineOgImage("Root", {
   font-family: var(--f-display);
   font-size: var(--t-14);
   color: var(--c-dim);
-  max-width: 52ch;
+  /* max-width: 52ch; */
   /* line-height: 1.55; */
 }
 
@@ -127,7 +130,7 @@ defineOgImage("Root", {
   display: flex;
   align-items: baseline;
   gap: 0.5em;
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
 }
 
 .entry__dot {
@@ -152,7 +155,7 @@ defineOgImage("Root", {
   font-size: var(--t-10);
   color: var(--c-dim);
   max-width: var(--measure-text);
-  line-height: 1.6;
+  /* line-height: 1.6; */
 }
 
 .entry__more {
@@ -162,7 +165,7 @@ defineOgImage("Root", {
   margin-top: var(--space-4);
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-accent);
   transition: color var(--dur) var(--ease);

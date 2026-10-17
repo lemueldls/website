@@ -9,6 +9,7 @@ const totals = computed(() => {
   return TOTAL_LABELS.map((entry) => ({
     key: entry.key,
     label: entry.label,
+    icon: entry.icon,
     value: stats.value!.totals[entry.key],
   }));
 });
@@ -31,7 +32,7 @@ const fetchedNote = computed(() => {
 
 <template>
   <section v-if="stats || loading" class="ghstats">
-    <XSection label="GitHub">
+    <XSection label="GitHub" icon="simple-icons:github">
       <template v-if="stats?.stale" #tail>
         <span class="meta">last known</span>
       </template>
@@ -42,6 +43,7 @@ const fetchedNote = computed(() => {
             v-for="entry in totals"
             :key="entry.key"
             :label="entry.label"
+            :icon="entry.icon"
             :value="entry.value"
             :note="entry.key === 'commits' ? repoNote : undefined"
           />
@@ -52,13 +54,15 @@ const fetchedNote = computed(() => {
 
           <div class="ghstats__row">
             <div class="ghstats__col">
-              <XLabel variant="accent">Languages</XLabel>
+              <XLabel variant="accent" icon="material-symbols:code-outline-sharp">Languages</XLabel>
               <!-- <p class="meta ghstats__caption">Share of all bytes, by primary language</p> -->
               <XLanguageShare :languages="stats.languages" />
             </div>
 
             <div class="ghstats__col">
-              <XLabel variant="accent">Most starred</XLabel>
+              <XLabel variant="accent" icon="material-symbols:star-outline-sharp"
+                >Most starred</XLabel
+              >
               <p class="meta ghstats__caption">Open source, by stars</p>
 
               <ol class="repos">

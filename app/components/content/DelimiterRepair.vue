@@ -281,7 +281,7 @@ const pieces = computed(() => {
 .repair__caption {
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dim);
 }
@@ -294,7 +294,7 @@ const pieces = computed(() => {
   color: var(--c-code-fg);
   font-family: var(--f-mono);
   font-size: var(--t-9);
-  line-height: 1.5;
+  /* line-height: 1.5; */
   padding: var(--space-3);
 }
 
@@ -313,7 +313,7 @@ const pieces = computed(() => {
   border-left: 2px solid var(--c-rule);
   font-family: var(--f-mono);
   font-size: var(--t-9);
-  line-height: 1.6;
+  /* line-height: 1.6; */
   white-space: pre-wrap;
   word-break: break-word;
   padding: var(--space-3);

@@ -30,11 +30,13 @@ import {
 
 useSeoMeta({ title: "Wallpapers" });
 
+const description =
+  "Curated collection of images with light and dark variants, color mappings, and a daily rotation.";
+
 defineOgImage("Root", {
   label: "collection",
   title: "Wallpapers",
-  description:
-    "Collection of wallpaper published in light and dark, each one able to retint the whole site.",
+  description,
   meta: `${wallpaperFiles.length} wallpapers`,
 });
 
@@ -435,8 +437,9 @@ useHead(heroLink);
 <template>
   <div class="gallery sheet-grid">
     <header class="gallery__head" data-reveal-group>
-      <XLabel variant="accent">Collection</XLabel>
+      <XLabel variant="accent" icon="material-symbols:wallpaper-outline-sharp">Collection</XLabel>
       <h1 class="gallery__title">Wallpapers</h1>
+      <p class="gallery__lede">{{ description }}</p>
 
       <div class="gallery__rule" aria-hidden="true" />
     </header>
@@ -471,7 +474,9 @@ useHead(heroLink);
           </button>
 
           <div class="gallery__applied-body">
-            <XLabel variant="accent">Currently applied</XLabel>
+            <XLabel variant="accent" icon="material-symbols:check-circle-outline-sharp">
+              Currently applied
+            </XLabel>
             <h2 class="gallery__applied-name">{{ selected }}</h2>
             <p class="meta gallery__applied-meta">
               {{ resolutionLabel(currentMeta) }} // {{ byteLabel(currentMeta.bytes) }}
@@ -495,9 +500,14 @@ useHead(heroLink);
             <div class="gallery__applied-actions">
               <XButton :href="wallpaperUrl(selected!, 'base')" variant="sheet">
                 Download
-                <XIcon name="material-symbols:download-sharp" />
+                <XIcon name="material-symbols:download-outline-sharp" />
               </XButton>
-              <XButton variant="ghost" @click="setWallpaper(null)">Remove</XButton>
+              <XButton
+                variant="ghost"
+                icon="material-symbols:close-outline-sharp"
+                @click="setWallpaper(null)"
+                >Remove</XButton
+              >
             </div>
           </div>
         </div>
@@ -507,9 +517,9 @@ useHead(heroLink);
     <XSheet class="gallery__controls" data-reveal>
       <div class="gallery__controls-grid">
         <label class="gallery__search">
-          <span class="label">Search</span>
+          <XLabel icon="material-symbols:search-outline-sharp">Search</XLabel>
           <span class="gallery__search-field">
-            <XIcon name="material-symbols:search-sharp" size="lg" />
+            <XIcon name="material-symbols:search-outline-sharp" size="lg" />
             <input v-model="search" type="search" placeholder="file name..." />
           </span>
         </label>
@@ -521,14 +531,14 @@ useHead(heroLink);
         />
 
         <div class="gallery__actions">
-          <span class="label">Surprise</span>
+          <XLabel icon="material-symbols:ifl-outline-sharp">Surprise</XLabel>
           <div class="gallery__action-group">
             <XButton variant="ghost" @click="randomWallpaper()">
-              <XIcon name="material-symbols:casino-sharp" />
+              <XIcon name="material-symbols:ifl-outline-sharp" />
               Random
             </XButton>
             <XButton variant="ghost" @click="dailyWallpaper()">
-              <XIcon name="material-symbols:today-sharp" />
+              <XIcon name="material-symbols:today-outline-sharp" />
               Today&rsquo;s
             </XButton>
           </div>
@@ -563,7 +573,11 @@ useHead(heroLink);
       </ul>
     </XSheet>
 
-    <XSection label="Gallery" :count="matches.length">
+    <XSection
+      label="Gallery"
+      icon="material-symbols:photo-library-outline-sharp"
+      :count="matches.length"
+    >
       <template #tail>
         <span class="meta" aria-live="polite">showing {{ visible.length }}</span>
       </template>
@@ -604,7 +618,7 @@ useHead(heroLink);
                 />
 
                 <span v-if="selected === file" class="tile__badge">
-                  <XIcon name="material-symbols:check-sharp" size="sm" />
+                  <XIcon name="material-symbols:check-outline-sharp" size="sm" />
                   In use
                 </span>
               </span>
@@ -622,6 +636,7 @@ useHead(heroLink);
                 v-if="selected !== file"
                 variant="sheet"
                 size="sm"
+                icon="material-symbols:check-outline-sharp"
                 :title="`Set ${file} as the site wallpaper`"
                 @click="setWallpaper(file)"
               >
@@ -631,6 +646,7 @@ useHead(heroLink);
                 v-else
                 variant="ghost"
                 size="sm"
+                icon="material-symbols:close-outline-sharp"
                 :title="`Stop using ${file}`"
                 @click="setWallpaper(null)"
               >
@@ -647,7 +663,12 @@ useHead(heroLink);
     <div class="gallery__more">
       <div ref="sentinel" class="gallery__sentinel" aria-hidden="true" />
 
-      <XButton v-if="remaining > 0" variant="rule" @click="loadMore">
+      <XButton
+        v-if="remaining > 0"
+        variant="rule"
+        icon="material-symbols:expand-more-outline-sharp"
+        @click="loadMore"
+      >
         Load {{ Math.min(PAGE_SIZE, remaining) }} more
       </XButton>
       <p v-else-if="matches.length > 0" class="meta">all {{ matches.length }} shown</p>
@@ -687,7 +708,7 @@ useHead(heroLink);
   font-size: var(--t-14);
   color: var(--c-dim);
   /* line-height: 1.55; */
-  max-width: 62ch;
+  /* max-width: 62ch; */
 }
 
 .gallery__note {
@@ -1066,7 +1087,7 @@ useHead(heroLink);
   font-family: var(--f-label);
   font-size: var(--t-6);
   font-weight: 600;
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
 }
 

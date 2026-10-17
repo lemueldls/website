@@ -324,7 +324,7 @@ function listing(block: Block) {
 .partition__caption {
   font-family: var(--f-label);
   font-size: var(--t-8);
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--c-dimmer);
   margin-block-end: var(--space-2);
@@ -339,7 +339,7 @@ function listing(block: Block) {
   color: var(--c-code-fg);
   font-family: var(--f-mono);
   font-size: var(--t-9);
-  line-height: 1.4;
+  /* line-height: 1.4; */
   padding: var(--space-3);
 }
 
@@ -382,7 +382,7 @@ function listing(block: Block) {
   border-left: 2px solid var(--c-rule);
   font-family: var(--f-mono);
   font-size: var(--t-8);
-  line-height: 1.5;
+  /* line-height: 1.5; */
   white-space: pre-wrap;
   word-break: break-word;
   padding: var(--space-2) var(--space-3);

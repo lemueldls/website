@@ -26,7 +26,7 @@ defineProps<{
   font-size: var(--t-9);
   font-family: var(--f-display);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  /* letter-spacing: 0.02em; */
   font-variant: small-caps;
   text-decoration: none;
   color: var(--c-dim);

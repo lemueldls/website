@@ -78,7 +78,7 @@ const pdfHref = computed(() => {
             <XSelect v-model="options.preset" label="Preset" :options="presetOptions" />
 
             <XButton class="cv__controls-sections" variant="sheet" @click="pickerOpen = true">
-              <XIcon name="material-symbols:tune-sharp" />
+              <XIcon name="material-symbols:tune-outline-sharp" />
               Sections
             </XButton>
           </div>
@@ -95,15 +95,15 @@ const pdfHref = computed(() => {
                 <XIcon
                   :name="
                     showPreview
-                      ? 'material-symbols:close-sharp'
-                      : 'material-symbols:visibility-sharp'
+                      ? 'material-symbols:close-outline-sharp'
+                      : 'material-symbols:visibility-outline-sharp'
                   "
                 />
                 {{ showPreview ? "Exit preview" : "Print preview" }}
               </XButton>
 
               <XButton :href="pdfHref" target="_blank" variant="accent" size="lg">
-                <XIcon name="material-symbols:download-sharp" size="lg" />
+                <XIcon name="material-symbols:download-outline-sharp" size="lg" />
                 Download PDF
               </XButton>
             </div>
@@ -118,16 +118,16 @@ const pdfHref = computed(() => {
 
     <Transition name="fade">
       <div v-if="showPreview" class="cv__preview-bar no-print">
-        <span class="label">Print preview</span>
+        <XLabel icon="material-symbols:print-outline-sharp">Print preview</XLabel>
         <span class="meta cv__preview-note">What the PDF will look like</span>
 
         <XButton variant="accent" :href="pdfHref" target="_blank">
-          <XIcon name="material-symbols:download-sharp" />
+          <XIcon name="material-symbols:download-outline-sharp" />
           PDF
         </XButton>
 
         <XButton variant="sheet" @click="showPreview = false">
-          <XIcon name="material-symbols:close-sharp" />
+          <XIcon name="material-symbols:close-outline-sharp" />
           Exit preview
         </XButton>
       </div>

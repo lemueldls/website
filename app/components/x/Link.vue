@@ -21,8 +21,7 @@ const leave = computed(() =>
     <slot />
     <XIcon
       v-if="external"
-      name="material-symbols:arrow-outward-sharp"
-      size="xs"
+      name="material-symbols:arrow-outward-outline-sharp"
       class="xlink__icon"
     />
   </NuxtLink>
@@ -30,8 +29,7 @@ const leave = computed(() =>
     <slot />
     <XIcon
       v-if="external"
-      name="material-symbols:arrow-outward-sharp"
-      size="xs"
+      name="material-symbols:arrow-outward-outline-sharp"
       class="xlink__icon"
     />
   </a>
