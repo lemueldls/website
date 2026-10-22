@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@cloudflare/puppeteer": "^1.4.0",
+    "@iconify-json/griddy-icons": "^1.2.0",
     "@iconify-json/lucide": "^1.2.142",
     "@iconify-json/material-symbols": "^1.2.95",
     "@iconify-json/simple-icons": "^1.2.99",

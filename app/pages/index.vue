@@ -143,9 +143,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
       </ul>
 
       <div class="hero__actions">
-        <XButton to="/cv" variant="sheet" icon="material-symbols:work-history-outline-sharp">
-          Curriculum Vitae
-        </XButton>
+        <XButton to="/cv" variant="sheet"> Curriculum Vitae </XButton>
         <XButton to="/projects" variant="accent">
           All projects
           <XIcon name="material-symbols:arrow-forward-outline-sharp" />
@@ -293,7 +291,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
 .hero__social-icon {
   display: inline-flex;
   margin-left: 0.25em;
-  margin-right: 0.125em;
+  /* margin-right: 0.125em; */
   color: var(--c-dimmer);
   transition: color var(--dur-fast) var(--ease);
 }

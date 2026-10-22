@@ -169,6 +169,9 @@ importers:
       '@cloudflare/puppeteer':
         specifier: ^1.4.0
         version: 1.4.0(supports-color@10.2.2)
+      '@iconify-json/griddy-icons':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@iconify-json/lucide':
         specifier: ^1.2.142
         version: 1.2.142
@@ -884,6 +887,9 @@ packages:
 
   '@iconify-json/carbon@1.2.28':
     resolution: {integrity: sha512-dog92E0fGszJSrmeikPQmFrd4ptbdapogEhtZ9MCA9KiCNacYb2/nDi0euwsK0kTevsFiTy7Mte6QvRq3LDyHQ==}
+
+  '@iconify-json/griddy-icons@1.2.0':
+    resolution: {integrity: sha512-C3AdVCAC9WrUNFSmyljsiH59CuyOqUfALsanzD4dO0VOHt4Fz0sttDSeayiSap8u8uACeq8WMZ1KZAmMusuf9w==}
 
   '@iconify-json/lucide@1.2.142':
     resolution: {integrity: sha512-vEGX5X52/l77jRMcmxXk3PiEebldDUs8WFdM8X3Evq1S9p5F+o0VZhx8sqaQsmFEB9Ukp5ND5Q/0g2kQ/LF+rQ==}
@@ -7999,6 +8005,10 @@ snapshots:
       vue: 3.5.43(typescript@6.0.3)
 
   '@iconify-json/carbon@1.2.28':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/griddy-icons@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 

@@ -160,13 +160,13 @@ function resolveProject(source: Project): Project {
 }
 
 const socials: Social[] = [
-  { title: "Bluesky", href: "https://bsky.app/profile/lem.my", icon: "simple-icons:bluesky" },
+  { title: "Bluesky", href: "https://bsky.app/profile/lem.my", icon: "griddy-icons:bluesky" },
   {
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/lemueldls",
-    icon: "simple-icons:linkedin",
+    icon: "griddy-icons:linkedin",
   },
-  { title: "GitHub", href: "https://github.com/lemueldls", icon: "simple-icons:github" },
+  { title: "GitHub", href: "https://github.com/lemueldls", icon: "griddy-icons:github" },
 ];
 
 const email: Social = {
