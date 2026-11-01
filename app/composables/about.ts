@@ -23,6 +23,16 @@ export interface RingLink {
   rand: string;
 }
 
+export type BadgeGroup = "tools" | "web" | "found" | "elsewhere";
+
+export interface Badge {
+  title: string;
+  href?: string;
+  src: string;
+  group: BadgeGroup;
+  note?: string;
+}
+
 export interface Education {
   name: string;
   slug: string;
@@ -203,6 +213,208 @@ const rings: RingLink[] = [
     next: "https://ring.recurse.com/next?id=89",
     rand: "https://ring.recurse.com/rand",
   },
+];
+
+const badges: Badge[] = [
+  // tools
+  // { title: "7-Zip", href: "https://www.7-zip.org/", src: "/badges/7zip.gif", group: "tools" },
+  {
+    title: "uBlock Origin",
+    href: "https://ublockorigin.com/",
+    src: "/badges/ublock-origin.png",
+    group: "tools",
+  },
+  // {
+  //   title: "Firefox",
+  //   href: "https://www.firefox.com/en-US/",
+  //   src: "/badges/firefox.png",
+  //   group: "tools",
+  // },
+  // {
+  //   title: "VSCodium",
+  //   href: "https://vscodium.com/",
+  //   src: "/badges/vscodium.gif",
+  //   group: "tools",
+  //   note: "made with",
+  // },
+  // { title: "Jellyfin", href: "https://jellyfin.org/", src: "/badges/jellyfin.gif", group: "tools" },
+  {
+    title: "qBittorrent",
+    href: "https://www.qbittorrent.org/",
+    src: "/badges/qbittorrent.png",
+    group: "tools",
+    note: "don't forget to seed",
+  },
+  { title: "Astro", href: "https://astro.build/", src: "/badges/astro.png", group: "tools" },
+  { title: "GNU/Linux", src: "/badges/linux.gif", group: "tools", note: "made on" },
+  // {
+  //   title: "Bitwarden",
+  //   href: "https://bitwarden.com/",
+  //   src: "https://reduxflakes.nekoweb.org/img/1pnLk_fmO--88.webp",
+  //   group: "tools",
+  // },
+  {
+    title: "VS Code",
+    href: "https://code.visualstudio.com/",
+    src: "https://reduxflakes.nekoweb.org/img/mnc2sJ2LeM-88.webp",
+    group: "tools",
+    note: "made with",
+  },
+
+  // the web
+  { title: "Got HTML?", src: "/badges/got-html.gif", group: "web" },
+  // {
+  //   title: "I dream in HTML",
+  //   src: "/badges/dream.gif",
+  //   group: "web",
+  // },
+  // {
+  //   title: "Viewable with any browser",
+  //   src: "/badges/any88x31.gif",
+  //   group: "web",
+  // },
+  {
+    title: "Responsive website",
+    src: "/badges/responsive.png",
+    group: "web",
+  },
+  { title: "Flexbox", src: "/badges/flexbox.gif", group: "web" },
+  { title: "Source missing", src: "/badges/source-missing.gif", group: "web" },
+  // {
+  //   title: "Tom Scott",
+  //   href: "https://www.tomscott.com/",
+  //   src: "/badges/tom-scott.webp",
+  //   group: "web",
+  //   note: "I am in an 88×31 badge",
+  // },
+  // {
+  //   title: "Made for Dark Mode!",
+  //   src: "https://reduxflakes.nekoweb.org/img/7aZrZJcDOu-88.jpeg",
+  //   group: "web",
+  // },
+  // {
+  //   title: "Mobile Friendly",
+  //   src: "https://reduxflakes.nekoweb.org/img/N7o-z86AwS-88.jpeg",
+  //   group: "web",
+  // },
+  {
+    title: "Made with CSS Grid",
+    src: "https://reduxflakes.nekoweb.org/img/sNgMP5_uUx-88.jpeg",
+    group: "web",
+  },
+
+  // found
+  { title: "I like computer", src: "/badges/computer.jpg", group: "found" },
+  // { title: "Homer", src: "/badges/homer.gif", group: "found" },
+  // { title: "Windows XP", src: "/badges/windows-xp.gif", group: "found" },
+  // { title: "Wii", src: "/badges/wii.gif", group: "found" },
+  // { title: "Stardew Valley", src: "/badges/stardew-valley.gif", group: "found" },
+  { title: "Nyan Cat", src: "/badges/nyan-cat.gif", group: "found" },
+  // { title: "Plastic Love", src: "/badges/plastic-love.gif", group: "found" },
+  {
+    title: "Hatsune Miku",
+    href: "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv01_us",
+    src: "/badges/miku.gif",
+    group: "found",
+  },
+  // { title: "Blåhaj", src: "/badges/love-blahaj.gif", group: "found" },
+  { title: "Aperture Laboratories", src: "/badges/aperture.jpg", group: "found" },
+  // { title: "blends", src: "/badges/blends.gif", group: "found" },
+  // {
+  //   title: "Trans rights now!",
+  //   src: "https://reduxflakes.nekoweb.org/img/aLNEopZsGj-88.jpeg",
+  //   group: "found",
+  // },
+  // {
+  //   title: "Bring back the headphone jack",
+  //   src: "https://reduxflakes.nekoweb.org/img/IasK7Yn36d-88.jpeg",
+  //   group: "found",
+  // },
+  // {
+  //   title: "Don't feed the AI!",
+  //   src: "https://reduxflakes.nekoweb.org/img/2eYhf4t8UA-88.webp",
+  //   group: "found",
+  // },
+  {
+    title: "Catppuccin",
+    href: "https://catppuccin.com/",
+    src: "https://reduxflakes.nekoweb.org/img/AJrswBS-HA-88.webp",
+    group: "found",
+  },
+  // {
+  //   title: "Bookmark this page!",
+  //   src: "https://reduxflakes.nekoweb.org/img/Irdy-mWv3s-88.jpeg",
+  //   group: "found",
+  // },
+
+  // elsewhere
+  {
+    title: "trafficlunar",
+    href: "https://trafficlunar.net/",
+    src: "https://trafficlunar.net/88x31.gif",
+    group: "elsewhere",
+  },
+  {
+    title: "melankorin",
+    href: "https://melankorin.net/",
+    src: "https://melankorin.net/assets/img/buttons/button-1.gif",
+    group: "elsewhere",
+  },
+  {
+    title: "dimden",
+    href: "https://dimden.dev/",
+    src: "https://dimden.dev/services/images/88x31.gif",
+    group: "elsewhere",
+  },
+  { title: "Daudix", href: "https://daudix.one", src: "/badges/daudix.gif", group: "elsewhere" },
+  {
+    title: "reduc",
+    href: "https://reduxflakes.nekoweb.org/",
+    src: "/badges/reduxflakes.gif",
+    group: "elsewhere",
+  },
+  // {
+  //   title: "ellen's den",
+  //   href: "https://ellenthekat.nekoweb.org",
+  //   src: "https://ellenthekat.nekoweb.org/Images/oc%20headshot%20style.png",
+  //   group: "elsewhere",
+  // },
+  // {
+  //   title: "Neocities",
+  //   href: "https://neocities.org/",
+  //   src: "https://reduxflakes.nekoweb.org/img/EuAHx5TWy9-88.webp",
+  //   group: "elsewhere",
+  // },
+  // {
+  //   title: "Nekoweb",
+  //   href: "https://nekoweb.org/",
+  //   src: "https://reduxflakes.nekoweb.org/img/wKShg4ul8V-88.webp",
+  //   group: "elsewhere",
+  // },
+  // {
+  //   title: "OpenBooks",
+  //   href: "https://openbooks.neocities.org",
+  //   src: "https://reduxflakes.nekoweb.org/img/AL6DZ4SaiH-88.webp",
+  //   group: "elsewhere",
+  // },
+  // {
+  //   title: "nkko",
+  //   href: "https://nkko.link/",
+  //   src: "https://reduxflakes.nekoweb.org/img/YwRB-p439O-88.webp",
+  //   group: "elsewhere",
+  // },
+  // {
+  //   title: "plasma",
+  //   href: "https://plasma.nekoweb.org/",
+  //   src: "https://reduxflakes.nekoweb.org/img/XtU6IkO_-f-88.webp",
+  //   group: "elsewhere",
+  // },
+  // {
+  //   title: "webchnl",
+  //   href: "https://webchnl.com/",
+  //   src: "https://reduxflakes.nekoweb.org/img/YPQobGjtx7-88.webp",
+  //   group: "elsewhere",
+  // },
 ];
 
 const education = [
@@ -933,6 +1145,7 @@ export function useAbout(presetKey: MaybeRefOrGetter<string> = "default") {
     socials,
     email,
     rings,
+    badges,
 
     education: computed<Education[]>(() => education.map(printHiddenFor(preset, "education"))),
     relevantCourses,

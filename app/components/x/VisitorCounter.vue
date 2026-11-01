@@ -30,19 +30,21 @@ const note = computed(() => {
 </script>
 
 <template>
-  <span v-if="visits" class="folio" :title="note">
-    <span class="folio__digits" aria-hidden="true">
-      <template v-for="(cell, i) in cells" :key="i">
-        <span v-if="cell.digit" class="folio__cell num">
-          <span class="mark mark--tl" />
-          <span class="mark mark--tr" />
-          <span class="mark mark--bl" />
-          <span class="mark mark--br" />
-          {{ cell.char }}
-        </span>
-        <span v-else class="folio__sep">{{ cell.char }}</span>
-      </template>
-    </span>
+  <span v-if="visits" class="folio">
+    <XTooltip :text="note">
+      <span class="folio__digits" aria-hidden="true">
+        <template v-for="(cell, i) in cells" :key="i">
+          <span v-if="cell.digit" class="folio__cell num">
+            <span class="mark mark--tl" />
+            <span class="mark mark--tr" />
+            <span class="mark mark--bl" />
+            <span class="mark mark--br" />
+            {{ cell.char }}
+          </span>
+          <!-- <span v-else class="folio__sep">{{ cell.char }}</span> -->
+        </template>
+      </span>
+    </XTooltip>
 
     <span class="sr-only">{{ reading }}</span>
   </span>
@@ -63,12 +65,11 @@ const note = computed(() => {
   }
 }
 
-.folio__digits {
+/* .folio__digits {
   display: inline-flex;
   align-items: stretch;
-
   gap: 0.5em;
-}
+} */
 
 .folio__cell {
   position: relative;
@@ -84,6 +85,7 @@ const note = computed(() => {
   border: var(--rule-width) solid var(--c-rule);
   /* font-variant-numeric: tabular-nums; */
   transition: border-color var(--dur-fast) var(--ease);
+  margin-right: -1px;
 }
 
 .folio__sep {

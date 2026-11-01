@@ -32,9 +32,12 @@ onMounted(refreshReveal);
 
   <XGlyphGround />
 
-  <NuxtLayout>
-    <NuxtPage :transition="{ name: 'page', mode: 'out-in' }" @after-enter="refreshReveal" />
-  </NuxtLayout>
+  <TooltipProvider :delay-duration="500" :skip-delay-duration="300" ignore-non-keyboard-focus>
+    <NuxtLayout>
+      <NuxtPage :transition="{ name: 'page', mode: 'out-in' }" @after-enter="refreshReveal" />
+    </NuxtLayout>
+    <!-- <XToaster /> -->
+  </TooltipProvider>
 </template>
 
 <style>

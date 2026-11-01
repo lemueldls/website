@@ -114,18 +114,18 @@
 }
 
 .mark--tl {
-  top: calc(var(--mark-size) / -2);
-  left: calc(var(--mark-size) / -2);
+  top: calc(var(--mark-size) / -2 - 0.5px);
+  left: calc(var(--mark-size) / -2 - 0.5px);
 }
 .mark--tr {
-  top: calc(var(--mark-size) / -2);
-  right: calc(var(--mark-size) / -2);
+  top: calc(var(--mark-size) / -2 - 0.5px);
+  right: calc(var(--mark-size) / -2 - 0.5px);
 }
 .mark--bl {
-  bottom: calc(var(--mark-size) / -2);
-  left: calc(var(--mark-size) / -2);
+  bottom: calc(var(--mark-size) / -2 - 0.5px);
+  left: calc(var(--mark-size) / -2 - 0.5px);
 }
 .mark--br {
-  bottom: calc(var(--mark-size) / -2);
-  right: calc(var(--mark-size) / -2);
+  bottom: calc(var(--mark-size) / -2 - 0.5px);
+  right: calc(var(--mark-size) / -2 - 0.5px);
 }

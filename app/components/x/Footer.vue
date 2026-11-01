@@ -65,20 +65,20 @@ const { socials, email, rings } = useAbout();
       <div class="ftr__col">
         <XPaletteGrid />
       </div>
+    </div>
 
-      <p class="ftr__meta">
-        <span class="ftr__meta-id">
-          <span class="text">Copyright © {{ year }}</span>
-          <!-- <span class="ftr__dot" aria-hidden="true">·</span> -->
-          <!-- <span class="meta">lem.my</span> -->
-        </span>
+    <div class="ftr__meta">
+      <span class="ftr__meta-id">
+        <!-- <span class="text">Copyright © {{ year }}</span> -->
+        <!-- <span class="ftr__dot" aria-hidden="true">·</span> -->
+        <!-- <span class="meta">lem.my</span> -->
+      </span>
 
-        <span class="ftr__meta-badges">
-          <!-- <XSiteBadge to="/badges" /> -->
+      <span class="ftr__meta-badges">
+        <!-- <XSiteBadge to="/badges" /> -->
 
-          <XVisitorCounter />
-        </span>
-      </p>
+        <XVisitorCounter />
+      </span>
     </div>
   </footer>
 </template>
@@ -108,9 +108,9 @@ const { socials, email, rings } = useAbout();
 }
 
 .ftr__inner {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  gap: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-7) var(--space-10);
   max-width: var(--sheet-max);
   margin-inline: auto;
   padding: 0 clamp(var(--space-4), 3vw, var(--space-8)) var(--space-7);
@@ -179,15 +179,16 @@ const { socials, email, rings } = useAbout();
 }
 
 .ftr__meta {
-  grid-column: 1 / -1;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
   justify-content: space-between;
-  padding-top: var(--space-4);
   border-top: 1px solid var(--c-rule);
   color: var(--c-dimmer);
+  margin-inline: auto;
+  max-width: var(--sheet-max);
+  padding: var(--space-4);
 }
 
 .ftr__meta-id {

@@ -65,6 +65,7 @@ const liveAccent = computed<string | null>(() => {
 
 <style scoped>
 .palette {
+  min-width: 12rem;
   display: flex;
   flex-direction: column;
   align-items: stretch;
