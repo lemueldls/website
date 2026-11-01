@@ -52,6 +52,7 @@ interface EntryBase {
   description: string;
   contributions: string[];
   technologies: string[];
+  link?: { href: string; text: string };
   github?: { href: string; text: string };
   href?: string;
   printable: boolean;
@@ -71,7 +72,6 @@ interface RoleEntry extends EntryBase {
 
 type EntryView = EducationEntry | RoleEntry;
 
-/** The shape `roleView` needs — everything an experience and a project share. */
 type RoleInput = Omit<Experience, "from" | "to">;
 
 const homeOf = (entry: RoleInput): string | undefined =>
@@ -90,6 +90,9 @@ const educationView = (entry: Education, section: CvSectionKey): EducationEntry 
   printable: !entry.hidePrint && on(cvEntryKey(section, entry.slug)),
 });
 
+const linkOf = (entry: RoleInput) =>
+  "link" in entry ? (entry.link as { href: string; text: string }) : undefined;
+
 const githubOf = (entry: RoleInput) =>
   "github" in entry ? (entry.github as { href: string; text: string }) : undefined;
 
@@ -101,6 +104,7 @@ const roleView = (entry: RoleInput, section: CvSectionKey, date: CvDate): RoleEn
   role: entry.role,
   contributions: entry.contributions,
   technologies: entry.technologies,
+  link: linkOf(entry),
   github: githubOf(entry),
   href: homeOf(entry),
   date,
@@ -113,12 +117,6 @@ const experienceDate = (entry: Experience): CvDate => ({
   to: entry.to ?? "Present",
 });
 
-/**
- * Only an `active` project reads as "Present" on the CV. Its "still working on it"
- * claim is the one a reader holds you to, so a maintained or paused project keeps a
- * real end date — otherwise a section that lists eight projects would claim eight
- * simultaneous ones. The end is the last-active date, which GitHub keeps advancing.
- */
 const projectDate = (project: Project): CvDate => {
   if ((project.status ?? "active") === "active") {
     return { kind: "range", from: project.since, to: "Present" };
@@ -178,7 +176,8 @@ const sections = computed(() =>
       {
         ...definition,
         entries,
-        count: definition.entries ? entries.filter((entry) => entry.printable).length : undefined,
+        // count: definition.entries ? entries.filter((entry) => entry.printable).length : undefined,
+        count: definition.entries ? entries.length : undefined,
       },
     ];
   }),
@@ -269,6 +268,8 @@ const headWouldPrint = (section: {
       <CvHead
         :id="section.key"
         :label="section.label"
+        :link="section.link"
+        :count="section.count"
         :class="{ 'no-print': !headWouldPrint(section) }"
       />
 
@@ -374,6 +375,9 @@ const headWouldPrint = (section: {
               >
                 {{ entry.name }}
               </component>
+              <!-- <a v-if="entry.link" :href="entry.link.href" class="cv__entry-link">
+                {{ entry.link.text }}
+              </a> -->
               <span v-if="entry.kind === 'role' && entry.role" class="cv__entry-role">
                 {{ entry.role }}
               </span>
@@ -544,7 +548,7 @@ const headWouldPrint = (section: {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: var(--space-1) var(--space-3);
+  /* gap: var(--space-1) var(--space-3); */
 }
 
 .cv__entry-row--sub {
@@ -581,6 +585,23 @@ const headWouldPrint = (section: {
 
 .cv__entry-role::before {
   content: " · ";
+  font-weight: 400;
+  color: var(--c-dimmer);
+  font-family: var(--f-label);
+  font-style: normal;
+}
+
+.cv__entry-link {
+  font-weight: 400;
+  color: var(--c-dim);
+  font-style: italic;
+  font-size: var(--t-9);
+  text-decoration: none;
+}
+
+.cv__entry-link::before {
+  content: " — ";
+  font-weight: 400;
   color: var(--c-dimmer);
   font-family: var(--f-label);
   font-style: normal;

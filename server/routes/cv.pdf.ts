@@ -58,7 +58,9 @@ function pdfResponse(base64: string, preset: string): Response {
 export default defineEventHandler(async (event) => {
   const binding = browserBinding(event);
 
-  const options = parseCvOptions(getQuery(event));
+  const query = getQuery(event);
+  const queryPreset = typeof query.p === "string" ? presets[query.p] : undefined;
+  const options = parseCvOptions(query, queryPreset ?? presets.resume!);
   const url = targetUrl(event, options);
 
   if (!binding) {

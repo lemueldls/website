@@ -10,6 +10,12 @@ export type CvSectionKey =
   | "talks"
   | "keywords";
 
+export interface CvQualificationVisibility {
+  technical: boolean;
+  linguistic: boolean;
+  leadership: boolean;
+}
+
 export type CvFont = "besley" | "besley-narrow" | "text" | "mono";
 
 export type CvEntrySource =
@@ -30,6 +36,7 @@ export interface CvSubsectionDefinition {
 export interface CvSectionDefinition {
   key: CvSectionKey;
   label: string;
+  link?: { href: string; text: string };
   hint: string;
   printDefault: boolean;
   subsections?: CvSubsectionDefinition[];
@@ -87,6 +94,7 @@ export const CV_SECTIONS: readonly CvSectionDefinition[] = [
   {
     key: "experience",
     label: "Experience",
+    link: { href: "/cv#experience", text: "/cv" },
     hint: "Roles, and what each one shipped.",
     printDefault: true,
     entries: "experience",
@@ -102,6 +110,7 @@ export const CV_SECTIONS: readonly CvSectionDefinition[] = [
   {
     key: "projects",
     label: "Projects",
+    link: { href: "/projects", text: "/projects" },
     hint: "Everything built under a personal name.",
     printDefault: true,
     entries: "projects",
@@ -171,6 +180,7 @@ export interface CvOptions {
   mergeResearch: boolean;
   showTech: boolean;
   hideDescriptions: boolean;
+  qualifications: CvQualificationVisibility;
   off: string[];
 }
 
@@ -180,6 +190,11 @@ export const CV_DEFAULT_OPTIONS: CvOptions = {
   mergeResearch: false,
   showTech: false,
   hideDescriptions: true,
+  qualifications: {
+    technical: false,
+    linguistic: false,
+    leadership: false,
+  },
   off: [],
 };
 
@@ -200,16 +215,23 @@ function parseBool(value: unknown, fallback: boolean): boolean {
   return fallback;
 }
 
-export function parseCvOptions(query: Record<string, unknown>): CvOptions {
+export function parseCvOptions(
+  query: Record<string, unknown>,
+  defaults: Pick<
+    CvOptions,
+    "mergeResearch" | "showTech" | "hideDescriptions" | "qualifications"
+  > = CV_DEFAULT_OPTIONS,
+): CvOptions {
   return {
     preset:
       typeof query.p === "string" && /^[\w-]+$/.test(query.p) ? query.p : CV_DEFAULT_OPTIONS.preset,
 
     font: CV_FONTS.some((f) => f.value === query.f) ? (query.f as CvFont) : CV_DEFAULT_OPTIONS.font,
 
-    mergeResearch: parseBool(query.m, CV_DEFAULT_OPTIONS.mergeResearch),
-    showTech: parseBool(query.t, CV_DEFAULT_OPTIONS.showTech),
-    hideDescriptions: parseBool(query.hd, CV_DEFAULT_OPTIONS.hideDescriptions),
+    mergeResearch: parseBool(query.m, defaults.mergeResearch),
+    showTech: parseBool(query.t, defaults.showTech),
+    hideDescriptions: parseBool(query.hd, defaults.hideDescriptions),
+    qualifications: defaults.qualifications,
 
     off: [...new Set(parseList(query.off))].filter(isKnownKey).slice(0, OFF_LIMIT),
   };
@@ -232,8 +254,15 @@ export function isCvKeyOn(options: CvOptions, key: string): boolean {
   if (!isKnownKey(key)) return false;
   if (options.off.includes(key)) return false;
 
+  if (key === "qualifications") return Object.values(options.qualifications).some(Boolean);
+
   const at = key.indexOf(":");
   if (at !== -1 && !isCvKeyOn(options, key.slice(0, at))) return false;
+
+  if (key.startsWith("qualifications:")) {
+    const qualification = key.slice("qualifications:".length) as keyof CvQualificationVisibility;
+    return options.qualifications[qualification] ?? false;
+  }
 
   return STATIC_KEYS.get(key) ?? true;
 }

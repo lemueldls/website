@@ -42,12 +42,6 @@ const LINKME_SNIPPET = `<a href="https://lem.my">
     <header class="badges__head" data-reveal-group>
       <p class="label label--accent">collection</p>
       <h1 class="badges__title">Badges</h1>
-      <!-- <p class="badges__lede">
-        Buttons at the size the format has always had it: 88 × 31 pixels, drawn by hand, shown at
-        one-to-one. The wall started from
-        <XLink href="https://trafficlunar.net/buttons/" external>trafficlunar's</XLink>, so the
-        first pass is their taste as much as mine — tools, craft, and things worth linking out to.
-      </p> -->
     </header>
 
     <template
@@ -73,10 +67,6 @@ const LINKME_SNIPPET = `<a href="https://lem.my">
 
     <XSection label="Link to me">
       <div class="linkme">
-        <!-- The real files, from scripts/gen-badges.ts. Shown at exactly 2× so they stay
-             pixel-clean — the size is the format, and half a pixel is mush. The still
-             leads: the loop spends most of its time composed, but a screenshot or a slow
-             connection catches it mid-type, and an empty box is a poor first impression. -->
         <p class="linkme__specimen">
           <img
             class="linkme__wide"
@@ -100,20 +90,6 @@ const LINKME_SNIPPET = `<a href="https://lem.my">
             alt="The 31 by 31 badge, the three asterisks of the sigil arriving one at a time"
           />
         </p>
-
-        <!-- <div class="linkme__how">
-          <p class="linkme__note">
-            The badge for this site is not drawn yet. That is the frame it will land in — sigil,
-            wordmark, this page's palette — and that is the snippet it will be offered with.
-          </p>
-
-          <pre><code>{{ LINKME_SNIPPET }}</code></pre>
-
-          <p class="linkme__note linkme__note--dim">
-            88 × 31, and it will not follow the theme of whoever links it. A hotlinked badge never
-            sees this document's stylesheets, so it has to carry its own palette.
-          </p>
-        </div> -->
       </div>
     </XSection>
   </div>

@@ -6,7 +6,6 @@ const props = withDefaults(
     label: string;
     value: number;
     icon?: string;
-
     note?: string;
   }>(),
   {},

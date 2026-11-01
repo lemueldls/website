@@ -68,7 +68,10 @@ const fetchedNote = computed(() => {
               <ol class="repos">
                 <li v-for="repo in stats.topRepos" :key="repo.name" class="repo">
                   <span class="repo__name">{{ repo.name }}</span>
-                  <span class="repo__stars num">{{ repo.stars }}</span>
+                  <span class="repo__stars">
+                    <XIcon name="material-symbols:star-outline-sharp" />
+                    <span class="num">{{ repo.stars }}</span>
+                  </span>
                 </li>
               </ol>
             </div>
@@ -189,14 +192,9 @@ const fetchedNote = computed(() => {
 }
 
 .repo__stars {
-  flex-shrink: 0;
-  color: var(--c-fg);
-  font-weight: 600;
-}
-
-.repo__stars::before {
-  content: "★ ";
-  color: var(--c-dimmer);
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--c-dim);
 }
 </style>

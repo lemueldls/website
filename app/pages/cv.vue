@@ -18,7 +18,19 @@ useSeoMeta({ title: "Curriculum Vitae" });
 const route = useRoute();
 const router = useRouter();
 
-const options = reactive(parseCvOptions(route.query));
+const queryPreset = typeof route.query.p === "string" ? presets[route.query.p] : undefined;
+const options = reactive(parseCvOptions(route.query, queryPreset ?? presets.resume!));
+
+watch(
+  () => options.preset,
+  (presetKey) => {
+    const preset = presets[presetKey] ?? presets.resume!;
+    options.mergeResearch = preset.mergeResearch;
+    options.showTech = preset.showTech;
+    options.hideDescriptions = preset.hideDescriptions;
+    options.qualifications = preset.qualifications;
+  },
+);
 
 watch(
   options,

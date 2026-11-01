@@ -1,6 +1,7 @@
 import { computed, toValue } from "vue";
 import type { ComputedRef, MaybeRefOrGetter } from "vue";
 
+import type { CvQualificationVisibility } from "#shared/cv";
 import type { RepoActivity } from "#shared/github";
 
 import reposMeta from "~/assets/repos.meta.json";
@@ -1094,16 +1095,28 @@ export interface Preset {
   experiences: Carried<ExperienceSlug>[];
   projects: Carried<ProjectSlug>[];
   affiliations: Carried<AffiliationSlug>[];
+  mergeResearch: boolean;
+  showTech: boolean;
+  hideDescriptions: boolean;
+  qualifications: CvQualificationVisibility;
   label: string;
   download: string;
 }
 
 export const presets: Record<string, Preset> = {
   resume: {
-    education: ["ccny", "afse"],
-    experiences: ["taylor-graham", "upenn-repl", "woven-toyota"],
+    education: ["ccny"],
+    experiences: ["upenn-repl", "woven-toyota"],
     projects: ["mnemo", "kaetram", "my-afse"],
     affiliations: ["acm-ccny"],
+    mergeResearch: true,
+    showTech: true,
+    hideDescriptions: true,
+    qualifications: {
+      technical: false,
+      linguistic: false,
+      leadership: false,
+    },
     label: "Resume",
     download: "lemuel-de-los-santos-resume.pdf",
   },
@@ -1112,6 +1125,14 @@ export const presets: Record<string, Preset> = {
     experiences: ["all"],
     projects: ["all"],
     affiliations: ["all"],
+    mergeResearch: false,
+    showTech: true,
+    hideDescriptions: false,
+    qualifications: {
+      technical: true,
+      linguistic: true,
+      leadership: true,
+    },
     label: "Full CV",
     download: "lemuel-de-los-santos-cv.pdf",
   },
@@ -1120,6 +1141,14 @@ export const presets: Record<string, Preset> = {
     experiences: ["upenn-repl"],
     projects: ["koffi", "ezno", "mnemo", "synquid", "lmt", "pyret-rs"],
     affiliations: ["acm-ccny"],
+    mergeResearch: true,
+    showTech: false,
+    hideDescriptions: false,
+    qualifications: {
+      technical: false,
+      linguistic: false,
+      leadership: true,
+    },
     label: "Research",
     download: "lemuel-de-los-santos-research.pdf",
   },
