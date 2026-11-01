@@ -65,6 +65,7 @@ export type ProjectStatus = "active" | "maintained" | "dormant" | "archived";
 
 export interface Project extends Omit<Experience, "from" | "to"> {
   github: { href: string; text: string };
+  tangled?: { href: string; text: string };
   since: string;
   lastActive?: string;
   status?: ProjectStatus;
@@ -702,6 +703,7 @@ const projects = [
     slug: "typbase",
     link: { href: "https://typbase.at", text: "typbase.at" },
     github: { href: "https://github.com/lemueldls/typbase", text: "github.com/lemueldls/typbase" },
+    tangled: { href: "https://tangled.org/lem.my/typbase", text: "tangled.org/lem.my/typbase" },
     description:
       "Typbase is a local-first knowledge base made for the Typst language and the Atmosphere protocol.",
     role: "Creator",
@@ -747,6 +749,7 @@ const projects = [
     name: "Rubify",
     slug: "rubify",
     github: { href: "https://github.com/lemueldls/rubify", text: "github.com/lemueldls/rubify" },
+    tangled: { href: "https://tangled.org/lem.my/rubify", text: "tangled.org/lem.my/rubify" },
     description:
       "Rubify is a program made to automatically annotate any font with ruby characters.",
     role: "Creator",

@@ -115,6 +115,9 @@ function toggleTechnology(name: string) {
             <XLink v-if="p.github" :href="p.github.href" external class="project__link">
               {{ p.github.text }}
             </XLink>
+            <XLink v-if="p.tangled" :href="p.tangled.href" external class="project__link">
+              {{ p.tangled.text }}
+            </XLink>
           </div>
 
           <p class="project__description">{{ p.description }}</p>

@@ -62,9 +62,12 @@ const neighbours = computed(() => {
 
       <div class="detail__links">
         <XLink v-if="entry.link" :href="entry.link.href" external>{{ entry.link.text }}</XLink>
-        <XLink v-if="entry.github" :href="entry.github.href" external>{{
-          entry.github.text
-        }}</XLink>
+        <XLink v-if="entry.github" :href="entry.github.href" external>
+          {{ entry.github.text }}
+        </XLink>
+        <XLink v-if="entry.tangled" :href="entry.tangled.href" external>
+          {{ entry.tangled.text }}
+        </XLink>
       </div>
 
       <p class="detail__description">{{ entry.description }}</p>

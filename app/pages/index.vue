@@ -138,6 +138,7 @@ const slugOf = (post: { path: string }) => post.path.replace(/^\/blog\/?/, "");
               project.link.text
             }}</XLink>
             <XLink v-if="project.github" :href="project.github.href" external>GitHub</XLink>
+            <XLink v-if="project.tangled" :href="project.tangled.href" external>Tangled</XLink>
           </span>
         </li>
       </ul>
