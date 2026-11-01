@@ -623,7 +623,7 @@ a.cv__entry-name:hover {
   flex-wrap: wrap;
   gap: var(--space-1) var(--space-3);
   margin: 0;
-  padding: 0;
+  padding: 0 var(--space-2);
   font-family: var(--f-label);
   font-size: var(--t-7);
   /* letter-spacing: 0.04em; */

@@ -1117,7 +1117,7 @@ export const presets: Record<string, Preset> = {
       linguistic: false,
       leadership: false,
     },
-    label: "Resume",
+    label: "Résumé",
     download: "lemuel-de-los-santos-resume.pdf",
   },
   full: {

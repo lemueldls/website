@@ -21,7 +21,7 @@ const discipline = [
   "Full Stack Development",
   // "Type Systems",
   // "Computer Graphics",
-  // "Compilers",
+  // "Compiler Design",
   "Programming Languages",
   // "Systems Programming",
   // "Web Development",
