@@ -10,13 +10,12 @@
 }
 
 html {
+  overflow-x: clip;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   scroll-behavior: smooth;
-  scroll-padding: 5rem;
+  scroll-padding: 4rem;
   tab-size: 2;
-
-  overflow-x: clip;
 }
 
 body {
