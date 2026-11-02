@@ -480,10 +480,10 @@ const qualifications = {
     // "Ruby",
     "Haskell",
     // "Rocq",
-    // "Kotlin",
+    "Kotlin",
     // "Swift",
     // "Go",
-    // "Ocaml",
+    // "OCaml",
     // "Pyret",
   ],
   tooling: [
@@ -742,6 +742,21 @@ const experiences = [
 export type ExperienceSlug = (typeof experiences)[number]["slug"];
 
 const projects = [
+  // {
+  //   name: "Lemmata",
+  //   slug: "lemmata",
+  //   github: { href: "https://github.com/lemueldls/lemmata", text: "github.com/lemueldls/lemmata" },
+  //   description:
+  //     "Lemmata is a programmatic typeface factory for building fonts from plans and glyph captures.",
+  //   role: "Creator",
+  //   since: "October 2026",
+  //   status: "active",
+  //   contributions: [
+  //     "Built a Rust workspace for generating and testing font glyphs, outlines, and shaping behavior.",
+  //     "Created browser tooling for inspecting generated typefaces and comparing their rendered output.",
+  //   ],
+  //   technologies: ["Rust", "TypeScript", "WebAssembly", "Nix", "Git"],
+  // },
   {
     name: "Typbase",
     slug: "typbase",
@@ -826,6 +841,25 @@ const projects = [
     technologies: ["Rust", "TypeScript", "Git"],
   },
   {
+    name: "Dotfiles",
+    slug: "dotfiles",
+    github: {
+      href: "https://github.com/lemueldls/dotfiles",
+      text: "github.com/lemueldls/dotfiles",
+    },
+    tangled: { href: "https://tangled.org/lem.my/dotfiles", text: "tangled.org/lem.my/dotfiles" },
+    description:
+      "Dotfiles is a reproducible desktop and development environment managed with Nix and Home Manager.",
+    role: "Creator",
+    since: "February 2025",
+    status: "active",
+    contributions: [
+      "Defined a reproducible Nix configuration for desktop applications, development tools, and system services.",
+      "Integrated shared inputs and binary caches so the environment can be rebuilt consistently across machines.",
+    ],
+    technologies: ["Nix", "NixOS", "Home Manager", "Linux", "Git"],
+  },
+  {
     name: "Mnemo",
     slug: "mnemo",
     link: { href: "https://mnemo.world/", text: "mnemo.world" },
@@ -854,6 +888,23 @@ const projects = [
       "Git",
       "Cloudflare",
     ],
+  },
+  {
+    name: "Assets",
+    slug: "assets",
+    github: { href: "https://github.com/lemueldls/assets", text: "github.com/lemueldls/assets" },
+    tangled: { href: "https://tangled.org/lem.my/assets", text: "tangled.org/lem.my/assets" },
+    description:
+      "Assets builds and publishes the site's typefaces and wallpapers with reproducible Nix workflows.",
+    role: "Creator",
+    since: "December 2025",
+    status: "active",
+    contributions: [
+      "Built the Asterism typeface family and its language variants from reproducible Nix packages.",
+      "Generated font and wallpaper metadata from the published build outputs for the website's asset catalogue.",
+      "Published optimized fonts, wallpapers, archives, and manifests for use by the site and other projects.",
+    ],
+    technologies: ["Nix", "Python", "Rust", "FontTools", "Git"],
   },
   {
     name: "Synquid",

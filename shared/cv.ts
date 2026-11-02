@@ -94,7 +94,7 @@ export const CV_SECTIONS: readonly CvSectionDefinition[] = [
   {
     key: "experience",
     label: "Experience",
-    link: { href: "/cv#experience", text: "/cv" },
+    link: { href: "https://lem.my/cv#experience", text: "lem.my/cv" },
     hint: "Roles, and what each one shipped.",
     printDefault: true,
     entries: "experience",
@@ -110,7 +110,7 @@ export const CV_SECTIONS: readonly CvSectionDefinition[] = [
   {
     key: "projects",
     label: "Projects",
-    link: { href: "/projects", text: "/projects" },
+    link: { href: "https://lem.my/projects", text: "lem.my/projects" },
     hint: "Everything built under a personal name.",
     printDefault: true,
     entries: "projects",
