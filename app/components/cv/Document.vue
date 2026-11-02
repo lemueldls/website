@@ -430,48 +430,50 @@ const headWouldPrint = (section: {
   padding: clamp(var(--space-6), 4vw, var(--space-9));
   color: var(--c-fg);
   /* line-height: 1.45; */
-  font-size: var(--t-14);
 
-  --t-6: 0.5em;
-  --t-7: 0.6111em;
-  --t-8: 0.7222em;
-  --t-8p5: 0.7778em;
-  --t-9: 0.8em;
-  --t-10: 0.8889em;
-  --t-1p5: 0.9444em;
-  --t-11: 0.9778em;
-  --t-12: 1em;
-  --t-14: 1.2222em;
-  --t-16: 1.4444em;
-  --t-18: 1.6111em;
-  --t-24: 2.2222em;
-  --t-30: 3.25em;
-  --t-36: 3.3333em;
-  --t-60: 5em;
+  --t-base: 15pt;
 
-  --space-1: 0.25em;
-  --space-1p5: 0.375em;
-  --space-2: 0.5em;
-  --space-3: 0.75em;
-  --space-4: 1em;
-  --space-5: 1.25em;
-  --space-6: 1.5em;
-  --space-7: 2em;
-  --space-8: 2.5em;
-  --space-9: 3em;
-  --space-10: 4em;
+  --t-6: calc(var(--t-base) * (6 / 12));
+  --t-7: calc(var(--t-base) * (7 / 12));
+  --t-8: calc(var(--t-base) * (8 / 12));
+  --t-8-5: calc(var(--t-base) * (8.5 / 12));
+  --t-9: calc(var(--t-base) * (9 / 12));
+  --t-10: calc(var(--t-base) * (10 / 12));
+  --t-10-5: calc(var(--t-base) * (10.5 / 12));
+  --t-11: calc(var(--t-base) * (11 / 12));
+  --t-12: calc(var(--t-base) * (12 / 12));
+  --t-13: calc(var(--t-base) * (13 / 12));
+  --t-14: calc(var(--t-base) * (14 / 12));
+  --t-16: calc(var(--t-base) * (16 / 12));
+  --t-18: calc(var(--t-base) * (18 / 12));
+  --t-24: calc(var(--t-base) * (24 / 12));
+  --t-30: calc(var(--t-base) * (30 / 12));
+  --t-36: calc(var(--t-base) * (36 / 12));
+  --t-60: calc(var(--t-base) * (60 / 12));
+
+  --space-1: calc(var(--t-base) * (1 / 4));
+  --space-1-5: calc(var(--t-base) * (1.5 / 4));
+  --space-2: calc(var(--t-base) * (2 / 4));
+  --space-3: calc(var(--t-base) * (3 / 4));
+  --space-4: calc(var(--t-base) * (4 / 4));
+  --space-5: calc(var(--t-base) * (5 / 4));
+  --space-6: calc(var(--t-base) * (6 / 4));
+  --space-7: calc(var(--t-base) * (7 / 4));
+  --space-8: calc(var(--t-base) * (8 / 4));
+  --space-9: calc(var(--t-base) * (9 / 4));
+  --space-10: calc(var(--t-base) * (10 / 4));
 }
 
 @media print {
   .cv__page {
-    font-size: 12pt;
+    --t-base: 13pt;
   }
 }
 
 @media (max-width: 640px) {
   .cv__page {
     padding: 0;
-    font-size: var(--t-11);
+    --t-base: 12pt;
   }
 }
 
@@ -488,12 +490,12 @@ const headWouldPrint = (section: {
 
 .cv__page--text {
   font-family: var(--f-text);
-  font-size: var(--t-8p5);
+  font-size: var(--t-8-5);
 }
 
 .cv__page--mono {
   font-family: var(--f-mono);
-  font-size: var(--t-8p5);
+  font-size: var(--t-8-5);
 }
 
 .cv__page h1,
@@ -503,7 +505,7 @@ const headWouldPrint = (section: {
 }
 
 .cv__section + .cv__section {
-  /* margin-top: var(--space-1); */
+  margin-top: var(--space-1);
 }
 
 .cv__section-body {
@@ -569,7 +571,7 @@ const headWouldPrint = (section: {
 
 .cv__summary {
   margin-top: var(--space-1);
-  font-size: var(--t-8p5);
+  font-size: var(--t-8-5);
   /* max-width: var(--measure-text); */
 }
 
@@ -593,7 +595,7 @@ const headWouldPrint = (section: {
 
 .cv__entry-row--sub {
   color: var(--c-dim);
-  font-size: var(--t-8p5);
+  font-size: var(--t-8-5);
   flex-direction: column;
 }
 
@@ -602,7 +604,7 @@ const headWouldPrint = (section: {
 }
 
 .cv__entry-date {
-  font-size: var(--t-8p5);
+  font-size: var(--t-8-5);
   color: var(--c-dim);
   white-space: nowrap;
 }
@@ -613,7 +615,7 @@ const headWouldPrint = (section: {
 }
 
 .cv__entry-name {
-  font-size: var(--t-10);
+  font-size: var(--t-9);
   font-weight: 600;
 }
 
@@ -621,7 +623,7 @@ const headWouldPrint = (section: {
   font-weight: 400;
   color: var(--c-dim);
   font-style: italic;
-  font-size: var(--t-8p5);
+  font-size: var(--t-8-5);
 }
 
 .cv__entry-role::before {
@@ -636,7 +638,7 @@ const headWouldPrint = (section: {
   font-weight: 400;
   color: var(--c-dim);
   font-style: italic;
-  font-size: var(--t-8p5);
+  font-size: var(--t-8-5);
   text-decoration: none;
 }
 
@@ -684,7 +686,7 @@ a.cv__entry-name:hover {
 }
 
 .cv__bullets li {
-  font-size: var(--t-8p5);
+  font-size: var(--t-8-5);
 }
 
 /* .cv__bullets li + li {
@@ -696,16 +698,18 @@ a.cv__entry-name:hover {
 }
 
 .cv__quals h3 {
-  font-size: var(--t-8p5);
+  font-size: var(--t-9);
   font-weight: 600;
 }
 
 .cv__quals-list {
   /* margin: var(--space-1) 0 0; */
   padding-left: var(--space-4);
-  font-size: var(--t-8p5);
 }
 
+.cv__quals-list li {
+  font-size: var(--t-8-5);
+}
 /* .cv__quals-list li + li {
   margin-top: var(--space-1);
 } */

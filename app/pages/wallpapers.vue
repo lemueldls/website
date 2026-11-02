@@ -1102,7 +1102,7 @@ useHead(heroLink);
   justify-content: flex-start;
   gap: var(--space-2);
   height: var(--tile-foot);
-  padding: 0 var(--space-1p5) 0 var(--space-3);
+  padding: 0 var(--space-1-5) 0 var(--space-3);
   min-width: 0;
 }
 

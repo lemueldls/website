@@ -69,7 +69,7 @@ const showRest = computed(() => props.languages.length > 0 && rest.value >= REST
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-1p5);
+  gap: var(--space-1-5);
   font-size: var(--t-9);
 }
 

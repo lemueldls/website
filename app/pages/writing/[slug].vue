@@ -130,7 +130,7 @@ defineOgImage(
 }
 
 .article__body {
-  font-size: var(--t-1p5);
+  font-size: var(--t-10-5);
   line-height: 1.6;
 }
 

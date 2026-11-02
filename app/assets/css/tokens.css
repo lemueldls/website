@@ -30,6 +30,7 @@
   --c-print-bg: #ffffff;
   --c-print-fg: #1e1e2e;
 }
+
 [data-theme="light"] {
   color-scheme: light;
 
@@ -69,22 +70,25 @@
   --f-mono: "Asterism Code", ui-monospace, monospace;
   --f-label: "Asterism Term", ui-monospace, monospace;
 
-  --t-6: 0.5rem;
-  --t-7: 0.6111rem;
-  --t-8: 0.7222rem;
-  --t-8p5: 0.7778rem;
-  --t-9: 0.8rem;
-  --t-10: 0.8889rem;
-  --t-1p5: 0.9444rem;
-  --t-11: 0.9778rem;
-  --t-12: 1rem;
-  --t-14: 1.2222rem;
-  --t-16: 1.4444rem;
-  --t-18: 1.6111rem;
-  --t-24: 2.2222rem;
-  --t-30: 3.25rem;
-  --t-36: 3.3333rem;
-  --t-60: 5rem;
+  --t-base: 1rem;
+
+  --t-6: calc(1rem * (6 / 12));
+  --t-7: calc(1rem * (7 / 12));
+  --t-8: calc(1rem * (8 / 12));
+  --t-8-5: calc(1rem * (8.5 / 12));
+  --t-9: calc(1rem * (9 / 12));
+  --t-10: calc(1rem * (10 / 12));
+  --t-10-5: calc(1rem * (10.5 / 12));
+  --t-11: calc(1rem * (11 / 12));
+  --t-12: calc(1rem * (12 / 12));
+  --t-13: calc(1rem * (13 / 12));
+  --t-14: calc(1rem * (14 / 12));
+  --t-16: calc(1rem * (16 / 12));
+  --t-18: calc(1rem * (18 / 12));
+  --t-24: calc(1rem * (24 / 12));
+  --t-30: calc(1rem * (30 / 12));
+  --t-36: calc(1rem * (36 / 12));
+  --t-60: calc(1rem * (60 / 12));
 
   --measure-narrow: 50ch;
   --measure-medium: 80ch;
@@ -117,25 +121,23 @@
   --z-command: 60;
   --z-dialog: 80;
 
-  --space-1: 0.25rem;
-  --space-1p5: 0.375rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-7: 2rem;
-  --space-8: 2.5rem;
-  --space-9: 3rem;
-  --space-10: 4rem;
+  --space-1: calc(1rem * (1 / 4));
+  --space-1-5: calc(1rem * (1.5 / 4));
+  --space-2: calc(1rem * (2 / 4));
+  --space-3: calc(1rem * (3 / 4));
+  --space-4: calc(1rem * (4 / 4));
+  --space-5: calc(1rem * (5 / 4));
+  --space-6: calc(1rem * (6 / 4));
+  --space-7: calc(1rem * (7 / 4));
+  --space-8: calc(1rem * (8 / 4));
+  --space-9: calc(1rem * (9 / 4));
+  --space-10: calc(1rem * (10 / 4));
 
   --icon-xs: 0.75rem;
   --icon-sm: 0.875rem;
   --icon-md: 1.25rem;
   --icon-lg: 1.125rem;
-}
 
-:root {
   --wallpaper-opacity: 0.055;
   --leading: 1.55;
   --f-display-weight: 600;
