@@ -743,6 +743,23 @@ export type ExperienceSlug = (typeof experiences)[number]["slug"];
 
 const projects = [
   // {
+  //   name: "Website",
+  //   slug: "website",
+  //   link: { href: "https://lem.my", text: "lem.my" },
+  //   github: { href: "https://github.com/lemueldls/website", text: "github.com/lemueldls/website" },
+  //   description:
+  //     "This website is a personal site for publishing writing, projects, fonts, and other work.",
+  //   role: "Creator",
+  //   since: "October 2026",
+  //   status: "active",
+  //   contributions: [
+  //     "Designed and built a content-driven personal site with project pages, technical writing, font specimens, and a wallpaper gallery.",
+  //     "Created a reusable Nuxt design system with dynamic themes, responsive layouts, and server-rendered metadata.",
+  //     "Built integrations for repository statistics, downloadable CVs, visit tracking, and generated Open Graph images.",
+  //   ],
+  //   technologies: ["TypeScript", "Vue.js", "Nuxt", "CSS", "Cloudflare", "Git"],
+  // },
+  // {
   //   name: "Lemmata",
   //   slug: "lemmata",
   //   github: { href: "https://github.com/lemueldls/lemmata", text: "github.com/lemueldls/lemmata" },
@@ -1133,7 +1150,9 @@ const projects = [
 
 export type ProjectSlug = (typeof projects)[number]["slug"];
 
-const resolvedProjects: Project[] = projects.map((source) => resolveProject(source));
+const resolvedProjects: Project[] = projects
+  .map((source) => resolveProject(source))
+  .sort((a, b) => monthOrdinal(b.since) - monthOrdinal(a.since));
 
 const affiliations = [
   { ...acmCcny, role: "Vice President" },
