@@ -22,7 +22,11 @@ defineProps<{
     >
       {{ link.text }}
     </a>
-    <a v-if="count && count > 1" :href="link?.href || `/cv#${id}`" class="cv-head__count">
+    <a
+      v-if="count && count > 1"
+      :href="link?.href || `https://lem.my/cv#${id}`"
+      class="cv-head__count"
+    >
       [{{ count }}]
     </a>
   </div>
