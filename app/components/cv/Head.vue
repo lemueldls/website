@@ -24,7 +24,9 @@ defineProps<{
     </a>
     <a
       v-if="count && count > 1"
-      :href="link?.href || `https://lem.my/cv#${id}`"
+      :href="link?.href || `https://lem.my/cv#${id}?utm_source=resume`"
+      target="_blank"
+      rel="noopener noreferrer"
       class="cv-head__count"
     >
       [{{ count }}]
