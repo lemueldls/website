@@ -429,13 +429,49 @@ const headWouldPrint = (section: {
 .cv__page {
   padding: clamp(var(--space-6), 4vw, var(--space-9));
   color: var(--c-fg);
-  font-size: 10.5pt;
   /* line-height: 1.45; */
+  font-size: var(--t-14);
+
+  --t-6: 0.5em;
+  --t-7: 0.6111em;
+  --t-8: 0.7222em;
+  --t-8p5: 0.7778em;
+  --t-9: 0.8em;
+  --t-10: 0.8889em;
+  --t-1p5: 0.9444em;
+  --t-11: 0.9778em;
+  --t-12: 1em;
+  --t-14: 1.2222em;
+  --t-16: 1.4444em;
+  --t-18: 1.6111em;
+  --t-24: 2.2222em;
+  --t-30: 3.25em;
+  --t-36: 3.3333em;
+  --t-60: 5em;
+
+  --space-1: 0.25em;
+  --space-1p5: 0.375em;
+  --space-2: 0.5em;
+  --space-3: 0.75em;
+  --space-4: 1em;
+  --space-5: 1.25em;
+  --space-6: 1.5em;
+  --space-7: 2em;
+  --space-8: 2.5em;
+  --space-9: 3em;
+  --space-10: 4em;
+}
+
+@media print {
+  .cv__page {
+    font-size: 12pt;
+  }
 }
 
 @media (max-width: 640px) {
   .cv__page {
     padding: 0;
+    font-size: var(--t-11);
   }
 }
 
@@ -467,7 +503,7 @@ const headWouldPrint = (section: {
 }
 
 .cv__section + .cv__section {
-  margin-top: var(--space-1);
+  /* margin-top: var(--space-1); */
 }
 
 .cv__section-body {

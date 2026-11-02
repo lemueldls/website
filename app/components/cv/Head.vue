@@ -58,7 +58,7 @@ defineProps<{
 
 .cv-head__link {
   font-weight: 400;
-  font-size: var(--t-8);
+  font-size: var(--t-8p5);
   color: var(--c-dim);
   font-style: italic;
   transition: opacity var(--dur-fast) var(--ease);
@@ -67,7 +67,7 @@ defineProps<{
 
 .cv-head__count {
   font-weight: 400;
-  font-size: var(--t-8);
+  font-size: var(--t-8p5);
   color: var(--c-dimmer);
   text-decoration: none;
 }
