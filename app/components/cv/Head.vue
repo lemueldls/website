@@ -8,8 +8,11 @@ defineProps<{
 </script>
 
 <template>
-  <a :href="`#${id}`" class="cv-head">
-    <span class="cv-head__label">{{ label }}</span>
+  <div class="cv-head">
+    <a :href="`#${id}`" class="cv-head__label">
+      <span>{{ label }}</span>
+    </a>
+
     <a
       v-if="link"
       class="cv-head__link"
@@ -19,8 +22,10 @@ defineProps<{
     >
       {{ link.text }}
     </a>
-    <span v-if="count && count > 1" class="cv-head__count">[{{ count }}]</span>
-  </a>
+    <a v-if="count && count > 1" :href="link?.href || `#${id}`" class="cv-head__count">
+      [{{ count }}]
+    </a>
+  </div>
 </template>
 
 <style scoped>
@@ -35,19 +40,18 @@ defineProps<{
   font-family: var(--f-display);
   font-weight: 600;
   /* letter-spacing: 0.02em; */
-  text-decoration: none;
   color: var(--c-dim);
   border-bottom: var(--rule-width) solid var(--c-rule-strong);
 }
 
 .cv-head__label:hover {
   color: var(--c-fg);
-  text-decoration: none !important;
   /* border-color: var(--c-rule); */
 }
 
 .cv-head__label {
   flex: 1;
+  text-decoration: none;
   white-space: nowrap;
   font-variant: small-caps;
 }
@@ -65,5 +69,6 @@ defineProps<{
   font-weight: 400;
   font-size: var(--t-8);
   color: var(--c-dimmer);
+  text-decoration: none;
 }
 </style>

@@ -399,17 +399,17 @@ const headWouldPrint = (section: {
           </div>
 
           <div class="cv__entry-row cv__entry-row--sub">
-            <ul v-if="showTech && entry.technologies.length" class="cv__tech">
-              <li v-for="t of entry.technologies" :key="t">{{ t }}</li>
-            </ul>
-
-            <em v-if="entry.kind === 'role'" :class="{ 'no-print': hideDescriptions }">{{
-              entry.description
-            }}</em>
+            <em v-if="entry.kind === 'role'" :class="{ 'no-print': hideDescriptions }">
+              {{ entry.description }}
+            </em>
             <em v-else>{{ entry.description }}</em>
             <span v-if="entry.kind === 'education' && entry.award">
               Honored <em>{{ entry.award }}</em>
             </span>
+
+            <ul v-if="showTech && entry.technologies.length" class="cv__tech">
+              <li v-for="t of entry.technologies" :key="t">{{ t }}</li>
+            </ul>
 
             <!-- <a v-if="entry.github" :href="entry.github.href" class="cv__repo print-only">{{
               entry.github.text
@@ -486,7 +486,7 @@ const headWouldPrint = (section: {
   align-items: flex-end;
   justify-content: space-evenly;
   gap: var(--space-4) var(--space-7);
-  padding-bottom: var(--space-2);
+  padding-bottom: var(--space-3);
   /* border-bottom: 1px solid var(--c-rule-strong); */
 }
 
@@ -533,6 +533,7 @@ const headWouldPrint = (section: {
 
 .cv__summary {
   margin-top: var(--space-1);
+  font-size: var(--t-8p5);
   /* max-width: var(--measure-text); */
 }
 
@@ -625,13 +626,13 @@ a.cv__entry-name:hover {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-1) var(--space-3);
+  gap: var(--space-1) var(--space-4);
   margin: 0;
-  padding: 0 var(--space-3);
+  padding: 0 var(--space-2);
   font-family: var(--f-label);
   font-size: var(--t-7);
   /* letter-spacing: 0.04em; */
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   color: var(--c-dimmer);
 }
 
