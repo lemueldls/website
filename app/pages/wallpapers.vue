@@ -958,7 +958,7 @@ useHead(heroLink);
   margin: var(--space-5) 0 0;
   position: relative;
   --masonry-cols: 1;
-  --masonry-gap: var(--space-5);
+  --masonry-gap: 0.5rem;
 }
 
 @media (min-width: 30rem) {
