@@ -1110,10 +1110,10 @@ export const presets: Record<string, Preset> = {
     projects: ["typbase", "kaetram", "my-afse"],
     affiliations: ["acm-ccny"],
     mergeResearch: true,
-    showTech: true,
+    showTech: false,
     hideDescriptions: true,
     qualifications: {
-      technical: false,
+      technical: true,
       linguistic: false,
       leadership: false,
     },

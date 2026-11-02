@@ -486,7 +486,7 @@ const headWouldPrint = (section: {
   align-items: flex-end;
   justify-content: space-evenly;
   gap: var(--space-4) var(--space-7);
-  padding-bottom: var(--space-2);
+  padding-bottom: var(--space-1);
   /* border-bottom: 1px solid var(--c-rule-strong); */
 }
 
@@ -544,7 +544,7 @@ const headWouldPrint = (section: {
 }
 
 .cv__entry {
-  margin-top: var(--space-1);
+  /* margin-top: var(--space-1); */
 }
 
 .cv__entry-row {
@@ -665,7 +665,7 @@ a.cv__entry-name:hover {
 }
 
 .cv__quals-list {
-  margin: var(--space-1) 0 0;
+  /* margin: var(--space-1) 0 0; */
   padding-left: var(--space-4);
   font-size: var(--t-8p5);
 }

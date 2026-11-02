@@ -188,7 +188,7 @@ export const CV_DEFAULT_OPTIONS: CvOptions = {
   preset: "resume",
   font: "besley",
   mergeResearch: true,
-  showTech: true,
+  showTech: false,
   hideDescriptions: true,
   qualifications: {
     technical: false,
