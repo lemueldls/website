@@ -712,9 +712,9 @@ const projects = [
     status: "active",
     contributions: [
       "Designed the workspace as a queryable document model so pages and categories can be read from inside.",
-      "Built an inline WYSIWYG editor where compiled output replaces the source as you type with a WebAssembly engine.",
+      "Built an inline WYSIWYG editor where compiled output replaces the source as typed with a custom engine.",
       "Extracted editor and engine into a reusable core so any other application can be built on top of it.",
-      "Shipped standalone export to HTML, PDF, SVG, and a compilable Typst project, so a page is portable outside the app.",
+      "Shipped standalone exports to HTML, PDF, SVG, and Typst projects, so pages are portable outside the app.",
     ],
     technologies: [
       "Rust",
@@ -1107,7 +1107,7 @@ export const presets: Record<string, Preset> = {
   resume: {
     education: ["ccny"],
     experiences: ["upenn-repl", "woven-toyota"],
-    projects: ["mnemo", "kaetram", "my-afse"],
+    projects: ["typbase", "kaetram", "my-afse"],
     affiliations: ["acm-ccny"],
     mergeResearch: true,
     showTech: true,

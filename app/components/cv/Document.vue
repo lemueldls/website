@@ -242,8 +242,10 @@ const headWouldPrint = (section: {
         <h1>Lemuel De Los Santos</h1>
         <address>
           <span>New York, NY</span>
-          <span class="meta" aria-hidden="true">·</span>
+          <span class="meta" aria-hidden="true"> · </span>
           <a href="mailto:hello@lemueldls.dev">hello@lemueldls.dev</a>
+          <span class="meta" aria-hidden="true"> · </span>
+          <a href="https://lem.my">@lem.my</a>
         </address>
       </div>
 
@@ -397,17 +399,18 @@ const headWouldPrint = (section: {
           </div>
 
           <div class="cv__entry-row cv__entry-row--sub">
+            <ul v-if="showTech && entry.technologies.length" class="cv__tech">
+              <li v-for="t of entry.technologies" :key="t">{{ t }}</li>
+            </ul>
+
             <em v-if="entry.kind === 'role'" :class="{ 'no-print': hideDescriptions }">{{
               entry.description
             }}</em>
             <em v-else>{{ entry.description }}</em>
-            <span v-if="entry.kind === 'education' && entry.award"
-              >Honored <em>{{ entry.award }}</em></span
-            >
+            <span v-if="entry.kind === 'education' && entry.award">
+              Honored <em>{{ entry.award }}</em>
+            </span>
 
-            <ul v-if="showTech && entry.technologies.length" class="cv__tech">
-              <li v-for="t of entry.technologies" :key="t">{{ t }}</li>
-            </ul>
             <!-- <a v-if="entry.github" :href="entry.github.href" class="cv__repo print-only">{{
               entry.github.text
             }}</a> -->
@@ -449,12 +452,12 @@ const headWouldPrint = (section: {
 
 .cv__page--text {
   font-family: var(--f-text);
-  font-size: var(--t-9);
+  font-size: var(--t-8p5);
 }
 
 .cv__page--mono {
   font-family: var(--f-mono);
-  font-size: var(--t-9);
+  font-size: var(--t-8p5);
 }
 
 .cv__page h1,
@@ -483,7 +486,7 @@ const headWouldPrint = (section: {
   align-items: flex-end;
   justify-content: space-evenly;
   gap: var(--space-4) var(--space-7);
-  padding-bottom: var(--space-1);
+  padding-bottom: var(--space-2);
   /* border-bottom: 1px solid var(--c-rule-strong); */
 }
 
@@ -494,14 +497,14 @@ const headWouldPrint = (section: {
 }
 
 .cv__identity h1 {
-  font-size: var(--t-16);
+  font-size: var(--t-18);
   /* line-height: 1.1; */
 }
 
 .cv__identity address {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* gap: var(--space-2); */
   margin-top: var(--space-1);
   font-size: var(--t-8);
   font-style: normal;
@@ -553,7 +556,8 @@ const headWouldPrint = (section: {
 
 .cv__entry-row--sub {
   color: var(--c-dim);
-  font-size: var(--t-9);
+  font-size: var(--t-8p5);
+  flex-direction: column;
 }
 
 .cv__entry-row--sub > * {
@@ -561,7 +565,7 @@ const headWouldPrint = (section: {
 }
 
 .cv__entry-date {
-  font-size: var(--t-9);
+  font-size: var(--t-8p5);
   color: var(--c-dim);
   white-space: nowrap;
 }
@@ -580,7 +584,7 @@ const headWouldPrint = (section: {
   font-weight: 400;
   color: var(--c-dim);
   font-style: italic;
-  font-size: var(--t-9);
+  font-size: var(--t-8p5);
 }
 
 .cv__entry-role::before {
@@ -595,7 +599,7 @@ const headWouldPrint = (section: {
   font-weight: 400;
   color: var(--c-dim);
   font-style: italic;
-  font-size: var(--t-9);
+  font-size: var(--t-8p5);
   text-decoration: none;
 }
 
@@ -623,7 +627,7 @@ a.cv__entry-name:hover {
   flex-wrap: wrap;
   gap: var(--space-1) var(--space-3);
   margin: 0;
-  padding: 0 var(--space-2);
+  padding: 0 var(--space-3);
   font-family: var(--f-label);
   font-size: var(--t-7);
   /* letter-spacing: 0.04em; */
@@ -639,11 +643,11 @@ a.cv__entry-name:hover {
 
 .cv__bullets {
   /* margin: var(--space-1) 0 0; */
-  padding-left: var(--space-5);
+  padding-left: var(--space-4);
 }
 
 .cv__bullets li {
-  font-size: var(--t-9);
+  font-size: var(--t-8p5);
 }
 
 /* .cv__bullets li + li {
@@ -655,14 +659,14 @@ a.cv__entry-name:hover {
 }
 
 .cv__quals h3 {
-  font-size: var(--t-9);
+  font-size: var(--t-8p5);
   font-weight: 600;
 }
 
 .cv__quals-list {
   margin: var(--space-1) 0 0;
-  padding-left: var(--space-5);
-  font-size: var(--t-9);
+  padding-left: var(--space-4);
+  font-size: var(--t-8p5);
 }
 
 /* .cv__quals-list li + li {
