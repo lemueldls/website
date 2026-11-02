@@ -65,8 +65,8 @@
 }
 
 :root {
-  --f-display: "Besley", Georgia, serif;
-  --f-text: "Asterism Text", ui-monospace, monospace;
+  --f-display: "Besley", ui-serif, serif;
+  --f-text: "Asterism Text", ui-sans-serif, sans-serif;
   --f-mono: "Asterism Code", ui-monospace, monospace;
   --f-label: "Asterism Term", ui-monospace, monospace;
 

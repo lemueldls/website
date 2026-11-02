@@ -422,6 +422,15 @@ const headWouldPrint = (section: {
         </article>
       </div>
     </section>
+
+    <!-- <NuxtImg
+      id="stamp"
+      src="/icon.svg"
+      width="512"
+      height="512"
+      format="avif,webp"
+      alt="Logo Stamp"
+    /> -->
   </div>
 </template>
 
@@ -719,5 +728,23 @@ a.cv__entry-name:hover {
   font-size: var(--t-8);
   color: var(--c-dim);
   max-width: var(--measure-text);
+}
+
+#stamp {
+  position: fixed;
+  right: var(--space-1);
+  bottom: var(--space-1);
+  z-index: var(--z-command);
+  display: none;
+  width: var(--t-24);
+  height: var(--t-24);
+  opacity: 0.25;
+  filter: grayscale(100%);
+}
+
+@media print {
+  #stamp {
+    display: block;
+  }
 }
 </style>
